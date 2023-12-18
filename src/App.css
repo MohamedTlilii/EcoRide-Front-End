@@ -9,11 +9,13 @@
   justify-content: space-between;
   gap: 300px;
   min-height: 70px;
+  border-bottom: 1px white solid ;
+  
 }
 .nav {
   /* border: 2px solid red; */
-  margin-left: 56px;
-  padding: 30px;
+  margin-left: 40px;
+  padding: 10px;
 }
 ul {
   /* border: 2px solid black; */

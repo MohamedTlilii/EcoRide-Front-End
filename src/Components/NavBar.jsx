@@ -4,25 +4,24 @@ import { BsChevronRight } from "react-icons/bs";
 
 function NavBar() {
   return (
-    <div className="nav-container">
-      <div className="nav-links">
-        <ul>
+    <nav className="nav-container">
+      <ul className="nav">
         <li>Shop All</li>
         <li>Electric Scooters</li>
+        <li>Accessories</li>
         <li>About</li>
         <li>Contact</li>
-        </ul>
-      </div>
-      <div className="brand-logo">
-        <img src="/assets/download.png" alt="Logo" />
-      </div>
-      <form className="search-form">
-        <input type="search" placeholder="Search products..." />
-        <button className="search-button" type="submit">
-          <BsChevronRight />
-        </button>
-      </form>
+      </ul>
+
+      <img className="logo" style={{ width: "148px" }} src="/assets/download.png" alt="Logo" />
+
       <div className="icons">
+        <form className="search-form">
+          <input type="search" placeholder="Search products..." />
+          <button className="search-button" type="submit">
+            <BsChevronRight />
+          </button>
+        </form>
         <span className="shopping-basket-icon">
           <FaShoppingBasket />
         </span>
@@ -30,7 +29,7 @@ function NavBar() {
           <FaUser />
         </span>
       </div>
-    </div>
+    </nav>
   );
 }
 

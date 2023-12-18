@@ -2,34 +2,31 @@
   box-sizing: border-box;
 }
 
-/* Add your custom styles here */
-
 .nav-container {
+  /* border: 2px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  gap: 300px;
+  min-height: 70px;
 }
-
-.nav-links {
+.nav {
+  /* border: 2px solid red; */
+  margin-left: 56px;
+  padding: 30px;
+}
+ul {
+  /* border: 2px solid black; */
   display: flex;
-  gap: 10px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
+  cursor: pointer;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: black; /* Change the color as needed */
-}
-
-.brand-logo {
-  flex: 1;
-}
-
-.brand-logo img {
-  max-width: 100px;
+.logo {
+  /* border: 2px solid black; */
+  position: relative;
+  right: 90px;
 }
 
 .search-form {
@@ -51,13 +48,21 @@
 }
 
 .icons {
+  /* border: 2px solid black;  */
   display: flex;
   align-items: center;
+  gap: 10px;
+  margin-right: 40px;
 }
 
-.shopping-basket-icon,
-.user-icon {
+.shopping-basket-icon {
   margin-left: 10px;
   color: rgb(201, 53, 53);
+  font-size: 1.5rem;
+}
+
+.user-icon {
+  margin-left: 10px;
+  /* color: rgb(201, 53, 53); */
   font-size: 1.5rem;
 }

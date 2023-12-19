@@ -10,13 +10,24 @@ function NavBar() {
         <Link to="/products">
           <li>Products</li>
         </Link>
-        <li>Electric Scooters</li>
-        <li>Accessories</li>
-        <li>About</li>
-        <li>Contact</li>
+
+        <Link to="/electricscooters">
+          <li>Electric Scooters</li>
+        </Link>
+        <Link to="/accessories">
+          {" "}
+          <li>Accessories</li>
+        </Link>
+        <Link to="/about">
+          {" "}
+          <li>About</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
       </ul>
 
-      <Link to="/">
+      <Link to="/products">
         <img
           className="logo"
           style={{ width: "148px" }}
@@ -36,7 +47,9 @@ function NavBar() {
           <FaShoppingBasket />
         </span>
         <span className="user-icon">
-          <FaUser />
+          <Link to="/login ">
+            <FaUser />
+          </Link>
         </span>
       </div>
     </nav>

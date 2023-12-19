@@ -10,6 +10,7 @@ import Contact from "./Pgaes/Contact";
 import Products from "./Pgaes/Products";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/Login";
+import Register from "./Pgaes/Register";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
 
       <Route path="/" element={<ConnexionLayout />}>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Route>
     </Routes>
   );

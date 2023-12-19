@@ -29,7 +29,7 @@ function NavBar() {
         </Link>
       </ul>
 
-      <Link to="/products">
+      <Link to="/home">
         <img
           className="logo"
           style={{ width: "148px" }}

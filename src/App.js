@@ -11,11 +11,13 @@ import Products from "./Pgaes/Products";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/Login";
 import Register from "./Pgaes/Register";
+import Home from "./Pgaes/Home";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<PublicLayout />}>
+        <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/electricscooters" element={<ElectricScooters />} />
         <Route path="/accessories" element={<Accessories />} />

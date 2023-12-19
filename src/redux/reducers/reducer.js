@@ -1,4 +1,6 @@
-const initialState = {};
+const initialState = {
+  shoppingBasket: [],
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

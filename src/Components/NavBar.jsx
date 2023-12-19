@@ -2,8 +2,10 @@ import React from "react";
 import { FaShoppingBasket, FaUser } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function NavBar() {
+  const shoppingBasket = useSelector((store) => store.shoppingBasket);
   return (
     <nav className="nav-container">
       <ul className="nav">
@@ -44,7 +46,8 @@ function NavBar() {
           </button>
         </form>
         <span className="shopping-basket-icon">
-          <FaShoppingBasket />
+          <FaShoppingBasket  />
+          {shoppingBasket.length}
         </span>
         <span className="user-icon">
           <Link to="/login ">

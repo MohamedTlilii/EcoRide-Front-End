@@ -9,12 +9,16 @@
   justify-content: space-between;
   gap: 300px;
   min-height: 70px;
-  border-bottom: 1px white solid;
+  border-bottom: 1px rgb(244, 239, 239) solid;
 }
 .nav {
   /* border: 2px solid red; */
   margin-left: 40px;
   padding: 10px;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
 }
 ul {
   /* border: 2px solid black; */
@@ -22,6 +26,9 @@ ul {
   list-style: none;
   gap: 20px;
   cursor: pointer;
+}
+.nav a :hover {
+  color: rgb(201, 53, 53);
 }
 
 .logo {
@@ -38,7 +45,13 @@ ul {
 .search-form input {
   margin-right: 5px;
   padding: 5px;
+  outline: none;
+ 
 }
+.search-button:hover {
+background-color: black;
+}
+
 
 .search-button {
   background-color: rgb(201, 53, 53);
@@ -46,7 +59,11 @@ ul {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
+/* .search-form  :hover {
+  background-color: black;
+} */
 
 .icons {
   /* border: 2px solid black;  */
@@ -66,6 +83,10 @@ ul {
   margin-left: 10px;
   /* color: rgb(201, 53, 53); */
   font-size: 1.5rem;
+  
+}
+.user-icon a {
+  color: black;
 }
 
 /* LOGIN */

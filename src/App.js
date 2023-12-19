@@ -11,23 +11,23 @@ import Products from "./Pgaes/Products";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/Login";
 import Register from "./Pgaes/Register";
-import Home from "./Pgaes/Home";
+import LandingPage from "./Pgaes/LandingPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<PublicLayout />}>
-        <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/electricscooters" element={<ElectricScooters />} />
-        <Route path="/accessories" element={<Accessories />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        
+        <Route index element={<LandingPage />} />
+        <Route path="products" element={<Products />} />
+        <Route path="electricscooters" element={<ElectricScooters />} />
+        <Route path="accessories" element={<Accessories />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
-
       <Route path="/" element={<ConnexionLayout />}>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Route>
     </Routes>
   );

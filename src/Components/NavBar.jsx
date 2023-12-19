@@ -29,7 +29,7 @@ function NavBar() {
         </Link>
       </ul>
 
-      <Link to="/home">
+      <Link to="/">
         <img
           className="logo"
           style={{ width: "148px" }}
@@ -42,11 +42,11 @@ function NavBar() {
         <form className="search-form">
           <input type="search" placeholder="Search products..." />
           <button className="search-button" type="submit">
-            <BsChevronRight />
+            <BsChevronRight  />
           </button>
         </form>
         <span className="shopping-basket-icon">
-          <FaShoppingBasket  />
+          <FaShoppingBasket />
           {shoppingBasket.length}
         </span>
         <span className="user-icon">

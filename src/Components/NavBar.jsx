@@ -42,12 +42,12 @@ function NavBar() {
         <form className="search-form">
           <input type="search" placeholder="Search products..." />
           <button className="search-button" type="submit">
-            <BsChevronRight  />
+            <BsChevronRight />
           </button>
         </form>
         <span className="shopping-basket-icon">
           <FaShoppingBasket />
-          {shoppingBasket.length}
+          <span className="shoppingBasket">{shoppingBasket.length}</span>
         </span>
         <span className="user-icon">
           <Link to="/login ">

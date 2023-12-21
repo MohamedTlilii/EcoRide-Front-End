@@ -9,9 +9,9 @@ function NavBar() {
   return (
     <nav className="nav-container">
       <ul className="nav">
-        <Link to="/products">
+        {/* <Link to="/products">
           <li>Products</li>
-        </Link>
+        </Link> */}
 
         <Link to="/electricscooters">
           <li>Electric Scooters</li>

@@ -7,7 +7,7 @@ import ElectricScooters from "./Pgaes/ElectricScooters";
 import Accessories from "./Pgaes/Accessories";
 import About from "./Pgaes/About";
 import Contact from "./Pgaes/Contact";
-import Products from "./Pgaes/Products";
+
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/Login";
 import Register from "./Pgaes/Register";
@@ -19,7 +19,7 @@ function App() {
       <Route path="/" element={<PublicLayout />}>
         
         <Route index element={<LandingPage />} />
-        <Route path="products" element={<Products />} />
+       
         <Route path="electricscooters" element={<ElectricScooters />} />
         <Route path="accessories" element={<Accessories />} />
         <Route path="about" element={<About />} />

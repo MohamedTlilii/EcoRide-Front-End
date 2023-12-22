@@ -1,12 +1,15 @@
-import React from "react";
 import CardKm from "../Components/CardKm";
 import ButtonCard from "../Components/ButtonCard";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaSquareYoutube } from "react-icons/fa6";
 import CardProduct from "../Components/CardProduct";
+import { useState } from "react";
+import Data from "../Data";
 
 function LandingPage() {
+  const [products, setProducts] = useState(Data);
+  // const [product, setProduct] = useState(Data);
   return (
     <div className="hero-section-first">
       <div className="hero-section">
@@ -36,7 +39,7 @@ function LandingPage() {
         </div>
         <div className="last-section-hero">
           <h4 className="last-section-title">Description</h4>
-          <p className="last-section-titlle-p"> 
+          <p className="last-section-titlle-p">
             The Fully Loaded Libero x250 is a High Performance, Extremely
             Durable, High Speed, Lightweight Electric Scooter with a Huge
             Battery
@@ -48,9 +51,13 @@ function LandingPage() {
         </div>
       </div>
 
-<div  className="product-section">
-<CardProduct />
-</div>
+      <div className="product-section">
+       <div className="products">
+       {products.map((product, i) => (
+          <CardProduct key={i} {...product} />
+        ))}
+       </div>
+      </div>
     </div>
   );
 }

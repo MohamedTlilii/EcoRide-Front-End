@@ -111,6 +111,7 @@ ul {
   border: 2px rgb(28, 58, 212) solid;
   /* margin: auto; */
   padding: 50px 50px 50px 50px;
+  /* height: 755px; */
 }
 
 .hero-section {
@@ -299,4 +300,17 @@ ul {
 .product-section {
   border: 2px solid red;
   height: 100vh;
+}
+.products {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-between;
+}
+.sale-btn {
+  border: 1px solid rgba(0, 0, 0, 0.268);
+  /* all: unset; */
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 10px;
+  position: absolute;
 }

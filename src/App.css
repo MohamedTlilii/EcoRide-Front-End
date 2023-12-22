@@ -107,9 +107,9 @@ ul {
 /* hero section */
 .hero-section-first {
   border: 2px rgb(28, 58, 212) solid;
-  min-height: 60vh;
+  min-height: 80vh;
   /* min-width: 1025px; */
-  margin: 150px;
+  margin: 100px;
   padding: 50px;
   background-image: url(../public/assets/home/bg-01.png);
   background-repeat: no-repeat;
@@ -120,84 +120,94 @@ ul {
   /* border: 2px rgb(28, 58, 212) solid; */
   display: flex;
   justify-content: center;
-  /* min-height: 100vh; */
-
+  
 }
 
 .hero-section-content {
   /* border: 2px red solid; */
-  width: 800px;
+  width: 700px;
   padding: 0 25px 0 0;
   display: flex;
   flex-wrap: wrap;
-  /* line-height: 1.5; */
+  position: relative;
+  left: 120px;
+  top: 50px;
 }
 .hero-section-content h1 {
   /* border: 2px red solid; */
   font-size: 55px;
   line-height: 66px;
   text-align: left;
-  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   width: 310px;
-color: black;
- height:75px ;
+  color: black;
+  height: 75px;
+  
 }
 .hero-titlle {
-  color: var( --e-global-color-astglobalcolor3 );
+  color: var(--e-global-color-astglobalcolor3);
   font-size: 1.5333333333333rem;
-    /* font-weight: 700; */
-    font-family: 'Montserrat',sans-serif;
-    /* border: 2px solid black; */
-    margin: 0;
-    /* height:55px ; */
-    position: relative;
-    bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+  /* border: 2px solid black; */
+  margin: 0;
+ 
+  position: relative;
+  bottom: 70px;
 }
 .hero-second-title {
   /* font-family: 'Montserrat',sans-serif; */
   font-size: 17px;
+  position: relative;
+  top: 30px;
+  right: 275px;
 }
 
 /* card-km components */
-.card-km {
-  border: 2px solid black;
-  line-height: 90.8571px;
-  width: 80px;
-  height: 99px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 15px;
-  letter-spacing: normal;
-  box-shadow: none;
-  /* font-family: "Open Sans", sans-serif; */
-  /* font-size: 27px; */
-}
-.card-km span {
-  /* border: 2px solid black; */
-  position: relative;
-  bottom: 35px;
-  font-size: 15px;
-}
-.card-km p {
-  /* border: 2px solid black; */
-  position: relative;
-  bottom: 95px;
-  font-size: 12px;
-}
 .card-km-info {
   /* border: 2px solid black; */
   display: flex;
   gap: 15px;
   margin-bottom: 90px;
   position: relative;
-  bottom: 25px;
+  bottom: 30px;
 }
-/* .card-km-info-third {
-  width: 190px;
-  height: 99px;
-} */
+
+
+.card-km {
+  border: 1px solid rgba(0, 0, 0, 0.257);
+  line-height: 90.8571px;
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  text-align: center;
+
+  /* font-family: "Montserrat", sans-serif; */
+}
+.card-km span {
+  /* border: 2px solid black; */
+  position: relative;
+  bottom: 35px;
+  font-family: "Montserrat", sans-serif;
+}
+.card-km p {
+  /* border: 2px solid black; */
+  position: relative;
+  bottom: 105px;
+  /* font-size: 15px; */
+}
+
 
 /* btn-cart */
+
+.add-cart-section {
+  /* border: 2px solid black; */
+  display: flex;
+  gap: 1px;
+  position: relative;
+  bottom: 90px;
+  align-items: center;
+}
+
 .btn-cart {
   all: unset;
   background-color: rgb(201, 53, 53);
@@ -210,27 +220,18 @@ color: black;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 2px;
 }
-.add-cart-section {
-  /* border: 2px solid black; */
-  display: flex;
-  gap: 1px;
-  position: relative;
-  bottom: 75px;
-  align-items: center;
+.btn-cart:hover {
+  background-color: black;
 }
+
 .add-cart-span {
   margin-left: 25px;
 }
 .scoter-hero-section {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
-  /* width: 658px;
-  height: 577px; */
-  /* height: auto; */
-    /* max-width: 100%; */
-    /* border: none; */
-    /* border-radius: 0; */
-    box-shadow: none;
+  position: relative;
+  top: 65px;
 }
 .last-section-hero {
   border: 2px solid rgb(26, 192, 56);

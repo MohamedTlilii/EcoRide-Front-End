@@ -2,10 +2,10 @@ import React from "react";
 
 function CardKm({ text, km, content }) {
   return (
-    <div className="card-km">
-      <h4>{text}</h4>
-      <span >{km}</span>
-      <p>{content}</p>
+    <div  className="card-km">
+      <h4 style={{fontWeight:"700",fontSize:"30px"}}>{text}</h4>
+      <span style={{fontWeight:"900" ,fontSize:"25px"}} >{km}</span>
+      <p style={{fontWeight:"100" ,fontSize:"12px"}}>{content}</p>
     </div>
   );
 }

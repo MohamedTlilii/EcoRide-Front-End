@@ -14,9 +14,9 @@ function LandingPage(props) {
           <h4 className="hero-titlle">250 Watt Electric Scooter</h4>
           <h5 className="hero-second-title">Informations:</h5>
           <div className="card-km-info">
-            <CardKm text={30} km={"km"} content={"BATTERY"} />
+            <CardKm  text={30} km={"km"} content={"BATTERY"} />
             <CardKm text={"13,5"} km={"kg"} content={"WEIGHT"} />
-            <CardKm text={25} km={"km/h"} content={"SPEED"} />
+            <CardKm  text={25} km={"km/h"} content={"SPEED"} />
           </div>
           <div className="add-cart-section">
             <span>$</span> 750.000

@@ -108,22 +108,19 @@ ul {
 
 /* hero section */
 .hero-section-first {
-  /* border: 2px rgb(28, 58, 212) solid; */
-  height: 80vh;
-  /* margin:100px; */
-  /* width: 80%; */
-  padding: 150px;
-  background-image: url(../public/assets/home/bg-01.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  border: 2px rgb(28, 58, 212) solid;
+  /* margin: auto; */
+  padding: 50px 50px 50px 50px;
 }
 
 .hero-section {
-  /* border: 2px rgb(28, 58, 212) solid; */
+  border: 2px rgb(202, 221, 28) solid;
   display: flex;
   justify-content: center;
-  margin-right: 385px;
-  /* margin-bottom: 350px!important; */
+  height: 755px;
+  background-image: url(../public/assets/home/bg-01.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-section-content {
@@ -153,14 +150,14 @@ ul {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   position: absolute;
-  bottom: 470px;
+  bottom: 650px;
 }
 .hero-second-title {
   /* border: 2px solid black; */
   /* font-family: 'Montserrat',sans-serif; */
   font-size: 17px;
   position: absolute;
-  bottom: 370px;
+  bottom: 540px;
 }
 
 /* card-km components */
@@ -203,7 +200,7 @@ ul {
   display: flex;
   gap: 1px;
   position: absolute;
-  bottom: 90px;
+  bottom: 280px;
   align-items: center;
 }
 
@@ -231,7 +228,7 @@ ul {
   display: flex;
   position: relative;
   top: 135px;
-  left: 150px;
+  left: 70px;
 }
 .last-section-hero {
   /* border: 2px solid rgb(26, 192, 56); */
@@ -259,7 +256,7 @@ ul {
   margin-bottom: 5.6em;
 }
 .last-section-logos-titlle {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   font-size: 15px;
   font-size: 1rem;
   font-weight: normal;
@@ -299,3 +296,7 @@ ul {
 }
 
 /* second section */
+.product-section {
+  border: 2px solid red;
+  height: 100vh;
+}

@@ -4,8 +4,9 @@ import ButtonCard from "../Components/ButtonCard";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaSquareYoutube } from "react-icons/fa6";
+import CardProduct from "../Components/CardProduct";
 
-function LandingPage(props) {
+function LandingPage() {
   return (
     <div className="hero-section-first">
       <div className="hero-section">
@@ -46,6 +47,10 @@ function LandingPage(props) {
           <FaSquareYoutube className="youtube-logo" />
         </div>
       </div>
+
+<div  className="product-section">
+<CardProduct />
+</div>
     </div>
   );
 }

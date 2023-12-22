@@ -3,7 +3,7 @@ import CardKm from "../Components/CardKm";
 import ButtonCard from "../Components/ButtonCard";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { CiYoutube } from "react-icons/ci";
+import { FaSquareYoutube } from "react-icons/fa6";
 
 function LandingPage(props) {
   return (
@@ -14,9 +14,9 @@ function LandingPage(props) {
           <h4 className="hero-titlle">250 Watt Electric Scooter</h4>
           <h5 className="hero-second-title">Informations:</h5>
           <div className="card-km-info">
-            <CardKm  text={30} km={"km"} content={"BATTERY"} />
+            <CardKm text={30} km={"km"} content={"BATTERY"} />
             <CardKm text={"13,5"} km={"kg"} content={"WEIGHT"} />
-            <CardKm  text={25} km={"km/h"} content={"SPEED"} />
+            <CardKm text={25} km={"km/h"} content={"SPEED"} />
           </div>
           <div className="add-cart-section">
             <span>$</span> 750.000
@@ -34,16 +34,16 @@ function LandingPage(props) {
           />
         </div>
         <div className="last-section-hero">
-          <h4>Description</h4>
-          <p>
+          <h4 className="last-section-title">Description</h4>
+          <p className="last-section-titlle-p"> 
             The Fully Loaded Libero x250 is a High Performance, Extremely
             Durable, High Speed, Lightweight Electric Scooter with a Huge
             Battery
           </p>
-          <h6>SHARE:</h6>
-          <FaFacebook />
-          <AiFillTwitterCircle />
-          <CiYoutube />
+          <h6 className="last-section-logos-titlle">SHARE:</h6>
+          <FaFacebook className="fb-logo" />
+          <AiFillTwitterCircle className="twiter-logo" />
+          <FaSquareYoutube className="youtube-logo" />
         </div>
       </div>
     </div>

@@ -527,3 +527,8 @@ ul {
   margin-top: 150px;
   margin-left: 100px;
 }
+/* footer */
+.footer {
+  border: 2px solid rgb(46, 210, 35);
+  height: 60vh;
+}

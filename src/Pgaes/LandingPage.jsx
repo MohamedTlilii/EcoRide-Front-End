@@ -171,6 +171,9 @@ function LandingPage() {
       <div className="silver-path-section">
         <Box/>
       </div>
+      <div className="footer">
+
+      </div>
     </div>
   );
 }

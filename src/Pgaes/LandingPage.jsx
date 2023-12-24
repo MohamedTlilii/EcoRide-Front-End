@@ -10,12 +10,13 @@ import { Link } from "react-router-dom";
 import WhyUs from "../Components/WhyUs";
 import { CiDeliveryTruck, CiLocationArrow1 } from "react-icons/ci";
 import { PiLockKey } from "react-icons/pi";
+import Box from "../Components/Box";
 
 function LandingPage() {
   const [products, setProducts] = useState(Data);
   // const [product, setProduct] = useState(Data);
   return (
-    <div >
+    <div>
       <div className="hero-section">
         <div className="hero-section-content">
           <h1>Libero X250</h1>
@@ -136,30 +137,39 @@ function LandingPage() {
             eiusmod tempor incididunt ut labore.
           </p>
 
-         <div className="why-us-section-card">
-         <WhyUs 
-            icon={<CiDeliveryTruck />}
-            title={"Fast Delivery"}
-            text={
-              "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
-            }
-          />
-          <WhyUs
-            icon={<CiLocationArrow1 />}
-            title={"Order Tracking"}
-            text={
-              "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
-            }
-          />
-          <WhyUs
-            icon={<PiLockKey />}
-            title={"Secure Payment"}
-            text={
-              "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
-            }
-          />
-         </div>
+          <div className="why-us-section-card">
+            <div>
+              <WhyUs
+                icon={<CiDeliveryTruck style={{ color: "white" }} />}
+                title={"Fast Delivery"}
+                text={
+                  "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
+                }
+              />
+            </div>
+            <div>
+              <WhyUs
+                icon={<CiLocationArrow1 style={{ color: "white" }} />}
+                title={"Order Tracking"}
+                text={
+                  "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
+                }
+              />
+            </div>
+            <div>
+              <WhyUs
+                icon={<PiLockKey style={{ color: "white" }} />}
+                title={"Secure Payment"}
+                text={
+                  "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
+                }
+              />
+            </div>
+          </div>
         </div>
+      </div>
+      <div className="silver-path-section">
+        <Box/>
       </div>
     </div>
   );

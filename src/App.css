@@ -459,30 +459,71 @@ ul {
   justify-content: center;
 }
 .why-us-section-content {
-  /* border: 2px solid rgb(131, 35, 210); */
+  /* border: 2px solid rgb(30, 230, 80); */
   margin-top: 180px;
-  width: 550px;
+  width: 500px;
+  height: 250px;
   text-align: center;
- 
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
+.why-us-section-card-icon:hover{
+  background-color: black;
+}
+.why-us-section-card {
+  /* border: 2px solid rgb(131, 35, 210); */
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  /* text-align: center;  */
+}
+.card-why-use {
+  /* border: 2px solid rgb(11, 10, 11); */
+  width: 300px;
+  height: 350px;
+  /* gap: 250px; */
+}
+
 .why-us-section-card-icon {
   border: 2px solid rgba(131, 35, 210, 0);
   width: 45px;
   background-color: hsl(0, 58%, 50%);
   border-radius: 50%;
   cursor: pointer;
-  margin-left: 75px;
+  margin-left: 125px;
   font-size: 30px;
 }
-
 .why-us-section-card-title {
   /* border: 2px solid rgb(22, 206, 117); */
-  font-size:33px ;
- /* width: 250px; */
+  font-size: 33px;
+  /* width: 250px; */
+  cursor: pointer;
 }
-.why-us-section-card {
-  /* border: 2px solid rgb(131, 35, 210); */
-  display: flex;
+/* six section */
+.silver-path-section {
+  /* border: 2px solid rgb(46, 210, 35); */
+  height: 100vh;
+  background-image: url(../public/assets/home/bg-02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box-last-section {
+  border: 2px solid rgba(0, 0, 0, 0.013);
+  background-color: white;
+  width: 750px;
+  height: 500px;
+  position: relative;
+  left: 1000px;
+  top: 300px;
+ 
+  
 
-  text-align: center;/* Add padding for better spacing */
+}
+.box-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 150px;
+  margin-left: 100px;
 }

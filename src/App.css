@@ -468,7 +468,7 @@ ul {
   flex-direction: column;
   gap: 50px;
 }
-.why-us-section-card-icon:hover{
+.why-us-section-card-icon:hover {
   background-color: black;
 }
 .why-us-section-card {
@@ -516,9 +516,6 @@ ul {
   position: relative;
   left: 1000px;
   top: 300px;
- 
-  
-
 }
 .box-box {
   display: flex;
@@ -529,6 +526,64 @@ ul {
 }
 /* footer */
 .footer {
-  border: 2px solid rgb(46, 210, 35);
-  height: 60vh;
+  /* border: 2px solid rgb(46, 210, 35); */
+  height: 65vh;
+  background-color: hsl(195, 57%, 97%);
 }
+.footer-section {
+  /* border: 2px solid rgb(35, 93, 210); */
+  gap: 55px;
+  display: flex;
+  justify-content: center;
+  padding: 150px;
+}
+.footer-part-one {
+  /* border: 2px solid rgb(210, 35, 190); */
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-part-two {
+  /* border: 2px solid rgb(35, 210, 50); */
+  width: 250px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.footer-part-two a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-part-third {
+  /* border: 2px solid rgb(210, 102, 35); */
+  width: 250px;
+}
+.all-shops {
+  cursor: pointer;
+}
+.footer-part-four {
+  /* border: 2px solid rgb(105, 18, 31); */
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+}
+.input-footer {
+  width: 240px;
+}
+
+.contact-footer {
+  margin-bottom: 35px;
+}
+
+.last-footer {
+  border-top: 2px rgba(0, 0, 0, 0.05) solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+/* other sections */

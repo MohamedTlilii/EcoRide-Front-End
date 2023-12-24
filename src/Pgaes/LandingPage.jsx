@@ -2,15 +2,15 @@ import CardKm from "../Components/CardKm";
 import ButtonCard from "../Components/ButtonCard";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { FaSquareYoutube, FaQuoteRight } from "react-icons/fa6";
+import { FaSquareYoutube } from "react-icons/fa6";
 import CardProduct from "../Components/CardProduct";
 import { useState } from "react";
 import Data from "../Data";
-import { Link } from "react-router-dom";
-import WhyUs from "../Components/WhyUs";
-import { CiDeliveryTruck, CiLocationArrow1 } from "react-icons/ci";
-import { PiLockKey } from "react-icons/pi";
 import Box from "../Components/Box";
+import LandingPageAbout from "../Components/LandingPageAbout";
+import LandingPageFour from "../Components/LandingPageFour";
+import LandingPageWhy from "../Components/LandingPageWhy";
+import LandingPageFooter from "../Components/LandingPageFooter";
 
 function LandingPage() {
   const [products, setProducts] = useState(Data);
@@ -63,21 +63,7 @@ function LandingPage() {
           ))}
         </div>
       </div>
-      <div className="about-section">
-        <div className="about-section-content">
-          <h6>ABOUT US</h6>
-          <h2>
-            If you’re looking for a brand new electric scooter, you’re in the
-            right place
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
-          </p>
-        </div>
-      </div>
+      <LandingPageAbout />
       <div className="third-section">
         <div className="card-third-section">
           <img
@@ -90,24 +76,7 @@ function LandingPage() {
           <p className="price-third-section">$650 </p>
         </div>
       </div>
-      <div className="four-section">
-        <div className="four-section-content">
-          <Link className="four-section-content-box" to="/">
-            <FaQuoteRight />
-          </Link>
-
-          <h4>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.”
-          </h4>
-          <img
-            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/signature-01.png"
-            alt=""
-          />
-          <p>MARIA OLIVER</p>
-        </div>
-      </div>
+      <LandingPageFour />
       <div className="section-five">
         <div className="content-five">
           <div className="section-five-content">
@@ -129,50 +98,16 @@ function LandingPage() {
           />
         </div>
       </div>
-      <div className="why-us-section">
-        <div className="why-us-section-content">
-          <h2>Why choose us</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
-          </p>
-
-          <div className="why-us-section-card">
-            <div>
-              <WhyUs
-                icon={<CiDeliveryTruck style={{ color: "white" }} />}
-                title={"Fast Delivery"}
-                text={
-                  "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
-                }
-              />
-            </div>
-            <div>
-              <WhyUs
-                icon={<CiLocationArrow1 style={{ color: "white" }} />}
-                title={"Order Tracking"}
-                text={
-                  "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
-                }
-              />
-            </div>
-            <div>
-              <WhyUs
-                icon={<PiLockKey style={{ color: "white" }} />}
-                title={"Secure Payment"}
-                text={
-                  "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
-                }
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <LandingPageWhy />
       <div className="silver-path-section">
-        <Box/>
+        <Box />
       </div>
       <div className="footer">
-
+        <LandingPageFooter/>
+        <div className="last-footer">
+        <p>Copyright © 2023 Electric Scooter | Powered by Electric Scooter</p>
+        <img src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png" style={{width:"246px", height:"20px"}} alt="" />
+        </div>
       </div>
     </div>
   );

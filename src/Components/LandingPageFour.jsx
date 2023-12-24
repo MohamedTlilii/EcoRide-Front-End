@@ -7,7 +7,7 @@ function LandingPageFour() {
       <div className="four-section">
         <div className="four-section-content">
           <Link to="/" className="four-section-content-box">
-            <FaQuoteRight />
+            <FaQuoteRight className="section-four-icon" />
           </Link>
 
           <h4>

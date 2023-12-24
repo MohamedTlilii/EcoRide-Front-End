@@ -76,7 +76,7 @@ function LandingPage() {
           <p className="price-third-section">$650 </p>
         </div>
       </div>
-      <LandingPageFour />
+      <LandingPageFour  />
       <div className="section-five">
         <div className="content-five">
           <div className="section-five-content">

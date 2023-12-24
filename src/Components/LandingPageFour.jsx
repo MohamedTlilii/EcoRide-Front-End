@@ -1,12 +1,12 @@
-import React from 'react'
-import {  FaQuoteRight } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import React from "react";
+import { FaQuoteRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 function LandingPageFour() {
   return (
     <div>
-        <div className="four-section">
+      <div className="four-section">
         <div className="four-section-content">
-          <Link className="four-section-content-box" to="/">
+          <Link to="/" className="four-section-content-box">
             <FaQuoteRight />
           </Link>
 
@@ -23,7 +23,7 @@ function LandingPageFour() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default LandingPageFour
+export default LandingPageFour;

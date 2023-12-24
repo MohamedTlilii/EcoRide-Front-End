@@ -218,12 +218,12 @@ ul {
   height: 30px;
   padding: 5px;
   text-align: center;
-  align-items: center;
+  /* align-items: center; */
   color: white;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 2px;
-  width: 130px;
+  width: 190px;
 }
 .btn-cart:hover {
   background-color: black;
@@ -354,6 +354,11 @@ ul {
 
 .content-card-box {
   cursor: pointer;
+  
+}
+a {
+  text-decoration: none!important;
+  
 }
 .line-through {
   text-decoration: line-through;

@@ -12,6 +12,7 @@ import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/Login";
 import Register from "./Pgaes/Register";
 import LandingPage from "./Pgaes/LandingPage";
+import ProductsSolo from "./Pgaes/ProductsSolo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<PublicLayout />}>
         
         <Route index element={<LandingPage />} />
+        <Route path="/product" element={<ProductsSolo  />} />
        
         <Route path="electricscooters" element={<ElectricScooters />} />
         <Route path="accessories" element={<Accessories />} />

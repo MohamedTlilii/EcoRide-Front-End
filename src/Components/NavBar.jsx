@@ -33,7 +33,7 @@ function NavBar() {
         <img
           className="logo"
           style={{ width: "148px" }}
-          src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/logo-regular.png"
+          src="./assets/home/download.png"
           alt="Logo"
         />
       </Link>
@@ -47,7 +47,7 @@ function NavBar() {
         </form>
         <span className="shopping-basket-icon">
           <FaShoppingBasket />
-          <span className="shoppingBasket">{shoppingBasket.length}</span>
+          <span className="shoppingBasket" >{shoppingBasket.length}</span>
         </span>
         <span className="user-icon">
           <Link to="/login ">

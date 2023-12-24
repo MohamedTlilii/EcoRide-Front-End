@@ -7,7 +7,7 @@ function CardProduct({ span, image, content, price, rating }) {
     <div>
       <SaleBtn />
       <div className="icons-product-card-section">
-        <FaShoppingBasket className="shop-icon-card-second-section" />
+        <FaShoppingBasket  className="shop-icon-card-second-section" />
 
         <FaEye className="shop-icon-card-second-section" />
       </div>
@@ -19,6 +19,7 @@ function CardProduct({ span, image, content, price, rating }) {
       <div>
         <h2 className="content-card-box"> {content}</h2>
       </div>
+      <span className="line-through">${span}</span>
       <span>${price}</span>
     </div>
   );

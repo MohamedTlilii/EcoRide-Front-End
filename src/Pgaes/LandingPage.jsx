@@ -86,7 +86,7 @@ function LandingPage() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </p>
-            <ButtonCard
+            <ButtonCard 
               className="content-five-btn"
               text={"SHOP ACCESSORIES"}
             />

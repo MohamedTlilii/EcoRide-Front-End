@@ -63,6 +63,7 @@ function LandingPageFooter() {
             type="text"
             placeholder="Email address"
             size={"250px"}
+            
           />
         </label>
         <ButtonCard text={"SUBSCRIBE"} />

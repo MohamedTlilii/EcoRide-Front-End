@@ -52,11 +52,37 @@ function LandingPage() {
       </div>
 
       <div className="product-section">
-       <div className="products">
-       {products.map((product, i) => (
-          <CardProduct key={i} {...product} />
-        ))}
-       </div>
+        <div className="products">
+          {products.map((product, i) => (
+            <CardProduct key={i} {...product} />
+          ))}
+        </div>
+      </div>
+      <div className="about-section">
+        <div className="about-section-content">
+          <h6>ABOUT US</h6>
+          <h2>
+            If you’re looking for a brand new electric scooter, you’re in the
+            right place
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+            accumsan lacus vel facilisis.
+          </p>
+        </div>
+      </div>
+      <div className="third-section">
+        <div className="card-third-section">
+          <img
+            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png"
+            alt=""
+          />
+          <figcaption>CITY</figcaption>
+          <h1>Electric Scooter Z400</h1>
+          <p>$650 </p>
+        </div>
       </div>
     </div>
   );

@@ -2,16 +2,20 @@ import CardKm from "../Components/CardKm";
 import ButtonCard from "../Components/ButtonCard";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { FaSquareYoutube } from "react-icons/fa6";
+import { FaSquareYoutube, FaQuoteRight } from "react-icons/fa6";
 import CardProduct from "../Components/CardProduct";
 import { useState } from "react";
 import Data from "../Data";
+import { Link } from "react-router-dom";
+import WhyUs from "../Components/WhyUs";
+import { CiDeliveryTruck, CiLocationArrow1 } from "react-icons/ci";
+import { PiLockKey } from "react-icons/pi";
 
 function LandingPage() {
   const [products, setProducts] = useState(Data);
   // const [product, setProduct] = useState(Data);
   return (
-    <div className="hero-section-first">
+    <div >
       <div className="hero-section">
         <div className="hero-section-content">
           <h1>Libero X250</h1>
@@ -33,7 +37,7 @@ function LandingPage() {
         <div className="scoter-hero-section">
           <img
             style={{ width: "658px", height: "577px" }}
-            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-01.png"
+            src="/assets/home/scooter-01.png"
             alt=""
           />
         </div>
@@ -76,12 +80,85 @@ function LandingPage() {
       <div className="third-section">
         <div className="card-third-section">
           <img
+            className="img-third-section"
             src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png"
             alt=""
           />
           <figcaption>CITY</figcaption>
-          <h1>Electric Scooter Z400</h1>
-          <p>$650 </p>
+          <h1 className="titlle-third-section">Electric Scooter Z400</h1>
+          <p className="price-third-section">$650 </p>
+        </div>
+      </div>
+      <div className="four-section">
+        <div className="four-section-content">
+          <Link className="four-section-content-box" to="/">
+            <FaQuoteRight />
+          </Link>
+
+          <h4>
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.”
+          </h4>
+          <img
+            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/signature-01.png"
+            alt=""
+          />
+          <p>MARIA OLIVER</p>
+        </div>
+      </div>
+      <div className="section-five">
+        <div className="content-five">
+          <div className="section-five-content">
+            <h1>Shop Electric Scooter Accessories</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+            <ButtonCard
+              className="content-five-btn"
+              text={"SHOP ACCESSORIES"}
+            />
+          </div>
+
+          <img
+            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/accessories-01.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="why-us-section">
+        <div className="why-us-section-content">
+          <h2>Why choose us</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+
+         <div className="why-us-section-card">
+         <WhyUs 
+            icon={<CiDeliveryTruck />}
+            title={"Fast Delivery"}
+            text={
+              "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
+            }
+          />
+          <WhyUs
+            icon={<CiLocationArrow1 />}
+            title={"Order Tracking"}
+            text={
+              "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
+            }
+          />
+          <WhyUs
+            icon={<PiLockKey />}
+            title={"Secure Payment"}
+            text={
+              "Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor consectetur incididunt ut labore"
+            }
+          />
+         </div>
         </div>
       </div>
     </div>

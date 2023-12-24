@@ -19,7 +19,7 @@ function CardProduct({ span, image, content, price, rating }) {
       <div>
         <h2 className="content-card-box"> {content}</h2>
       </div>
-      <span>{price}</span>
+      <span>${price}</span>
     </div>
   );
 }

@@ -25,7 +25,7 @@ function CardProduct({ span, image, content, price, rating }) {
         </Link>
       </div>
       <span className="line-through">${span}</span>
-      <span>${price}</span>
+      <span className="line-through-two">${price}</span>
     </div>
   );
 }

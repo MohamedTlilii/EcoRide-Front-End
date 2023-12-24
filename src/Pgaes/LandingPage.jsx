@@ -20,7 +20,7 @@ function LandingPage() {
       <div className="hero-section">
         <div className="hero-section-content">
           <h1>Libero X250</h1>
-          <h4 className="hero-titlle">250 Watt Electric Scooter</h4>
+          <h4  className="hero-titlle">250 Watt Electric Scooter</h4>
           <h5 className="hero-second-title">Informations:</h5>
           <div className="card-km-info">
             <CardKm text={30} km={"km"} content={"BATTERY"} />

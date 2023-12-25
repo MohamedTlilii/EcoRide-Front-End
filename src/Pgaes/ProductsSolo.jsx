@@ -1,19 +1,22 @@
 import React from "react";
 import SaleBtn from "../Components/SaleBtn";
 import ButtonCard from "../Components/ButtonCard";
+import { useParams } from "react-router-dom";
+function ProductsSolo({ products }) {
+  let { id } = useParams();
+  let product = products.find((product) => product.id === id);
 
-function ProductsSolo({ span, image, content, price, lorem }) {
   return (
     <div>
       <SaleBtn />
-      <img className="img-product-cart" src={image} alt="" />
+      <img className="img-product-cart" src={product.image} alt="" />
       <h2 style={{ color: "black" }} className="content-card-box">
         {" "}
-        {content}
+        {product.content}
       </h2>
-      <span className="line-through">${span}</span>
-      <span>${price}</span>
-      <p>{lorem}</p>
+      <span className="line-through">${}</span>
+      <span>${product.price}</span>
+      <p>{product.content}</p>
       <div className="quantity buttons_added">
         <label className="screen-reader-text" htmlFor="minus_qty">
           -

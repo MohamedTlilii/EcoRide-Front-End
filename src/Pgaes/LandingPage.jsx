@@ -4,19 +4,19 @@ import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaSquareYoutube } from "react-icons/fa6";
 import CardProduct from "../Components/CardProduct";
-import { useState } from "react";
-import Data from "../Data";
+
 import Box from "../Components/Box";
 import LandingPageAbout from "../Components/LandingPageAbout";
 import LandingPageFour from "../Components/LandingPageFour";
 import LandingPageWhy from "../Components/LandingPageWhy";
 import LandingPageFooter from "../Components/LandingPageFooter";
 
-function LandingPage() {
-  const [products, setProducts] = useState(Data);
-  // const [product, setProduct] = useState(Data);
+
+function LandingPage({products}) {
+
+
   return (
-    <div>
+    <div className="parent-div">
       <div className="hero-section">
         <div className="hero-section-content">
           <h1>Libero X250</h1>

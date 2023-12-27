@@ -3,7 +3,7 @@ import SaleBtn from "../Components/SaleBtn";
 import ButtonCard from "../Components/ButtonCard";
 import { useParams } from "react-router-dom";
 import LandingPageFooter from "../Components/LandingPageFooter";
-import { CiSearch } from "react-icons/ci";
+// import { CiSearch } from "react-icons/ci";
 
 function ProductsSolo({ products }) {
   let { id } = useParams();
@@ -13,10 +13,10 @@ function ProductsSolo({ products }) {
     <div className="solo-product">
       <div className="products-cont">
         <div className="product-img">
-          <div className="icons-product">
+          {/* <div className="icons-product">
             <SaleBtn />
             <CiSearch />
-          </div>
+          </div> */}
           <img className="product-main" src={product.image} alt="" />
           <div className="products-mains">
             <img src={product.img1} alt="" />
@@ -27,19 +27,22 @@ function ProductsSolo({ products }) {
         </div>
 
         <div className="content-card-boxx">
-          <span>Electric Scooters</span>
-          <h2 style={{ color: "black" }}> {product.content}</h2>
+          <span className="electric-scooters">Electric Scooters</span>
+          <h2 className="product-content"> {product.content}</h2>
 
-          <span>${product.span}</span>
-          <p>${product.price}</p>
-          <span>& Free Shipping</span>
+          <div className="box-prices">
+            <span className="cut-price">{product.span}EGP</span>
+            <span className="price6without-cut">{product.price}EGP</span>
+            <span>& Free Shipping</span>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
             accumsan lacus vel facilisis.
           </p>
-          <div className="quantity buttons_added">
+          <div className="label-btn">
+          <div className="quantity-buttons_added">
             <label className="screen-reader-text" htmlFor="minus_qty">
               -
             </label>
@@ -53,15 +56,20 @@ function ProductsSolo({ products }) {
             </label>
           </div>
           <ButtonCard text={"ADD TO CART "} />
+          </div>
           <legend>Guaranteed Safe Checkout</legend>
+          <div className="payment-methods">
           <img
             src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
-            style={{ width: "246px", height: "20px" }}
+            style={{ width: "256px", height: "20px" }}
             alt=""
           />
+          </div>
+          <div className="safe">
           <span> ✔️No-Risk Money Back Guarantee!</span>
           <span> ✔️No Hassle Refunds</span>
           <span> ✔️Secure Payments</span>
+          </div>
         </div>
       </div>
 

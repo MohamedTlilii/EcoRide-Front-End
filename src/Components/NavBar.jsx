@@ -32,8 +32,8 @@ function NavBar() {
       <Link to="/">
         <img
           className="logo"
-          style={{ width: "148px" }}
-          src="./assets/home/download.png"
+          style={{ width: "128px" , height:"38px" }}
+          src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/logo-regular.png"
           alt="Logo"
         />
       </Link>

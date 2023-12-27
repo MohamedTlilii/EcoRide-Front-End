@@ -14,9 +14,10 @@ import LandingPage from "./Pgaes/LandingPage";
 import ProductsSolo from "./Pgaes/ProductsSolo";
 import Data from "./Data";
 
+
 function App() {
   return (
-    <Routes>
+    <Routes >
       <Route path="/" element={<PublicLayout />}>
         <Route index element={<LandingPage products={Data} />} />
         <Route path="/product/:id" element={<ProductsSolo products={Data} />} />

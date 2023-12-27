@@ -55,6 +55,8 @@ ul {
   /* border: 2px solid black; */
   position: relative;
   right: 20px;
+  /* width: 148px;
+  height: 38px; */
 }
 
 .search-form {
@@ -130,8 +132,11 @@ ul {
   width: 1900px;
   margin: auto;
 }
+::selection {
+  background-color: #cf2e2e;
+}
 .hero-section {
-  border: 2px rgb(202, 221, 28) solid;
+  /* border: 2px rgb(202, 221, 28) solid; */
   display: flex;
   justify-content: center;
   height: 99vh;
@@ -356,7 +361,7 @@ ul {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
   position: relative;
-  top: 35px;
+  top: 45px;
   left: 35px;
   color: hsl(0, 2%, 70%);
 }
@@ -748,3 +753,41 @@ a {
   padding: 40px;
 }
 /* other sections */
+.solo-product {
+  width: 1900px;
+  margin: auto;
+  /* border: 1px solid black; */
+  /* display: flex;
+  justify-content: center;
+  gap: 10px; */
+}
+.products-cont {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  /* padding:70px; */
+}
+.icons-product {
+  border: 1px solid black;
+}
+.product-img {
+  /* border: 2px solid rgb(203, 27, 27); */
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.product-main {
+  width: 500px;
+}
+
+.products-mains {
+  /* border: 2px solid rgb(62, 203, 27); */
+  display: flex;
+  gap: 34px;
+}
+
+.content-card-boxx {
+  border: 1px solid rgb(48, 181, 27);
+  width: 500px;
+}

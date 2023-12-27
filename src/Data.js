@@ -6,6 +6,10 @@ const Data = [
     price: "799.00",
     span: "875.00 ",
     rating: 5,
+    img1:"https://scooteregypt.com/wp-content/uploads/2022/07/product-03-a-100x100.jpg",
+    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-b-100x100.jpg",
+    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-c-100x100.jpg",
+    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-d-100x100.jpg",
   },
   {
     id: "73b05d48-703c-565b-815d-7b2331c69bb6",

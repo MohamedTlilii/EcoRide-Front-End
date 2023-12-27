@@ -128,16 +128,17 @@ ul {
 .parent-div {
   /* border: 2px rgb(202, 221, 28) solid; */
   width: 1900px;
+  margin: auto;
 }
 .hero-section {
-  /* border: 2px rgb(202, 221, 28) solid; */
+  border: 2px rgb(202, 221, 28) solid;
   display: flex;
   justify-content: center;
   height: 99vh;
   background-image: url(../public/assets/home/bg-01.png);
   background-repeat: no-repeat;
   background-position: center;
-  width: fit-content;
+  /* width: fit-content; */
   margin: auto;
 }
 

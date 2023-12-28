@@ -5,10 +5,18 @@ import { useParams } from "react-router-dom";
 import LandingPageFooter from "../Components/LandingPageFooter";
 // import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
+// import Swiper from 'swiper';
+// import { Navigation, Pagination } from 'swiper/modules';
 
 function ProductsSolo({ products }) {
   let { id } = useParams();
   let product = products.find((product) => product.id === id);
+  // const swiper = new Swiper(...);
+  
+
+
+
+
 
   return (
     <div className="solo-product-parent-div">
@@ -62,20 +70,22 @@ function ProductsSolo({ products }) {
             <ButtonCard text={"ADD TO CART "} />
           </div>
           <fieldset>
-            <legend>Guaranteed Safe Checkout</legend>
-            <div className="payment-methods">
+  <legend>Guaranteed Safe Checkout</legend>
+   <div className="payment-methods">
               <img
                 src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
                 style={{ width: "256px", height: "20px" }}
                 alt=""
               />
             </div>
-          </fieldset>
+           
+ </fieldset>
           <div className="safe">
             <span> ✔️No-Risk Money Back Guarantee!</span>
             <span> ✔️No Hassle Refunds</span>
             <span> ✔️Secure Payments</span>
           </div>
+          
         </div>
       </div>
 

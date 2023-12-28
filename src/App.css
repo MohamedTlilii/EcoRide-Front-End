@@ -926,3 +926,9 @@ flex-direction: column;
   padding-right: 0.75em!important;
   border: 2px solid #000!important; 
 } */
+
+.slides-container {
+  border: 2px solid black ;
+ position: relative;
+ top: 240px;
+}

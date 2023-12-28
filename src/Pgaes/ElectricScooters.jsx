@@ -1,8 +1,9 @@
 import React from 'react'
+import Slides from '../Slides/Slides'
 
 function ElectricScooters() {
   return (
-    <div>ElectricScooters</div>
+    <div><Slides/> </div>
   )
 }
 

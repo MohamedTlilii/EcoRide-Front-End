@@ -5,13 +5,13 @@ import { useParams } from "react-router-dom";
 import LandingPageFooter from "../Components/LandingPageFooter";
 // import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
-// import Swiper from 'swiper';
-// import { Navigation, Pagination } from 'swiper/modules';
+import Slides from '../Slides/Slides'
+
 
 function ProductsSolo({ products }) {
   let { id } = useParams();
   let product = products.find((product) => product.id === id);
-  // const swiper = new Swiper(...);
+  
   
 
 
@@ -27,12 +27,9 @@ function ProductsSolo({ products }) {
             <SaleBtn />
             <CiSearch />
           </div> */}
-          <img className="product-main" src={product.image} alt="" />
+          {/* <img className="product-main" src={product.image} alt="" /> */}
           <div className="products-mains">
-            <img src={product.img1} alt="" />
-            <img src={product.img2} alt="" />
-            <img src={product.img3} alt="" />
-            <img src={product.img4} alt="" />
+          <Slides/> 
           </div>
         </div>
 

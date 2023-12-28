@@ -339,6 +339,8 @@ ul {
   /* border: 2px solid red; */
   height: 90vh;
   padding: 15px;
+  height: 1000px;
+
 }
 .products {
   /* border: 2px solid black; */
@@ -364,6 +366,7 @@ ul {
   top: 45px;
   left: 35px;
   color: hsl(0, 2%, 70%);
+
 }
 .icons-product-card-section {
   /* margin-left: 360px; */
@@ -410,10 +413,13 @@ a {
 
 /* about section */
 .about-section {
-  /* border: 2px solid rgb(46, 210, 35); */
+  border: 2px solid rgb(46, 210, 35);
   height: 60vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  height: 1000px;
+
 }
 .about-section-content {
   /* border: 2px solid rgb(131, 35, 210); */
@@ -461,6 +467,8 @@ a {
   /* justify-content: center; */
   align-items: center;
   /* text-align: center; */
+  height: 1000px;
+
 }
 .card-third-section {
   border: 2px solid rgba(23, 16, 18, 0);
@@ -496,6 +504,7 @@ a {
 .four-section {
   /* border: 2px solid rgb(204, 46, 96); */
   height: 60vh;
+  height: 800px;
 }
 .four-section-content {
   /* border: 2px solid rgb(59, 201, 27); */
@@ -503,12 +512,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 920px;
   gap: 25px;
   padding: 55px;
-  margin-left: 552px;
+  margin-left: 500px;
   margin-top: 350px;
-  text-align: center;
 }
 
 .section-four-icon {
@@ -540,6 +549,7 @@ a {
   height: 80vh;
   background-color: hsl(195, 57%, 97%);
   /* display: flex; */
+  height: 1000px;
 }
 .content-five {
   /* border: 2px solid rgb(59, 201, 27); */
@@ -574,10 +584,11 @@ a {
 }
 /* Why choose us section */
 .why-us-section {
-  /* border: 2px solid rgb(46, 210, 35); */
-  height: 80vh;
+  /* border: 2px solid rgb(46, 210, 35);  */
+  height: 100vh;
   display: flex;
   justify-content: center;
+  height: 1000px;
 }
 .why-us-section-content {
   /* border: 2px solid rgb(30, 230, 80); */
@@ -635,20 +646,22 @@ a {
 }
 /* six section */
 .silver-path-section {
-  /* border: 2px solid rgb(46, 210, 35); */
+  /* border: 2px solid rgb(205, 28, 163); */
   height: 100vh;
   background-image: url(../public/assets/home/bg-02.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;  
+  height: 1000px;
 }
 .box-last-section {
-  border: 2px solid rgba(0, 0, 0, 0.013);
+  border: 2px solid rgba(0, 0, 0, 0);
   background-color: white;
   width: 750px;
-  height: 500px;
+  height: 500px;  
   position: relative;
   left: 1000px;
   top: 300px;
+  /* position: absolute; */
 }
 
 .box-titlle-section {

@@ -11,6 +11,7 @@ function ProductsSolo({ products }) {
   let product = products.find((product) => product.id === id);
 
   return (
+    <div className="solo-product-parent-div">
     <div className="solo-product">
       <div className="products-cont">
         <div className="product-img">
@@ -89,6 +90,7 @@ function ProductsSolo({ products }) {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 }

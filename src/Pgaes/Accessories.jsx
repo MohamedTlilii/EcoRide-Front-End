@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Slides from "../Slides/Slides"
 function Accessories() {
   return (
-    <div>Accessories</div>
+    <div> <Slides/>  </div>
   )
 }
 

@@ -4,8 +4,8 @@ import ButtonCard from "../Components/ButtonCard";
 import { useParams } from "react-router-dom";
 import LandingPageFooter from "../Components/LandingPageFooter";
 // import { CiSearch } from "react-icons/ci";
-import { Link } from "react-router-dom";
-import Slides from '../Slides/Slides'
+// import { Link } from "react-router-dom";
+import Slides from "../Slides/Slides"
 
 
 function ProductsSolo({ products }) {
@@ -29,14 +29,14 @@ function ProductsSolo({ products }) {
           </div> */}
           {/* <img className="product-main" src={product.image} alt="" /> */}
           <div className="products-mains">
-          <Slides/> 
+          <h1>swiper</h1>
           </div>
         </div>
 
         <div className="content-card-boxx">
-          <Link to="/electricscooters">
+          
             <span className="electric-scooters">Electric Scooters</span>
-          </Link>
+          
           <h2 className="product-content"> {product.content}</h2>
 
           <div className="box-prices">

@@ -5,10 +5,11 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import 'react-slideshow-image/dist/styles.css'
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

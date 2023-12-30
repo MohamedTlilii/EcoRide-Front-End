@@ -1,7 +1,7 @@
 import React from "react";
 import { IoListOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { FaTableCellsLarge,FaTableList  } from "react-icons/fa6";
+import { FaTableCellsLarge, FaTableList } from "react-icons/fa6";
 
 function ElectricScooters() {
   return (
@@ -9,8 +9,8 @@ function ElectricScooters() {
       <div className="electric-section-one">
         <nav>
           <ul>
-          <Link to={"/"}>
-            <li className="elictric-to-home" >Home</li>
+            <Link to={"/"}>
+              <li className="elictric-to-home">Home</li>
             </Link>
             <span className="elictric-to-home">/</span>
             <li className="elictric-to-home">Electric Scooters</li>
@@ -18,17 +18,15 @@ function ElectricScooters() {
         </nav>
         <div className="electric-section-two">
           <p>Showing all 12 results</p>
-          <div className="filter-icon-container">
-          <IoListOutline />
+          <IoListOutline className="slection-icons" />
           <p>Filter</p>
-          </div>
-          <div>
+        </div>
+        <div className="electric-section-third">
           <FaTableCellsLarge />
           <FaTableList />
-          </div>
         </div>
       </div>
-      <div className="electric-section-third"></div>
+      <div className="electric-section-four"></div>
     </div>
   );
 }

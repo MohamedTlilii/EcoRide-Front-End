@@ -948,26 +948,30 @@ height: 130px;
 .electric-section-two {
   border: 2px solid rgb(234, 24, 220);
   display: flex;
-  justify-content: flex-start;
-  gap: 448px;
+  /* justify-content: flex-start; */
+  /* gap: 568px; */
+  align-items: center;
+  gap: 7px;
+  display: flex;
   
 }
-.electric-section-two p {
+.electric-section-two p  {
+  border: 2px solid rgb(24, 234, 178);
   color: #777;
   font-size: 15px;
   margin: 4px;
+  
 }
-.filter-icon-container {
-  display: flex;
-  color: #000000ec;
-  align-items: center;
-}
-.filter-icon-container p {
-  /* align-items: center; */
-  color: #000000ec;
-  margin: 4px;
+.slection-icons {
+  border: 2px solid rgb(24, 234, 178);
+  
 }
 .electric-section-third {
+  border: 2px solid rgb(234, 210, 24);
+  display: flex;
+  
+}
+.electric-section-four {
   border: 2px solid rgb(15, 32, 160);
   /* height: 6vh; */
 padding: 10px;

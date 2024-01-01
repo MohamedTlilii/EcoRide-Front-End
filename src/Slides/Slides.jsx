@@ -1,35 +1,28 @@
-import React from 'react';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import SimpleImageSlider from "react-simple-image-slider";
+const images = [
+    { url: "/assets/home/scooter-01.png" },
+    { url: "/assets/home/scooter-02.png" },
+    { url: "/assets/home/scooter-03.png" },
+    { url: "/assets/home/scooter-04.png" },
+    { url: "/assets/home/scooter-05.png" },
+    { url: "/assets/home/scooter-06.png" },
+    { url: "/assets/home/scooter-07.png" },
+  ];
 
-const Slides = () => {
-    const images = [
-        "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/logo-regular.png",
-        "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/logo-regular.png",
-        "https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/logo-regular.png",
-    ]
-
+function Slides() {
+    
+  
     return (
-        <Slide  autoplay={false}
-        onChange={function noRefCheck(){}}
-        onStartChange={function noRefCheck(){}}>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[0]})` }}>
-                    <span>Slide 1</span>
-                </div>
-            </div>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[1]})` }}>
-                    <span>Slide 2</span>
-                </div>
-            </div>
-            <div className="each-slide-effect">
-                <div style={{ 'backgroundImage': `url(${images[2]})` }}>
-                    <span>Slide 3</span>
-                </div>
-            </div>
-        </Slide>
-    );
-};
+        <div>
+          <SimpleImageSlider
+            width={396}
+            height={504}
+            images={images}
+            showBullets={true}
+            showNavs={true}
+          />
+        </div>
+      );
+}
 
-export default Slides;
+export default Slides

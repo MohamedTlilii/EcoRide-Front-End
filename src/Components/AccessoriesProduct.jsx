@@ -1,19 +1,18 @@
-
-
+import React from 'react'
 import { Link } from "react-router-dom";
-function ElectricScootersProducts({ image, content, price, rating, id}) {
+function AccessoriesProduct({ image, content, price, rating, id}) {
   return (
     <div >
       
 
       <div>
-        <Link to={`/productscooter/${id}`}>
+        <Link to={`/accessories/${id}`}>
           <img className="electric-scooter-products" src={image} alt="" />
         </Link>
       </div>
       <span>{"✰".repeat(rating)}</span>
       <div>
-        <Link to={`/productscooter/${id}`}>
+        <Link to={`/aaccessories/${id}`}>
           <h2 style={{ color: "black" }} className="electric-scooter-products-title">
             {" "}
             {content}
@@ -28,4 +27,4 @@ function ElectricScootersProducts({ image, content, price, rating, id}) {
   )
 }
 
-export default ElectricScootersProducts
+export default AccessoriesProduct

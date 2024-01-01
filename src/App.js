@@ -14,17 +14,33 @@ import LandingPage from "./Pgaes/LandingPage";
 import ProductsSolo from "./Pgaes/ProductsSolo";
 import Data from "./Data";
 import DataScoooters from "./DataScoooters";
-
+import ElectricScootersSoloProduct from "./Pgaes/ElectricScootersSoloProduct";
+import DataAccessories from "./DataAccessories";
+import AccessoriesSoloProduct from "./Pgaes/AccessoriesSoloProduct";
 
 function App() {
   return (
-    <Routes >
+    <Routes>
       <Route path="/" element={<PublicLayout />}>
         <Route index element={<LandingPage products={Data} />} />
         <Route path="/product/:id" element={<ProductsSolo products={Data} />} />
 
-        <Route path="electricscooters" element={<ElectricScooters products={DataScoooters} />} />
-        <Route path="accessories" element={<Accessories />} />
+        <Route
+          path="electricscooters"
+          element={<ElectricScooters products={DataScoooters} />}
+        />
+        <Route
+          path="productscooter/:id"
+          element={<ElectricScootersSoloProduct products={DataScoooters} />}
+        />
+        <Route
+          path="accessories"
+          element={<Accessories products={DataAccessories} />}
+        />
+        <Route
+          path="accessories/:id"
+          element={<AccessoriesSoloProduct products={DataAccessories} />}
+        />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
       </Route>

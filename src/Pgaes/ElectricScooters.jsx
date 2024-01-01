@@ -2,8 +2,10 @@ import React from "react";
 import { IoListOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { FaTableCellsLarge, FaTableList } from "react-icons/fa6";
-import ElectricScootersProducts from "../Components/ElectricScootersProducts";
+
 import LandingPageFooter from "../Components/LandingPageFooter";
+// import ElectricScootersSoloProduct from "./ElectricScootersSoloProduct";
+import ElectricScootersProducts from "../Components/ElectricScootersProducts";
 function ElectricScooters({ products }) {
   return (
     <div className="electric-section">
@@ -32,7 +34,9 @@ function ElectricScooters({ products }) {
           <ElectricScootersProducts key={product.id} {...product} />
         ))}
 
-        <div className="footer">
+
+      </div>
+      <div className="footer">
         <LandingPageFooter />
         <div className="last-footer">
           <p>Copyright © 2023 Electric Scooter | Powered by Electric Scooter</p>
@@ -42,7 +46,6 @@ function ElectricScooters({ products }) {
             alt=""
           />
         </div>
-      </div>
       </div>
     </div>
   );

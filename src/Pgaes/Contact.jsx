@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Slides from "../Slides/Slides"
 function Contact() {
   return (
-    <div>Contact</div>
+    <div> <Slides/>  </div>
   )
 }
 

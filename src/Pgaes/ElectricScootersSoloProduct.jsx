@@ -1,24 +1,12 @@
-import React from "react";
-// import SaleBtn from "../Components/SaleBtn";
-import ButtonCard from "../Components/ButtonCard";
+import React from 'react'
+import ButtonCard from '../Components/ButtonCard'
+import LandingPageFooter from '../Components/LandingPageFooter'
 import { useParams } from "react-router-dom";
-import LandingPageFooter from "../Components/LandingPageFooter";
-// import { CiSearch } from "react-icons/ci";
-// import { Link } from "react-router-dom";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-import Slides from "../Slides/Slides"
 
-
-function ProductsSolo({ products }) {
-  let { id } = useParams();
+function ElectricScootersSoloProduct({ products }) {
+    let { id } = useParams();
   let product = products.find((product) => product.id === id);
-  
-  
-
-
-
-
-
   return (
     <div className="solo-product-parent-div">
     <div className="solo-product">
@@ -30,11 +18,10 @@ function ProductsSolo({ products }) {
           </div> */}
           {/* <img className="product-main" src={product.image} alt="" /> */}
           <div className="products-mains">
-            <img src={product.img1} alt="" />
+          <img src={product.img1} alt="" />
             <img src={product.img2} alt="" />
             <img src={product.img3} alt="" />
             <img src={product.img4} alt="" />
-          {/* <Slides  /> */}
           </div>
         </div>
 
@@ -43,12 +30,13 @@ function ProductsSolo({ products }) {
         <IoIosArrowDropleft />
         <IoIosArrowDropright />
         </div>
+          
             <span className="electric-scooters">Electric Scooters</span>
           
           <h2 className="product-content"> {product.content}</h2>
 
           <div className="box-prices">
-            <span className="cut-price">{product.span}EGP</span>
+            
             <span className="price6without-cut">{product.price}EGP</span>
             <span>& Free Shipping</span>
           </div>
@@ -107,7 +95,7 @@ function ProductsSolo({ products }) {
       </div>
     </div>
     </div>
-  );
+  )
 }
 
-export default ProductsSolo;
+export default ElectricScootersSoloProduct

@@ -1,11 +1,11 @@
 const DataScoooters = [
   {
-    id: "",
+    id: "de31381c-dfd6-53e2-a383-423e19378bb5",
     image:
       "https://scooteregypt.com/wp-content/uploads/2022/07/product-12-a.jpg",
     content: "Booster Brave F1",
     price: "490.00",
-    // span: " ",
+    span: " ",
     rating: 5,
     img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-12-a-100x100.jpg",
     img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-12-b-100x100.jpg",
@@ -13,19 +13,19 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-12-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "f36ead79-cd85-5133-a8ec-819a7c60c82f",
     image: "/assets/electric scooters/product-01-a-400x525.jpg",
     content: "Libero X150",
     price: "750.00",
     span: " ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-d-100x100.jpg",
-    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-b.jpg",
-    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-c.jpg",
-    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-c.jpg",
+    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-a-100x100.jpg",
+    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-b-100x100.jpg",
+    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-c-100x100.jpg",
+    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-01-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "df62dbed-aed8-5ddd-8dc2-3cd773c14ae7",
     image: "/assets/electric scooters/product-02-a-400x525.jpg",
     content: "Libero X250",
     price: "750.00",
@@ -37,7 +37,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-02-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "a420db41-c12b-524d-af13-1bc4e6a3d986",
     image: "/assets/electric scooters/product-03-a-400x525.jpg",
     content: "Libero X350",
     price: "799.00",
@@ -50,7 +50,7 @@ const DataScoooters = [
     tel: "123",
   },
   {
-    id: "",
+    id: "ab61fcd3-be43-5fa8-b94f-add29ab8c385",
     image: "/assets/electric scooters/product-11-a-400x525.jpg",
     content: "North Booster 1",
     price: "725.00",
@@ -62,7 +62,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-11-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "d465702e-5cbc-5dd2-bd84-ab0acabda5f7",
     image: "/assets/electric scooters/product-10-a-400x525.jpg",
     content: "North D Booster 2000",
     price: "870.00",
@@ -74,7 +74,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-10-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "8cffae40-cf0c-5a5a-86a7-d458d720af54",
     image: "/assets/electric scooters/product-06-a-400x525.jpg",
     content: "Practico PRO 500",
     price: "699.00",
@@ -86,7 +86,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-06-c-100x100.jpg",
   },
   {
-    id: "",
+    id: "3a4867af-b805-54bc-a5f5-148b9ae17233",
     image: "/assets/electric scooters/product-04-a-400x525.jpg",
     content: "Practico S2 Exclusive",
     price: "600.00",
@@ -99,7 +99,7 @@ const DataScoooters = [
   },
 
   {
-    id: "",
+    id: "b17faa24-d397-5854-9a9e-4d9c3274cabe",
     image: "/assets/electric scooters/product-05-a-400x525.jpg",
     content: "Practico Z50 Exclusive",
     price: "750.00",
@@ -111,7 +111,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-05-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "1351a019-fc84-5808-bb4b-5a1f340895cb",
     image: "/assets/electric scooters/product-09-a-400x525.jpg",
     content: "SilverPath C1",
     price: "725.00",
@@ -123,7 +123,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-09-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "b81268b2-11e5-5724-a1d8-c53aa91232b2",
     image: "/assets/electric scooters/product-07-a-400x525.jpg",
     content: "SilverPath MAX1",
     price: "699.00",
@@ -135,7 +135,7 @@ const DataScoooters = [
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-07-d-100x100.jpg",
   },
   {
-    id: "",
+    id: "35492f69-68e5-5146-a069-99a2a260ee33",
     image: "/assets/electric scooters/product-08-a-400x525.jpg",
     content: "SilverPath MAX2",
     price: "575.00",

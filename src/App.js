@@ -13,6 +13,7 @@ import Register from "./Pgaes/Register";
 import LandingPage from "./Pgaes/LandingPage";
 import ProductsSolo from "./Pgaes/ProductsSolo";
 import Data from "./Data";
+import DataScoooters from "./DataScoooters";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route index element={<LandingPage products={Data} />} />
         <Route path="/product/:id" element={<ProductsSolo products={Data} />} />
 
-        <Route path="electricscooters" element={<ElectricScooters />} />
+        <Route path="electricscooters" element={<ElectricScooters products={DataScoooters} />} />
         <Route path="accessories" element={<Accessories />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />

@@ -10,6 +10,7 @@ const Data = [
     img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-b-100x100.jpg",
     img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-c-100x100.jpg",
     img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-d-100x100.jpg",
+    tel:"123",
   },
   {
     id: "73b05d48-703c-565b-815d-7b2331c69bb6",

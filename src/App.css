@@ -927,18 +927,22 @@ legend {
 }
 /* ElectricScooters section */
 .electric-section {
-  border: 2px solid rgb(11, 209, 14);
+  /* border: 2px solid rgb(11, 209, 14); */
+ height: 400vh;
   width: 1900px;
   margin: auto;
-  width: 300vh;
+  /* height: 400px; */
 }
 .electric-section-one {
-  border: 2px solid rgb(206, 30, 30);
-height: 6vh;
-padding: 10px;
-margin: 149px;
-width: 1500px;
+  /* border: 2px solid rgb(206, 30, 30); */
+/* height: 16vh; */
+padding: 50px;
+/* margin-left: 149px; */
+width: 1400px;
 height: 130px;
+margin: auto;
+/* margin: auto; */
+
 
 }
 .elictric-to-home {
@@ -946,37 +950,72 @@ height: 130px;
   font-size: 13,8px
 }
 .electric-section-two {
-  border: 2px solid rgb(234, 24, 220);
+  /* border: 2px solid rgb(234, 24, 220); */
   display: flex;
-  /* justify-content: flex-start; */
   /* gap: 568px; */
   align-items: center;
   gap: 7px;
   display: flex;
+  /* justify-content: center; */
+  
   
 }
 .electric-section-two p  {
-  border: 2px solid rgb(24, 234, 178);
+  /* border: 2px solid rgb(24, 234, 178); */
   color: #777;
   font-size: 15px;
   margin: 4px;
   
 }
 .slection-icons {
-  border: 2px solid rgb(24, 234, 178);
+  /* border: 2px solid rgb(24, 234, 178); */
+  position: relative;
+  left: 12px;
   
 }
 .electric-section-third {
-  border: 2px solid rgb(234, 210, 24);
+  /* border: 2px solid rgb(234, 210, 24); */
+  /* display: flex; */
+  position: relative;
+  left: 1000px;
   display: flex;
+  gap: 10px;
   
 }
 .electric-section-four {
-  border: 2px solid rgb(15, 32, 160);
+  border: 2px solid rgb(92, 160, 15);
   /* height: 6vh; */
-padding: 10px;
-margin-left: 149px;
-position: relative;
-bottom: 140px;
-width: 1400px;
+  width: 1500px;
+height: 2730px;
+margin: auto;
+display:flex ;
+justify-content: space-around;
+flex-wrap: wrap;
+
+
+
+
+
+}
+
+.electric-scooter-products {
+  /* border: 2px solid rgb(214, 208, 38); */
+  /* width: 300px;
+  height: 470px; */
+  text-align: center;
+  width: 309px;
+  height: 400px;
+}
+
+.electric-scooter-products-title {
+  /* border: 2px solid rgb(214, 208, 38); */
+  font-size: 15px;
+  font-size: larger;
+ 
+}
+.electric-scooter-products-price {
+  /* border: 2px solid rgb(214, 208, 38); */
+  /* display: flex; */
+  
+ 
 }

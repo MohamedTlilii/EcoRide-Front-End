@@ -12,7 +12,7 @@ function AccessoriesProduct({ image, content, price, rating, id}) {
       </div>
       <span>{"✰".repeat(rating)}</span>
       <div>
-        <Link to={`/aaccessories/${id}`}>
+        <Link to={`/accessories/${id}`}>
           <h2 style={{ color: "black" }} className="electric-scooter-products-title">
             {" "}
             {content}

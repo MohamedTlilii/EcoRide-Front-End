@@ -6,10 +6,20 @@ const DataAccessories = [
     price: "95,00 ",
     span: " ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-a-100x100.jpg",
-    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-b-100x100.jpg",
-    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-c-100x100.jpg",
-    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-d-100x100.jpg",
+    images: [
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-d.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-b-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-c-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-13-d.jpg",
+      },
+    ],
   },
   {
     id: "dd6537f5-d698-5e05-9146-f64d50333670",
@@ -18,10 +28,20 @@ const DataAccessories = [
     price: "75,00",
     span: " ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-a-100x100.jpg",
-    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-b-100x100.jpg",
-    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-c-100x100.jpg",
-    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-d-100x100.jpg",
+    images: [
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-a.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-b-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-c-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-17-d-600x788.jpg",
+      },
+    ],
   },
   {
     id: "a8ab3897-aa36-5e6c-bca4-5435e728e145",
@@ -30,10 +50,12 @@ const DataAccessories = [
     price: "90,00",
     span: " ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-18-a-100x100.jpg",
-    img2: "",
-    img3: "",
-    img4: "",
+    images: [
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-18-a.jpg",
+      },
+   
+    ],
   },
   {
     id: "d10c09f9-7e2f-56ec-bd53-fcaed6109b19",
@@ -42,10 +64,20 @@ const DataAccessories = [
     price: "99,00",
     span: " ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-a-100x100.jpg",
-    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-b-100x100.jpg",
-    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-c-100x100.jpg",
-    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-d-100x100.jpg",
+    images: [
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-a.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-b-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-c-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-14-d-600x788.jpg",
+      },
+    ],
   },
   {
     id: "94432217-1ac2-5aa6-a47d-c73d5ca0d3c6",
@@ -54,10 +86,20 @@ const DataAccessories = [
     price: "75.00",
     span: "90.00 ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-a-100x100.jpg",
-    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-b-100x100.jpg",
-    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-c-100x100.jpg",
-    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-d-100x100.jpg",
+    images: [
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-a.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-b-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-c-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-15-d-600x788.jpg",
+      },
+    ],
   },
   {
     id: "8096f4c7-2659-56ef-9e4a-88f7af8d03dd",
@@ -66,10 +108,20 @@ const DataAccessories = [
     price: "69.00",
     span: "80.00 ",
     rating: 5,
-    img1: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-a-100x100.jpg",
-    img2: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-b-100x100.jpg",
-    img3: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-c-100x100.jpg",
-    img4: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-d-100x100.jpg",
+    images: [
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-a.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-b-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-c-600x788.jpg",
+      },
+      {
+        src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-16-d-600x788.jpg",
+      },
+    ],
   },
 ];
 

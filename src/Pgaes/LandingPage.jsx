@@ -10,6 +10,7 @@ import LandingPageAbout from "../Components/LandingPageAbout";
 import LandingPageFour from "../Components/LandingPageFour";
 import LandingPageWhy from "../Components/LandingPageWhy";
 import LandingPageFooter from "../Components/LandingPageFooter";
+import { Link } from "react-router-dom";
 // import ShoppingCart from "../Components/ShoppingCart";
 
 function LandingPage({ products }) {
@@ -65,11 +66,13 @@ function LandingPage({ products }) {
       <LandingPageAbout />
       <div className="third-section">
         <div className="card-third-section">
-          <img
-            className="img-third-section"
-            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png"
-            alt=""
-          />
+          <Link to="/electricscooters">
+            <img
+              className="img-third-section"
+              src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png"
+              alt=""
+            />
+          </Link>
           <figcaption>CITY</figcaption>
           <h1 className="titlle-third-section">Electric Scooter Z400</h1>
           <p className="price-third-section">$650 </p>
@@ -85,7 +88,9 @@ function LandingPage({ products }) {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </p>
-            <ButtonCard text={"SHOP ACCESSORIES"} />
+            <Link to={"accessories"}>
+              <ButtonCard text={"SHOP ACCESSORIES"} />
+            </Link>
           </div>
 
           <img

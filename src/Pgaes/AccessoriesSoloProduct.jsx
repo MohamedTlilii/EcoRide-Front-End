@@ -2,6 +2,7 @@ import React from 'react'
 import ButtonCard from '../Components/ButtonCard'
 import LandingPageFooter from '../Components/LandingPageFooter'
 import { useParams } from "react-router-dom";
+import { Thumbnails } from '../Components/Thumbanails/Thumbnails';
 // import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 function AccessoriesSoloProduct({ products }) {
@@ -18,10 +19,10 @@ function AccessoriesSoloProduct({ products }) {
           </div> */}
           {/* <img className="product-main" src={product.image} alt="" /> */}
           <div className="products-mains">
-          <img src={product.img1} alt="" />
-            <img src={product.img2} alt="" />
-            <img src={product.img3} alt="" />
-            <img src={product.img4} alt="" />
+          
+            
+              <Thumbnails images={product.images} />
+            
           </div>
         </div>
 

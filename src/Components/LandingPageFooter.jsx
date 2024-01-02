@@ -41,8 +41,7 @@ function LandingPageFooter() {
         </div>
 
         <div className="all-shops">
-        <span>Shop All</span>
-        <br />
+       
         <span>Electric Scooters</span>
         <br />
         <span>Accessories</span>

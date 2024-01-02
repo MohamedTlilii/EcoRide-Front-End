@@ -858,8 +858,8 @@ scale:1.2
   display: flex;
   gap: 34px;
   position: relative;
-  right: 100px;
-  bottom: 100px;
+  right: 10px;
+  bottom: 60px;
   width: fit-content;
 }
 

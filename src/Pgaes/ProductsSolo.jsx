@@ -17,11 +17,11 @@ function ProductsSolo({ products }) {
     <div className="solo-product-parent-div">
       <div className="solo-product">
         <div className="products-cont">
-          <div className="product-img">
-            <div></div>
-            <div className="products-mains">
+          <div className="products-mains">
+          
+            
               <Thumbnails images={product.images} />
-            </div>
+            
           </div>
 
           <div className="content-card-boxx">

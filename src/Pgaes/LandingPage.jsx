@@ -10,17 +10,16 @@ import LandingPageAbout from "../Components/LandingPageAbout";
 import LandingPageFour from "../Components/LandingPageFour";
 import LandingPageWhy from "../Components/LandingPageWhy";
 import LandingPageFooter from "../Components/LandingPageFooter";
+// import ShoppingCart from "../Components/ShoppingCart";
 
-
-function LandingPage({products}) {
-
-
+function LandingPage({ products }) {
   return (
     <div className="parent-div">
+      {/* <ShoppingCart/>   */}
       <div className="hero-section">
         <div className="hero-section-content">
           <h1>Libero X250</h1>
-          <h4  className="hero-titlle">250 Watt Electric Scooter</h4>
+          <h4 className="hero-titlle">250 Watt Electric Scooter</h4>
           <h5 className="hero-second-title">Informations:</h5>
           <div className="card-km-info">
             <CardKm text={30} km={"km"} content={"BATTERY"} />
@@ -76,7 +75,7 @@ function LandingPage({products}) {
           <p className="price-third-section">$650 </p>
         </div>
       </div>
-      <LandingPageFour  />
+      <LandingPageFour />
       <div className="section-five">
         <div className="content-five">
           <div className="section-five-content">
@@ -86,10 +85,7 @@ function LandingPage({products}) {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </p>
-            <ButtonCard 
-              
-              text={"SHOP ACCESSORIES"} 
-            />
+            <ButtonCard text={"SHOP ACCESSORIES"} />
           </div>
 
           <img
@@ -103,10 +99,14 @@ function LandingPage({products}) {
         <Box />
       </div>
       <div className="footer">
-        <LandingPageFooter/>
+        <LandingPageFooter />
         <div className="last-footer">
-        <p >Copyright © 2023 Electric Scooter | Powered by Electric Scooter</p>
-        <img src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png" style={{width:"246px", height:"20px"}} alt="" />
+          <p>Copyright © 2023 Electric Scooter | Powered by Electric Scooter</p>
+          <img
+            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
+            style={{ width: "246px", height: "20px" }}
+            alt=""
+          />
         </div>
       </div>
     </div>

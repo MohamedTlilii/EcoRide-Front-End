@@ -2,7 +2,7 @@ import React from 'react'
 import ButtonCard from '../Components/ButtonCard'
 import LandingPageFooter from '../Components/LandingPageFooter'
 import { useParams } from "react-router-dom";
-import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+// import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 
 function AccessoriesSoloProduct({ products }) {
     let { id } = useParams();
@@ -26,10 +26,10 @@ function AccessoriesSoloProduct({ products }) {
         </div>
 
         <div className="content-card-boxx">
-        <div className="content-card-box-icons">
+        {/* <div className="content-card-box-icons">
         <IoIosArrowDropleft />
         <IoIosArrowDropright />
-        </div>
+        </div> */}
           
             <span className="electric-scooters">Electric Scooters</span>
           

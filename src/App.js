@@ -17,12 +17,14 @@ import DataScoooters from "./DataScoooters";
 import ElectricScootersSoloProduct from "./Pgaes/ElectricScootersSoloProduct";
 import DataAccessories from "./DataAccessories";
 import AccessoriesSoloProduct from "./Pgaes/AccessoriesSoloProduct";
+import '@splidejs/react-splide/css';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<PublicLayout />}>
         <Route index element={<LandingPage products={Data} />} />
+        
         <Route path="/product/:id" element={<ProductsSolo products={Data} />} />
 
         <Route

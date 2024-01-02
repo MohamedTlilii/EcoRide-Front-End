@@ -6,7 +6,7 @@ import LandingPageFooter from "../Components/LandingPageFooter";
 // import { CiSearch } from "react-icons/ci";
 // import { Link } from "react-router-dom";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-import Slides from "../Slides/Slides"
+// import Slides from "../Slides/Slides"
 
 
 function ProductsSolo({ products }) {
@@ -24,17 +24,17 @@ function ProductsSolo({ products }) {
     <div className="solo-product">
       <div className="products-cont">
         <div className="product-img">
-          {/* <div className="icons-product">
-            <SaleBtn />
-            <CiSearch />
-          </div> */}
-          {/* <img className="product-main" src={product.image} alt="" /> */}
+         <div>
+          
+         </div>
           <div className="products-mains">
-            <img src={product.img1} alt="" />
+            <img  src={product.img1} alt="" onClick={()=>{
+              console.log('ok')
+            }}  />
             <img src={product.img2} alt="" />
             <img src={product.img3} alt="" />
             <img src={product.img4} alt="" />
-          {/* <Slides  /> */}
+          
           </div>
         </div>
 

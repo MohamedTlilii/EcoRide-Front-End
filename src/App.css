@@ -266,7 +266,7 @@ ul {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 2px;
-  width: 190px;
+  width: fit-content;
 }
 .btn-cart:hover {
   background-color: black;
@@ -424,6 +424,16 @@ a {
   /* font-size: 13,5px; */
   font-weight: 700;
 }
+/* product zoomed  */
+.my-product-card{
+  overflow: hidden;
+}
+.my-product-card img{
+  transition: all 0.5s ease;
+}
+.my-product-card:hover img{
+scale:1.2
+}
 
 /* about section */
 .about-section {
@@ -445,7 +455,7 @@ a {
   justify-content: space-around;
   text-align: center;
   /* align-items: center; */
-  margin-left: 340px;
+  margin-left: 360px;
   gap: 10px;
 }
 .about-section-content h6 {
@@ -602,9 +612,7 @@ a {
   width: 400px;
 }
 
-.content-five-btn {
-  border: 7px solid black !important;
-}
+
 /* Why choose us section */
 .why-us-section {
   /* border: 2px solid rgb(46, 210, 35);  */
@@ -667,6 +675,7 @@ a {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
+
 /* six section */
 .silver-path-section {
   /* border: 2px solid rgb(205, 28, 163); */
@@ -1212,7 +1221,7 @@ legend {
 }
 /* contact section */
 .contact-parent {
-  border: 2px solid rgb(63, 30, 211);
+  /* border: 2px solid rgb(63, 30, 211); */
   width: 1900px;
   margin: auto;
   height: 150vh;
@@ -1324,6 +1333,11 @@ height: 200px;
 /* line-height: 20px; */
 
 }
+
+.partnership-logo :hover {
+  background-color: rgb(201, 53, 53);
+  cursor: pointer;
+}
 .useful-link-one h4 {
   /* border: 2px solid rgb(13, 233, 90); */
 /* width: fit-content; */
@@ -1337,3 +1351,4 @@ font-size: 1.5333333333333rem;
 font-size: 15px;
 line-height: 50px;
 }
+

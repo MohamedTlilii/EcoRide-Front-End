@@ -20,7 +20,7 @@ function CardProduct({ span, image, content, price, rating, id }) {
         />
       </div>
 
-      <div>
+      <div  className="my-product-card">
         <Link to={`/product/${id}`}>
           <img className="img-product-cart" src={image} alt="" />
         </Link>

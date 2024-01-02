@@ -5,7 +5,7 @@ function AccessoriesProduct({ image, content, price, rating, id}) {
     <div >
       
 
-      <div>
+      <div  className="my-product-card">
         <Link to={`/accessories/${id}`}>
           <img className="electric-scooter-products" src={image} alt="" />
         </Link>

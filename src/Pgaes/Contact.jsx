@@ -47,22 +47,22 @@ function Contact() {
         <h2>Useful Links</h2>
         <div className="useful-links">
           <div className="useful-link-one">
-            <FaHandshake style={{fontSize:"32px"}} />
+            <FaHandshake className="partnership-logo" style={{fontSize:"32px"}} />
             <h4>Partnerships</h4>
             <p>Interested in a partnership with us?</p>
             <ButtonCard   text={"APPLY HERE"}/>
           </div>
 
           <div className="useful-link-one">
-            <FaQuestionCircle  style={{fontSize:"32px"}} />
+            <FaQuestionCircle className="partnership-logo"  style={{fontSize:"32px"}} />
             <h4>FAQ</h4>
             <p>Most questions can be answered here.</p>
-            <ButtonCard   text={"GO TO FAQ"}/>
+            <ButtonCard    text={"GO TO FAQ"}/>
           </div>
 
           
           <div className="useful-link-one">
-            <FaLocationDot  style={{fontSize:"32px"}} />
+            <FaLocationDot  className="partnership-logo" style={{fontSize:"32px"}} />
             <h4>Store Locations</h4>
             <p>Find your nearest Electric Scooter store.</p>
             <ButtonCard   text={"FIND STORE"}/>

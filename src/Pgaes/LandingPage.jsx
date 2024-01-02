@@ -87,8 +87,8 @@ function LandingPage({products}) {
               enim ad minim veniam.
             </p>
             <ButtonCard 
-              className="content-five-btn"
-              text={"SHOP ACCESSORIES"}
+              
+              text={"SHOP ACCESSORIES"} 
             />
           </div>
 

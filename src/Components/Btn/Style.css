@@ -1,0 +1,33 @@
+.sale-btn {
+    border: 1px solid rgba(0, 0, 0, 0.018);
+    /* all: unset; */
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
+    position: relative;
+    top: 45px;
+    left: 35px;
+    color: hsl(0, 2%, 70%);
+  }
+
+  .btn-cart {
+    all: unset;
+    background-color: rgb(201, 53, 53);
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    /* align-items: center; */
+    color: white;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 2px;
+    width: fit-content;
+  }
+  .btn-cart:hover {
+    background-color: black;
+  }
+  
+  .add-cart-span {
+    margin-left: 25px;
+  }

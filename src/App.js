@@ -1,30 +1,30 @@
-import "./App.css";
-
+// import "./App.css";
+// import  "../src/Pgaes/Home/"
 import { Routes, Route } from "react-router-dom";
 import PublicLayout from "./Layouts/PublicLayout";
-// import Home from "./Pgaes/Home";
-import ElectricScooters from "./Pgaes/ElectricScooters";
-import Accessories from "./Pgaes/Accessories";
-import About from "./Pgaes/About";
-import Contact from "./Pgaes/Contact";
+import LandingPage from "./Pgaes/Home/LandingPage";
+import ProductsSolo from "./Pgaes/Home/ProductsSolo";
+// import "./Pgaes/Home/Home.css"
+import ElectricScooters from "./Pgaes/ElectricScooters/ElectricScooters";
+import Accessories from "./Pgaes/Accessories/Accessories";
+import About from "./Pgaes/About/About";
+import Contact from "./Pgaes/Contact/Contact";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
-import Login from "./Pgaes/Login";
-import Register from "./Pgaes/Register";
-import LandingPage from "./Pgaes/LandingPage";
-import ProductsSolo from "./Pgaes/ProductsSolo";
+import Login from "./Pgaes/LoginRegister/Login";
 import Data from "./Data";
 import DataScoooters from "./DataScoooters";
-import ElectricScootersSoloProduct from "./Pgaes/ElectricScootersSoloProduct";
+import ElectricScootersSoloProduct from "./Pgaes/ElectricScooters/ElectricScootersSoloProduct";
 import DataAccessories from "./DataAccessories";
-import AccessoriesSoloProduct from "./Pgaes/AccessoriesSoloProduct";
-import '@splidejs/react-splide/css';
+import AccessoriesSoloProduct from "./Pgaes/Accessories/AccessoriesSoloProduct";
+import "@splidejs/react-splide/css";
+import Register from "./Pgaes/LoginRegister/Register";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<PublicLayout />}>
         <Route index element={<LandingPage products={Data} />} />
-        
+
         <Route path="/product/:id" element={<ProductsSolo products={Data} />} />
 
         <Route

@@ -1,0 +1,13 @@
+/* LOGIN */
+.page {
+    display: flex;
+    gap: 20px;
+    padding: 300px;
+  }
+  .login-form {
+    border: 2px rgba(0, 0, 0, 0.202) solid;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-left: 450px;
+  }

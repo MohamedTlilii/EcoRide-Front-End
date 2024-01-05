@@ -139,7 +139,7 @@ ul {
   color: white;
   cursor: pointer;
 }
-
+/*home  */
 /* LANDING PAGE */
 .parent-div {
   /* border: 6px rgb(1, 1, 0) solid; */
@@ -349,7 +349,7 @@ ul {
   background-color: rgb(201, 53, 53);
   cursor: pointer;
 }
-
+/* home */
 /* second section */
 .product-section {
   /* border: 2px solid red; */
@@ -434,6 +434,7 @@ a {
 .my-product-card:hover img{
 scale:1.2
 }
+/* second seciton */
 
 /* about section */
 .about-section {
@@ -843,7 +844,7 @@ scale:1.2
 }
 
 .product-img {
-  /* border: 2px solid rgb(203, 27, 27); */
+  border: 2px solid rgb(203, 27, 27);
   width: 510px;
   display: flex;
   flex-direction: column;
@@ -903,7 +904,7 @@ scale:1.2
   font-size: 1.5rem;
   text-decoration: line-through;
 }
-.price6without-cut {
+.price-without-cut {
   color: #000000;
   font-size: 1.5rem;
   font-weight: 600;
@@ -943,23 +944,7 @@ legend {
   flex-direction: column;
 }
 
-/* slides section */
-.each-slide-effect > div {
-  border: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 450px;
-  width: 450px;
-}
 
-.each-slide-effect span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
-}
 /* ElectricScooters section */
 .electric-section {
   /* border: 2px solid rgb(47, 11, 209); */
@@ -1025,6 +1010,10 @@ legend {
   gap: 55px;
   padding: 0px 0px 55px;
 }
+
+
+
+
 
 .electric-scooter-products {
   /* border: 2px solid rgb(214, 208, 38); */

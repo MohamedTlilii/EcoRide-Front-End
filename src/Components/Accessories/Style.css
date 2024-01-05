@@ -1,0 +1,35 @@
+/* product zoomed  */
+.my-product-card{
+    overflow: hidden;
+  }
+  .my-product-card img{
+    transition: all 0.5s ease;
+  }
+  .my-product-card:hover img{
+  scale:1.2
+  }
+
+
+  .electric-scooter-products {
+    /* border: 2px solid rgb(214, 208, 38); */
+    /* width: 300px;
+    height: 470px; */
+    text-align: center;
+    width: 309px;
+    height: 400px;
+  }
+  
+  .electric-scooter-products-title {
+    /* border: 2px solid rgb(214, 208, 38); */
+    font-size: 15px;
+    font-size: larger;
+  }
+  .electric-scooter-products-price {
+    /* border: 2px solid rgb(214, 208, 38); */
+    /* display: flex; */
+  }
+
+
+
+
+  

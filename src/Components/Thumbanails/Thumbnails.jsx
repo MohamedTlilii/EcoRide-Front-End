@@ -37,7 +37,7 @@ Render the component.*
       gap: "1rem",
       pagination: false,
       height: "40rem",
-    //   width: "520px",
+      //   width: "520px",
     };
 
     const thumbsOptions = {
@@ -54,8 +54,6 @@ Render the component.*
 
     return (
       <div className="wrapper">
-        
-
         <Splide
           options={mainOptions}
           ref={this.mainRef}

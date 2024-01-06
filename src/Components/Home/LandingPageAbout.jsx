@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import "./style.css";
 
 function LandingPageAbout() {
   return (
     <div>
-        <div className="about-section">
+      <div className="about-section">
         <div className="about-section-content">
-          <h6 >ABOUT US</h6>
+          <h6>ABOUT US</h6>
           <h2>
             If you’re looking for a brand new electric scooter, you’re in the
             right place
@@ -20,7 +20,7 @@ function LandingPageAbout() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default LandingPageAbout
+export default LandingPageAbout;

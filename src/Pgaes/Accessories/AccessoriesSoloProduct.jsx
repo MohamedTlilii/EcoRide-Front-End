@@ -3,8 +3,7 @@ import ButtonCard from "../../Components/Btn/ButtonCard";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import { useParams } from "react-router-dom";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
-// import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-
+import "./Style.css";
 function AccessoriesSoloProduct({ products }) {
   let { id } = useParams();
   let product = products.find((product) => product.id === id);
@@ -13,28 +12,20 @@ function AccessoriesSoloProduct({ products }) {
       <div className="solo-product-accessoiers">
         <div className="products-cont-accessoiers">
           <div className="product-img-accessoiers">
-            {/* <div className="icons-product">
-            <SaleBtn />
-            <CiSearch />
-          </div> */}
-            {/* <img className="product-main" src={product.image} alt="" /> */}
             <div className="products-mains-accessoiers">
               <Thumbnails images={product.images} />
             </div>
           </div>
 
           <div className="content-card-boxx-accessoiers">
-            {/* <div className="content-card-box-icons">
-        <IoIosArrowDropleft />
-        <IoIosArrowDropright />
-        </div> */}
-
             <span className="accessoiers">Accessories</span>
 
             <h2 className="accessoiers-content"> {product.content}</h2>
 
             <div className="box-prices-accessoiers">
-              <span className="price-without-cut-accessoiers">{product.price}EGP</span>
+              <span className="price-without-cut-accessoiers">
+                {product.price}EGP
+              </span>
               <span>& Free Shipping</span>
             </div>
             <p>

@@ -22,11 +22,6 @@ const Data = [
     ],
   },
 
-
- 
-
-
-
   {
     id: "73b05d48-703c-565b-815d-7b2331c69bb6",
     image: "/assets/home/product-04-a-400x525.jpg",
@@ -48,7 +43,6 @@ const Data = [
         src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-04-d-600x788.jpg",
       },
     ],
-  
   },
   {
     id: "b35c5417-4595-54d6-9b47-9ca355155045",

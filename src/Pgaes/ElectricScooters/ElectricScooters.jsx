@@ -5,7 +5,6 @@ import { FaTableCellsLarge, FaTableList } from "react-icons/fa6";
 import "./Style.css";
 
 import LandingPageFooter from "../../Components/Footer/Footer";
-// import ElectricScootersSoloProduct from "./ElectricScootersSoloProduct";
 import ElectricScootersProducts from "../../Components/ElectricScooters/ElectricScootersProducts";
 function ElectricScooters({ products }) {
   return (

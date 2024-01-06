@@ -1,10 +1,7 @@
-// import "./App.css";
-// import  "../src/Pgaes/Home/"
 import { Routes, Route } from "react-router-dom";
 import PublicLayout from "./Layouts/PublicLayout";
 import LandingPage from "./Pgaes/Home/LandingPage";
 import ProductsSolo from "./Pgaes/Home/ProductsSolo";
-// import "./Pgaes/Home/Home.css"
 import ElectricScooters from "./Pgaes/ElectricScooters/ElectricScooters";
 import Accessories from "./Pgaes/Accessories/Accessories";
 import About from "./Pgaes/About/About";

@@ -3,7 +3,6 @@ import ButtonCard from "../../Components/Btn/ButtonCard";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import { useParams } from "react-router-dom";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
-// import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import "./Style.css";
 
 function ElectricScootersSoloProduct({ products }) {
@@ -14,28 +13,20 @@ function ElectricScootersSoloProduct({ products }) {
       <div className="solo-product-scooter">
         <div className="products-cont-scooter">
           <div className="product-img">
-            {/* <div className="icons-product">
-            <SaleBtn />
-            <CiSearch />
-          </div> */}
-            {/* <img className="product-main" src={product.image} alt="" /> */}
             <div className="products-mains-scooter">
               <Thumbnails images={product.images} />
             </div>
           </div>
 
           <div className="content-card-boxx-scooter">
-            {/* <div className="content-card-box-icons">
-        <IoIosArrowDropleft />
-        <IoIosArrowDropright />
-        </div> */}
-
             <span className="electric-scooters">Electric Scooters</span>
 
             <h2 className="product-content-scooters"> {product.content}</h2>
 
             <div className="box-prices-scooters">
-              <span className="price-without-cut-scooters">{product.price}EGP</span>
+              <span className="price-without-cut-scooters">
+                {product.price}EGP
+              </span>
               <span>& Free Shipping</span>
             </div>
             <p>

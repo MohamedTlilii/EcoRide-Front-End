@@ -1,51 +1,52 @@
 body {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  button, input {
-    font-family: inherit;
-  }
-  
-  label {
-    margin-right: 1rem;
-  }
-  
-  input {
-    font-family: inherit;
-    height: 1.5rem;
-    width: 4rem;
-    margin-right: 3px;
-  }
-  
-  label span {
-    margin-right: 4px;
-  }
-  
-  .examples {
-    padding: 2rem 0;
-  }
-  
-  .wrapper {
-    max-width: 600px;
-    margin: 4rem auto;
-  }
-  
-  .splideslide {
-    background: #eee;
-  }
-  
-  .splideslide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .splide--nav {
-    margin-top: 1rem;
-  }
-  .SLIDES{
-    /* border: 1px black solid;  */
-    display: flex;
-    /* justify-content: center; */
-    padding-left: 30px;
-  }
+  font-family: "Poppins", sans-serif;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+input {
+  font-family: inherit;
+  height: 1.5rem;
+  width: 4rem;
+  margin-right: 3px;
+}
+
+label span {
+  margin-right: 4px;
+}
+
+.examples {
+  padding: 2rem 0;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 4rem auto;
+}
+
+.splideslide {
+  background: #eee;
+}
+
+.splideslide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splide--nav {
+  margin-top: 1rem;
+}
+.SLIDES {
+  /* border: 1px black solid;  */
+  display: flex;
+  /* justify-content: center; */
+  padding-left: 30px;
+}

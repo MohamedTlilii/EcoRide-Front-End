@@ -1,123 +1,123 @@
 /* NAVBAR */
 .nav-container {
-    /* border: 2px solid black; */
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 300px;
-    min-height: 70px;
-    border-bottom: 1px rgb(244, 239, 239) solid;
-    /* position: fixed; */
-    background-color: #ffffff;
-    /* width: auto; */
-    /* width: 2000px; */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  
-    padding: 10px;
-    z-index: 1000;
-  }
-  .nav {
-    /* border: 2px solid red; */
-  
-    /* z-index: 999; */
-    margin-left: 40px;
-    padding: 0px 1em;
-    font-family: "Open Sans", sans-serif;
-    /* font-weight: 500; */
-    font-size: 0.93333333333333rem;
-    color: var(--ast-global-color-2);
-    line-height: 70px;
-  }
-  .nav a {
-    text-decoration: none;
-    color: black;
-  }
-  ul {
-    /* border: 2px solid black; */
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    cursor: pointer;
-  }
-  .nav a :hover {
-    color: rgb(201, 53, 53);
-  }
-  
-  .logo {
-    /* border: 2px solid black; */
-    position: relative;
-    right: 20px;
-    /* width: 148px;
+  /* border: 2px solid black; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 300px;
+  min-height: 70px;
+  border-bottom: 1px rgb(244, 239, 239) solid;
+  /* position: fixed; */
+  background-color: #ffffff;
+  /* width: auto; */
+  /* width: 2000px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 10px;
+  z-index: 1000;
+}
+.nav {
+  /* border: 2px solid red; */
+
+  /* z-index: 999; */
+  margin-left: 40px;
+  padding: 0px 1em;
+  font-family: "Open Sans", sans-serif;
+  /* font-weight: 500; */
+  font-size: 0.93333333333333rem;
+  color: var(--ast-global-color-2);
+  line-height: 70px;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  /* border: 2px solid black; */
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  cursor: pointer;
+}
+.nav a :hover {
+  color: rgb(201, 53, 53);
+}
+
+.logo {
+  /* border: 2px solid black; */
+  position: relative;
+  right: 20px;
+  /* width: 148px;
     height: 38px; */
-  }
-  
-  .search-form {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-form input {
-    all: unset;
-    border: 1px solid rgba(0, 0, 0, 0.171);
-    margin-right: 5px;
-    padding: 5px;
-    outline: none;
-  }
-  .search-button:hover {
-    background-color: black;
-  }
-  
-  .search-button {
-    background-color: rgb(201, 53, 53);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  /* .search-form  :hover {
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  all: unset;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  margin-right: 5px;
+  padding: 5px;
+  outline: none;
+}
+.search-button:hover {
+  background-color: black;
+}
+
+.search-button {
+  background-color: rgb(201, 53, 53);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* .search-form  :hover {
     background-color: black;
   } */
-  
-  .icons {
-    /* border: 2px solid black;  */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 40px;
-  }
-  
-  .shopping-basket-icon {
-    margin-left: 10px;
-    color: rgb(201, 53, 53);
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .user-icon {
-    margin-left: 10px;
-    /* color: rgb(201, 53, 53); */
-    font-size: 1.5rem;
-  }
-  .user-icon a {
-    color: black;
-    font-size: 20px;
-  }
-  
-  /* shopbasketicon */
-  .shoppingBasket {
-    border: 1px solid;
-    border-radius: 50%;
-    /* font-size: 5px; */
-    background-color: rgb(201, 53, 53);
-    font-size: 10px;
-    position: absolute;
-    width: 18px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-  }
+
+.icons {
+  /* border: 2px solid black;  */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+.shopping-basket-icon {
+  margin-left: 10px;
+  color: rgb(201, 53, 53);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.user-icon {
+  margin-left: 10px;
+  /* color: rgb(201, 53, 53); */
+  font-size: 1.5rem;
+}
+.user-icon a {
+  color: black;
+  font-size: 20px;
+}
+
+/* shopbasketicon */
+.shoppingBasket {
+  border: 1px solid;
+  border-radius: 50%;
+  /* font-size: 5px; */
+  background-color: rgb(201, 53, 53);
+  font-size: 10px;
+  position: absolute;
+  width: 18px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function ButtonCard({text}) {
+function ButtonCard({ text }) {
   return (
     <div>
-        <button className='btn-cart'>{text}</button>
+      <button className="btn-cart">{text}</button>
     </div>
-  )
+  );
 }
 
-export default ButtonCard
+export default ButtonCard;

@@ -1,6 +1,5 @@
 import React from "react";
 import LandingPageFooter from "../../Components/Footer/Footer";
-// import Slides from "../Slides/Slides";
 import "./Style.css";
 function About() {
   return (

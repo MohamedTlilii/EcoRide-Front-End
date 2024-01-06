@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import { Outlet } from "react-router-dom";
 
 function ConnexionLayout() {
   return (
     <div>
-         <Outlet/>
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default ConnexionLayout
+export default ConnexionLayout;

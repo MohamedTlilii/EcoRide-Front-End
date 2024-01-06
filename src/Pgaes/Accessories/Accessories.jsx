@@ -2,9 +2,8 @@ import React from "react";
 import { IoListOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { FaTableCellsLarge, FaTableList } from "react-icons/fa6";
-
+import "./Style.css";
 import LandingPageFooter from "../../Components/Footer/Footer";
-// import ElectricScootersSoloProduct from "./ElectricScootersSoloProduct";
 import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct";
 function Accessories({ products }) {
   return (

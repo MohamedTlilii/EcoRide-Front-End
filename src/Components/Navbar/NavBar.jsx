@@ -9,10 +9,6 @@ function NavBar() {
   return (
     <nav className="nav-container">
       <ul className="nav">
-        {/* <Link to="/products">
-          <li>Products</li>
-        </Link> */}
-
         <Link to="/electricscooters">
           <li>Electric Scooters</li>
         </Link>

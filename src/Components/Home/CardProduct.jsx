@@ -12,7 +12,6 @@ function CardProduct({ span, image, content, price, rating, id }) {
         <FaShoppingBasket size={20} className="shop-icon-card-second-section" />
         <FaEye
           size={20}
-          // className="shop-icon-card-second-section"
         />
       </div>
 

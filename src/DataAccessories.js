@@ -54,7 +54,6 @@ const DataAccessories = [
       {
         src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-18-a.jpg",
       },
-   
     ],
   },
   {

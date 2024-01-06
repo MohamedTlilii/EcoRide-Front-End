@@ -9,7 +9,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import "./Style.css";
 
 import ButtonCard from "../../Components/Btn/ButtonCard";
-// import Slides from "../Slides/Slides";
 function Contact() {
   return (
     <div className="contact-parent">

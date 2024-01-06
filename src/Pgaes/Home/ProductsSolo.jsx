@@ -1,13 +1,10 @@
 import React from "react";
-// import SaleBtn from "../Components/SaleBtn";
+
 import ButtonCard from "../../Components/Btn/ButtonCard";
 import { useParams } from "react-router-dom";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
-// import { CiSearch } from "react-icons/ci";
-// import { Link } from "react-router-dom";
-// import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-// import Slides from "../Slides/Slides"
+
 import "./style.css";
 
 function ProductsSolo({ products }) {
@@ -23,17 +20,17 @@ function ProductsSolo({ products }) {
           </div>
 
           <div className="content-card-boxx">
-            {/* <div className="content-card-box-icons">
-        <IoIosArrowDropleft />
-        <IoIosArrowDropright />
-        </div> */}
-            <span className="electric-scooters-scooter-accs">Electric Scooters</span>
+            <span className="electric-scooters-scooter-accs">
+              Electric Scooters
+            </span>
 
             <h2 className="product-content-scooter-accs"> {product.content}</h2>
 
             <div className="box-prices-scooter-accs">
               <span className="cut-price-scooter-accs">{product.span}EGP</span>
-              <span className="price-without-cut-scooter-accs">{product.price}EGP</span>
+              <span className="price-without-cut-scooter-accs">
+                {product.price}EGP
+              </span>
               <span>& Free Shipping</span>
             </div>
             <p>

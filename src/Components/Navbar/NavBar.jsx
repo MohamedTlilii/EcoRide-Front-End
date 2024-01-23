@@ -28,8 +28,8 @@ function NavBar() {
       <Link to="/">
         <img
           className="logo"
-          style={{ width: "128px", height: "38px" }}
-          src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/logo-regular.png"
+          style={{ width: "188px", height: "88px" }}
+          src="/assets/home/ecoride-logo-green.png"
           alt="Logo"
         />
       </Link>

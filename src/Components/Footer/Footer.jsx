@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="footer-section">
       <div className="footer-part-one">
-        <img src="/assets/home/logo-footer.png" alt="" />
+        <img src="/assets/home/ecoride-logo-green.png" alt="" />
         <p>
           Duis aute irure dolor in reprehen derit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur.
@@ -67,7 +67,6 @@ function Footer() {
         </label>
         <ButtonCard text={"SUBSCRIBE"} />
       </div>
-     
     </div>
   );
 }

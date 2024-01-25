@@ -5,6 +5,7 @@ import "./Style.css";
 function Login() {
   return (
     <div className="page">
+      
       <Form className="login-form">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

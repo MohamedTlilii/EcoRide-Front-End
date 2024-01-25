@@ -1,4 +1,5 @@
 /* NAVBAR */
+
 .nav-container {
   /* border: 2px solid black; */
 
@@ -19,6 +20,7 @@
 
   padding: 10px;
   z-index: 1000;
+
 }
 .nav {
   /* border: 2px solid red; */
@@ -28,7 +30,7 @@
   padding: 0px 1em;
   font-family: "Open Sans", sans-serif;
   /* font-weight: 500; */
-  font-size: 0.93333333333333rem;
+  font-size: 1.6rem;
   color: var(--ast-global-color-2);
   line-height: 70px;
 }
@@ -37,20 +39,22 @@
   color: black;
 }
 ul {
-  /* border: 2px solid black; */
+  border: 2px solid black;
   display: flex;
   list-style: none;
   gap: 20px;
   cursor: pointer;
+  
+  
 }
 .nav a :hover {
-  color: rgb(201, 53, 53);
+  color:hsl(173, 95%, 42%);
 }
 
 .logo {
   /* border: 2px solid black; */
   position: relative;
-  right: 20px;
+  right: 100px;
   /* width: 148px;
     height: 38px; */
 }
@@ -58,6 +62,7 @@ ul {
 .search-form {
   display: flex;
   align-items: center;
+  
 }
 
 .search-form input {
@@ -120,4 +125,33 @@ ul {
   text-align: center;
   color: white;
   cursor: pointer;
+}
+.nav-container-login {
+  /* border: 2px solid black; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+  gap: 300px;
+  /* min-height: 70px; */
+  height: 100px;
+  /* border-bottom: 1px rgb(244, 239, 239) solid; */
+  /* position: fixed; */
+  background-color: #ffffff;
+  /* width: auto; */
+  /* width: 2000px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 10px;
+  z-index: 1000;
+  background-image: url("../../../public/assets/home/bg-000.PNG"); /* Replace with the actual URL or path of your cover image */
+  background-size: cover;
+  background-position: center;
+}
+.logo-nav-login {
+  
 }

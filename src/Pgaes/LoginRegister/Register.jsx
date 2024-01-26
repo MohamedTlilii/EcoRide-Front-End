@@ -43,7 +43,7 @@ function Register() {
   };
   return (
     <div className="page">
-      <Form 
+      <Form
         size="large"
         className="login-form"
         onChange={(e) => {

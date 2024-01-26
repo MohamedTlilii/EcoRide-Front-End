@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Reviews from "../../Components/Reviews/Reviews"
 
 
 function ElectricScootersProducts({ image, title, price, description, id }) {
@@ -14,7 +13,7 @@ function ElectricScootersProducts({ image, title, price, description, id }) {
       <div>
         <Link to={`/productscooter/${id}`}>
           <h2
-            style={{ color: "black" }}
+            style={{ color: "#05cfb7" }}
             className="electric-scooter-products-title"
           >
             {" "}
@@ -23,8 +22,8 @@ function ElectricScootersProducts({ image, title, price, description, id }) {
         </Link>
       </div>
 
+      <span>$</span>
       <span className="electric-scooter-products-price">{price}</span>
-      <span>EGP</span>
       
     </div>
   );

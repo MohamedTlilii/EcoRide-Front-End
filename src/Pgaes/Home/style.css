@@ -44,6 +44,7 @@
     font-size: 3.6666666666667rem;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
+    color:hsl(173, 95%, 42%) !important;
   }
   .hero-titlle {
     /* border: 2px solid black; */
@@ -63,7 +64,7 @@
     font-family: "Montserrat", sans-serif;
     position: absolute;
     bottom: 540px;
-    color: black;
+    color:hsl(173, 95%, 42%) !important;
   }
   
   /* card-km components */
@@ -74,6 +75,7 @@
     margin-bottom: 90px;
     position: absolute;
     top: 220px;
+    
   }
   
   .card-km {
@@ -83,6 +85,7 @@
     height: 90px;
     border-radius: 10px;
     text-align: center;
+    
   
     /* font-family: "Montserrat", sans-serif; */
   }
@@ -93,12 +96,14 @@
     font-size: 1.5333333333333rem;
     /* font-weight: 700; */
     font-family: "Montserrat", sans-serif;
+    
   }
   .card-km-p {
     /* border: 2px solid black; */
     position: relative;
     bottom: 105px;
     /* font-size: 15px; */
+    
   }
   
   /* btn-cart */
@@ -110,28 +115,14 @@
     position: absolute;
     bottom: 280px;
     align-items: center;
+    
   }
   
-  .btn-cart {
-    all: unset;
-    background-color: rgb(201, 53, 53);
-    border-radius: 5px;
-    height: 30px;
-    padding: 5px;
-    text-align: center;
-    /* align-items: center; */
-    color: white;
-    font-size: 15px;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 2px;
-    width: fit-content;
-  }
-  .btn-cart:hover {
-    background-color: black;
-  }
+
   
   .add-cart-span {
     margin-left: 25px;
+    
   }
   .scoter-hero-section {
     /* border: 2px solid black; */
@@ -145,6 +136,7 @@
     font-size: 1.5333333333333rem;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
+    color:hsl(173, 95%, 42%) !important;
   }
   .last-section-hero {
     /* border: 2px solid rgb(26, 192, 56); */
@@ -172,7 +164,7 @@
     font-size: 1rem;
   
     line-height: 1.7;
-  
+    color:hsl(173, 95%, 42%) !important;
     font-weight: normal;
     font-family: "Montserrat", sans-serif;
   }
@@ -184,7 +176,7 @@
     font-size: 35px;
   }
   .fb-logo:hover {
-    background-color: rgb(201, 53, 53);
+    background-color: hsl(173, 95%, 42%);
     cursor: pointer;
   }
   .twiter-logo {
@@ -194,7 +186,7 @@
     font-size: 35px;
   }
   .twiter-logo:hover {
-    background-color: rgb(201, 53, 53);
+    background-color: hsl(173, 95%, 42%);
     cursor: pointer;
   }
   .youtube-logo {
@@ -204,7 +196,7 @@
     font-size: 35px;
   }
   .youtube-logo:hover {
-    background-color: rgb(201, 53, 53);
+    background-color: hsl(173, 95%, 42%);
     cursor: pointer;
   }
 /* solo-product section */
@@ -266,7 +258,7 @@
   
   .electric-scooters-scooter-accs {
     display: flex;
-    color: #c93535;
+    color: hsl(180, 8%, 3%)!important;
     cursor: pointer;
     /* font-size: 15px; */
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -274,7 +266,7 @@
   
   .product-content-scooter-accs {
     font-weight: 400;
-    color: black;
+    color: hsl(173, 95%, 42%)!important;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     position: relative;

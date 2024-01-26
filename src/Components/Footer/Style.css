@@ -29,7 +29,7 @@
   color: hsl(200, 2%, 33%) !important;
 }
 .footer-part-two a {
-  color: hsl(0, 58%, 50%);
+  color: hsl(173, 95%, 42%)!important;
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@
 }
 .all-shops {
   cursor: pointer;
-  color: hsl(0, 58%, 50%);
+  color:hsl(173, 95%, 42%)!important;
 }
 .footer-part-four {
   /* border: 2px solid rgb(105, 18, 31); */

@@ -67,6 +67,7 @@ function Footer() {
         </label>
         <ButtonCard text={"SUBSCRIBE"} />
       </div>
+      
     </div>
   );
 }

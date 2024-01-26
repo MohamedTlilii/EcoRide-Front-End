@@ -6,7 +6,7 @@ const Data = [
     price: "799.00",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
-    rating: 5,
+    // rating: 5,
     images: [
       {
         src: "https://scooteregypt.com/wp-content/uploads/2022/07/product-03-a.jpg",

@@ -1,35 +1,97 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
 import "./Style.css";
-
+import React, { useState } from "react";
+import { Button, Form, Checkbox } from "semantic-ui-react";
+import axios from "axios";
+// api
+import { Link, useNavigate } from "react-router-dom";
+import { MessageHeader, Message } from "semantic-ui-react";
 function Register() {
+  const navigate = useNavigate();
+  const [showPass, setShowPass] = useState(false);
+  const [registerData, setRegisterData] = useState({});
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleRegister = () => {
+    setLoading(true);
+    axios
+      .post(
+        "https://ecoridebackend.onrender.com/api/user/register",
+        registerData
+      )
+      .then((res) => {
+        console.log(res);
+        setLoading(false);
+        setMessage("Your account was created successfully");
+        setTimeout(() => {
+          navigate("/login");
+        }, 3000);
+      })
+      .catch((err) => {
+        console.dir(err);
+        setLoading(false);
+        if (err.response.data.error.email) {
+          setError(err.response.data.error.email.message);
+        } else {
+          setError(err.response.data.error);
+        }
+        setTimeout(() => {
+          setError("");
+        }, 10000);
+        console.dir(err);
+      });
+  };
   return (
     <div className="page">
-      <Form className="login-form">
-        <Form.Text>Create an account</Form.Text>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Username</Form.Label>
-          <Form.Control type="text" placeholder="Username" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      <Form 
+        size="large"
+        className="login-form"
+        onChange={(e) => {
+          setRegisterData({ ...registerData, [e.target.name]: e.target.value });
+        }}
+      >
+        <h1>Create an account.</h1>
+        <Form.Input type="text" name="userName" placeholder="Username" />
+        <Form.Input type="email" name="email" placeholder="Email" />
+        <Form.Input
+          type={showPass ? "text" : "password"}
+          name="password"
+          placeholder="Password"
+        />
+        <Form.Field>
+          <Checkbox
+            label="Show password"
+            onClick={() => {
+              setShowPass(!showPass);
+            }}
+          />
+        </Form.Field>
+        {error && (
+          <Message negative>
+            <MessageHeader>OOOPPPS! 🤕</MessageHeader>
+            <p>{error}</p>
+          </Message>
+        )}
+        {message && (
+          <Message positive>
+            <MessageHeader>{message} 🥳</MessageHeader>
+            <p>You wil be redirect to the Login page</p>
+          </Message>
+        )}
+        <Button
+          onClick={() => {
+            handleRegister();
+          }}
+          loading={loading}
+        >
+          Register
+        </Button>
+        <Form className="mb-3" controlId="formBasicCheckbox">
           <Link to="/login"> You already have an account? Login now.</Link>
-        </Form.Group>
+        </Form>
         <div>
           <Link to="/">← Go to Website</Link>
         </div>
-        <Button variant="primary" type="submit">
-          Register
-        </Button>
       </Form>
     </div>
   );

@@ -46,7 +46,7 @@
 }
 
 .accessoiers {
-  color: #c93535;
+  color: hsl(173, 95%, 42%)!important;
   cursor: pointer;
   /* font-size: 15px; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -132,7 +132,7 @@ legend {
   /* margin: 15px 0 5px; */
 }
 .accessories-to-home {
-  color: #777;
+  color: hsl(173, 95%, 42%)!important;
   font-size: 13, 8px;
   position: relative;
   left: 15px;

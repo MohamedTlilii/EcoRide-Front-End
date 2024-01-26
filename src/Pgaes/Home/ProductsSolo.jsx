@@ -30,14 +30,14 @@ function ProductsSolo({ products }) {
             <div className="box-prices-scooter-accs">
               {/* <span className="cut-price-scooter-accs">{product.span}EGP</span> */}
               <span className="price-without-cut-scooter-accs">
-                {product.price}EGP
+                {product.price}$
               </span>
               <span>& Free Shipping</span>
             </div>
             <p>{product.description}</p>
             <div className="label-btn-scooter-accs">
               <div className="quantity-buttons_added-scooter-accs">
-                <label className="screen-reader-text" htmlFor="minus_qty">
+                {/* <label className="screen-reader-text" htmlFor="minus_qty">
                   -
                 </label>
                 <label
@@ -47,7 +47,8 @@ function ProductsSolo({ products }) {
                 <input style={{ width: "25px" }}></input>
                 <label className="screen-reader-text" htmlFor="plus_qty">
                   +
-                </label>
+                </label> */}
+                <input type="number" min={1} max={50} />
               </div>
               <ButtonCard text={"ADD TO CART "} />
             </div>

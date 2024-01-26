@@ -1,18 +1,8 @@
-.sale-btn {
-  border: 1px solid rgba(0, 0, 0, 0.018);
-  /* all: unset; */
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
-  position: relative;
-  top: 45px;
-  left: 35px;
-  color: hsl(0, 2%, 70%);
-}
+
 
 .btn-cart {
   all: unset;
-  background-color: rgb(201, 53, 53);
+  background-color: hsl(173, 95%, 42%)!important;
   border-radius: 5px;
   height: 30px;
   padding: 5px;
@@ -25,7 +15,7 @@
   width: fit-content;
 }
 .btn-cart:hover {
-  background-color: black;
+  background-color: black!important;
 }
 
 .add-cart-span {

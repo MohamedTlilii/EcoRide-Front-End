@@ -26,7 +26,7 @@ function ElectricScootersSoloProduct({ products }) {
 
             <div className="box-prices-scooters">
               <span className="price-without-cut-scooters">
-                {product.price}EGP
+                {product.price}$
               </span>
               <span>& Free Shipping</span>
             </div>

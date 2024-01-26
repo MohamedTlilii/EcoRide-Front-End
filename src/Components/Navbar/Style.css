@@ -5,7 +5,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-end;
   gap: 300px;
   min-height: 70px;
   border-bottom: 1px rgb(244, 239, 239) solid;
@@ -28,18 +28,20 @@
   /* z-index: 999; */
   margin-left: 40px;
   padding: 0px 1em;
-  font-family: "Open Sans", sans-serif;
   /* font-weight: 500; */
   font-size: 1.6rem;
   color: var(--ast-global-color-2);
   line-height: 70px;
+  font-style: italic;
+  font-weight: 600;
+  gap: 44px;
 }
 .nav a {
   text-decoration: none;
   color: black;
 }
 ul {
-  border: 2px solid black;
+  /* border: 2px solid black;  */
   display: flex;
   list-style: none;
   gap: 20px;
@@ -48,6 +50,9 @@ ul {
   
 }
 .nav a :hover {
+  color:hsl(173, 95%, 42%);
+}
+.nav li :hover {
   color:hsl(173, 95%, 42%);
 }
 
@@ -77,7 +82,7 @@ ul {
 }
 
 .search-button {
-  background-color: rgb(201, 53, 53);
+  background-color: hsl(173, 95%, 42%);
   color: white;
   border: none;
   padding: 5px 10px;
@@ -98,7 +103,7 @@ ul {
 
 .shopping-basket-icon {
   margin-left: 10px;
-  color: rgb(201, 53, 53);
+  color: hsl(173, 95%, 42%);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -108,9 +113,13 @@ ul {
   /* color: rgb(201, 53, 53); */
   font-size: 1.5rem;
 }
+.user-icon:hover {
+ color:hsl(173, 95%, 42%)!important;
+}
 .user-icon a {
   color: black;
   font-size: 20px;
+  
 }
 
 /* shopbasketicon */
@@ -118,7 +127,7 @@ ul {
   border: 1px solid;
   border-radius: 50%;
   /* font-size: 5px; */
-  background-color: rgb(201, 53, 53);
+  background-color:hsl(173, 95%, 42%);
   font-size: 10px;
   position: absolute;
   width: 18px;
@@ -151,7 +160,4 @@ ul {
   background-image: url("../../../public/assets/home/bg-000.PNG"); /* Replace with the actual URL or path of your cover image */
   background-size: cover;
   background-position: center;
-}
-.logo-nav-login {
-  
 }

@@ -20,13 +20,12 @@
   /* margin: 15px 0 5px; */
 }
 .elictric-to-home {
-  color: #777;
+  /* color: hsl(173, 95%, 42%) !important; */
   font-size: 13, 8px;
+  color: #000000;
 }
 .electric-section-two {
-  /* border: 2px solid rgb(234, 24, 220); */
   display: flex;
-  /* gap: 568px; */
   align-items: center;
   gap: 7px;
   display: flex;
@@ -58,7 +57,7 @@
   /* height: 116vh; */
   width: 1600px;
   /* height: 750px; */
-  margin: auto;
+  margin: 50px auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -135,7 +134,7 @@
 }
 
 .electric-scooters {
-  color: #c93535;
+  color: hsl(180, 5%, 4%) !important;
   cursor: pointer;
   /* font-size: 15px; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -147,6 +146,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   /* height: 900px; */
+  color: hsl(173, 95%, 42%)!important;
 }
 .box-prices-scooters {
   display: flex;

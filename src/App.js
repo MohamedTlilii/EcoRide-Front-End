@@ -15,6 +15,13 @@ import DataAccessories from "./DataAccessories";
 import AccessoriesSoloProduct from "./Pgaes/Accessories/AccessoriesSoloProduct";
 import "@splidejs/react-splide/css";
 import Register from "./Pgaes/LoginRegister/Register";
+import Profile from "./Pgaes/Profile/Profile";
+import UserRoute from "./Routes/UserRoute";
+import PublicRoute from "./Routes/PublicRoute";
+import AdminDashboard from "./Pgaes/Admin/AdminDashboard";
+// import PrivateRoute from "./Routes/PrivateRoute";
+// import AdminRoute from "./Routes/AdminRoute";
+// import AdminLogin from "./Pages/AdminLogin";
 
 function App() {
   return (
@@ -42,9 +49,12 @@ function App() {
         />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="Dashboard" element={<AdminDashboard />} />
       </Route>
       <Route path="/" element={<ConnexionLayout />}>
         <Route path="login" element={<Login />} />
+
         <Route path="register" element={<Register />} />
       </Route>
     </Routes>

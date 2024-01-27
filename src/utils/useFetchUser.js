@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-export const useFetch = (url, token) => {
+export const useFetchUser = (url, token) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   useEffect(() => {
     axios
-      .get(`${url}/updateInformation`, { headers: { token } })
+      .get(`${url}/GetInformation`, { headers: { token } })
       .then((res) => {
         // console.log(res);
         setData(res.data.data);
@@ -16,6 +16,6 @@ export const useFetch = (url, token) => {
           console.dir(err)
         }
       });
-  }, [data, url, token]);
+  }, [ url, token]);
   return { data, error };
 };

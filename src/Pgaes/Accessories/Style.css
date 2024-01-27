@@ -175,8 +175,8 @@ legend {
   /* height: 116vh; */
   width: 1500px;
   /* height: 750px; */
-  margin: auto;
-  display: flex;
+  margin: 50px auto;
+    display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 55px;

@@ -1,11 +1,14 @@
-import React from "react";
+
+import React, { useState } from "react";
+
 // import { IoListOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { FormInput, Form, FormGroup } from "semantic-ui-react";
+import { Form, } from "semantic-ui-react";
 import "./Style.css";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct";
 function Accessories({ products }) {
+  const [inputPrice, setInputPrice] = useState(490);
   return (
     <div className="accessories-section">
       <div className="accessories-section-one">
@@ -20,11 +23,25 @@ function Accessories({ products }) {
         </nav>
         <div className="accessories-section-two">
         <Form>
-            <FormGroup widths="equal">
-              <FormInput placeholder="Electric Scooters" />
-              <FormInput placeholder="Prices" />
-             
-            </FormGroup>
+            <Form.Group widths="equal">
+              <Form.Input
+                className="scooter-name-search"
+                label="Accessories"
+                placeholder="Accessorie name"
+              />
+              <Form.Input
+                label={inputPrice}
+                min={490}
+                max={1000}
+                name="hide"
+                onChange={(e, value) => {
+                  setInputPrice(value.value);
+                }}
+                step={50}
+                type="range"
+                // value={hide}
+              />
+            </Form.Group>
           </Form>
         </div>
       </div>

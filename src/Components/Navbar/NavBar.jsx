@@ -4,6 +4,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import "./Style.css";
+import ShoppingCart from "../ShopingCard/ShoppingCart";
 function NavBar() {
   const navigate = useNavigate();
   // let activeStyle = "font-bold text-sky-400 border-b-[1px] border-sky-400 pb-2";
@@ -54,7 +55,7 @@ function NavBar() {
             <li>Profile</li>
           </Link>
         )}
-
+        {token && <ShoppingCart />}
         {token ? (
           <Link
             onClick={() => {

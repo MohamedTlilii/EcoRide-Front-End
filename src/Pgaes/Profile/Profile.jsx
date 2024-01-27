@@ -1,60 +1,152 @@
-import React from 'react';
-import './Style.css'; // Import your CSS file for styling
+import "./Style.css";
+import React from "react";
+// import { Button } from "react-bootstrap";
+
+import { CardContent } from "semantic-ui-react";
+// import { url } from "../../utils/url";
+// import { useFetch } from "../../utils/useFetch";
+// import ProfileItem from "../../Components/ProfileItem";
+import {
+  CardMeta,
+  CardHeader,
+  CardDescription,
+  Card,
+  Icon,
+  Image,
+  ButtonGroup,
+  Button,
+  ModalHeader,
+  ModalContent,
+  ModalActions,
+  Form,
+  Modal,
+  TableRow,
+  TableHeaderCell,
+  TableHeader,
+  TableCell,
+  TableBody,
+  Table,
+} from "semantic-ui-react";
+import Footer from "../../Components/Footer/Footer";
 
 function Profile() {
-  return (
-    <div className="profile-container">
-    <div className="profile-header">
-      <div className="profile-picture-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtz4ywqIj5QdGq2_nxs72_wAwhPPkiuc0VCwWmpd6tuA&s" alt="User Profile" className="profile-picture" />
-      </div>
-      <div className="user-details">
-        <h2>User Name</h2>
-        <p>Number: 123-456-7890</p>
-        <p>Email: john.doe@example.com</p>
-      </div>
-    </div>
+  // let token = localStorage.getItem("token");
+  // let { data } = useFetch(url, token);
 
-    <div className="product-section">
-      <h3>Products Purchased</h3>
-      <table className="product-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <img
-                src="product1-thumbnail.jpg"
-                alt="Product 1"
-                className="product-thumbnail"
+  // Check if data is undefined before using map
+  return (
+    <div >
+      <div className="dashboard">
+      <div className="profile-container">
+      <Card className="profil-container-user">
+        <Image src="https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg" />
+        <CardContent>
+          <CardHeader></CardHeader>
+          <CardMeta>
+            <span className="date">Added on: </span>
+          </CardMeta>
+          <CardDescription>
+            {" "}
+            <Icon name="map marker alternate" />
+          </CardDescription>
+          <CardDescription>
+            {" "}
+            <Icon name="mail" />
+          </CardDescription>
+        </CardContent>
+        <CardContent extra>
+          <Icon name="phone" />
+        </CardContent>
+        <ButtonGroup>
+          <Button>Edit</Button>
+          {/* <Button>Delete</Button> */}
+        </ButtonGroup>
+      </Card>
+      {/* EDIT CONTACT MODAL */}
+      <Modal>
+        <ModalHeader>Update contact</ModalHeader>
+        <ModalContent>
+          <Form>
+            <Form.Group widths="equal">
+              <Form.Input
+                type="text"
+                placeholder="Contact name"
+                name="contactName"
               />
-              Product 1
-            </td>
-            <td>$20</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>
-              <img
-                src="product2-thumbnail.jpg"
-                alt="Product 2"
-                className="product-thumbnail"
-              />
-              Product 2
-            </td>
-            <td>$30</td>
-            <td>1</td>
-          </tr>
-          {/* Add more rows as needed */}
-        </tbody>
-      </table>
+              <Form.Input type="phone" placeholder="Phone" name="phone" />
+            </Form.Group>
+            <Form.Group widths="equal">
+              <Form.Input type="email" placeholder="Email" name="email" />
+              <Form.Input type="text" placeholder="Adress" name="address" />
+            </Form.Group>
+          </Form>
+        </ModalContent>
+        <ModalActions>
+          <Button>Cancel</Button>
+          <Button />
+        </ModalActions>
+      </Modal>
+      {/* EDIT CONTACT PHOTO MODAL */}
+      <Modal>
+        <ModalHeader>Update contact photo</ModalHeader>
+        <ModalContent>
+          <Form>
+            <Form.Group widths="equal">
+              <Form.Input />
+            </Form.Group>
+          </Form>
+        </ModalContent>
+        <ModalActions>
+          <Button>Cancel</Button>
+          <Button />
+        </ModalActions>
+      </Modal>
+      <div>
+        <Table celled inverted selectable>
+          <TableHeader>
+            <TableRow>
+              <TableHeaderCell>Name</TableHeaderCell>
+              <TableHeaderCell>Status</TableHeaderCell>
+              <TableHeaderCell>Notes</TableHeaderCell>
+            </TableRow>
+          </TableHeader>
+
+          <TableBody>
+            <TableRow>
+              <TableCell>clio</TableCell>
+              <TableCell>Approved</TableCell>
+              <TableCell textAlign="right">None</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>x200</TableCell>
+              <TableCell>Approved</TableCell>
+              <TableCell textAlign="right">Requires call</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>bmw</TableCell>
+              <TableCell>Denied</TableCell>
+              <TableCell textAlign="right">None</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+        
+      </div>
     </div>
-  </div>
+      </div>
+      <div className="aaa">
+      <div className="footer">
+        <Footer />
+        <div className="last-footer">
+          <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>
+          <img
+            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
+            style={{ width: "246px", height: "20px" }}
+            alt=""
+          />
+        </div>
+      </div>
+      </div>
+    </div>
   );
 }
 

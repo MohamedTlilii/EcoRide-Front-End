@@ -12,7 +12,8 @@ import LandingPageFour from "../../Components/Home/LandingPageFour";
 import LandingPageWhy from "../../Components/Home/LandingPageWhy";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
-import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
+import Footer from "../../Components/Footer/Footer";
+// import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 
 
 function LandingPage({ products }) {
@@ -21,7 +22,7 @@ function LandingPage({ products }) {
       <div className="hero-section">
         <div className="hero-section-content">
           <h1>Libero X250</h1>
-          <ShoppingCart/>  
+          {/* <ShoppingCart/>   */}
           <h4 className="hero-titlle">250 Watt Electric Scooter</h4>
           <h5 className="hero-second-title">Informations:</h5>
           <div className="card-km-info">
@@ -108,7 +109,7 @@ function LandingPage({ products }) {
         <Box />
       </div>
       <div className="footer">
-        <LandingPageFooter />
+        <Footer />
         <div className="last-footer">
           <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>
           <img

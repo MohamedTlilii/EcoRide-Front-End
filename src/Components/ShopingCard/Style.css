@@ -1,0 +1,8 @@
+.ShoppingCart   {
+    color:hsl(173, 95%, 42%)!important ;
+    all: unset;
+    /* border: 1px solid black; */
+    height: fit-content;
+    position: relative;
+    top: 23px;
+}

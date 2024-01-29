@@ -80,7 +80,7 @@ function Profile() {
             <Modal
               style={{
                 width: "50%",
-                height: "37%",
+                height: "31%",
                 position: "absolute",
                 left: "500px",
                 top: "300px",
@@ -91,13 +91,14 @@ function Profile() {
               <ModalHeader>Update Information</ModalHeader>
               <ModalContent>
                 <Form>
-                  <Form.Group widths="equal">
-                    <Form.Input
-                      style={{ height: "50px" }}
-                      type="file"
-                      name="photo"
-                      onChange={(e) => {}}
-                    />
+                  <Form.Group >
+                    <label >
+                      <input 
+                        style={{ width: "927px", height: "40px" }}
+                        type="file"
+                        name="photo"
+                      />
+                    </label>
                   </Form.Group>
                   <Form.Group onChange={(e) => {}} widths="equal">
                     <Form.Input
@@ -105,18 +106,10 @@ function Profile() {
                       placeholder="UserName"
                       name="UserName"
                     />
-                    <Form.Input
-                      type="phone"
-                      placeholder="Phone"
-                      name="phone"
-                    />
+                    <Form.Input type="phone" placeholder="Phone" name="phone" />
                   </Form.Group>
                   <Form.Group widths="equal" onChange={(e) => {}}>
-                    <Form.Input
-                      type="email"
-                      placeholder="Email"
-                      name="email"
-                    />
+                    <Form.Input type="email" placeholder="Email" name="email" />
                     <Form.Input
                       type="text"
                       placeholder="Adress"

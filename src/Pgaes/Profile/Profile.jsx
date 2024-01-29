@@ -1,5 +1,7 @@
 import "./Style.css";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { url } from "../../utils/url";
 import { CardContent, Form } from "semantic-ui-react";
 import {
   CardMeta,
@@ -25,14 +27,32 @@ import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 
-function Profile() {
+function Profile(_id) {
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/GetInformation",
     token
   );
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [newUserData, setNewUserData] = useState({});
+  const handleUpdateUser = () => {
+    setLoading(true);
+    axios
+      .put(`${url}/updateInformation/${_id}`, newUserData, {
+        headers: { token },
+      })
+      .then((res) => {
+        setLoading(false);
+        setOpen(false);
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
 
+        console.dir(err);
+      });
+  };
   return (
     <div>
       <div className="dashboard">
@@ -70,13 +90,12 @@ function Profile() {
                   >
                     Edit
                   </Button>
-                  <Button onClick={() => {}}>Save</Button>
                 </ButtonGroup>
               </Card>
             )
           )}
           <>
-            {/* edit contact photo and information */}
+            {/* edit user modal */}
             <Modal
               style={{
                 width: "50%",
@@ -90,10 +109,17 @@ function Profile() {
             >
               <ModalHeader>Update Information</ModalHeader>
               <ModalContent>
-                <Form>
-                  <Form.Group >
-                    <label >
-                      <input 
+                <Form
+                  onChange={(e) => {
+                    setNewUserData({
+                      ...newUserData,
+                      [e.target.name]: e.target.value,
+                    });
+                  }}
+                >
+                  <Form.Group>
+                    <label>
+                      <input
                         style={{ width: "927px", height: "40px" }}
                         type="file"
                         name="photo"
@@ -126,8 +152,11 @@ function Profile() {
                   content="Update"
                   labelPosition="right"
                   icon="checkmark"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    handleUpdateUser();
+                  }}
                   positive
+                  loading={loading}
                 />
               </ModalActions>
             </Modal>
@@ -164,7 +193,7 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div className="aaa">
+      <div >
         <div className="footer">
           <Footer />
           <div className="last-footer">

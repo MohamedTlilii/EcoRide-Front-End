@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
-
 import "./Style.css";
 import { Form } from "semantic-ui-react";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import ElectricScootersProducts from "../../Components/ElectricScooters/ElectricScootersProducts";
+import { useFetch } from "../../utils/useFetch";
 function ElectricScooters({ products }) {
   const [inputPrice, setInputPrice] = useState(490);
-
+  let token = localStorage.getItem("token");
+  const { data, error } = useFetch(
+    "https://ecoridebackend.onrender.com/api/user/getProducts",
+    token
+  );
+  // console.log(data);
   return (
     <div className="electric-section">
       <div className="electric-section-one">
@@ -46,9 +50,11 @@ function ElectricScooters({ products }) {
         </div>
       </div>
       <div className="electric-section-four">
-        {products.map((product) => (
-          <ElectricScootersProducts key={product.id} {...product} />
-        ))}
+        {data
+          ?.filter((elt) => elt.category === "scooter")
+          .map((product) => (
+            <ElectricScootersProducts key={product.id} {...product} />
+          ))}
       </div>
 
       <div className="footer">

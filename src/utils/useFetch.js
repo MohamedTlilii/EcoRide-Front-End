@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-export const useFetchUser = (url, token) => {
+export const useFetch = (url, token) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   useEffect(() => {
     axios
-      .get(`${url}/GetInformation`, { headers: { token } })
+      .get(url, { headers: { token } })
       .then((res) => {
-        // console.log(res);
         setData(res.data.data);
       })
       .catch((err) => {
         if (err.response.status === 404) {
           setError("404 NOT FOUND");
-          console.dir(err)
+          console.dir(err);
         }
       });
-  }, [ url, token]);
+  }, [data, url, token]);
   return { data, error };
 };

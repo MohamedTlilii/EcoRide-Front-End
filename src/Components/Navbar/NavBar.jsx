@@ -24,18 +24,14 @@ function NavBar() {
       </Link>
 
       <ul className="nav">
-        {token && (
-          <Link to="/electricscooters">
-            <li>Electric Scooters</li>
-          </Link>
-        )}
+        <Link to="/electricscooters">
+          <li>Electric Scooters</li>
+        </Link>
 
-        {token && (
-          <Link to="/accessories">
-            {" "}
-            <li>Accessories</li>
-          </Link>
-        )}
+        <Link to="/accessories">
+          {" "}
+          <li>Accessories</li>
+        </Link>
 
         <Link to="/about">
           {" "}

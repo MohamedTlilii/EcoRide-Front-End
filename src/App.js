@@ -30,9 +30,9 @@ function App() {
         <Route
           index
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <LandingPage products={Data} />
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
 
@@ -48,25 +48,25 @@ function App() {
         <Route
           path="electricscooters"
           element={
-            <PrivateRoute>
-              <ElectricScooters products={DataScoooters} />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <ElectricScooters products={DataScoooters} />
+            // </PrivateRoute>
           }
         />
         <Route
           path="productscooter/:id"
           element={
-            <PrivateRoute>
-              <ElectricScootersSoloProduct products={DataScoooters} />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <ElectricScootersSoloProduct products={DataScoooters} />
+            // </PrivateRoute>
           }
         />
         <Route
           path="accessories"
           element={
-            <PrivateRoute>
-              <Accessories products={DataAccessories} />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <Accessories products={DataAccessories} />
+            // </PrivateRoute>
           }
         />
         <Route

@@ -18,9 +18,9 @@ export class Thumbnails extends React.Component {
   }
 
   renderSlides() {
-    return this.props.images.map((slide) => (
+    return this.props.images?.map((slide) => (
       <SplideSlide className="SLIDES" key={slide.src}>
-        <img src={slide.src} alt={slide.alt} width={500} />
+        <img src={slide} alt="" width={500} />
       </SplideSlide>
     ));
   }

@@ -42,7 +42,7 @@ function Register() {
       });
   };
   return (
-    <div className="page">
+    <div className="page-container">
       <Form
         size="large"
         className="login-form"

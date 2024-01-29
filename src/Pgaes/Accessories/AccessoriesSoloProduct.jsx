@@ -5,28 +5,35 @@ import { useParams } from "react-router-dom";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 import "./Style.css";
 import Reviews from "../../Components/Reviews/Reviews"
+import { useFetch } from "../../utils/useFetch";
 
 function AccessoriesSoloProduct({ products }) {
   let { id } = useParams();
+  let token = localStorage.getItem("token");
   let product = products.find((product) => product.id === id);
+  const { data, error } = useFetch(
+    `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
+    token
+  );
+   // console.log(data)
   return (
     <div className="solo-product-parent-div-accessoiers">
       <div className="solo-product-accessoiers">
         <div className="products-cont-accessoiers">
           <div className="product-img-accessoiers">
             <div className="products-mains-accessoiers">
-              <Thumbnails images={product.images} />
+              <Thumbnails images={data?.imageUrls} />
             </div>
           </div>
 
           <div className="content-card-boxx-accessoiers">
             <span className="accessoiers">Accessories</span>
 
-            <h2 className="accessoiers-content"> {product.title}</h2>
+            <h2 className="accessoiers-content"> {data?.title}</h2>
 
             <div className="box-prices-accessoiers">
               <span className="price-without-cut-accessoiers">
-                {product.price}EGP
+                {data?.price}$
               </span>
               <span>& Free Shipping</span>
             </div>
@@ -38,17 +45,7 @@ function AccessoriesSoloProduct({ products }) {
             </p>
             <div className="label-btn-accessoiers">
               <div className="quantity-buttons_added-accessoiers">
-                <label className="screen-reader-text" htmlFor="minus_qty">
-                  -
-                </label>
-                <label
-                  className="screen-reader-text"
-                  htmlFor="quantity_65882f9b538de"
-                ></label>
-                <input style={{ width: "25px" }}></input>
-                <label className="screen-reader-text" htmlFor="plus_qty">
-                  +
-                </label>
+              <input type="number" min={1} max={50} />
               </div>
               <ButtonCard text={"ADD TO CART "} />
             </div>

@@ -7,8 +7,15 @@ import { Form, } from "semantic-ui-react";
 import "./Style.css";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct";
+import { useFetch } from "../../utils/useFetch";
+
 function Accessories({ products }) {
   const [inputPrice, setInputPrice] = useState(490);
+  let token = localStorage.getItem("token");
+  const { data, error } = useFetch(
+    "https://ecoridebackend.onrender.com/api/user/getProducts",
+    token
+  );
   return (
     <div className="accessories-section">
       <div className="accessories-section-one">
@@ -46,7 +53,7 @@ function Accessories({ products }) {
         </div>
       </div>
       <div className="accessories-section-four">
-        {products.map((product) => (
+        {data?.filter((elt) => elt.category === "access").map((product) => (
           <AccessoriesProduct key={product.id} {...product} />
         ))}
       </div>

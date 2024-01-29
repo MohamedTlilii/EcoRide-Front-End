@@ -6,6 +6,7 @@ import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 import "./Style.css";
 import Reviews from "../../Components/Reviews/Reviews";
 import { useFetch } from "../../utils/useFetch";
+import { PacmanLoader } from "react-spinners";
 function ElectricScootersSoloProduct({ products }) {
   let { id } = useParams();
   let token = localStorage.getItem("token");
@@ -21,7 +22,11 @@ function ElectricScootersSoloProduct({ products }) {
         <div className="products-cont-scooter">
           <div className="product-img">
             <div className="products-mains-scooter">
-              <Thumbnails images={data?.imageUrls} />
+            {!data ? (
+  <PacmanLoader color="#36d7b7" size={100} />
+) : (
+  <Thumbnails images={data?.imageUrls} />
+)}
             </div>
           </div>
 

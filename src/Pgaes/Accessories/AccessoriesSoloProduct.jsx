@@ -6,6 +6,7 @@ import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 import "./Style.css";
 import Reviews from "../../Components/Reviews/Reviews"
 import { useFetch } from "../../utils/useFetch";
+import { PacmanLoader } from "react-spinners";
 
 function AccessoriesSoloProduct({ products }) {
   let { id } = useParams();
@@ -22,7 +23,12 @@ function AccessoriesSoloProduct({ products }) {
         <div className="products-cont-accessoiers">
           <div className="product-img-accessoiers">
             <div className="products-mains-accessoiers">
-              <Thumbnails images={data?.imageUrls} />
+            {!data ? (
+  <PacmanLoader
+   color="#36d7b7" size={100} />
+) : (
+  <Thumbnails images={data?.imageUrls} />
+)}
             </div>
           </div>
 

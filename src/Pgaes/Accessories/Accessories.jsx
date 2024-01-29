@@ -7,6 +7,7 @@ import "./Style.css";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct";
 import { useFetch } from "../../utils/useFetch";
+import { PacmanLoader } from "react-spinners";
 
 function Accessories({ products }) {
   const [inputPrice, setInputPrice] = useState(490);
@@ -53,10 +54,12 @@ function Accessories({ products }) {
       </div>
       <div className="accessories-section-four">
         {data
-          ?.filter((elt) => elt.category === "access")
+          ?data.filter((elt) => elt.category === "access")
           .map((product) => (
             <AccessoriesProduct key={product.id} {...product} />
-          ))}
+          )): (
+            <PacmanLoader color="#36d7b7" size={200} />
+          )}
       </div>
       <div className="footer">
         <LandingPageFooter />

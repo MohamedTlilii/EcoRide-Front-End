@@ -5,6 +5,7 @@ import { Form } from "semantic-ui-react";
 import LandingPageFooter from "../../Components/Footer/Footer";
 import ElectricScootersProducts from "../../Components/ElectricScooters/ElectricScootersProducts";
 import { useFetch } from "../../utils/useFetch";
+import { PacmanLoader } from "react-spinners";
 function ElectricScooters({ products }) {
   const [inputPrice, setInputPrice] = useState(490);
   let token = localStorage.getItem("token");
@@ -50,11 +51,15 @@ function ElectricScooters({ products }) {
         </div>
       </div>
       <div className="electric-section-four">
-        {data
-          ?.filter((elt) => elt.category === "scooter")
-          .map((product) => (
-            <ElectricScootersProducts key={product.id} {...product} />
-          ))}
+        {data ? (
+          data
+            .filter((elt) => elt.category === "scooter")
+            .map((product) => (
+              <ElectricScootersProducts key={product.id} {...product} />
+            ))
+        ) : (
+          <PacmanLoader color="#36d7b7" size={200} />
+        )}
       </div>
 
       <div className="footer">

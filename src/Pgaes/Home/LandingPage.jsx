@@ -13,8 +13,7 @@ import LandingPageWhy from "../../Components/Home/LandingPageWhy";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
-// import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
-
+import { PacmanLoader } from "react-spinners";
 
 function LandingPage({ products }) {
   let token = localStorage.getItem("token");
@@ -40,11 +39,9 @@ function LandingPage({ products }) {
             <span className="add-cart-span">
               <ButtonCard text={"ADD TO CART"} />
             </span>
-            
           </div>
         </div>
 
-     
         <div className="scoter-hero-section">
           <img
             style={{ width: "658px", height: "577px" }}
@@ -68,9 +65,15 @@ function LandingPage({ products }) {
 
       <div className="product-section">
         <div className="products">
-        {data?.slice(0, 4).map((product, i) => (
-  <CardProduct key={product.id} {...product} />
-))} 
+          {data ? (
+            data
+              .slice(0, 4)
+              .map((product, i) => (
+                <CardProduct key={product.id} {...product} />
+              ))
+          ) : (
+            <PacmanLoader color="#36d7b7" size={200} />
+          )}
         </div>
       </div>
       <LandingPageAbout />

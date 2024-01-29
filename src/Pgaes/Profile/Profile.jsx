@@ -1,11 +1,6 @@
 import "./Style.css";
-import React, { useState } from "react";
-// import { Button } from "react-bootstrap";
-
+import React, { useEffect } from "react";
 import { CardContent, Form } from "semantic-ui-react";
-import { url } from "../../utils/url";
-// import { useFetch } from "../../utils/useFetch";
-// import ProfileItem from "../../Components/ProfileItem";
 import {
   CardMeta,
   CardHeader,
@@ -22,58 +17,63 @@ import {
   TableBody,
   Table,
   ModalHeader,
-  ModalDescription,
   ModalContent,
   ModalActions,
-  Header,
   Modal,
-  Input,
 } from "semantic-ui-react";
 import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
+import { PacmanLoader } from "react-spinners";
 
 function Profile() {
   let token = localStorage.getItem("token");
-  let { data } = useFetch(url, token);
+  const { data, error } = useFetch(
+    "https://ecoridebackend.onrender.com/api/user/GetInformation",
+    token
+  );
   const [open, setOpen] = React.useState(false);
 
   return (
     <div>
       <div className="dashboard">
         <div className="profile-container">
-          {data && (
-            <Card className="profil-container-user">
-              <Image src={data.imageUrl} />
-              <CardContent>
-                <CardHeader></CardHeader>
-                <CardMeta>
-                  <span className="date"> {data.userName} </span>
-                </CardMeta>
-                <CardDescription>
-                  <Icon name="map marker alternate" />
-                  {data.address}
-                </CardDescription>
-                <CardDescription>
-                  {" "}
-                  <Icon name="mail" />
-                  {data.email}
-                </CardDescription>
-              </CardContent>
-              <CardContent extra>
-                <Icon name="phone" />
-                {data.number}
-              </CardContent>
-              <ButtonGroup>
-                <Button
-                  onClick={() => {
-                    setOpen(true);
-                  }}
-                >
-                  Edit
-                </Button>
-                <Button onClick={() => {}}>Save</Button>
-              </ButtonGroup>
-            </Card>
+          {!data ? (
+            <PacmanLoader color="#36d7b7" size={100} />
+          ) : (
+            data && (
+              <Card className="profil-container-user">
+                <Image src={data.imageUrl} />
+                <CardContent>
+                  <CardHeader></CardHeader>
+                  <CardMeta>
+                    <span className="date"> {data.userName} </span>
+                  </CardMeta>
+                  <CardDescription>
+                    <Icon name="map marker alternate" />
+                    {data.address}
+                  </CardDescription>
+                  <CardDescription>
+                    {" "}
+                    <Icon name="mail" />
+                    {data.email}
+                  </CardDescription>
+                </CardContent>
+                <CardContent extra>
+                  <Icon name="phone" />
+                  {data.number}
+                </CardContent>
+                <ButtonGroup>
+                  <Button
+                    onClick={() => {
+                      setOpen(true);
+                    }}
+                  >
+                    Edit
+                  </Button>
+                  <Button onClick={() => {}}>Save</Button>
+                </ButtonGroup>
+              </Card>
+            )
           )}
           <>
             {/* edit contact photo and information */}
@@ -105,10 +105,18 @@ function Profile() {
                       placeholder="UserName"
                       name="UserName"
                     />
-                    <Form.Input type="phone" placeholder="Phone" name="phone" />
+                    <Form.Input
+                      type="phone"
+                      placeholder="Phone"
+                      name="phone"
+                    />
                   </Form.Group>
                   <Form.Group widths="equal" onChange={(e) => {}}>
-                    <Form.Input type="email" placeholder="Email" name="email" />
+                    <Form.Input
+                      type="email"
+                      placeholder="Email"
+                      name="email"
+                    />
                     <Form.Input
                       type="text"
                       placeholder="Adress"

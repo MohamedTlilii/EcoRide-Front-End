@@ -43,8 +43,8 @@ function ElectricScootersSoloProduct({ products }) {
               accumsan lacus vel facilisis.
             </p>
             <div className="label-btn-scooters">
-              <div className="quantity-buttons_added-scooters">
-              <input type="number" min={1} max={50} />
+              <div >
+              <input className="quantity-buttons_added-scooters" type="number" min={1} max={50} />
               </div>
               <ButtonCard text={"ADD TO CART "} />
             </div>

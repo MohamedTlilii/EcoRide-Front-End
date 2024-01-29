@@ -10,13 +10,18 @@ import Box from "../../Components/Home/Box";
 import LandingPageAbout from "../../Components/Home/LandingPageAbout";
 import LandingPageFour from "../../Components/Home/LandingPageFour";
 import LandingPageWhy from "../../Components/Home/LandingPageWhy";
-import LandingPageFooter from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
+import { useFetch } from "../../utils/useFetch";
 // import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 
 
 function LandingPage({ products }) {
+  let token = localStorage.getItem("token");
+  const { data, error } = useFetch(
+    "https://ecoridebackend.onrender.com/api/user/getProducts",
+    token
+  );
   return (
     <div className="parent-div">
       <div className="hero-section">
@@ -63,9 +68,9 @@ function LandingPage({ products }) {
 
       <div className="product-section">
         <div className="products">
-          {products.map((product, i) => (
-            <CardProduct key={i} {...product} />
-          ))}
+        {data?.slice(0, 4).map((product, i) => (
+  <CardProduct key={product.id} {...product} />
+))} 
         </div>
       </div>
       <LandingPageAbout />

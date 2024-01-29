@@ -1,35 +1,25 @@
 import React from "react";
-// import SaleBtn from "../Btn/SaleBtn";
-// import { FaShoppingBasket, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-function CardProduct({  image, title, price, id }) {
+function CardProduct({ imageUrls, title, price, _id }) {
   return (
     <div className="product-container">
-      {/* <SaleBtn />
-      <div className="icons-product-card-section">
-        <FaShoppingBasket size={20} className="shop-icon-card-second-section" />
-        <FaEye
-          size={20}
-        />
-      </div> */}
-
       <div className="my-product-card">
-        <Link to={`/product/${id}`}>
-          <img className="img-product-cart" src={image} alt="" />
+        <Link to={`/product/${_id}`}>
+          <img style={{width:"450px"}} className="img-product-cart" src={imageUrls[0]} alt="" />
         </Link>
       </div>
-      {/* <span>{"✰".repeat(rating)}</span> */}
+
       <div>
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${_id}`}>
           <h2 style={{ color: "black" }} className="content-card-box">
             {" "}
             {title}
           </h2>
         </Link>
       </div>
-      {/* <span className="line-through">${span}</span> */}
+
       <span className="line-through-two">${price}</span>
     </div>
   );

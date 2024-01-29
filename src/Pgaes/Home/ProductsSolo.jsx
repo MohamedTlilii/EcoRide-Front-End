@@ -6,18 +6,23 @@ import LandingPageFooter from "../../Components/Footer/Footer";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 
 import "./style.css";
-import Reviews from "../../Components/Reviews/Reviews"
+import Reviews from "../../Components/Reviews/Reviews";
+import { useFetch } from "../../utils/useFetch";
 
 function ProductsSolo({ products }) {
   let { id } = useParams();
+  let token = localStorage.getItem("token");
   let product = products.find((product) => product.id === id);
-
+  const { data, error } = useFetch(
+    `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
+    token
+  );
   return (
     <div className="solo-product-parent-div">
       <div className="solo-product">
         <div className="products-cont">
           <div className="products-mains">
-            <Thumbnails images={product.images} />
+            <Thumbnails images={data?.imageUrls} />
           </div>
 
           <div className="content-card-boxx">
@@ -25,30 +30,20 @@ function ProductsSolo({ products }) {
               Electric Scooters
             </span>
 
-            <h2 className="product-content-scooter-accs"> {product.title}</h2>
+            <h2 className="product-content-scooter-accs"> {data?.title}</h2>
 
             <div className="box-prices-scooter-accs">
               {/* <span className="cut-price-scooter-accs">{product.span}EGP</span> */}
               <span className="price-without-cut-scooter-accs">
-                {product.price}$
+                {data?.price}$
               </span>
               <span>& Free Shipping</span>
             </div>
-            <p>{product.description}</p>
+            <p>{data?.description}</p>
             <div className="label-btn-scooter-accs">
-              <div className="quantity-buttons_added-scooter-accs">
-                {/* <label className="screen-reader-text" htmlFor="minus_qty">
-                  -
-                </label>
-                <label
-                  className="screen-reader-text"
-                  htmlFor="quantity_65882f9b538de"
-                ></label>
-                <input style={{ width: "25px" }}></input>
-                <label className="screen-reader-text" htmlFor="plus_qty">
-                  +
-                </label> */}
-                <input type="number" min={1} max={50} />
+              <div >
+               
+                <input className="quantity-buttons_added-scooter-accs" type="number" min={1} max={50} />
               </div>
               <ButtonCard text={"ADD TO CART "} />
             </div>
@@ -69,9 +64,9 @@ function ProductsSolo({ products }) {
             </div>
           </div>
         </div>
-        <div className="reviews" >
-         <Reviews />
-         </div>
+        <div className="reviews">
+          <Reviews />
+        </div>
 
         <div className="footer">
           <LandingPageFooter />

@@ -76,7 +76,7 @@
   font-weight: 600;
 }
 .quantity-buttons_added-accessoiers {
-  border: 1px solid rgba(24, 24, 24, 0.246);
+  /* border: 1px solid rgba(24, 24, 24, 0.246); */
   width: 90px;
   text-align: center;
   height: 35px;

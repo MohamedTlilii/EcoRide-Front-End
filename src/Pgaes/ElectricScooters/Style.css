@@ -25,6 +25,8 @@
   color: hsl(173, 95%, 42%)!important;
 }
 .electric-section-two {
+    /* border: 2px solid rgb(206, 30, 30); */
+
   display: flex;
   align-items: center;
   gap: 7px;
@@ -40,7 +42,7 @@
   margin: 4px;
 }
 .slection-icons {
-  /* border: 2px solid rgb(24, 234, 178); */
+  /* border: 2px solid rgb(24, 234, 178);  */
   position: relative;
   left: 12px;
 }
@@ -59,7 +61,7 @@
   /* height: 750px; */
   margin: 50px auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 55px;
   padding: 0px 0px 55px;
@@ -165,7 +167,7 @@
   font-weight: 600;
 }
 .quantity-buttons_added-scooters {
-  border: 1px solid rgba(24, 24, 24, 0.246);
+  /* border: 1px solid rgba(24, 24, 24, 0.246); */
   width: 90px;
   text-align: center;
   height: 35px;

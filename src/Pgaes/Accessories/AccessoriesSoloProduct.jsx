@@ -44,8 +44,8 @@ function AccessoriesSoloProduct({ products }) {
               accumsan lacus vel facilisis.
             </p>
             <div className="label-btn-accessoiers">
-              <div className="quantity-buttons_added-accessoiers">
-              <input type="number" min={1} max={50} />
+              <div >
+              <input className="quantity-buttons_added-accessoiers" type="number" min={1} max={50} />
               </div>
               <ButtonCard text={"ADD TO CART "} />
             </div>

@@ -4,7 +4,6 @@ function ElectricScootersProducts({
   imageUrls,
   title,
   price,
-  description,
   _id,
 }) {
   return (
@@ -18,7 +17,6 @@ function ElectricScootersProducts({
           />
         </Link>
       </div>
-      {/* <span>{"✰".repeat(rating)}</span> */}
       <div>
         <Link to={`/productscooter/${_id}`}>
           <h2

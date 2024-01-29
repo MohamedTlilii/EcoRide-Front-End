@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Style.css";
-function AccessoriesProduct({ image, title, price, id, imageUrls }) {
+function AccessoriesProduct({ imageUrls, title, price, _id }) {
   return (
     <div>
       <div className="my-product-card">
-        <Link to={`/accessories/${id}`}>
+        <Link to={`/accessories/${_id}`}>
           <img
             className="electric-scooter-products"
             src={imageUrls[0]}
@@ -15,7 +15,7 @@ function AccessoriesProduct({ image, title, price, id, imageUrls }) {
       </div>
       {/* <span>{"✰".repeat(rating)}</span> */}
       <div>
-        <Link to={`/accessories/${id}`}>
+        <Link to={`/accessories/${_id}`}>
           <h2
             style={{ color: "black" }}
             className="electric-scooter-products-title"

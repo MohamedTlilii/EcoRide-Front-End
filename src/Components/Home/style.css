@@ -223,9 +223,12 @@
   /* border: 2px solid black; */
   display: flex;
   justify-content: space-between;
+  /* width: ; */
 }
 .product-container {
+  /* border: 2px solid black; */
   position: relative;
+  /* font-weight: 300px; */
 }
 .img-product-cart {
   /* border: 2px solid black; */
@@ -289,6 +292,8 @@ a {
 /* product zoomed  */
 .my-product-card {
   overflow: hidden;
+  /* border: 1px solid rgba(0, 0, 0, 0.018); */
+  width: "30px";
   
 }
 .my-product-card img {

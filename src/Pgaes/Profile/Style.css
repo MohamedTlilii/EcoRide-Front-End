@@ -1,24 +1,16 @@
-
-
 .profile-container {
-    /* border: 2px solid rgb(11, 209, 74); */
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    /* padding: 20px; */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 120px;
-    /* left: 20px; */
-   
+  /* border: 2px solid rgb(11, 209, 74); */
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  /* padding: 20px; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 120px;
+  /* left: 20px; */
 }
 .profil-container-user {
-    position: relative;
-        left: 150px;
-
+  position: relative;
+  left: 150px;
 }
-
-
-
-

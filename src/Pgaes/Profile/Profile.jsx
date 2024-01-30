@@ -26,31 +26,75 @@ import {
 import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-
-function Profile(_id) {
+import { toast } from "react-toastify";
+import { Navigate } from "react-router-dom";
+function Profile() {
+  // const navigate = useNavigate();
   let token = localStorage.getItem("token");
-  const { data, error } = useFetch(
+  const { data } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/GetInformation",
     token
   );
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [loadingP, setLoadingP] = useState(false);
   const [newUserData, setNewUserData] = useState({});
+  const [updateUserPic, setUpdateUserPic] = useState();
   const handleUpdateUser = () => {
     setLoading(true);
     axios
-      .put(`${url}/updateInformation/${_id}`, newUserData, {
+      .put(`${url}/updateInformation`, newUserData, {
         headers: { token },
       })
+
       .then((res) => {
         setLoading(false);
-        setOpen(false);
         console.log(res);
+        toast.success("Contact was added successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        setOpen(false);
       })
       .catch((err) => {
         setLoading(false);
-
         console.dir(err);
+        setOpen(false);
+      });
+  };
+  const handleUpdatePhoto = () => {
+    setLoadingP(true);
+    let userData = new FormData();
+    userData.append("photo", updateUserPic);
+    axios
+      .put(`${url}/updatePhoto`, userData, {
+        headers: { token },
+      })
+      .then((res) => {
+        setLoadingP(false);
+        console.log(res);
+        toast.success("Contact was added successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        setOpen(false);
+      })
+      .catch((err) => {
+        setLoadingP(false);
+        console.dir(err);
+        setOpen(false);
       });
   };
   return (
@@ -99,7 +143,7 @@ function Profile(_id) {
             <Modal
               style={{
                 width: "50%",
-                height: "31%",
+                height: "40%",
                 position: "absolute",
                 left: "500px",
                 top: "300px",
@@ -109,36 +153,56 @@ function Profile(_id) {
             >
               <ModalHeader>Update Information</ModalHeader>
               <ModalContent>
-                <Form
-                  onChange={(e) => {
-                    setNewUserData({
-                      ...newUserData,
-                      [e.target.name]: e.target.value,
-                    });
-                  }}
-                >
+                <Form>
                   <Form.Group>
                     <label>
                       <input
-                        style={{ width: "927px", height: "40px" }}
+                        style={{ width: "927px", height: "50px" }}
                         type="file"
                         name="photo"
+                        onChange={(e) => {
+                          setUpdateUserPic(e.target.files[0]);
+                        }}
                       />
+                      <Button
+                        onClick={() => {
+                          handleUpdatePhoto();
+                        }}
+                        loading={loadingP}
+                      >
+                        Update photo
+                      </Button>
                     </label>
                   </Form.Group>
-                  <Form.Group onChange={(e) => {}} widths="equal">
+                  <Form.Group
+                    widths="equal"
+                    onChange={(e) => {
+                      setNewUserData({
+                        ...newUserData,
+                        [e.target.name]: e.target.value,
+                      });
+                    }}
+                  >
                     <Form.Input
                       type="text"
                       placeholder="UserName"
-                      name="UserName"
+                      name="userName"
                     />
-                    <Form.Input type="phone" placeholder="Phone" name="phone" />
+                    <Form.Input type="tel" placeholder="Phone" name="number" />
                   </Form.Group>
-                  <Form.Group widths="equal" onChange={(e) => {}}>
+                  <Form.Group
+                    widths="equal"
+                    onChange={(e) => {
+                      setNewUserData({
+                        ...newUserData,
+                        [e.target.name]: e.target.value,
+                      });
+                    }}
+                  >
                     <Form.Input type="email" placeholder="Email" name="email" />
                     <Form.Input
                       type="text"
-                      placeholder="Adress"
+                      placeholder="Address"
                       name="address"
                     />
                   </Form.Group>
@@ -149,15 +213,15 @@ function Profile(_id) {
                   Cancel
                 </Button>
                 <Button
-                  content="Update"
-                  labelPosition="right"
-                  icon="checkmark"
+                  type="button"
+                  positive
+                  loading={loading}
                   onClick={() => {
                     handleUpdateUser();
                   }}
-                  positive
-                  loading={loading}
-                />
+                >
+                  Update
+                </Button>
               </ModalActions>
             </Modal>
           </>
@@ -193,7 +257,7 @@ function Profile(_id) {
           </div>
         </div>
       </div>
-      <div >
+      <div>
         <div className="footer">
           <Footer />
           <div className="last-footer">

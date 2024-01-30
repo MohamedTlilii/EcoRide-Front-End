@@ -9,25 +9,28 @@ import "./style.css";
 import Reviews from "../../Components/Reviews/Reviews";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
+import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 
-function ProductsSolo({ products }) {
+function ProductsSolo({ product }) {
   let { id } = useParams();
   let token = localStorage.getItem("token");
-  // let product = products.find((product) => product.id === id);
-  const { data, error } = useFetch(
+  const { data } = useFetch(
     `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
     token
   );
+  // const handleAddToCart = () => {
+  //   ShoppingCart({ productData: data });
+  // };
   return (
     <div className="solo-product-parent-div">
       <div className="solo-product">
         <div className="products-cont">
           <div className="products-mains">
-          {!data ? (
-  <PacmanLoader color="#36d7b7" size={100} />
-) : (
-  <Thumbnails images={data?.imageUrls} />
-)}
+            {!data ? (
+              <PacmanLoader color="#36d7b7" size={100} />
+            ) : (
+              <Thumbnails images={data?.imageUrls} />
+            )}
           </div>
 
           <div className="content-card-boxx">
@@ -38,7 +41,6 @@ function ProductsSolo({ products }) {
             <h2 className="product-content-scooter-accs"> {data?.title}</h2>
 
             <div className="box-prices-scooter-accs">
-              {/* <span className="cut-price-scooter-accs">{product.span}EGP</span> */}
               <span className="price-without-cut-scooter-accs">
                 {data?.price}$
               </span>
@@ -46,11 +48,20 @@ function ProductsSolo({ products }) {
             </div>
             <p>{data?.description}</p>
             <div className="label-btn-scooter-accs">
-              <div >
-               
-                <input className="quantity-buttons_added-scooter-accs" type="number" min={1} max={50} />
+              <div>
+                <input
+                  className="quantity-buttons_added-scooter-accs"
+                  type="number"
+                  min={1}
+                  max={50}
+                />
               </div>
-              <ButtonCard text={"ADD TO CART "} />
+              <ButtonCard
+                // onClick={() => {
+                //   handleAddToCart();
+                // }}
+                text={"ADD TO CART "}
+              />
             </div>
             <fieldset>
               <legend>Guaranteed Safe Checkout</legend>

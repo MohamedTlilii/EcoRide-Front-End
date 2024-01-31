@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ButtonCard from "../../Components/Btn/ButtonCard";
 import { useParams } from "react-router-dom";
@@ -9,18 +9,38 @@ import "./style.css";
 import Reviews from "../../Components/Reviews/Reviews";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-// import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
+import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
+import axios from "axios";
+import { url } from "../../utils/url";
 
-function ProductsSolo({ product }) {
+function ProductsSolo({ _id }) {
+  const [loading, setLoading] = useState(false);
+  const [quantity, setQuantity] = useState({ quantity: 1 });
+
   let { id } = useParams();
   let token = localStorage.getItem("token");
   const { data } = useFetch(
     `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
     token
   );
-  // const handleAddToCart = () => {
-  //   ShoppingCart({ productData: data });
-  // };
+  const handleAddProductToCart = () => {
+    setLoading(true);
+    axios
+      .post(`${url}/addProductToCart/${id}`, quantity, {
+        headers: { token },
+      })
+      .then((res) => {
+        setLoading(false);
+
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        console.dir(err);
+      });
+  };
+
   return (
     <div className="solo-product-parent-div">
       <div className="solo-product">
@@ -50,18 +70,17 @@ function ProductsSolo({ product }) {
             <div className="label-btn-scooter-accs">
               <div>
                 <input
+                  onChange={(e) => {
+                    setQuantity({ quantity: e.target.value });
+                  }}
                   className="quantity-buttons_added-scooter-accs"
                   type="number"
                   min={1}
                   max={50}
+                  defaultValue={1}
                 />
               </div>
-              <ButtonCard
-                // onClick={() => {
-                //   handleAddToCart();
-                // }}
-                text={"ADD TO CART "}
-              />
+              <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART "} />
             </div>
             <fieldset>
               <legend>Guaranteed Safe Checkout</legend>

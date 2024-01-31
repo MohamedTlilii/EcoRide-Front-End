@@ -1,8 +1,34 @@
-.ShoppingCart   {
-    color:hsl(173, 95%, 42%)!important ;
-    all: unset;
-    /* border: 1px solid black; */
-    height: fit-content;
-    position: relative;
-    /* bottom: 23px; */
+.ShoppingCart {
+  color: hsl(173, 95%, 42%) !important ;
+  all: unset;
+  /* border: 1px solid black; */
+  height: fit-content;
+  position: relative;
+  /* bottom: 23px; */
+}
+.shopingCartBox {
+  display: flex;
+  gap: 20px;
+}
+
+.pr_intro h5 {
+  margin-bottom: 7;
+}
+
+form {
+  border: 1px solid rgba(0, 0, 0, 0.097);
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  width: 45px;
+  margin-top: 7px;
+}
+form button {
+  /* border: 1px solid rgba(0, 0, 0, 0.152); */
+  all: unset;
+}
+.cart_body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }

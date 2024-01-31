@@ -1,10 +1,17 @@
 import React from "react";
 import "./Style.css";
 
-function ButtonCard({ text }) {
+function ButtonCard({ text, fn }) {
   return (
     <div>
-      <button className="btn-cart">{text}</button>
+      <button
+        onClick={() => {
+          fn();
+        }}
+        className="btn-cart"
+      >
+        {text}
+      </button>
     </div>
   );
 }

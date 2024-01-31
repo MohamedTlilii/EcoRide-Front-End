@@ -9,7 +9,7 @@ function ElectricScootersProducts({
   return (
     <div>
       <div className="my-product-card">
-        <Link to={`/productscooter/${_id}`}>
+        <Link to={`/product/${_id}`}>
           <img
             className="electric-scooter-products"
             src={imageUrls[0]}
@@ -18,7 +18,7 @@ function ElectricScootersProducts({
         </Link>
       </div>
       <div>
-        <Link to={`/productscooter/${_id}`}>
+        <Link to={`/product/${_id}`}>
           <h2
             style={{ color: "#05cfb7" }}
             className="electric-scooter-products-title"

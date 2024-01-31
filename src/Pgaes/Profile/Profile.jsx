@@ -35,6 +35,7 @@ function Profile() {
     "https://ecoridebackend.onrender.com/api/user/GetInformation",
     token
   );
+
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingP, setLoadingP] = useState(false);
@@ -68,6 +69,7 @@ function Profile() {
         setOpen(false);
       });
   };
+
   const handleUpdatePhoto = () => {
     setLoadingP(true);
     let userData = new FormData();
@@ -97,6 +99,8 @@ function Profile() {
         setOpen(false);
       });
   };
+  // let tIndex = createdAt.indexOf("T");
+  // let date = createdAt.substr(0, tIndex);
   return (
     <div>
       <div className="dashboard">
@@ -108,9 +112,9 @@ function Profile() {
               <Card className="profil-container-user">
                 <Image src={data.imageUrl} />
                 <CardContent>
-                  <CardHeader></CardHeader>
+                  <CardHeader> {data.userName}</CardHeader>
                   <CardMeta>
-                    <span className="date"> {data.userName} </span>
+                    <span className="date"> Joined{data.createdAt} </span>
                   </CardMeta>
                   <CardDescription>
                     <Icon name="map marker alternate" />

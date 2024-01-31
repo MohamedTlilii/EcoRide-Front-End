@@ -4,7 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaSquareYoutube } from "react-icons/fa6";
 import CardProduct from "../../Components/Home/CardProduct";
-
+import { useState } from "react";
 import "./style.css";
 import Box from "../../Components/Home/Box";
 import LandingPageAbout from "../../Components/Home/LandingPageAbout";
@@ -14,20 +14,42 @@ import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
+import axios from "axios";
+import { url } from "../../utils/url";
 
-function LandingPage({ products }) {
+function LandingPage() {
   let token = localStorage.getItem("token");
-  const { data, error } = useFetch(
+  const [loading, setLoading] = useState(false);
+  const [quantity, setQuantity] = useState({ quantity: 1 });
+  const { data } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/getProducts",
     token
   );
+  let mainProduct = data?.find((elt) => elt.title === "Libero X250");
+  const handleAddProductToCart = () => {
+    setLoading(true);
+    axios
+      .post(`${url}/addProductToCart/${mainProduct._id}`, quantity, {
+        headers: { token },
+      })
+      .then((res) => {
+        setLoading(false);
+
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        console.dir(err);
+      });
+  };
   return (
     <div className="parent-div">
       <div className="hero-section">
         <div className="hero-section-content">
-          <h1>Libero X250</h1>
+          <h1>{mainProduct?.title}</h1>
           {/* <ShoppingCart/>   */}
-          <h4 className="hero-titlle">250 Watt Electric Scooter</h4>
+          {/* <h4 className="hero-titlle">{mainProduct?.description}</h4> */}
           <h5 className="hero-second-title">Informations:</h5>
           <div className="card-km-info">
             <CardKm text={30} km={"km"} content={"BATTERY"} />
@@ -35,9 +57,9 @@ function LandingPage({ products }) {
             <CardKm text={25} km={"km/h"} content={"SPEED"} />
           </div>
           <div className="add-cart-section">
-            <span>$</span> 750.000
+            <span>$</span> {mainProduct?.price}
             <span className="add-cart-span">
-              <ButtonCard text={"ADD TO CART"} />
+              <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART"} />
             </span>
           </div>
         </div>
@@ -45,17 +67,13 @@ function LandingPage({ products }) {
         <div className="scoter-hero-section">
           <img
             style={{ width: "658px", height: "577px" }}
-            src="/assets/home/scooter-01.png"
+            src={mainProduct?.imageUrls[0]}
             alt=""
           />
         </div>
         <div className="last-section-hero">
           <h4 className="last-section-title">Description</h4>
-          <p className="last-section-titlle-p">
-            The Fully Loaded Libero x250 is a High Performance, Extremely
-            Durable, High Speed, Lightweight Electric Scooter with a Huge
-            Battery
-          </p>
+          <p className="last-section-titlle-p">{mainProduct?.description}</p>
           <h6 className="last-section-logos-titlle">SHARE:</h6>
           <FaFacebook className="fb-logo" />
           <AiFillTwitterCircle className="twiter-logo" />

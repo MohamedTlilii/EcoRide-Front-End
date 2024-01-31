@@ -1,9 +1,9 @@
 .dashboard {
-    /* border: 2px solid rgb(213, 20, 20); */
-    height: 120vh;
+    border: 2px solid rgb(213, 20, 20);
+    height: 160vh;
+    padding: 200px;
     
 
 }
-.aaa {
-    /* border: 2px solid rgb(46, 213, 20); */
-}
+
+

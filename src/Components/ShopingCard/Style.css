@@ -48,13 +48,15 @@ form button {
   height: 50px;
   display: flex;
   align-items: center;
+  margin: 10px;
 }
 
 .Subtotal h3 {
-  margin: 0; /* Remove default margin for h3 */
+  margin: 10px; /* Remove default margin for h3 */
+  
 }
 
-button {
+.buttonChekoutbtn {
   background-color: hsl(173, 95%, 42%); /* Set your desired background color */
   color: #fff; /* Set your desired text color */
   border: none;
@@ -63,6 +65,13 @@ button {
   font-size: 16px;
   border-radius: 5px;
   margin-left: 10px; /* Add spacing between the h3 and button */
+  position: relative;
+  left: 70px;
+  width: 250px;
+  bottom: 4px;
+  /* margin: 10px; */
+  
+
 }
 
 button:hover {

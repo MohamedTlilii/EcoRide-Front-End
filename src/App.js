@@ -87,7 +87,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="Dashboard" element={<AdminDashboard />} />
+        <Route path="dashboard" element={<AdminDashboard />} />
       </Route>
       <Route path="/" element={<ConnexionLayout />}>
         <Route

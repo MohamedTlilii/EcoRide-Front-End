@@ -24,6 +24,9 @@ function NavBar() {
       </Link>
 
       <ul className="nav">
+        <Link to="/">
+          <li>Home</li>
+        </Link>
         <Link to="/electricscooters">
           <li>Electric Scooters</li>
         </Link>

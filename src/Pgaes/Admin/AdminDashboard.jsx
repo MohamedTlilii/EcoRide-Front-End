@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from "../Profile/Profile";
+// import Profile from "../Profile/Profile";
 // import Footer from "../../Components/Footer/Footer";
 // import NavBar from "../../Components/Navbar/NavBar";
 // import AddPostForm from "../components/AddPostForm";
@@ -8,13 +8,15 @@ import Profile from "../Profile/Profile";
 import "./Style.css";
 // import LandingPageFooter from "../../Components/Footer/Footer";
 import Footer from "../../Components/Footer/Footer";
+// import Checkout from "../Checkout/Checkout";
+import Checkout from "../Checkout/Checkout";
 function AdminDashboard() {
   return (
     <div >
       <div className="dashboard">
-        <Profile />
+        <Checkout />
       </div>
-      <div className="aaa">
+      
       <div className="footer">
         <Footer />
         <div className="last-footer">
@@ -27,7 +29,7 @@ function AdminDashboard() {
         </div>
       </div>
       </div>
-    </div>
+    
   );
 }
 

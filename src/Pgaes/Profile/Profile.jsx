@@ -99,7 +99,7 @@ function Profile() {
   };
   return (
     <div>
-      <div className="dashboard">
+      <div className="profilDashboard">
         <div className="profile-container">
           {!data ? (
             <PacmanLoader color="#36d7b7" size={100} />
@@ -231,8 +231,8 @@ function Profile() {
               <TableHeader>
                 <TableRow>
                   <TableHeaderCell>Name</TableHeaderCell>
-                  <TableHeaderCell>Status</TableHeaderCell>
-                  <TableHeaderCell>Notes</TableHeaderCell>
+                  <TableHeaderCell>Price</TableHeaderCell>
+                  <TableHeaderCell>Quantity</TableHeaderCell>
                 </TableRow>
               </TableHeader>
 
@@ -240,16 +240,6 @@ function Profile() {
                 <TableRow>
                   <TableCell>clio</TableCell>
                   <TableCell>Approved</TableCell>
-                  <TableCell textAlign="right">None</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>x200</TableCell>
-                  <TableCell>Approved</TableCell>
-                  <TableCell textAlign="right">Requires call</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>bmw</TableCell>
-                  <TableCell>Denied</TableCell>
                   <TableCell textAlign="right">None</TableCell>
                 </TableRow>
               </TableBody>

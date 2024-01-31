@@ -27,7 +27,7 @@ import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 function Profile() {
   // const navigate = useNavigate();
   let token = localStorage.getItem("token");

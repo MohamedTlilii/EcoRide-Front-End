@@ -9,7 +9,7 @@ import "./style.css";
 import Reviews from "../../Components/Reviews/Reviews";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
+// import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 
 function ProductsSolo({ product }) {
   let { id } = useParams();

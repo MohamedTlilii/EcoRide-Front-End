@@ -20,7 +20,7 @@ function CardProduct({ imageUrls, title, price, _id }) {
         </Link>
       </div>
 
-      <span className="line-through-two">${price}</span>
+      <span className="line-through-two">{price}TND</span>
     </div>
   );
 }

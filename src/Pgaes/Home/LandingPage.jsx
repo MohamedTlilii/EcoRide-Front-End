@@ -57,7 +57,7 @@ function LandingPage() {
             <CardKm text={25} km={"km/h"} content={"SPEED"} />
           </div>
           <div className="add-cart-section">
-            <span>$</span> {mainProduct?.price}
+            {mainProduct?.price} <span>TND</span>
             <span className="add-cart-span">
               <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART"} />
             </span>
@@ -106,7 +106,7 @@ function LandingPage() {
           </Link>
           <figcaption>CITY</figcaption>
           <h1 className="titlle-third-section">Electric Scooter Z400</h1>
-          <p className="price-third-section">$650 </p>
+          <p className="price-third-section">650 <span>TND</span> </p>
         </div>
       </div>
       <LandingPageFour />

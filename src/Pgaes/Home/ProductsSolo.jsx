@@ -62,7 +62,7 @@ function ProductsSolo({ _id }) {
 
             <div className="box-prices-scooter-accs">
               <span className="price-without-cut-scooter-accs">
-                {data?.price}$
+                {data?.price}TND
               </span>
               <span>& Free Shipping</span>
             </div>

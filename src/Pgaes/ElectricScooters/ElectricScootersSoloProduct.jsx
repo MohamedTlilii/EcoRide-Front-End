@@ -10,7 +10,7 @@ import { PacmanLoader } from "react-spinners";
 function ElectricScootersSoloProduct({ products }) {
   let { id } = useParams();
   let token = localStorage.getItem("token");
-  let product = products.find((product) => product.id === id);
+  // let product = products.find((product) => product.id === id);
   const { data, error } = useFetch(
     `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
     token

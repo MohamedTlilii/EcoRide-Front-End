@@ -26,7 +26,7 @@ function AccessoriesProduct({ imageUrls, title, price, _id }) {
       </div>
 
       <span className="electric-scooter-products-price">{price}</span>
-      <span>EGP</span>
+      <span>TND</span>
     </div>
   );
 }

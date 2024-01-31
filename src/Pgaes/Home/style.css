@@ -10,10 +10,12 @@
   }
   .hero-section {
     /* border: 2px rgb(202, 221, 28) solid; */
+    background-color:hsl(180, 43%, 97%);
     display: flex;
     justify-content: center;
     height: 99vh;
-    background-image: url("../../../public/assets/home/bg-01.png");
+    width: 1000;
+    background-image: url("");
     background-repeat: no-repeat;
     background-position: center;
     /* width: fit-content; */

@@ -15,7 +15,7 @@
   margin-bottom: 7;
 }
 
-form {
+.shopingCartForm {
   border: 1px solid rgba(0, 0, 0, 0.097);
   display: flex;
   align-items: start;
@@ -31,4 +31,40 @@ form button {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.Subtotal {
+  border: 1px solid rgba(0, 0, 0, 0.149);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.Subtotal h3 {
+  margin: 0; /* Remove default margin for h3 */
+}
+
+.Subtotal {
+  border: 1px solid rgba(0, 0, 0, 0.149);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.Subtotal h3 {
+  margin: 0; /* Remove default margin for h3 */
+}
+
+button {
+  background-color: hsl(173, 95%, 42%); /* Set your desired background color */
+  color: #fff; /* Set your desired text color */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 10px; /* Add spacing between the h3 and button */
+}
+
+button:hover {
+  background-color: black; /* Change the background color on hover */
 }

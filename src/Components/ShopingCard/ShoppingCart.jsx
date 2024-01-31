@@ -5,6 +5,7 @@ import "./Style.css";
 import { FaCartShopping } from "react-icons/fa6";
 import axios from "axios";
 import { url } from "../../utils/url";
+import { Button } from "semantic-ui-react";
 
 // import { useFetch } from "../../utils/useFetch";
 
@@ -97,7 +98,7 @@ function ShoppingCart() {
                   </p>
                 </div>
 
-                <form>
+                <form className="shopingCartForm">
                   <button
                     type="button"
                     onClick={() => {
@@ -122,6 +123,10 @@ function ShoppingCart() {
             </div>
           ))}
         </Offcanvas.Body>
+        <div className="Subtotal">
+          <h3>Subtotal:</h3>
+        </div>
+        <button >Checkout</button>
       </Offcanvas>
     </div>
   );

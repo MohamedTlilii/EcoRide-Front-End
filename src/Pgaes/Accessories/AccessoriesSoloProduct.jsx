@@ -8,11 +8,11 @@ import Reviews from "../../Components/Reviews/Reviews"
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 
-function AccessoriesSoloProduct({ products }) {
+function AccessoriesSoloProduct( ) {
   let { id } = useParams();
   let token = localStorage.getItem("token");
-  let product = products.find((product) => product.id === id);
-  const { data, error } = useFetch(
+  // let product = products.find((product) => product.id === id);
+  const { data,  } = useFetch(
     `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
     token
   );
@@ -39,7 +39,7 @@ function AccessoriesSoloProduct({ products }) {
 
             <div className="box-prices-accessoiers">
               <span className="price-without-cut-accessoiers">
-                {data?.price}$
+                {data?.price}TND
               </span>
               <span>& Free Shipping</span>
             </div>

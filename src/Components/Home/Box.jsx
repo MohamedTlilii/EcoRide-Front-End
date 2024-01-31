@@ -7,7 +7,7 @@ function Box({ products }) {
   return (
     <div className="box-last-section">
       <div className="box-box">
-        <h5>$750</h5>
+        <h5>750 <span>TND</span></h5>
 
         <h2 className="box-titlle-section">Practico Z50 Exclusive</h2>
 

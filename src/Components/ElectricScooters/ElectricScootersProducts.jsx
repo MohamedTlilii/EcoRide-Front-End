@@ -29,8 +29,9 @@ function ElectricScootersProducts({
         </Link>
       </div>
 
-      <span>$</span>
+      
       <span className="electric-scooter-products-price">{price}</span>
+      <span>TND</span>
     </div>
   );
 }

@@ -27,9 +27,8 @@ import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import { toast } from "react-toastify";
-// import { Navigate } from "react-router-dom";
+
 function Profile() {
-  // const navigate = useNavigate();
   let token = localStorage.getItem("token");
   const { data } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/GetInformation",
@@ -103,7 +102,8 @@ function Profile() {
     "https://ecoridebackend.onrender.com/api/user/getOwnOrder",
     token
   );
-  console.log(products)
+  console.log(products.data && products.data);
+
   return (
     <div>
       <div className="profilDashboard">
@@ -114,6 +114,7 @@ function Profile() {
             data && (
               <Card className="profil-container-user">
                 <Image src={data.imageUrl} />
+
                 <CardContent>
                   <CardHeader></CardHeader>
                   <CardMeta>
@@ -237,24 +238,26 @@ function Profile() {
             <Table celled inverted selectable>
               <TableHeader>
                 <TableRow>
-                  <TableHeaderCell>Name</TableHeaderCell>
+                  <TableHeaderCell>Product ID</TableHeaderCell>
+                  <TableHeaderCell>Product</TableHeaderCell>
                   <TableHeaderCell>Price</TableHeaderCell>
                   <TableHeaderCell>Quantity</TableHeaderCell>
                 </TableRow>
               </TableHeader>
 
               <TableBody>
-                {/* {products?.data.map((e) => {
-                  return (
-                    <TableRow>
-                      <TableCell>{e.productId.title}</TableCell>
-                      <TableCell>{e.productId.price}</TableCell>
-                      <TableCell textAlign="right">
-                        {e.productId.quantity}{" "}
-                      </TableCell>
-                    </TableRow>
-                  );
-                })} */}
+                {products.data &&
+                  products.data.map((e) =>
+                    e.cart.map((e) => (
+                      <TableRow>
+                        <TableCell>{e.productId.title}</TableCell>
+                        <TableCell>{e.productId._id}</TableCell>
+                        <TableCell textAlign="right">
+                          {e.productId.price}{" "}
+                        </TableCell>
+                      </TableRow>
+                    ))
+                  )}
               </TableBody>
             </Table>
           </div>

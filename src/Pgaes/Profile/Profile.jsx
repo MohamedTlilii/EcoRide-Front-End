@@ -250,8 +250,8 @@ function Profile() {
                   products.data.map((e) =>
                     e.cart.map((e) => (
                       <TableRow>
-                        <TableCell>{e.productId.title}</TableCell>
                         <TableCell>{e.productId._id}</TableCell>
+                        <TableCell>{e.productId.title}</TableCell>
                         <TableCell textAlign="right">
                           {e.productId.price}{" "}
                         </TableCell>

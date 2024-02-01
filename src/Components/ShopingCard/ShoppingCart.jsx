@@ -5,7 +5,7 @@ import "./Style.css";
 import { FaCartShopping } from "react-icons/fa6";
 import axios from "axios";
 import { url } from "../../utils/url";
-import { Button } from "semantic-ui-react";
+import { Button, ButtonGroup, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 // import { useFetch } from "../../utils/useFetch";
@@ -14,13 +14,17 @@ function ShoppingCart() {
   const [show, setShow] = useState(false);
   const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [loading1, setLoading1] = useState(false);
+  const [loading2, setLoading2] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   let token = localStorage.getItem("token");
-  // console.log(cart);
-  // const [loading, setLoading] = useState(false);
-  // const [quantity, setQuantity] = useState({ quantity: 1 });
+  let total = cart?.reduce(
+    (accumulator, currentValue) =>
+      accumulator + currentValue.quantity * currentValue.productId.price,
+    0
+  );
   useEffect(() => {
     // setLoading(true);
     axios
@@ -75,6 +79,59 @@ function ShoppingCart() {
         console.dir(err);
       });
   };
+  const handleSubmitOdrer = () => {
+    setLoading(true);
+    axios
+      .post(
+        `${url}/createOrder`,
+        { total },
+        {
+          headers: { token },
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        setLoading(false);
+        setShow(false);
+      })
+      .catch((err) => {
+        console.dir(err);
+        setLoading(true);
+      });
+  };
+  const handleDeleteCart = () => {
+    setLoading1(true);
+    axios
+      .delete(`${url}/deleteCart`, {
+        headers: { token },
+      })
+      .then((res) => {
+        console.log(res);
+        setLoading1(false);
+        setTimeout(() => {
+          setShow(false);
+        }, 1000);
+      })
+      .catch((err) => {
+        console.dir(err);
+        setLoading1(true);
+      });
+  };
+  const handleDeleteSingleProduct = (id) => {
+    setLoading2(true);
+    axios
+      .delete(`${url}/removeProductFromCart/${id}`, {
+        headers: { token },
+      })
+      .then((res) => {
+        console.log(res);
+        setLoading2(false);
+      })
+      .catch((err) => {
+        console.dir(err);
+        setLoading2(false);
+      });
+  };
   return (
     <div className="ShoppingCart">
       <FaCartShopping variant="primary" onClick={handleShow} />
@@ -120,15 +177,48 @@ function ShoppingCart() {
                     -
                   </button>
                 </form>
+                <Button
+                  icon
+                  onClick={() => {
+                    handleDeleteSingleProduct(product.productId._id);
+                  }}
+                  loading={loading2}
+                >
+                  <Icon name="trash" />
+                </Button>
               </div>
             </div>
           ))}
         </Offcanvas.Body>
         <div className="Subtotal">
-          <h3>Subtotal:</h3>
+          <h3>Subtotal: {total} TND </h3>
         </div>
-        {/* <Link to="/Checkout"> */}
-          <button className="buttonChekoutbtn">Checkout</button>
+        {/* <Link to="/chekout"> */}
+        <ButtonGroup>
+          <Button
+            // className="buttonChekoutbtn"
+            onClick={() => {
+              handleDeleteCart();
+            }}
+            color="black"
+            disabled={cart.length > 0 ? false : true}
+            loading={loading1}
+          >
+            Cancel
+          </Button>
+          <Button
+            // className="buttonChekoutbtn"
+            onClick={() => {
+              handleSubmitOdrer();
+            }}
+            color="green"
+            disabled={cart.length > 0 ? false : true}
+            loading={loading}
+          >
+            Submit odrer
+          </Button>
+        </ButtonGroup>
+
         {/* </Link> */}
       </Offcanvas>
     </div>

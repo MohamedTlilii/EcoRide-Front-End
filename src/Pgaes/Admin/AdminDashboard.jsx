@@ -9,12 +9,12 @@ import "./Style.css";
 // import LandingPageFooter from "../../Components/Footer/Footer";
 import Footer from "../../Components/Footer/Footer";
 // import Checkout from "../Checkout/Checkout";
-import Checkout from "../Checkout/Checkout";
+// import Checkout from "../Checkout/Checkout";
 function AdminDashboard() {
   return (
     <div >
       <div className="dashboard">
-        <Checkout />
+        <h1>azeaze</h1>
       </div>
       
       <div className="footer">

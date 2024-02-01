@@ -35,6 +35,7 @@ function Profile() {
     "https://ecoridebackend.onrender.com/api/user/GetInformation",
     token
   );
+
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingP, setLoadingP] = useState(false);
@@ -97,6 +98,12 @@ function Profile() {
         setOpen(false);
       });
   };
+
+  const products = useFetch(
+    "https://ecoridebackend.onrender.com/api/user/getOwnOrder",
+    token
+  );
+  console.log(products)
   return (
     <div>
       <div className="profilDashboard">
@@ -237,11 +244,17 @@ function Profile() {
               </TableHeader>
 
               <TableBody>
-                <TableRow>
-                  <TableCell>clio</TableCell>
-                  <TableCell>Approved</TableCell>
-                  <TableCell textAlign="right">None</TableCell>
-                </TableRow>
+                {/* {products?.data.map((e) => {
+                  return (
+                    <TableRow>
+                      <TableCell>{e.productId.title}</TableCell>
+                      <TableCell>{e.productId.price}</TableCell>
+                      <TableCell textAlign="right">
+                        {e.productId.quantity}{" "}
+                      </TableCell>
+                    </TableRow>
+                  );
+                })} */}
               </TableBody>
             </Table>
           </div>

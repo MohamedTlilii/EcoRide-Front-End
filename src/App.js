@@ -20,6 +20,7 @@ import Profile from "./Pgaes/Profile/Profile";
 import AdminDashboard from "./Pgaes/Admin/AdminDashboard";
 import PrivateRoute from "./Routes/PrivateRoute";
 import PublicRoute from "./Routes/PublicRoute";
+import Checkout from "./Pgaes/Checkout/Checkout";
 // import AdminRoute from "./Routes/AdminRoute";
 // import AdminLogin from "./Pages/AdminLogin";
 
@@ -31,7 +32,7 @@ function App() {
           index
           element={
             // <PrivateRoute>
-              <LandingPage products={Data} />
+            <LandingPage products={Data} />
             // </PrivateRoute>
           }
         />
@@ -88,6 +89,14 @@ function App() {
           }
         />
         <Route path="dashboard" element={<AdminDashboard />} />
+        <Route
+          path="chekout"
+          element={
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
+          }
+        />
       </Route>
       <Route path="/" element={<ConnexionLayout />}>
         <Route

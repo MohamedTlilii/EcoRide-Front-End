@@ -120,7 +120,7 @@ function LandingPage() {
               enim ad minim veniam.
             </p>
             <Link to={"accessories"}>
-              <ButtonCard text={"SHOP ACCESSORIES"} />
+              <ButtonCard text={"SHOP ACCESSORIES"} fn={()=>console.log('hello')} />
             </Link>
           </div>
 

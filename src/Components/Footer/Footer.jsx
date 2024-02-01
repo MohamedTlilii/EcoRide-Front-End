@@ -65,9 +65,8 @@ function Footer() {
             size={"250px"}
           />
         </label>
-        <ButtonCard text={"SUBSCRIBE"} />
+        <ButtonCard text={"SUBSCRIBE"} fn={() => console.log("hello")} />
       </div>
-      
     </div>
   );
 }

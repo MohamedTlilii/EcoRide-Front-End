@@ -15,6 +15,6 @@ export const useFetch = (url, token) => {
           console.dir(err);
         }
       });
-  }, [data, url, token]);
+  }, [ url, token]);
   return { data, error };
 };

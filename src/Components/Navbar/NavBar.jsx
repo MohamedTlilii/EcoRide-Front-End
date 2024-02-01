@@ -44,6 +44,9 @@ function NavBar() {
         <Link to="/contact">
           <li>Contact</li>
         </Link>
+        {/* <Link to="/Checkout">
+          <li>Checkout </li>
+        </Link> */}
 
         <li>
           <Link to="/dashboard">Dashboard</Link>

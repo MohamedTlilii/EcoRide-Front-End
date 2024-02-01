@@ -1,5 +1,7 @@
 .Checkout {
     /* border: 2px solid rgb(213, 20, 20);      */
+    height: 130vh;
+    padding: 100px;
 }
 body {
     font-family: Arial, sans-serif;

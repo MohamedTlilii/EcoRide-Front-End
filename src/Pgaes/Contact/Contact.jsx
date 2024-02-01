@@ -53,7 +53,7 @@ function Contact() {
             />
             <h4>Partnerships</h4>
             <p>Interested in a partnership with us?</p>
-            <ButtonCard text={"APPLY HERE"} />
+            <ButtonCard text={"APPLY HERE"} fn={() => console.log("hello")} />
           </div>
 
           <div className="useful-link-one">
@@ -63,7 +63,7 @@ function Contact() {
             />
             <h4>FAQ</h4>
             <p>Most questions can be answered here.</p>
-            <ButtonCard text={"GO TO FAQ"} />
+            <ButtonCard text={"GO TO FAQ"} fn={() => console.log("hello")} />
           </div>
 
           <div className="useful-link-one">
@@ -73,7 +73,7 @@ function Contact() {
             />
             <h4>Store Locations</h4>
             <p>Find your nearest Electric Scooter store.</p>
-            <ButtonCard text={"FIND STORE"} />
+            <ButtonCard text={"FIND STORE"} fn={() => console.log("hello")} />
           </div>
         </div>
       </div>
@@ -81,7 +81,8 @@ function Contact() {
       <div className="footer">
         <LandingPageFooter />
         <div className="last-footer">
-        <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>          <img
+          <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>{" "}
+          <img
             src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
             style={{ width: "246px", height: "20px" }}
             alt=""

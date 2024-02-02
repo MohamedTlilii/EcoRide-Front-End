@@ -1,14 +1,13 @@
 .profilDashboard {
   /* border: 2px solid rgb(213, 20, 20); */
   height: 120vh;
-  
-
 }
 .profile-container {
   /* border: 2px solid rgb(11, 209, 74); */
-  max-width: 600px;
+  width: 800px;
+  height: 470px;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: hsl(173, 95%, 42%);
   /* padding: 20px; */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -18,5 +17,6 @@
 }
 .profil-container-user {
   position: relative;
-  left: 150px;
+  left: 250px;
+  /* background-color: hsl(173, 95%, 42%)!important; */
 }

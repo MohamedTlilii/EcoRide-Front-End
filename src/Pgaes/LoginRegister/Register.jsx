@@ -50,21 +50,107 @@ function Register() {
           setRegisterData({ ...registerData, [e.target.name]: e.target.value });
         }}
       >
-        <h1>Create an account.</h1>
-        <Form.Input type="text" name="userName" placeholder="Username" />
-        <Form.Input type="email" name="email" placeholder="Email" />
-        <Form.Input type="firstName" name="firstName" placeholder="firstName" />
-        <Form.Input type="lastName" name="lastName" placeholder="lastName" />
-        <Form.Input type="address" name="address" placeholder="address" />
-        <Form.Input type="city" name="city" placeholder="city" />
-        <Form.Input type="phone" name="number" placeholder="phone" />
-        <Form.Input
+        <h1
+          style={{
+            color: "hsl(173, 95%, 42%)",
+            position: "relative",
+            left: "10px",
+          }}
+        >
+          Register{" "}
+        </h1>
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "305px",
+          }}
+          name="firstName"
+          type="text"
+          placeholder="First Name"
+        />
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "305px",
+          }}
+          name="lastName"
+          type="text"
+          placeholder="Last Name"
+        />
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "305px",
+          }}
+          type="text"
+          name="address"
+          placeholder="Address"
+        />
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "305px",
+          }}
+          type="text"
+          name="city"
+          placeholder="City"
+        />
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "305px",
+          }}
+          type="text"
+          name="userName"
+          placeholder="Username"
+        />
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "305px",
+          }}
+          type="text"
+          name="number"
+          placeholder="Phone"
+        />
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "630px",
+          }}
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+
+        <input
+          style={{
+            margin: "10px",
+            padding: "5px",
+            height: "40px",
+            width: "630px",
+          }}
           type={showPass ? "text" : "password"}
           name="password"
           placeholder="Password"
         />
         <Form.Field>
           <Checkbox
+            style={{ margin: "10px" }}
             label="Show password"
             onClick={() => {
               setShowPass(!showPass);
@@ -91,11 +177,15 @@ function Register() {
         >
           Register
         </Button>
-        <Form className="mb-3" controlId="formBasicCheckbox">
-          <Link to="/login"> You already have an account? Login now.</Link>
+        <Form className="loginNow">
+          <Link to="/login">
+            {" "}
+            <h3>You already have an account?</h3> <br />
+            <h4>Login now✌️</h4>{" "}
+          </Link>
         </Form>
         <div>
-          <Link to="/">← Go to Website</Link>
+          <h5 className="goToWebSite">← Go to Website</h5>
         </div>
       </Form>
     </div>

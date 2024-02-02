@@ -40,6 +40,7 @@ function Profile() {
   const [loadingP, setLoadingP] = useState(false);
   const [newUserData, setNewUserData] = useState({});
   const [updateUserPic, setUpdateUserPic] = useState();
+  const [creatOrder, setCreatOrder] = useState({});
   const handleUpdateUser = () => {
     setLoading(true);
     axios
@@ -103,7 +104,23 @@ function Profile() {
     token
   );
   // console.log(products.data && products.data);
+  const handleCreatOrder = () => {
+    setLoading(true);
+    axios
+      .post(`${url}/createOrder`, creatOrder, {
+        headers: { token },
+      })
+      .then((res) => {
+        setLoading(false);
 
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        console.dir(err);
+      });
+  };
   return (
     <div>
       <div className="profilDashboard">
@@ -235,31 +252,116 @@ function Profile() {
           </>
           {/* products card */}
           <div>
-            <Table celled inverted selectable>
+            <Table
+              style={{
+                backgroundColor: "hsl(173, 95%, 42%)",
+                
+              }}
+            >
               <TableHeader>
                 <TableRow>
-                  <TableHeaderCell>Product ID</TableHeaderCell>
-                  <TableHeaderCell>Product</TableHeaderCell>
-                  <TableHeaderCell>Price</TableHeaderCell>
-                  <TableHeaderCell>Quantity</TableHeaderCell>
-                  <TableHeaderCell>Totall</TableHeaderCell>
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    Product ID
+                  </TableHeaderCell>
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    Product
+                  </TableHeaderCell>
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    Price
+                  </TableHeaderCell>
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    Quantity
+                  </TableHeaderCell>
+
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    IsConfirmed{" "}
+                  </TableHeaderCell>
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    IsDelivered{" "}
+                  </TableHeaderCell>
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    Createdat{" "}
+                  </TableHeaderCell>
+
+                  <TableHeaderCell
+                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                  >
+                    Totall
+                  </TableHeaderCell>
                 </TableRow>
               </TableHeader>
 
               <TableBody>
-                {products.data &&
-                  products.data.map((e) =>
-                    e.cart.map((e) => (
-                      <TableRow>
-                        <TableCell>{e.productId._id}</TableCell>
-                        <TableCell>{e.productId.title}</TableCell>
-                        <TableCell textAlign="right">
-                          {e.productId.price}TND
-                        </TableCell>
-                        <TableCell textAlign="right">{e.quantity}</TableCell>
-                      </TableRow>
-                    ))
-                  )}
+                {!data ? (
+                  // Loading indicator (PacmanLoader)
+                  <PacmanLoader color="#36d7b7" size={100} />
+                ) : (
+                  data && (
+                    // Render products data
+                    <>
+                      {products.data &&
+                        products.data.map((product) =>
+                          product.cart.map((cartItem) => (
+                            <TableRow key={cartItem.productId._id}>
+                              <TableCell>{cartItem.productId._id}</TableCell>
+                              <TableCell>{cartItem.productId.title}</TableCell>
+                              <TableCell textAlign="right">
+                                {cartItem.productId.price}TND
+                              </TableCell>
+                              <TableCell textAlign="right">
+                                {cartItem.quantity}
+                              </TableCell>
+                              <TableCell textAlign="right">
+                                {/* {product.data.map((order) => (
+                                  <React.Fragment key={order._id}>
+                                    <TableRow>
+                                      <TableCell>
+                                        Total: {order.total}
+                                      </TableCell>
+                                    </TableRow>
+
+                                    <TableRow>
+                                      <TableCell>
+                                        Is Delivered:{" "}
+                                        {order.isDelivered ? "Yes" : "No"}
+                                      </TableCell>
+                                    </TableRow>
+
+                                    <TableRow>
+                                      <TableCell>
+                                        Is Confirmed:{" "}
+                                        {order.isConfirmed ? "Yes" : "No"}
+                                      </TableCell>
+                                    </TableRow>
+
+                                    <TableRow>
+                                      <TableCell>
+                                        Created At: {order.createdAt}
+                                      </TableCell>
+                                    </TableRow>
+                                  </React.Fragment>
+                                ))} */}
+                              </TableCell>
+                            </TableRow>
+                          ))
+                        )}
+                    </>
+                  )
+                )}
               </TableBody>
             </Table>
           </div>

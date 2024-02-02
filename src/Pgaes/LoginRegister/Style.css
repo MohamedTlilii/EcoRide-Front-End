@@ -43,11 +43,27 @@
 }
 
 .register-form {
-  border: 2px rgba(0, 0, 0, 0.202) solid;
+  /* border: 2px rgba(0, 0, 0, 0.202) solid; */
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   margin-left: 50px;
-  height: 540px;
-  width: 459px;
+  position: relative;
+  right: 70px;
+  bottom: 60px;
+  background-color: rgb(246, 246, 246);
+  height: 700px;
+  width: 750px;
+}
+.loginNow h3 {
+  /* border: 2px rgba(0, 0, 0, 0.202) solid; */
+  color: hsl(173, 95%, 42%);
+  position: relative;
+  top: 20px;
+}
+.loginNow h4 {
+  /* border: 2px rgba(0, 0, 0, 0.202) solid; */
+  color: hsl(173, 95%, 42%);
+  position: relative;
+  bottom: 20px;
 }

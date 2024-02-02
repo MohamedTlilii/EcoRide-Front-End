@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-// import Button from "react-bootstrap/Button";
+
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./Style.css";
 import { FaCartShopping } from "react-icons/fa6";
 import axios from "axios";
 import { url } from "../../utils/url";
 import { Button, ButtonGroup, Icon } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 
-// import { useFetch } from "../../utils/useFetch";
+import { Bounce, toast, ToastContainer } from "react-toastify";
+
 
 function ShoppingCart() {
   const [show, setShow] = useState(false);
@@ -32,8 +32,7 @@ function ShoppingCart() {
         headers: { token },
       })
       .then((res) => {
-        // setLoading(false);
-
+        setLoading(false);
         setCart(res.data.data);
       })
       .catch((err) => {
@@ -93,6 +92,17 @@ function ShoppingCart() {
         console.log(res);
         setLoading(false);
         setShow(false);
+        toast.success("Product was added successfully ", {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
       })
       .catch((err) => {
         console.dir(err);
@@ -221,6 +231,18 @@ function ShoppingCart() {
 
         {/* </Link> */}
       </Offcanvas>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }

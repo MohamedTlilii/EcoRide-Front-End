@@ -50,7 +50,7 @@ function Profile() {
       .then((res) => {
         setLoading(false);
         console.log(res);
-        toast.success("Contact was added successfully", {
+        toast.success("User information updated successfully", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -79,7 +79,7 @@ function Profile() {
       .then((res) => {
         setLoadingP(false);
         console.log(res);
-        toast.success("Contact was added successfully", {
+        toast.success("Profile picture updated successfully", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -102,7 +102,7 @@ function Profile() {
     "https://ecoridebackend.onrender.com/api/user/getOwnOrder",
     token
   );
-  console.log(products.data && products.data);
+  // console.log(products.data && products.data);
 
   return (
     <div>
@@ -242,6 +242,7 @@ function Profile() {
                   <TableHeaderCell>Product</TableHeaderCell>
                   <TableHeaderCell>Price</TableHeaderCell>
                   <TableHeaderCell>Quantity</TableHeaderCell>
+                  <TableHeaderCell>Totall</TableHeaderCell>
                 </TableRow>
               </TableHeader>
 
@@ -253,8 +254,9 @@ function Profile() {
                         <TableCell>{e.productId._id}</TableCell>
                         <TableCell>{e.productId.title}</TableCell>
                         <TableCell textAlign="right">
-                          {e.productId.price}{" "}
+                          {e.productId.price}TND
                         </TableCell>
+                        <TableCell textAlign="right">{e.quantity}</TableCell>
                       </TableRow>
                     ))
                   )}

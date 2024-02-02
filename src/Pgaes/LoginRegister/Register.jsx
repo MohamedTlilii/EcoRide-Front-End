@@ -45,7 +45,7 @@ function Register() {
     <div className="page-container">
       <Form
         size="large"
-        className="login-form"
+        className="register-form"
         onChange={(e) => {
           setRegisterData({ ...registerData, [e.target.name]: e.target.value });
         }}
@@ -53,6 +53,11 @@ function Register() {
         <h1>Create an account.</h1>
         <Form.Input type="text" name="userName" placeholder="Username" />
         <Form.Input type="email" name="email" placeholder="Email" />
+        <Form.Input type="firstName" name="firstName" placeholder="firstName" />
+        <Form.Input type="lastName" name="lastName" placeholder="lastName" />
+        <Form.Input type="address" name="address" placeholder="address" />
+        <Form.Input type="city" name="city" placeholder="city" />
+        <Form.Input type="phone" name="number" placeholder="phone" />
         <Form.Input
           type={showPass ? "text" : "password"}
           name="password"

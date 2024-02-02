@@ -41,15 +41,30 @@ function Login() {
           setLoginData({ ...loginData, [e.target.name]: e.target.value });
         }}
       >
-        <h1>Login.</h1>
-        <Form.Input type="email" name="email" placeholder="Email" />
-        <Form.Input
+        <h1
+          style={{
+            color: "hsl(173, 95%, 42%)",
+            position: "relative",
+            left: "10px",
+          }}
+        >
+          Login
+        </h1>
+        <input
+          style={{ margin: "10px", padding: "5px", height: "40px" }}
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+        <input
+          style={{ margin: "10px", padding: "5px", height: "40px" }}
           type={showPass ? "text" : "password"}
           name="password"
           placeholder="Password"
         />
         <Form.Field>
           <Checkbox
+            style={{ margin: "10px" }}
             label="Show password"
             onClick={() => {
               setShowPass(!showPass);
@@ -64,6 +79,7 @@ function Login() {
         )}
 
         <Button
+          style={{ margin: "10px" }}
           onClick={() => {
             handleLogin();
           }}
@@ -71,11 +87,19 @@ function Login() {
         >
           Login
         </Button>
-        <Form className="mb-3" controlId="formBasicCheckbox">
-          <Link to="/register">   You dont have an account yet? Register now.</Link>
+        <Form className="registerNow">
+          <Link to="/register">
+            {" "}
+            <div>
+              <h3>You dont have an account yet? </h3> <br />
+              <h4>Register now ✌️</h4>
+            </div>
+          </Link>
         </Form>
         <div>
-          <Link to="/">← Go to Website</Link>
+          <Link to="/">
+            <h5 className="goToWebSite">← Go to Website</h5>
+          </Link>
         </div>
       </Form>
     </div>

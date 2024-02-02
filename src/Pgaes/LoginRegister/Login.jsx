@@ -7,6 +7,7 @@ function Login() {
   const navigate = useNavigate();
   const [showPass, setShowPass] = useState(false);
   const [loginData, setLoginData] = useState({});
+  const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const handleLogin = () => {
@@ -18,6 +19,7 @@ function Login() {
         localStorage.setItem("isUser", res.data.data.isUser);
         localStorage.setItem("isBanned", res.data.data.isBanned);
         localStorage.setItem("id", res.data.data.id);
+        setMessage("Logged successfully");
         setTimeout(() => {
           setLoading(false);
           navigate("/");
@@ -75,6 +77,13 @@ function Login() {
           <Message negative>
             <MessageHeader>OOOPPPS! 🤕</MessageHeader>
             <p>{error}</p>
+          </Message>
+        )}
+
+        {message && (
+          <Message positive>
+            <MessageHeader>{message} 🥳</MessageHeader>
+            <p>You wil be redirect to the Home page</p>
           </Message>
         )}
 

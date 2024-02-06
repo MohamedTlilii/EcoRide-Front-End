@@ -36,6 +36,14 @@ function Register() {
           setError(err.response.data.error.firstName.message);
         } else if (err.response.data.error.lastName) {
           setError(err.response.data.error.lastName.message);
+        } else if (err.response.data.error.address) {
+          setError(err.response.data.error.address.message);
+        } else if (err.response.data.error.city) {
+          setError(err.response.data.error.city.message);
+        } else if (err.response.data.error.number) {
+          setError(err.response.data.error.number.message);
+        } else if (err.response.data.error.userName) {
+          setError(err.response.data.error.userName.message);
         } else {
           setError(err.response.data.error);
         }

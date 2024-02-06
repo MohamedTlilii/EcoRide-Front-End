@@ -5,7 +5,7 @@
 .profile-container {
   /* border: 2px solid rgb(11, 209, 74); */
   width: 800px;
-  height: 470px;
+  height: fit-content;
   margin: 50px auto;
   background-color: hsl(173, 95%, 42%);
   /* padding: 20px; */

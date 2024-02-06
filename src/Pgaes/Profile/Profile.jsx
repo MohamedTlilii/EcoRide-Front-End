@@ -139,6 +139,7 @@ function Profile() {
                   <CardMeta>
                     <span className="date"> {data.userName} </span>
                   </CardMeta>
+
                   <CardDescription>
                     <Icon name="map marker alternate" />
                     {data.address}
@@ -148,6 +149,11 @@ function Profile() {
                     <Icon name="mail" />
                     {data.email}
                   </CardDescription>
+                  <CardMeta>
+                    Createdate :{" "}
+                    <span> {data.createdAt.substring(0, 10)} </span>
+                    {data.createdAt.substring(11, data.createdAt.length - 8)}
+                  </CardMeta>
                 </CardContent>
                 <CardContent extra>
                   <Icon name="phone" />
@@ -284,7 +290,7 @@ function Profile() {
                   <TableHeaderCell
                     style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
                   >
-                    Createdat{" "}
+                    Createdate{" "}
                   </TableHeaderCell>
 
                   <TableHeaderCell

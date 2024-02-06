@@ -53,7 +53,7 @@ function Contact() {
             />
             <h4>Partnerships</h4>
             <p>Interested in a partnership with us?</p>
-            <ButtonCard text={"APPLY HERE"} fn={() => console.log("hello")} />
+            <ButtonCard text={"APPLY HERE"} />
           </div>
 
           <div className="useful-link-one">
@@ -63,7 +63,7 @@ function Contact() {
             />
             <h4>FAQ</h4>
             <p>Most questions can be answered here.</p>
-            <ButtonCard text={"GO TO FAQ"} fn={() => console.log("hello")} />
+            <ButtonCard text={"GO TO FAQ"}  />
           </div>
 
           <div className="useful-link-one">
@@ -73,7 +73,7 @@ function Contact() {
             />
             <h4>Store Locations</h4>
             <p>Find your nearest Electric Scooter store.</p>
-            <ButtonCard text={"FIND STORE"} fn={() => console.log("hello")} />
+            <ButtonCard text={"FIND STORE"} />
           </div>
         </div>
       </div>

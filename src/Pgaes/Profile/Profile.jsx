@@ -128,7 +128,7 @@ function Profile() {
       <div className="profilDashboard">
         <div className="profile-container">
           {!data ? (
-            <PacmanLoader color="#36d7b7" size={100} />
+            <PacmanLoader color="#36d7b7" size={60} />
           ) : (
             data && (
               <Card className="profil-container-user">
@@ -304,7 +304,7 @@ function Profile() {
               <TableBody>
                 {!data ? (
                   // Loading indicator (PacmanLoader)
-                  <PacmanLoader color="#36d7b7" size={100} />
+                  <PacmanLoader color="#36d7b7" size={60} />
                 ) : (
                   data && (
                     // Render products data

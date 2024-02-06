@@ -47,7 +47,11 @@ function ProductsSolo({ _id }) {
         <div className="products-cont">
           <div className="products-mains">
             {!data ? (
-              <PacmanLoader color="#36d7b7" size={100} />
+              <PacmanLoader
+                color="#36d7b7"
+                size={60}
+                style={{ position: "relative", top: "160px", right: "270px" }}
+              />
             ) : (
               <Thumbnails images={data?.imageUrls} />
             )}

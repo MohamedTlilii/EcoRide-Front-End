@@ -42,7 +42,11 @@ function LandingPage() {
     <div className="parent-div">
       <div className="hero-section">
         {!data ? (
-          <PacmanLoader color="#36d7b7" size={400} />
+          <PacmanLoader
+          color="#36d7b7"
+            style={{ position: "relative", top: "160px" }}
+            size={60}
+          />
         ) : (
           data && (
             <>
@@ -94,7 +98,11 @@ function LandingPage() {
                 <CardProduct key={product.id} {...product} />
               ))
           ) : (
-            <PacmanLoader color="#36d7b7" size={200} />
+            <PacmanLoader
+              color="#36d7b7"
+              size={60}
+              style={{ position: "relative", top: "160px", left: "800px" }}
+            />
           )}
         </div>
       </div>
@@ -126,10 +134,7 @@ function LandingPage() {
               enim ad minim veniam.
             </p>
             <Link to={"accessories"}>
-              <ButtonCard
-                text={"SHOP ACCESSORIES"}
-                fn={() => console.log("hello")}
-              />
+              <ButtonCard text={"SHOP ACCESSORIES"} />
             </Link>
           </div>
 

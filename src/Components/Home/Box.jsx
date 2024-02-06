@@ -19,7 +19,7 @@ function Box({ products }) {
           suspendisse ultrices gravida.
         </p>
         <Link to={"electricscooters"}>
-          <ButtonCard text={"SHOP NOW"} fn={() => console.log("hello")} />
+          <ButtonCard text={"SHOP NOW"}  />
         </Link>
       </div>
     </div>

@@ -6,7 +6,7 @@ function ButtonCard({ text, fn }) {
     <div>
       <button
         onClick={() => {
-          fn();
+          fn && fn();
         }}
         className="btn-cart"
       >

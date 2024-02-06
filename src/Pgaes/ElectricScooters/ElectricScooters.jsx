@@ -9,7 +9,7 @@ import { PacmanLoader } from "react-spinners";
 function ElectricScooters() {
   const [search, setSearch] = useState("");
   // console.log(search);
-  const [inputPrice, setInputPrice] = useState(490);
+  const [inputPrice, setInputPrice] = useState(400);
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/getProducts",
@@ -41,15 +41,15 @@ function ElectricScooters() {
               />
               <Form.Input
                 label={inputPrice}
-                min={490}
+                min={400}
                 max={1000}
-                name="hide"
+                // name="hide"
                 onChange={(e, value) => {
                   setInputPrice(value.value);
                 }}
                 step={50}
                 type="range"
-                // value={hide}
+                value={inputPrice}
               />
             </Form.Group>
           </Form>
@@ -58,12 +58,14 @@ function ElectricScooters() {
       <div className="electric-section-four">
         {data ? (
           data
-            .filter((elt) => elt.category === "scooter").filter((e)=>search==''?e:e.title.toLowerCase().includes(search.toLowerCase()))
+            .filter((elt) => elt.category === "scooter")
+            .filter((e) => e.title.toLowerCase().includes(search.toLowerCase()))
+            .filter((e) => e.price >= inputPrice)
             .map((product) => (
               <ElectricScootersProducts key={product.id} {...product} />
             ))
         ) : (
-          <PacmanLoader color="#36d7b7" size={200} />
+          <PacmanLoader color="#36d7b7"  size={60} />
         )}
       </div>
 

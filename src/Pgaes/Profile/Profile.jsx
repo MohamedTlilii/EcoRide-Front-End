@@ -27,6 +27,7 @@ import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import { toast } from "react-toastify";
+import CartDetails from "./CartDetails";
 
 function Profile() {
   let token = localStorage.getItem("token");
@@ -40,7 +41,7 @@ function Profile() {
   const [loadingP, setLoadingP] = useState(false);
   const [newUserData, setNewUserData] = useState({});
   const [updateUserPic, setUpdateUserPic] = useState();
-  const [creatOrder, setCreatOrder] = useState({});
+  const [open2, setOpen2] = useState(false);
   const handleUpdateUser = () => {
     setLoading(true);
     axios
@@ -103,24 +104,25 @@ function Profile() {
     "https://ecoridebackend.onrender.com/api/user/getOwnOrder",
     token
   );
+
   // console.log(products.data && products.data);
-  const handleCreatOrder = () => {
-    setLoading(true);
-    axios
-      .post(`${url}/createOrder`, creatOrder, {
-        headers: { token },
-      })
-      .then((res) => {
-        setLoading(false);
+  // const handleCreatOrder = () => {
+  //   setLoading(true);
+  //   axios
+  //     .post(`${url}/createOrder`, creatOrder, {
+  //       headers: { token },
+  //     })
+  //     .then((res) => {
+  //       setLoading(false);
 
-        console.log(res);
-      })
-      .catch((err) => {
-        setLoading(false);
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       setLoading(false);
 
-        console.dir(err);
-      });
-  };
+  //       console.dir(err);
+  //     });
+  // };
   return (
     <div>
       <div className="profilDashboard">
@@ -255,7 +257,6 @@ function Profile() {
             <Table
               style={{
                 backgroundColor: "hsl(173, 95%, 42%)",
-                
               }}
             >
               <TableHeader>
@@ -263,24 +264,13 @@ function Profile() {
                   <TableHeaderCell
                     style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
                   >
-                    Product ID
+                    Order ID
                   </TableHeaderCell>
                   <TableHeaderCell
                     style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
                   >
-                    Product
+                    Products
                   </TableHeaderCell>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    Price
-                  </TableHeaderCell>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    Quantity
-                  </TableHeaderCell>
-
                   <TableHeaderCell
                     style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
                   >
@@ -314,51 +304,41 @@ function Profile() {
                     // Render products data
                     <>
                       {products.data &&
-                        products.data.map((product) =>
-                          product.cart.map((cartItem) => (
-                            <TableRow key={cartItem.productId._id}>
-                              <TableCell>{cartItem.productId._id}</TableCell>
-                              <TableCell>{cartItem.productId.title}</TableCell>
-                              <TableCell textAlign="right">
-                                {cartItem.productId.price}TND
-                              </TableCell>
-                              <TableCell textAlign="right">
-                                {cartItem.quantity}
-                              </TableCell>
-                              <TableCell textAlign="right">
-                                {/* {product.data.map((order) => (
-                                  <React.Fragment key={order._id}>
-                                    <TableRow>
-                                      <TableCell>
-                                        Total: {order.total}
-                                      </TableCell>
-                                    </TableRow>
-
-                                    <TableRow>
-                                      <TableCell>
-                                        Is Delivered:{" "}
-                                        {order.isDelivered ? "Yes" : "No"}
-                                      </TableCell>
-                                    </TableRow>
-
-                                    <TableRow>
-                                      <TableCell>
-                                        Is Confirmed:{" "}
-                                        {order.isConfirmed ? "Yes" : "No"}
-                                      </TableCell>
-                                    </TableRow>
-
-                                    <TableRow>
-                                      <TableCell>
-                                        Created At: {order.createdAt}
-                                      </TableCell>
-                                    </TableRow>
-                                  </React.Fragment>
-                                ))} */}
-                              </TableCell>
-                            </TableRow>
-                          ))
-                        )}
+                        products.data.map((product) => (
+                          <TableRow>
+                            <TableCell>{product._id}</TableCell>
+                            <TableCell
+                              onClick={() => {
+                                setOpen2(true);
+                              }}
+                              style={{
+                                cursor: "pointer",
+                                textDecoration: "underline",
+                              }}
+                            >
+                              See Details
+                            </TableCell>
+                            <CartDetails
+                              data={product.cart}
+                              setOpen2={setOpen2}
+                              open2={open2}
+                            />
+                            <TableCell>
+                              {product.isConfirmed ? "Yes" : "No"}
+                            </TableCell>
+                            <TableCell>
+                              {product.isDelivered ? "Yes" : "No"}
+                            </TableCell>
+                            <TableCell>
+                              {product.createdAt.substring(0, 10)},{" "}
+                              {product.createdAt.substring(
+                                11,
+                                product.createdAt.length - 8
+                              )}
+                            </TableCell>
+                            <TableCell>{product.total} DT</TableCell>
+                          </TableRow>
+                        ))}
                     </>
                   )
                 )}

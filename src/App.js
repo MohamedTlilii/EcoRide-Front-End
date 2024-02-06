@@ -9,9 +9,9 @@ import Contact from "./Pgaes/Contact/Contact";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/LoginRegister/Login";
 import Data from "./Data";
-import DataScoooters from "./DataScoooters";
+// import DataScoooters from "./DataScoooters";
 import ElectricScootersSoloProduct from "./Pgaes/ElectricScooters/ElectricScootersSoloProduct";
-import DataAccessories from "./DataAccessories";
+// import DataAccessories from "./DataAccessories";
 import AccessoriesSoloProduct from "./Pgaes/Accessories/AccessoriesSoloProduct";
 import "@splidejs/react-splide/css";
 import Register from "./Pgaes/LoginRegister/Register";
@@ -20,6 +20,7 @@ import Profile from "./Pgaes/Profile/Profile";
 import AdminDashboard from "./Pgaes/Admin/AdminDashboard";
 import PrivateRoute from "./Routes/PrivateRoute";
 import PublicRoute from "./Routes/PublicRoute";
+// import React, { useState } from "react";
 // import Checkout from "./Pgaes/Checkout/Checkout";
 // import AdminRoute from "./Routes/AdminRoute";
 // import AdminLogin from "./Pages/AdminLogin";
@@ -40,9 +41,9 @@ function App() {
         <Route
           path="/product/:id"
           element={
-            <PrivateRoute>
-              <ProductsSolo products={Data} />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <ProductsSolo products={Data} />
+            // </PrivateRoute>
           }
         />
 
@@ -50,7 +51,7 @@ function App() {
           path="electricscooters"
           element={
             // <PrivateRoute>
-            <ElectricScooters products={DataScoooters} />
+            <ElectricScooters />
             // </PrivateRoute>
           }
         />
@@ -58,7 +59,7 @@ function App() {
           path="productscooter/:id"
           element={
             // <PrivateRoute>
-            <ElectricScootersSoloProduct products={DataScoooters} />
+            <ElectricScootersSoloProduct  />
             // </PrivateRoute>
           }
         />
@@ -66,16 +67,16 @@ function App() {
           path="accessories"
           element={
             // <PrivateRoute>
-            <Accessories products={DataAccessories} />
+            <Accessories />
             // </PrivateRoute>
           }
         />
         <Route
           path="accessories/:id"
           element={
-            <PrivateRoute>
-              <AccessoriesSoloProduct products={DataAccessories} />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <AccessoriesSoloProduct  />
+            // </PrivateRoute>
           }
         />
         <Route path="about" element={<About />} />

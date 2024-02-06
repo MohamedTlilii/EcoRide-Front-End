@@ -32,6 +32,10 @@ function Register() {
         setLoading(false);
         if (err.response.data.error.email) {
           setError(err.response.data.error.email.message);
+        } else if (err.response.data.error.firstName) {
+          setError(err.response.data.error.firstName.message);
+        } else if (err.response.data.error.lastName) {
+          setError(err.response.data.error.lastName.message);
         } else {
           setError(err.response.data.error);
         }

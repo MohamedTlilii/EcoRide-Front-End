@@ -6,7 +6,9 @@ import LandingPageFooter from "../../Components/Footer/Footer";
 import ElectricScootersProducts from "../../Components/ElectricScooters/ElectricScootersProducts";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-function ElectricScooters({ products }) {
+function ElectricScooters() {
+  const [search, setSearch] = useState("");
+  // console.log(search);
   const [inputPrice, setInputPrice] = useState(490);
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
@@ -32,7 +34,10 @@ function ElectricScooters({ products }) {
               <Form.Input
                 className="scooter-name-search"
                 label="Electric Scooters"
-                placeholder="scooter name"
+                placeholder="Search"
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                }}
               />
               <Form.Input
                 label={inputPrice}
@@ -53,7 +58,7 @@ function ElectricScooters({ products }) {
       <div className="electric-section-four">
         {data ? (
           data
-            .filter((elt) => elt.category === "scooter")
+            .filter((elt) => elt.category === "scooter").filter((e)=>search==''?e:e.title.toLowerCase().includes(search.toLowerCase()))
             .map((product) => (
               <ElectricScootersProducts key={product.id} {...product} />
             ))

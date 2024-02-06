@@ -1,11 +1,15 @@
-import React from "react";
+// import React from "react";
 // import { FaShoppingBasket, FaUser } from "react-icons/fa";
 // import { BsChevronRight } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import "./Style.css";
 import ShoppingCart from "../ShopingCard/ShoppingCart";
+// import React, { useState } from "react";
+
 function NavBar() {
+  
+
   const navigate = useNavigate();
   // let activeStyle = "font-bold text-sky-400 border-b-[1px] border-sky-400 pb-2";
   let token = localStorage.getItem("token");
@@ -22,7 +26,7 @@ function NavBar() {
           alt="Logo"
         />
       </Link>
-
+      
       <ul className="nav">
         <Link to="/">
           <li>Home</li>

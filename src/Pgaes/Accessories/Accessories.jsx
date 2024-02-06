@@ -9,7 +9,10 @@ import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct"
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 
-function Accessories({ products }) {
+function Accessories() {
+  const [search, setSearch] = useState("");
+  // console.log(search);
+
   const [inputPrice, setInputPrice] = useState(490);
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
@@ -34,7 +37,10 @@ function Accessories({ products }) {
               <Form.Input
                 className="scooter-name-search"
                 label="Accessories"
-                placeholder="Accessorie name"
+                placeholder="Search"
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                }}
               />
               <Form.Input
                 label={inputPrice}
@@ -53,13 +59,20 @@ function Accessories({ products }) {
         </div>
       </div>
       <div className="accessories-section-four">
-        {data
-          ?data.filter((elt) => elt.category === "access")
-          .map((product) => (
-            <AccessoriesProduct key={product.id} {...product} />
-          )): (
-            <PacmanLoader color="#36d7b7" size={200} />
-          )}
+        {data ? (
+          data
+            .filter((elt) => elt.category === "access")
+            .filter((e) =>
+              search == ""
+                ? e
+                : e.title.toLowerCase().includes(search.toLowerCase())
+            )
+            .map((product) => (
+              <AccessoriesProduct key={product.id} {...product} />
+            ))
+        ) : (
+          <PacmanLoader color="#36d7b7" size={200} />
+        )}
       </div>
       <div className="footer">
         <LandingPageFooter />

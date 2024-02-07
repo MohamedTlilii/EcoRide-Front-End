@@ -13,7 +13,7 @@ function Accessories() {
   const [search, setSearch] = useState("");
   // console.log(search);
 
-  const [inputPrice, setInputPrice] = useState(10);
+  const [inputPrice, setInputPrice] = useState(1);
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/getProducts",
@@ -44,7 +44,7 @@ function Accessories() {
               />
               <Form.Input
                 label={inputPrice}
-                min={10}
+                min={1}
                 max={500}
                 name="hide"
                 onChange={(e, value) => {

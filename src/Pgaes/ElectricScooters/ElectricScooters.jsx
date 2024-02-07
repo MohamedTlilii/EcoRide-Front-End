@@ -9,7 +9,7 @@ import { PacmanLoader } from "react-spinners";
 function ElectricScooters() {
   const [search, setSearch] = useState("");
   // console.log(search);
-  const [inputPrice, setInputPrice] = useState(400);
+  const [inputPrice, setInputPrice] = useState(1);
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/getProducts",
@@ -47,7 +47,7 @@ function ElectricScooters() {
                 onChange={(e, value) => {
                   setInputPrice(value.value);
                 }}
-                step={50}
+                step={1}
                 type="range"
                 value={inputPrice}
               />
@@ -65,7 +65,7 @@ function ElectricScooters() {
               <ElectricScootersProducts key={product.id} {...product} />
             ))
         ) : (
-          <PacmanLoader color="#36d7b7"  size={60} />
+          <PacmanLoader color="#36d7b7" size={60} />
         )}
       </div>
 

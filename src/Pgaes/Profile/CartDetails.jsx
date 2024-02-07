@@ -62,7 +62,7 @@ function CartDetails({ setOpen2, open2, data }) {
             <TableRow>
               <TableCell> {elt.productId.title} </TableCell>
               <TableCell> {elt.quantity} </TableCell>
-              <TableCell> {elt.productId.price} DT </TableCell>
+              <TableCell> {elt.productId.price} TND </TableCell>
 
               <TableCell>
                 <img src={elt.productId.imageUrls[0]} width={100} alt="" />

@@ -1,101 +1,125 @@
-import React, { useState } from "react";
 import AdminAside from "../Components/Navbar/AdminAside";
-import { adminUrl } from "../utils/url";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button, Form } from "semantic-ui-react";
 import axios from "axios";
-import {
-  FormField,
-  Form,
-  Input,
-  Button,
-  Message,
-  MessageHeader,
-} from "semantic-ui-react";
+import { adminUrl } from "../utils/url";
+import { toast, ToastContainer } from "react-toastify";
+
 function AddProduct() {
-  let token = localStorage.getItem("token");
-  const [addproduct, setAddproduct] = useState("");
-  const [imgData, setImgData] = useState();
-  const [message, setMessage] = useState();
+  const navigate = useNavigate();
+  const [productData, setProductData] = useState({});
+  // console.log(productData);
+  const [productPhoto, setProductPhoto] = useState();
   const [loading, setLoading] = useState(false);
-  const handleAddPost = () => {
+
+  const handleAddProduct = () => {
     setLoading(true);
-    const postForm = new FormData();
-    postForm.append("postPic", imgData);
-    postForm.append("postBody", addproduct);
+    let token = localStorage.getItem("token");
+    let { title, price, description, category } = productData;
+    const productFormData = new FormData();
+    productFormData.append("photo", productPhoto);
+    productFormData.append("title", title);
+    productFormData.append("price", price);
+    productFormData.append("description", description);
+    productFormData.append("category", category);
+    // console.log(productFormData);
+
     axios
-      .post(`${adminUrl}/addProduct`, postForm, {
+      .post(`${adminUrl}/addProduct`, productFormData, {
         headers: { token },
       })
       .then((res) => {
         setLoading(false);
-        if (res.data.status) {
-          setMessage("Product added successfully");
-          setAddproduct("");
-        }
-        // console.log(res);
+        console.log(res);
+        toast.success("Contact was added successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       })
       .catch((err) => {
         setLoading(false);
         console.dir(err);
+        if (err.response.data.error.includes("Invalid token")) {
+          localStorage.clear();
+          navigate("/login");
+        }
       });
   };
   return (
     <div className="dashboardProduct">
       <AdminAside />
 
-      <Form className="dashboardProductform" size="big">
-        <FormField
-          type="text"
-          control={Input}
-          placeholder="Product"
+      <Form className="dashboardProductform">
+        <h1>Add New Product</h1>
+        <Form.Group
           onChange={(e) => {
-            setAddproduct(e.target.value);
+            setProductData({ ...productData, [e.target.name]: e.target.value });
           }}
-        />
-        <FormField
-          type="text"
-          control={Input}
-          placeholder="Price"
+          widths="equal"
+        >
+          <Form.Input type="text" placeholder="Product" name="Product" />
+          <Form.Input type="text" placeholder="Price" name="Price" />
+        </Form.Group>
+
+        <Form.Group
           onChange={(e) => {
-            setAddproduct(e.target.value);
+            setProductData({ ...productData, [e.target.name]: e.target.value });
           }}
-        />
-        <FormField
-          type="text"
-          control={Input}
-          placeholder="Description"
-          onChange={(e) => {
-            setAddproduct(e.target.value);
-          }}
-        />
-        <FormField
-          type="text"
-          control={Input}
-          placeholder="Category"
-          onChange={(e) => {
-            setAddproduct(e.target.value);
-          }}
-        />
-        <FormField
-          control={Input}
-          type="file"
-          onChange={(e) => {
-            setImgData(e.target.files[0]);
-          }}
-        />
-        {message && (
-          <Message positive>
-            <MessageHeader>{message}</MessageHeader>
-          </Message>
-        )}
+          widths="equal"
+        >
+          <Form.Input
+            type="text"
+            placeholder="Description"
+            name="Description"
+          />
+          <Form.Input type="text" placeholder="Category" name="Category" />
+        </Form.Group>
+
+        <Form.Group>
+          <input
+            style={{
+              height: "50px",
+              width: "430px",
+              position: "relative",
+              left: "7px",
+            }}
+            type="file"
+            name="Photo"
+            onChange={(e) => {
+              setProductPhoto(e.target.files[0]);
+              // console.log(e.target.files[0]);
+            }}
+          />
+        </Form.Group>
         <Button
+          color=" red"
           onClick={() => {
-            handleAddPost();
+            handleAddProduct();
           }}
           loading={loading}
         >
           Add
         </Button>
       </Form>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }

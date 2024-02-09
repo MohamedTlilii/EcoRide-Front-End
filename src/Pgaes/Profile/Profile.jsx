@@ -26,8 +26,8 @@ import {
 // import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-import { toast } from "react-toastify";
 import CartDetails from "./CartDetails";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 
 function Profile() {
   let token = localStorage.getItem("token");
@@ -52,16 +52,16 @@ function Profile() {
       .then((res) => {
         setLoading(false);
         console.log(res);
-        toast.success("User information updated successfully", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        // toast.success("User information updated successfully", {
+        //   position: "top-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "colored",
+        // });
         setOpen(false);
       })
       .catch((err) => {
@@ -81,16 +81,17 @@ function Profile() {
       .then((res) => {
         setLoadingP(false);
         console.log(res);
-        toast.success("Profile picture updated successfully", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        // toast.success("Profile picture updated successfully", {
+        //   position: "top-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "colored",
+        //   transition: Bounce,
+        // });
         setOpen(false);
       })
       .catch((err) => {
@@ -335,9 +336,19 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
+      {/* <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      /> */}
     </div>
   );
 }

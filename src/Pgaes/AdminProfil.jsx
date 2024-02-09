@@ -1,7 +1,7 @@
 import "./Style.css";
 import React, { useState } from "react";
 import axios from "axios";
-import { adminUrl } from "../utils/url";
+import {  url } from "../utils/url";
 import { CardContent, Form } from "semantic-ui-react";
 import {
   CardMeta,
@@ -18,7 +18,7 @@ import {
 } from "semantic-ui-react";
 import { useFetch } from "../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 function AdminProfil() {
   let token = localStorage.getItem("token");
@@ -35,7 +35,7 @@ function AdminProfil() {
   const handleUpdateAdmin = () => {
     setLoading(true);
     axios
-      .put(`${adminUrl}/updateInformation`, newAdminData, {
+      .put(`${url}/updateInformation`, newAdminData, {
         headers: { token },
       })
       .then((res) => {
@@ -65,7 +65,7 @@ function AdminProfil() {
     let adminData = new FormData();
     adminData.append("photo", updateAdminPic);
     axios
-      .put(`${adminUrl}/updateAdminPhoto`, adminData, {
+      .put(`${url}/updatePhoto`, adminData, {
         headers: { token },
       })
       .then((res) => {
@@ -128,6 +128,7 @@ function AdminProfil() {
           </ButtonGroup>
         </Card>
       )}
+      {/* edit admin modal */}
       <Modal
         style={{
           width: "50%",
@@ -195,6 +196,18 @@ function AdminProfil() {
           </Button>
         </ModalActions>
       </Modal>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }

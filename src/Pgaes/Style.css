@@ -23,8 +23,13 @@
 }
 .dashboardProductform {
   border: 4px black solid !important;
-  width: 700px;
+  width: 440px;
+  height: 240px;
   position: relative;
   left: 400px;
   bottom: 220px;
+  /* text-align: center; */
+}
+.imageInput {
+  border: 4px black solid !important;
 }

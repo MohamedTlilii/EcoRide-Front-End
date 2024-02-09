@@ -13,7 +13,7 @@ function AccessoriesProduct({ imageUrls, title, price, _id }) {
           />
         </Link>
       </div>
-      {/* <span>{"✰".repeat(rating)}</span> */}
+    
       <div>
         <Link to={`/product/${_id}`}>
           <h2

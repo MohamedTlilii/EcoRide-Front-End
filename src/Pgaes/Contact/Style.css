@@ -1,9 +1,8 @@
 /* contact section */
 .contact-parent {
   /* border: 2px solid rgb(63, 30, 211); */
-  width: 1900px;
-  margin: auto;
-  height: 150vh;
+  margin-top: 110px;
+  min-height: 150vh;
   /* padding: 170px; */
 }
 .contact-section {
@@ -14,28 +13,34 @@
   background-repeat: no-repeat;
   background-position: center;
   /* width: fit-content;  */
-  margin: auto;
+  /* /* margin: auto; */
   height: 700px;
+  position: relative;
+
+  left: 130px;
 }
 .contact-content {
   /* border: 2px solid rgb(233, 105, 13); */
-  position: relative;
-  left: 730px;
-  top: 150px;
-  width: 430px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  /* gap: 320px; */
+  /* width: fit-content; */
+  position: relative;
+  top: 230px;
+  /* left: 90px; */
 }
 .contact-content h1 {
   /* border: 2px solid rgb(233, 105, 13); */
   font-size: 3.6666666666667rem;
   font-weight: 700;
-  line-height: 66px;
+  font-family: "Montserrat", sans-serif;
 }
 .contact-content h4 {
   /* border: 2px solid rgb(233, 105, 13); */
   font-size: 1.5333333333333rem;
   font-weight: 700;
-  /* font-family: 'Montserrat',sans-serif; */
+  font-family: "Montserrat", sans-serif;
   line-height: normal;
 }
 .contact-details {
@@ -43,7 +48,8 @@
   width: fit-content;
   margin-left: 400px;
   position: relative;
-  top: 230px;
+  top: 290px;
+  /* left: 500px; */
   line-height: 30.8571px;
 }
 .contact-details h6 {
@@ -68,14 +74,19 @@
 .social-media-links {
   /* border: 2px solid rgb(233, 105, 13); */
   position: relative;
-  top: 280px;
+  top: 310px;
   left: 400px;
   width: fit-content;
 }
 .links-section {
   /* border: 2px solid rgb(233, 105, 13); */
-  margin: auto;
-  height: 700px;
+  /* margin: auto; */
+  /* height: 700px; */
+  display: flex;
+  justify-content: center;
+  /* gap: 100px; */
+  position: relative;
+  right: 270px;
 }
 .links-section h2 {
   /* border: 2px solid rgb(233, 105, 13); */
@@ -88,13 +99,18 @@
 }
 .useful-links {
   /* border: 2px solid rgb(233, 13, 163); */
-  position: relative;
+  /* position: relative;
   top: 300px;
   left: 300px;
   width: 1300px;
-  display: flex;
+  
   justify-content: center;
-  gap: 90px;
+  gap: 90px; */
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 300px;
+  left: 320px;
 }
 .useful-link-one {
   /* border: 2px solid rgb(13, 233, 90); */

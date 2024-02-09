@@ -17,12 +17,21 @@ function Login() {
       .then((res) => {
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("isUser", res.data.data.isUser);
+        localStorage.setItem("isAdmin", res.data.data.isAdmin);
         localStorage.setItem("isBanned", res.data.data.isBanned);
         localStorage.setItem("id", res.data.data.id);
         setMessage("Logged successfully");
         setTimeout(() => {
           setLoading(false);
-          navigate("/");
+          if (
+            res.data.data.isUser &&
+            !res.data.data.isBanned &&
+            !res.data.data.isAdmin
+          ) {
+            navigate("/");
+          } else if (res.data.data.isAdmin && !res.data.data.isUser) {
+            navigate("/dashboard");
+          }
         }, 2000);
       })
       .catch((err) => {
@@ -96,20 +105,16 @@ function Login() {
         >
           Login
         </Button>
-        <Form className="registerNow">
-          <Link to="/register">
-            {" "}
-            <div>
-              <h3>You dont have an account yet? </h3> <br />
-              <h4>Register now ✌️</h4>
-            </div>
-          </Link>
-        </Form>
-        <div>
-          <Link to="/">
-            <h5 className="goToWebSite">← Go to Website</h5>
-          </Link>
-        </div>
+        <br />
+        <Link to="/register" className="registerNow">
+          You dont have an account yet? Register now ✌️
+        </Link>
+        <br />
+        <br />
+
+        <Link className="goToWebSite" to="/">
+          ← Go to Website
+        </Link>
       </Form>
     </div>
   );

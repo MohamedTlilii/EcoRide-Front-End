@@ -3,7 +3,7 @@ import axios from "axios";
 export const useFetch = (url, token) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
-  // const [loading, setLoading] = useState(false);
+ 
   useEffect(() => {
     axios
       .get(url, { headers: { token } })

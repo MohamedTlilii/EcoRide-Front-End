@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-// import { IoListOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { Form } from "semantic-ui-react";
 import "./Style.css";
@@ -11,7 +9,6 @@ import { PacmanLoader } from "react-spinners";
 
 function Accessories() {
   const [search, setSearch] = useState("");
-  // console.log(search);
 
   const [inputPrice, setInputPrice] = useState(1);
   let token = localStorage.getItem("token");
@@ -70,17 +67,6 @@ function Accessories() {
         ) : (
           <PacmanLoader color="#36d7b7" size={60} />
         )}
-      </div>
-      <div className="footer">
-        <LandingPageFooter />
-        <div className="last-footer">
-          <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>{" "}
-          <img
-            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
-            style={{ width: "246px", height: "20px" }}
-            alt=""
-          />
-        </div>
       </div>
     </div>
   );

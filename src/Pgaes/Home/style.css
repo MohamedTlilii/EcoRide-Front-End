@@ -195,12 +195,14 @@
   cursor: pointer;
 }
 /* solo-product section */
-/* .solo-product-parent-div { */
-  /* border: 6px solid black; */
-  /* height: 120vh;
-    margin: auto;  */
+.solo-product-parent-div {
+  /* border: 1px solid black; */
+  margin-top: 110px;
+  min-height: 150vh;
+  /* margin: auto; */
   /* display: flex; */
-/* } */
+  /* height: 1200px; */
+}
 
 .solo-product {
   /* border: 1px solid black; */

@@ -23,7 +23,7 @@ import {
   ModalActions,
   Modal,
 } from "semantic-ui-react";
-import Footer from "../../Components/Footer/Footer";
+// import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import { toast } from "react-toastify";
@@ -105,27 +105,9 @@ function Profile() {
     token
   );
 
-  // console.log(products.data && products.data);
-  // const handleCreatOrder = () => {
-  //   setLoading(true);
-  //   axios
-  //     .post(`${url}/createOrder`, creatOrder, {
-  //       headers: { token },
-  //     })
-  //     .then((res) => {
-  //       setLoading(false);
-
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-
-  //       console.dir(err);
-  //     });
-  // };
   return (
     <div>
-      <div className="profilDashboard">
+      <div className="profil">
         <div className="profile-container">
           {!data ? (
             <PacmanLoader color="#36d7b7" size={60} />
@@ -354,17 +336,7 @@ function Profile() {
         </div>
       </div>
       <div>
-        <div className="footer">
-          <Footer />
-          <div className="last-footer">
-            <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>
-            <img
-              src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
-              style={{ width: "246px", height: "20px" }}
-              alt=""
-            />
-          </div>
-        </div>
+        
       </div>
     </div>
   );

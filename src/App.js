@@ -2,102 +2,84 @@ import { Routes, Route } from "react-router-dom";
 import PublicLayout from "./Layouts/PublicLayout";
 import LandingPage from "./Pgaes/Home/LandingPage";
 import ProductsSolo from "./Pgaes/Home/ProductsSolo";
+import "@splidejs/react-splide/css";
 import ElectricScooters from "./Pgaes/ElectricScooters/ElectricScooters";
+// import ElectricScootersSoloProduct from "./Pgaes/ElectricScooters/ElectricScootersSoloProduct";
 import Accessories from "./Pgaes/Accessories/Accessories";
+// import AccessoriesSoloProduct from "./Pgaes/Accessories/AccessoriesSoloProduct";
 import About from "./Pgaes/About/About";
 import Contact from "./Pgaes/Contact/Contact";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pgaes/LoginRegister/Login";
-import Data from "./Data";
-// import DataScoooters from "./DataScoooters";
-import ElectricScootersSoloProduct from "./Pgaes/ElectricScooters/ElectricScootersSoloProduct";
-// import DataAccessories from "./DataAccessories";
-import AccessoriesSoloProduct from "./Pgaes/Accessories/AccessoriesSoloProduct";
-import "@splidejs/react-splide/css";
 import Register from "./Pgaes/LoginRegister/Register";
 import Profile from "./Pgaes/Profile/Profile";
-// import UserRoute from "./Routes/UserRoute";
-import AdminDashboard from "./Pgaes/Admin/AdminDashboard";
-import PrivateRoute from "./Routes/PrivateRoute";
+import AdminDashboard from "./Pgaes/AdminDashboard/AdminDashboard";
 import PublicRoute from "./Routes/PublicRoute";
-// import React, { useState } from "react";
-// import Checkout from "./Pgaes/Checkout/Checkout";
-// import AdminRoute from "./Routes/AdminRoute";
-// import AdminLogin from "./Pages/AdminLogin";
+import AdminRoute from "./Routes/AdminRoute";
+import UserRoute from "./Routes/UserRoute";
+import Users from "./Pgaes/Users";
+import Orders from "./Pgaes/Orders";
+import AddProduct from "./Pgaes/AddProduct";
+// import AdminProfil from "./Pgaes/AdminProfil";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<PublicLayout />}>
-        <Route
-          index
-          element={
-            // <PrivateRoute>
-            <LandingPage products={Data} />
-            // </PrivateRoute>
-          }
-        />
+        <Route index element={<LandingPage />} />
 
-        <Route
-          path="/product/:id"
-          element={
-            // <PrivateRoute>
-            <ProductsSolo products={Data} />
-            // </PrivateRoute>
-          }
-        />
+        <Route path="/product/:id" element={<ProductsSolo />} />
 
-        <Route
-          path="electricscooters"
-          element={
-            // <PrivateRoute>
-            <ElectricScooters />
-            // </PrivateRoute>
-          }
-        />
-        <Route
+        <Route path="electricscooters" element={<ElectricScooters />} />
+        {/* <Route
           path="productscooter/:id"
-          element={
-            // <PrivateRoute>
-            <ElectricScootersSoloProduct  />
-            // </PrivateRoute>
-          }
-        />
-        <Route
-          path="accessories"
-          element={
-            // <PrivateRoute>
-            <Accessories />
-            // </PrivateRoute>
-          }
-        />
-        <Route
-          path="accessories/:id"
-          element={
-            // <PrivateRoute>
-            <AccessoriesSoloProduct  />
-            // </PrivateRoute>
-          }
-        />
+          element={<ElectricScootersSoloProduct />}
+        /> */}
+        <Route path="accessories" element={<Accessories />} />
+        {/* <Route path="accessories/:id" element={<AccessoriesSoloProduct />} /> */}
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route
           path="profile"
           element={
-            <PrivateRoute>
+            <UserRoute>
               <Profile />
-            </PrivateRoute>
+            </UserRoute>
           }
         />
-        <Route path="dashboard" element={<AdminDashboard />} />
-        {/* <Route
-          path="chekout"
+        <Route
+          path="dashboard"
           element={
-            <PrivateRoute>
-              <Checkout />
-            </PrivateRoute>
+            <AdminRoute>
+              <AdminDashboard />
+            </AdminRoute>
           }
-        /> */}
+        />
+
+        <Route
+          path="users"
+          element={
+            <AdminRoute>
+              <Users />
+            </AdminRoute>
+          }
+        />
+        <Route
+          path="orders"
+          element={
+            <AdminRoute>
+              <Orders />
+            </AdminRoute>
+          }
+        />
+        <Route
+          path="addProduct"
+          element={
+            <AdminRoute>
+              <AddProduct />
+            </AdminRoute>
+          }
+        />
       </Route>
       <Route path="/" element={<ConnexionLayout />}>
         <Route
@@ -108,7 +90,6 @@ function App() {
             </PublicRoute>
           }
         />
-
         <Route
           path="register"
           element={

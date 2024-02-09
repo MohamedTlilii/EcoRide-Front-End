@@ -189,16 +189,16 @@ function Register() {
         >
           Register
         </Button>
-        <Form className="loginNow">
-          <Link to="/login">
-            {" "}
-            <h3>You already have an account?</h3> <br />
-            <h4>Login now✌️</h4>{" "}
-          </Link>
-        </Form>
-        <div>
-          <h5 className="goToWebSite">← Go to Website</h5>
-        </div>
+        <br />
+        <Link to="/login" className="loginNow">
+          You already have an account? Login now✌️
+        </Link>
+        <br />
+        <br />
+
+        <Link className="goToWebSite" to="/">
+          ← Go to Website
+        </Link>
       </Form>
     </div>
   );

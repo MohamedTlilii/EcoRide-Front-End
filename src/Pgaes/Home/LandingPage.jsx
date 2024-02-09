@@ -11,7 +11,7 @@ import LandingPageAbout from "../../Components/Home/LandingPageAbout";
 import LandingPageFour from "../../Components/Home/LandingPageFour";
 import LandingPageWhy from "../../Components/Home/LandingPageWhy";
 import { Link } from "react-router-dom";
-import Footer from "../../Components/Footer/Footer";
+// import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import axios from "axios";
@@ -43,7 +43,7 @@ function LandingPage() {
       <div className="hero-section">
         {!data ? (
           <PacmanLoader
-          color="#36d7b7"
+            color="#36d7b7"
             style={{ position: "relative", top: "160px" }}
             size={60}
           />
@@ -147,17 +147,6 @@ function LandingPage() {
       <LandingPageWhy />
       <div className="silver-path-section">
         <Box />
-      </div>
-      <div className="footer">
-        <Footer />
-        <div className="last-footer">
-          <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>
-          <img
-            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
-            style={{ width: "246px", height: "20px" }}
-            alt=""
-          />
-        </div>
       </div>
     </div>
   );

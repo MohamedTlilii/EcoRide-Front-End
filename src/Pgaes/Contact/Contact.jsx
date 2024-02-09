@@ -63,7 +63,7 @@ function Contact() {
             />
             <h4>FAQ</h4>
             <p>Most questions can be answered here.</p>
-            <ButtonCard text={"GO TO FAQ"}  />
+            <ButtonCard text={"GO TO FAQ"} />
           </div>
 
           <div className="useful-link-one">
@@ -75,18 +75,6 @@ function Contact() {
             <p>Find your nearest Electric Scooter store.</p>
             <ButtonCard text={"FIND STORE"} />
           </div>
-        </div>
-      </div>
-
-      <div className="footer">
-        <LandingPageFooter />
-        <div className="last-footer">
-          <p>Copyright © 2023 EcoRide | Powered by EcoRide</p>{" "}
-          <img
-            src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/payment-icons.png"
-            style={{ width: "246px", height: "20px" }}
-            alt=""
-          />
         </div>
       </div>
     </div>

@@ -9,10 +9,11 @@ function PublicRoute({ children }) {
   if (
     token &&
     isBanned === "false" &&
-    isUser === "true" 
+    isUser === "true" &&
+    isAdmin === "false"
   ) {
     return <Navigate to="/profile" />;
-  } else if (token && isAdmin === "true") {
+  } else if (token && isAdmin === "true" && isUser === "false") {
     return <Navigate to="/dashboard" />;
   } else {
     return <> {children} </>;

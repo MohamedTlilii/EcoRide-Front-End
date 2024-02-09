@@ -1,5 +1,5 @@
 import React from "react";
-import LandingPageFooter from "../../Components/Footer/Footer";
+// import LandingPageFooter from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";

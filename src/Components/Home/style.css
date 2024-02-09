@@ -506,9 +506,7 @@ a {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-.why-us-section-content p {
-  /* border: 2px solid rgb(30, 230, 80); */
-}
+
 .why-us-section-card-icon:hover {
   background-color:  hsl(180, 14%, 1%)!important;
 }

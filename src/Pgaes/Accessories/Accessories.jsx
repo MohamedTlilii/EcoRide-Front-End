@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Form } from "semantic-ui-react";
 import "./Style.css";
-import LandingPageFooter from "../../Components/Footer/Footer";
+// import LandingPageFooter from "../../Components/Footer/Footer";
 import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";

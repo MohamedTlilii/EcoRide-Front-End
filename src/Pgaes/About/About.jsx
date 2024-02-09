@@ -1,5 +1,5 @@
 import React from "react";
-import LandingPageFooter from "../../Components/Footer/Footer";
+// import LandingPageFooter from "../../Components/Footer/Footer";
 import "./Style.css";
 function About() {
   return (

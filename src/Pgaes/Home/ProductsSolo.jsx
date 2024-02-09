@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 import ButtonCard from "../../Components/Btn/ButtonCard";
 import { useParams } from "react-router-dom";
-import LandingPageFooter from "../../Components/Footer/Footer";
+// import LandingPageFooter from "../../Components/Footer/Footer";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 
 import "./style.css";
 import Reviews from "../../Components/Reviews/Reviews";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
-import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
+// import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 import axios from "axios";
 import { url } from "../../utils/url";
 

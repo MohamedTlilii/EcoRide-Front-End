@@ -1,5 +1,5 @@
 import React from "react";
-import AdminAside from "../Components/Navbar/AdminAside";
+import AdminAside from "../../Components/Navbar/AdminAside";
 
 function Orders() {
   return (

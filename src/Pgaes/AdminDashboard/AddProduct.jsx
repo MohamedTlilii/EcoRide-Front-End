@@ -1,9 +1,9 @@
-import AdminAside from "../Components/Navbar/AdminAside";
+import AdminAside from "../../Components/Navbar/AdminAside";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form } from "semantic-ui-react";
 import axios from "axios";
-import { adminUrl } from "../utils/url";
+import { adminUrl } from "../../utils/url";
 import { toast, ToastContainer } from "react-toastify";
 
 function AddProduct() {

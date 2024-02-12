@@ -5,10 +5,24 @@ import {
   Button,
   Card,
   Image,
+  CardMeta,
+  CardDescription,
 } from "semantic-ui-react";
-import { adminUrl } from "../utils/url";
+import { adminUrl } from "../../utils/url";
 import axios from "axios";
-function UserItem({ createdAt, imageUrl, userName, isBanned, _id }) {
+function UserItem({
+  createdAt,
+  imageUrl,
+  userName,
+  address,
+  city,
+  firstName,
+  lastName,
+  number,
+  email,
+  isBanned,
+  _id,
+}) {
   let token = localStorage.getItem("token");
   const handleBanUser = () => {
     axios
@@ -44,9 +58,25 @@ function UserItem({ createdAt, imageUrl, userName, isBanned, _id }) {
   };
   return (
     <Card className="userItemContainer">
+      <Image
+        style={{ width: "90px", height: "90px" }}
+        floated="right"
+        size="mini"
+        src={imageUrl}
+      />
+      <CardHeader> User: {userName}</CardHeader>
       <CardContent>
-        <Image floated="right" size="mini" src={imageUrl} />
-        <CardHeader> UserName :{userName}</CardHeader>
+        <CardMeta>Address:
+          {address}
+          {city}
+        </CardMeta>
+        <CardDescription>Email:{email}</CardDescription>
+        <CardMeta>
+          {" "}Name:
+          {firstName} {lastName}
+        </CardMeta>
+
+        <CardMeta>Number: {number}</CardMeta>
       </CardContent>
       <CardContent extra>
         {" "}

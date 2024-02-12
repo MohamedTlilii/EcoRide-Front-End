@@ -13,15 +13,14 @@ import { PacmanLoader } from "react-spinners";
 import axios from "axios";
 import { url } from "../../utils/url";
 
-function ProductsSolo({ _id }) {
+function ProductsSolo() {
   const [loading, setLoading] = useState(false);
   const [quantity, setQuantity] = useState({ quantity: 1 });
 
   let { id } = useParams();
   let token = localStorage.getItem("token");
   const { data } = useFetch(
-    `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`,
-    token
+    `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`
   );
   const handleAddProductToCart = () => {
     setLoading(true);
@@ -104,7 +103,7 @@ function ProductsSolo({ _id }) {
           </div>
         </div>
         <div className="reviews">
-          <Reviews />
+          <Reviews productId={id} />
         </div>
       </div>
     </div>

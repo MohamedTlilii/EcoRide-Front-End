@@ -5,6 +5,7 @@ function ButtonCard({ text, fn }) {
   return (
     <div>
       <button
+        type="button"
         onClick={() => {
           fn && fn();
         }}

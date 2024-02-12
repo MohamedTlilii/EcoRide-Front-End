@@ -40,6 +40,7 @@ function LandingPage() {
   };
   return (
     <div className="parent-div">
+      
       <div className="hero-section">
         {!data ? (
           <PacmanLoader

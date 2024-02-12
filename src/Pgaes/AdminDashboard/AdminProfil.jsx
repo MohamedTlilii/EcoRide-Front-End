@@ -1,7 +1,7 @@
 import "./Style.css";
 import React, { useState } from "react";
 import axios from "axios";
-import {  url } from "../utils/url";
+import { adminUrl, url } from "../../utils/url";
 import { CardContent, Form } from "semantic-ui-react";
 import {
   CardMeta,
@@ -16,7 +16,7 @@ import {
   ModalActions,
   Modal,
 } from "semantic-ui-react";
-import { useFetch } from "../utils/useFetch";
+import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -35,7 +35,7 @@ function AdminProfil() {
   const handleUpdateAdmin = () => {
     setLoading(true);
     axios
-      .put(`${url}/updateInformation`, newAdminData, {
+      .put(`${adminUrl}/updateInformation`, newAdminData, {
         headers: { token },
       })
       .then((res) => {

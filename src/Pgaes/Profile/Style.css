@@ -1,7 +1,7 @@
 .profil {
   /* border: 2px solid rgb(213, 20, 20); */
   margin-top: 110px;
-  min-height: 150vh;
+  min-height: 100vh;
 }
 .profile-container {
   /* border: 2px solid rgb(11, 209, 74); */
@@ -17,6 +17,8 @@
   /* left: 20px; */
 }
 .profil-container-user {
+  /* border: 2px solid rgb(11, 209, 74); */
+
   position: relative;
   left: 250px;
   /* background-color: hsl(173, 95%, 42%)!important; */

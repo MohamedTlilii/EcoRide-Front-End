@@ -17,7 +17,8 @@
 
 .shopingCartForm {
   border: 1px solid rgba(0, 0, 0, 0.097);
-  display: flex;
+  /* display: flex; */
+  
   align-items: start;
   gap: 10px;
   width: 45px;

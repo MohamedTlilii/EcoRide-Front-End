@@ -27,7 +27,7 @@ import {
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import CartDetails from "./CartDetails";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 function Profile() {
   let token = localStorage.getItem("token");
@@ -51,17 +51,16 @@ function Profile() {
 
       .then((res) => {
         setLoading(false);
-        console.log(res);
-        // toast.success("User information updated successfully", {
-        //   position: "top-right",
-        //   autoClose: 5000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "colored",
-        // });
+        toast.success("User informations was updated successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         setOpen(false);
       })
       .catch((err) => {
@@ -80,7 +79,7 @@ function Profile() {
       })
       .then((res) => {
         setLoadingP(false);
-        console.log(res);
+
         // toast.success("Profile picture updated successfully", {
         //   position: "top-right",
         //   autoClose: 5000,
@@ -90,7 +89,6 @@ function Profile() {
         //   draggable: true,
         //   progress: undefined,
         //   theme: "colored",
-        //   transition: Bounce,
         // });
         setOpen(false);
       })
@@ -115,7 +113,10 @@ function Profile() {
           ) : (
             data && (
               <Card className="profil-container-user">
-                <Image src={data.imageUrl} />
+                <Image
+                  style={{ widdth: "250px", height: "250px" }}
+                  src={data.imageUrl}
+                />
 
                 <CardContent>
                   <CardHeader></CardHeader>
@@ -336,7 +337,7 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div></div>
+
       {/* <ToastContainer
         position="top-right"
         autoClose={5000}

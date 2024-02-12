@@ -1,5 +1,5 @@
 .dashboard {
-  border: 2px solid rgb(213, 20, 20);
+  /* border: 2px solid rgb(213, 20, 20); */
   margin-top: 110px;
   min-height: 150vh;
   display: flex;
@@ -32,4 +32,40 @@
 }
 .aside-link {
   font-size: 2rem;
+}
+.profil-container-admin {
+  /* border: 4px black solid !important; */
+  /* height: 290px !important; */
+
+  position: relative;
+  left: 1300px;
+  top: 100px;
+  /* background-color: hsl(173, 95%, 42%) !important; */
+}
+.userItemContainer {
+  /* border: 4px black solid !important; */
+  height: 400px !important;
+
+  position: relative;
+  left: 100px;
+
+  background-color: hsl(173, 95%, 42%) !important;
+}
+.dashboardProduct {
+  /* border: 4px black solid !important; */
+  margin-top: 110px;
+  min-height: 100vh;
+}
+.dashboardProductform {
+  border: 1px black solid !important;
+  width: 440px;
+  height: 240px;
+  position: relative;
+  left: 400px;
+  bottom: 220px;
+  /* text-align: center; */
+  border-radius: 10px;
+}
+.imageInput {
+  border: 4px black solid !important;
 }

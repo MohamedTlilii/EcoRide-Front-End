@@ -17,10 +17,11 @@ import AdminDashboard from "./Pgaes/AdminDashboard/AdminDashboard";
 import PublicRoute from "./Routes/PublicRoute";
 import AdminRoute from "./Routes/AdminRoute";
 import UserRoute from "./Routes/UserRoute";
-import Users from "./Pgaes/Users";
-import Orders from "./Pgaes/Orders";
-import AddProduct from "./Pgaes/AddProduct";
-// import AdminProfil from "./Pgaes/AdminProfil";
+
+import AddProduct from "./Pgaes/AdminDashboard/AddProduct";
+import Users from "./Pgaes/AdminDashboard/Users";
+import Orders from "./Pgaes/AdminDashboard/Orders";
+// import Reviews from "./Components/Reviews/Reviews";
 
 function App() {
   return (
@@ -29,14 +30,12 @@ function App() {
         <Route index element={<LandingPage />} />
 
         <Route path="/product/:id" element={<ProductsSolo />} />
+        {/* <Route path="/" element={<getReviews />} /> */}
 
         <Route path="electricscooters" element={<ElectricScooters />} />
-        {/* <Route
-          path="productscooter/:id"
-          element={<ElectricScootersSoloProduct />}
-        /> */}
+
         <Route path="accessories" element={<Accessories />} />
-        {/* <Route path="accessories/:id" element={<AccessoriesSoloProduct />} /> */}
+
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route

@@ -1,26 +1,125 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CommentMetadata,
   CommentContent,
   CommentAvatar,
   CommentAuthor,
   Comment,
+  CommentAction,
+  CommentActions,
+  CommentText,
+  Form,
+  Button,
 } from "semantic-ui-react";
 
-function ProductReviews({ review, productId, hourDate, dayDate }) {
+import axios from "axios";
+import { url } from "../../utils/url";
+import { Spinner } from "react-bootstrap";
+
+function ProductReviews({ review, hourDate, dayDate }) {
+  let token = localStorage.getItem("token");
+  let userId = localStorage.getItem("id");
+
+  // const navigate = useNavigate();
+
+  const [loading, setLoading] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+  const [newReviewBody, setNewReviewtBody] = useState({});
+  const [showEdit, setShowEdit] = useState(false);
+  const [editErr, setEditErr] = useState("");
+  const handleUserUpdateReview = () => {
+    setLoading2(true);
+    if (newReviewBody.yourReview) {
+      axios
+        .put(`${url}/updateReview/${review._id}`, newReviewBody, {
+          headers: { token },
+        })
+        .then((res) => {
+          setShowEdit(false);
+          setLoading2(false);
+          console.log(res);
+        })
+        .catch((err) => {
+          setShowEdit(false);
+          setLoading2(false);
+          console.dir(err);
+        });
+    } else {
+      setLoading2(false);
+      setEditErr("Empty comment is not allowed");
+    }
+  };
+  const handleUserDeleteReview = () => {
+    console.log(review._id);
+    setLoading(true);
+    axios
+      .delete(`${url}/deleteReview/${review._id}`, { headers: { token } })
+      .then((res) => {
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
   return (
-    <Comment key={review.id}>
+    <Comment key={review._id}>
       <CommentAvatar src={review.userId.imageUrl} />
       <CommentContent>
         <CommentAuthor as="a">{review.userId.userName}</CommentAuthor>
-        <div>{review.yourReview}</div> {/* Assuming there's a 'body' field */}
+        {showEdit ? (
+          <Form>
+            <Form.TextArea
+              onChange={(e) => {
+                setNewReviewtBody({ yourReview: e.target.value });
+              }}
+              type="text"
+              width={10}
+              error={editErr ? editErr : null}
+            />
+            <Button
+              onClick={() => {
+                handleUserUpdateReview();
+              }}
+              loading={loading2}
+              size="mini"
+            >
+              Save
+            </Button>
+          </Form>
+        ) : (
+          <CommentText>{review.yourReview}</CommentText>
+        )}
+        {/* Assuming there's a 'body' field */}
         <CommentMetadata>
           <div>
             Today at {dayDate},{hourDate.substr(0, hourDate?.length - 8)}
           </div>
         </CommentMetadata>
       </CommentContent>
-      
+      {!showEdit && review.userId._id === userId && (
+        <CommentActions>
+          {loading ? (
+            <Spinner size="lg" />
+          ) : (
+            <CommentAction
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                handleUserDeleteReview();
+              }}
+            >
+              Delete
+            </CommentAction>
+          )}
+          <CommentAction
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              setShowEdit(true);
+            }}
+          >
+            Edit
+          </CommentAction>
+        </CommentActions>
+      )}
     </Comment>
   );
 }

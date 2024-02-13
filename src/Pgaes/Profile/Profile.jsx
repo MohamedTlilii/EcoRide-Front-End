@@ -23,11 +23,11 @@ import {
   ModalActions,
   Modal,
 } from "semantic-ui-react";
-// import Footer from "../../Components/Footer/Footer";
+
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 import CartDetails from "./CartDetails";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 function Profile() {
   let token = localStorage.getItem("token");
@@ -286,52 +286,42 @@ function Profile() {
               </TableHeader>
 
               <TableBody>
-                {!data ? (
-                  // Loading indicator (PacmanLoader)
-                  <PacmanLoader color="#36d7b7" size={60} />
-                ) : (
-                  data && (
-                    // Render products data
-                    <>
-                      {products.data &&
-                        products.data.map((product) => (
-                          <TableRow>
-                            <TableCell>{product._id}</TableCell>
-                            <TableCell
-                              onClick={() => {
-                                setOpen2(true);
-                              }}
-                              style={{
-                                cursor: "pointer",
-                                textDecoration: "underline",
-                              }}
-                            >
-                              See Details
-                            </TableCell>
-                            <CartDetails
-                              data={product.cart}
-                              setOpen2={setOpen2}
-                              open2={open2}
-                            />
-                            <TableCell>
-                              {product.isConfirmed ? "Yes" : "No"}
-                            </TableCell>
-                            <TableCell>
-                              {product.isDelivered ? "Yes" : "No"}
-                            </TableCell>
-                            <TableCell>
-                              {product.createdAt.substring(0, 10)},{" "}
-                              {product.createdAt.substring(
-                                11,
-                                product.createdAt.length - 8
-                              )}
-                            </TableCell>
-                            <TableCell>{product.total} DT</TableCell>
-                          </TableRow>
-                        ))}
-                    </>
-                  )
-                )}
+                {products.data &&
+                  products.data.map((product) => (
+                    <TableRow>
+                      <TableCell>{product._id}</TableCell>
+                      <TableCell
+                        onClick={() => {
+                          setOpen2(true);
+                        }}
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        See Details
+                      </TableCell>
+                      <CartDetails
+                        data={product.cart}
+                        setOpen2={setOpen2}
+                        open2={open2}
+                      />
+                      <TableCell>
+                        {product.isConfirmed ? "Yes" : "No"}
+                      </TableCell>
+                      <TableCell>
+                        {product.isDelevered ? "Yes" : "No"}
+                      </TableCell>
+                      <TableCell>
+                        {product.createdAt.substring(0, 10)},{" "}
+                        {product.createdAt.substring(
+                          11,
+                          product.createdAt.length - 8
+                        )}
+                      </TableCell>
+                      <TableCell>{product.total} DT</TableCell>
+                    </TableRow>
+                  ))}
               </TableBody>
             </Table>
           </div>

@@ -14,8 +14,8 @@ function AdminAside() {
       <Link style={{ color: "black" }} className="aside-link" to="/addProduct">
         Porduct
       </Link>
-      <div > 
-        <AdminProfil/>
+      <div>
+        <AdminProfil />
       </div>
     </div>
   );

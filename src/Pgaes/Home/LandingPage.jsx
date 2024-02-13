@@ -26,6 +26,9 @@ function LandingPage() {
     token
   );
   let mainProduct = data?.find((elt) => elt.title === "Libero X250");
+  let secondProduct = data?.find(
+    (elt) => elt.title === "Electric Scooter Z400"
+  );
   const handleAddProductToCart = () => {
     axios
       .post(`${url}/addProductToCart/${mainProduct._id}`, quantity, {
@@ -40,7 +43,6 @@ function LandingPage() {
   };
   return (
     <div className="parent-div">
-      
       <div className="hero-section">
         {!data ? (
           <PacmanLoader
@@ -113,14 +115,15 @@ function LandingPage() {
           <Link to="/electricscooters">
             <img
               className="img-third-section"
-              src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/scooter-02.png"
+              // style={{ width: "658px", height: "577px" }}
+              src={secondProduct?.imageUrls[0]}
               alt=""
             />
           </Link>
-          <figcaption>CITY</figcaption>
-          <h1 className="titlle-third-section">Electric Scooter Z400</h1>
+
+          <h1 className="titlle-third-section">{secondProduct?.title}</h1>
           <p className="price-third-section">
-            650 <span>TND</span>{" "}
+            {secondProduct?.price} <span>TND</span>
           </p>
         </div>
       </div>

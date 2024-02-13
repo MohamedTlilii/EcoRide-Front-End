@@ -10,7 +10,7 @@ import { PacmanLoader } from "react-spinners";
 function Accessories() {
   const [search, setSearch] = useState("");
 
-  const [inputPrice, setInputPrice] = useState(1);
+  const [inputPrice, setInputPrice] = useState(40);
   let token = localStorage.getItem("token");
   const { data, error } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/getProducts",

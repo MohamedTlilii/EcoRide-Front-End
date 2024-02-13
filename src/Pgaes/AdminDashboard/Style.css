@@ -8,32 +8,26 @@
   /* border: 2px solid rgb(11, 209, 74); */
   /* width: fit-content;
   height: fit-content; */
-  margin: 50px auto;
+  /* margin: 50px auto; */
   /* background-color: hsl(173, 95%, 42%); */
   /* padding: 20px; */
-  border-radius: 8px;
+  /* border-radius: 8px; */
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  position: relative;
+  /* position: relative;
   bottom: 1370px;
-  left: 490px;
+  left: 490px; */
 }
-
 
 .profil-container-admin {
-  /* border: 4px black solid !important; */
-  /* height: 290px !important; */
-/* margin: 125px; */
-  /* position: relative;
-  left: 1300px;
-  top: 100px; */
-  /* background-color: hsl(173, 95%, 42%) !important; */
+  /* border: 7px black solid !important; */
+  /* position: relative; */
+  /* right: 70px; */
 }
-
 
 .userCardSolo {
   /* border: 4px black solid !important; */
-margin: 50px;
-height: 450px;
+  margin: 50px;
+  height: 450px;
 }
 .userItemContainer {
   /* border: 4px black solid !important; */
@@ -41,7 +35,7 @@ height: 450px;
 
   /* position: relative;
   left: 100px; */
- 
+
   background-color: hsl(173, 95%, 42%) !important;
 }
 .dashboardProduct {
@@ -54,8 +48,8 @@ height: 450px;
   width: 440px;
   height: 240px;
   position: relative;
-  left: 400px;
-  bottom: 220px;
+  left: 840px;
+  bottom: 520px;
   /* text-align: center; */
   border-radius: 10px;
 }

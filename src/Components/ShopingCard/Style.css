@@ -17,11 +17,12 @@
 
 .shopingCartForm {
   border: 1px solid rgba(0, 0, 0, 0.097);
-  /* display: flex; */
-  
+  display: flex;
+
   align-items: start;
   gap: 10px;
-  width: 45px;
+  width: 46px;
+  /* height: 35px; */
   margin-top: 7px;
 }
 form button {
@@ -54,7 +55,6 @@ form button {
 
 .Subtotal h3 {
   margin: 10px; /* Remove default margin for h3 */
-  
 }
 
 .buttonChekoutbtn {
@@ -71,8 +71,6 @@ form button {
   width: 250px;
   bottom: 4px;
   /* margin: 10px; */
-  
-
 }
 
 button:hover {

@@ -5,7 +5,7 @@
 
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   gap: 300px;
   min-height: 70px;
   border-bottom: 1px rgb(244, 239, 239) solid;
@@ -20,7 +20,6 @@
 
   padding: 10px;
   z-index: 1000;
-
 }
 .nav {
   /* border: 2px solid red; */
@@ -46,14 +45,12 @@ ul {
   list-style: none;
   gap: 20px;
   cursor: pointer;
-  
-  
 }
 .nav a :hover {
-  color:hsl(173, 95%, 42%);
+  color: hsl(173, 95%, 42%);
 }
 .nav li :hover {
-  color:hsl(173, 95%, 42%);
+  color: hsl(173, 95%, 42%);
 }
 
 .logo {
@@ -67,7 +64,6 @@ ul {
 .search-form {
   display: flex;
   align-items: center;
-  
 }
 
 .search-form input {
@@ -114,12 +110,11 @@ ul {
   font-size: 1.5rem;
 }
 .user-icon:hover {
- color:hsl(173, 95%, 42%)!important;
+  color: hsl(173, 95%, 42%) !important;
 }
 .user-icon a {
   color: black;
   font-size: 20px;
-  
 }
 
 /* shopbasketicon */
@@ -127,7 +122,7 @@ ul {
   border: 1px solid;
   border-radius: 50%;
   /* font-size: 5px; */
-  background-color:hsl(173, 95%, 42%);
+  background-color: hsl(173, 95%, 42%);
   font-size: 10px;
   position: absolute;
   width: 18px;
@@ -163,13 +158,13 @@ ul {
 }
 .admin-aside {
   /* border: 1px black solid !important; */
-  width: fit-content;
+  width: 340px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  height: 300px;
+  height: 710px;
   padding-top: 20px;
-  /* padding: 70px; */
+  padding: 70px;
   background-color: hsl(173, 95%, 42%) !important;
   color: black !important;
 }

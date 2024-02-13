@@ -44,9 +44,7 @@ function NavBar() {
             <Link to="/profile">
               <li>Profile</li>
             </Link>
-            <li>
-              <ShoppingCart />
-            </li>
+            <li><ShoppingCart /></li>
           </>
         ) : (
           token &&

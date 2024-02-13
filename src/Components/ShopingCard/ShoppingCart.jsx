@@ -9,7 +9,6 @@ import { Button, ButtonGroup, Icon } from "semantic-ui-react";
 
 import { Bounce, toast, ToastContainer } from "react-toastify";
 
-
 function ShoppingCart() {
   const [show, setShow] = useState(false);
   const [cart, setCart] = useState([]);
@@ -144,7 +143,10 @@ function ShoppingCart() {
   };
   return (
     <div className="ShoppingCart">
-      <FaCartShopping variant="primary" onClick={handleShow} />
+      <span onClick={handleShow}>
+        <FaCartShopping variant="primary" />
+        <span> {cart?.length} </span>
+      </span>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Shopping Cart</Offcanvas.Title>

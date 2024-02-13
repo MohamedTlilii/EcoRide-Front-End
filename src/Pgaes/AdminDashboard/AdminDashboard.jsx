@@ -6,7 +6,7 @@ function AdminDashboard() {
   return (
     <div className="dashboard">
       <AdminAside />
-      {/* <AdminProfil /> */}
+      
     </div>
   );
 }

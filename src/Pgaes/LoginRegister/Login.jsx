@@ -15,6 +15,7 @@ function Login() {
     axios
       .post("https://ecoridebackend.onrender.com/api/user/login", loginData)
       .then((res) => {
+        console.log(res.data);
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("isUser", res.data.data.isUser);
         localStorage.setItem("isAdmin", res.data.data.isAdmin);

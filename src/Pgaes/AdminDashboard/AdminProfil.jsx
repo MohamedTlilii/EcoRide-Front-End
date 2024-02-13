@@ -93,11 +93,7 @@ function AdminProfil() {
   return (
     <div>
       {!data ? (
-        <PacmanLoader
-          color="#36d7b7"
-          size={60}
-          style={{ position: "relative", left: "1300px", top: "200px" }}
-        />
+        <PacmanLoader color="#36d7b7" size={60} />
       ) : (
         <Card className="profil-container-admin">
           <Image src={data.imageUrl} />

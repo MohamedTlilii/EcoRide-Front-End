@@ -12,7 +12,6 @@ import {
   Modal,
 } from "semantic-ui-react";
 function CartDetails({ setOpen2, open2, data }) {
-  console.log(open2);
   return (
     <Modal
       style={{

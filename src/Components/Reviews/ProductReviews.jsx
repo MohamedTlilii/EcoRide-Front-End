@@ -10,15 +10,17 @@ import {
   CommentText,
   Form,
   Button,
+  Icon,
 } from "semantic-ui-react";
 
 import axios from "axios";
-import { url } from "../../utils/url";
+import { adminUrl, url } from "../../utils/url";
 import { Spinner } from "react-bootstrap";
 
 function ProductReviews({ review, hourDate, dayDate }) {
   let token = localStorage.getItem("token");
   let userId = localStorage.getItem("id");
+  let adminId = localStorage.getItem("id");
 
   // const navigate = useNavigate();
 
@@ -26,6 +28,7 @@ function ProductReviews({ review, hourDate, dayDate }) {
   const [loading2, setLoading2] = useState(false);
   const [newReviewBody, setNewReviewtBody] = useState({});
   const [showEdit, setShowEdit] = useState(false);
+  // const [Cancel, setCancel] = useState(false);
   const [editErr, setEditErr] = useState("");
   const handleUserUpdateReview = () => {
     setLoading2(true);
@@ -61,6 +64,19 @@ function ProductReviews({ review, hourDate, dayDate }) {
         setLoading(false);
       });
   };
+  const handleAdminDeleteReview = () => {
+    setLoading(true);
+    axios
+      .delete(`${adminUrl}/deleteReview/${review._id}`, { headers: { token } })
+      .then((res) => {
+        setLoading(false);
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.dir(err);
+      });
+  };
   return (
     <Comment key={review._id}>
       <CommentAvatar src={review.userId.imageUrl} />
@@ -84,6 +100,14 @@ function ProductReviews({ review, hourDate, dayDate }) {
               size="mini"
             >
               Save
+            </Button>
+            <Button
+              onClick={() => {
+                setShowEdit(false);
+              }}
+              size="mini"
+            >
+              Cancel
             </Button>
           </Form>
         ) : (

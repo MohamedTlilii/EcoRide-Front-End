@@ -1,25 +1,26 @@
 .profil {
   /* border: 2px solid rgb(213, 20, 20); */
+  /* background-color: aqua; */
   margin-top: 110px;
-  min-height: 100vh;
+  min-height: 150vh;
 }
 .profile-container {
   /* border: 2px solid rgb(11, 209, 74); */
-  width: 800px;
-  height: fit-content;
+  width: 1000px;
+  height: 600px;
   margin: 50px auto;
-  background-color: hsl(173, 95%, 42%);
+  /* background-color: hsl(173, 95%, 42%); */
   /* padding: 20px; */
-  border-radius: 8px;
+  border-radius: 48px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 170px;
+  top: 200px;
   /* left: 20px; */
 }
 .profil-container-user {
-  /* border: 2px solid rgb(11, 209, 74); */
+  /* border: 7px solid rgb(11, 209, 74) !important; */
 
-  position: relative;
-  left: 250px;
+  /* position: relative;
+  left: 250px; */
   /* background-color: hsl(173, 95%, 42%)!important; */
 }

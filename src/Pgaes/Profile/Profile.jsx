@@ -112,47 +112,125 @@ function Profile() {
             <PacmanLoader color="#36d7b7" size={60} />
           ) : (
             data && (
-              <Card className="profil-container-user">
-                <Image
-                  style={{ widdth: "250px", height: "250px" }}
+              <div className="profil-container-user">
+                <img
+                  style={{
+                    width: "250px",
+                    height: "250px",
+                    borderRadius: "148px",
+                    position: "relative",
+                    left: "390px",
+                    bottom: "100px",
+                  }}
                   src={data.imageUrl}
+                  alt=""
                 />
 
-                <CardContent>
-                  <CardHeader></CardHeader>
-                  <CardMeta>
-                    <span className="date"> {data.userName} </span>
-                  </CardMeta>
-
-                  <CardDescription>
+                <div>
+                  <h1
+                    className="date"
+                    style={{
+                      fontSize: "59px",
+                      position: "relative",
+                      left: "427px",
+                      bottom: "90px",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {data.userName}{" "}
+                  </h1>
+                  <span
+                    style={{
+                      fontSize: "30px",
+                      position: "relative",
+                      left: "248px",
+                      bottom: "90px",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {data.firstName}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "30px",
+                      position: "relative",
+                      left: "258px",
+                      bottom: "90px",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {data.lastName}
+                  </span>
+                  <h3
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      left: "245px",
+                      bottom: "90px",
+                      fontFamily: "monospace",
+                    }}
+                  >
                     <Icon name="map marker alternate" />
                     {data.address}
-                  </CardDescription>
-                  <CardDescription>
-                    {" "}
+                    {data.city}
+                  </h3>
+                  <h3
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      left: "245px",
+                      bottom: "90px",
+                      fontFamily: "monospace",
+                    }}
+                  >
                     <Icon name="mail" />
                     {data.email}
-                  </CardDescription>
-                  <CardMeta>
+                  </h3>
+                  <span
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      left: "243px",
+                      bottom: "77px",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    <Icon name="phone" />
+                    {data.number}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      right: "70px",
+                      top: "90px",
+                      fontFamily: "monospace",
+                    }}
+                  >
                     Createdate :{" "}
                     <span> {data.createdAt.substring(0, 10)} </span>
                     {data.createdAt.substring(11, data.createdAt.length - 8)}
-                  </CardMeta>
-                </CardContent>
-                <CardContent extra>
-                  <Icon name="phone" />
-                  {data.number}
-                </CardContent>
-                <ButtonGroup>
-                  <Button
-                    onClick={() => {
-                      setOpen(true);
-                    }}
-                  >
-                    Edit
-                  </Button>
-                </ButtonGroup>
-              </Card>
+                  </span>
+                </div>
+
+                <Button
+                  style={{
+                    fontSize: "20px",
+                    position: "relative",
+                    left: "435px",
+                    top: "20px",
+                    fontFamily: "monospace",
+                    borderRadius: "148px",
+                    backgroundColor: "hsl(173, 95%, 42%)",
+                    color: "white",
+                  }}
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                >
+                  Edit
+                </Button>
+              </div>
             )
           )}
           <>
@@ -230,6 +308,7 @@ function Profile() {
                   Cancel
                 </Button>
                 <Button
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
                   type="button"
                   positive
                   loading={loading}
@@ -246,8 +325,14 @@ function Profile() {
           <div>
             <Table
               style={{
-                backgroundColor: "hsl(173, 95%, 42%)",
+                position: "relative",
+                top: "200px",
+                right: "150px",
+                width: "1330px",
               }}
+              // style={{
+              //   backgroundColor: "hsl(173, 95%, 42%)",
+              // }}
             >
               <TableHeader>
                 <TableRow>

@@ -20,6 +20,7 @@ function ProductReviews({ review, productId, hourDate, dayDate }) {
           </div>
         </CommentMetadata>
       </CommentContent>
+      
     </Comment>
   );
 }

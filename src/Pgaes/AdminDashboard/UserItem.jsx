@@ -57,6 +57,7 @@ function UserItem({
       });
   };
   return (
+    <div className="userCardSolo">
     <Card className="userItemContainer">
       <Image
         style={{ width: "90px", height: "90px" }}
@@ -106,6 +107,7 @@ function UserItem({
         </div>
       </CardContent>
     </Card>
+    </div>
   );
 }
 

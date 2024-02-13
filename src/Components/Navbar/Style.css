@@ -161,3 +161,18 @@ ul {
   background-size: cover;
   background-position: center;
 }
+.admin-aside {
+  /* border: 1px black solid !important; */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 300px;
+  padding-top: 20px;
+  /* padding: 70px; */
+  background-color: hsl(173, 95%, 42%) !important;
+  color: black !important;
+}
+.aside-link {
+  font-size: 2rem;
+}

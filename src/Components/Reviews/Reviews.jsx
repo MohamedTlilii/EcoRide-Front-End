@@ -1,7 +1,7 @@
 import ButtonCard from "../Btn/ButtonCard";
 import "./Style.css";
 import React, { useState, useEffect } from "react";
-import { FormCheckbox } from "semantic-ui-react";
+import { Button, CommentAction, CommentActions, FormCheckbox, Icon } from "semantic-ui-react";
 import axios from "axios";
 import { url } from "../../utils/url";
 import { useFetch } from "../../utils/useFetch";
@@ -13,9 +13,11 @@ function Reviews({ productId }) {
   const [data, setData] = useState();
   const [error, setError] = useState();
   let token = localStorage.getItem("token");
+  let isUser = localStorage.getItem("isUser");
   const [reviewsBody, setReviewsBody] = useState("");
-  // const [reviewId, setReviewId] = useState();
-  // const [newReviewBody, setNewReviewtBody] = useState({});
+  const [reviewId, setReviewId] = useState();
+  const [newReviewBody, setNewReviewtBody] = useState({});
+  const [showEdit, setShowEdit] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -53,35 +55,35 @@ function Reviews({ productId }) {
       navigate("/login");
     }
   };
-  // const handleUserUpdateReview = (reviewId) => {
-  //   // setShowEdit(false);
-  //   axios
-  //     .put(`${url}/updateReview/${reviewId}`, newReviewBody, {
-  //       headers: { token },
-  //     })
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.dir(err);
-  //     });
-  // };
-  // const handleUserDeleteReview = (reviewId) => {
-  //   // setLoading(true);
-  //   axios
-  //     .delete(
-  //       `https://contactapp-api-uas9.onrender.com/api/user/deleteReview/${reviewId}`,
-  //       { headers: { token } }
-  //     )
-  //     .then((res) => {
-  //       // setLoading(false);
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       // setLoading(false);
-  //       console.dir(err);
-  //     });
-  // };
+  const handleUserUpdateReview = (reviewId) => {
+    // setShowEdit(false);
+    axios
+      .put(`${url}/updateReview/${reviewId}`, newReviewBody, {
+        headers: { token },
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.dir(err);
+      });
+  };
+  const handleUserDeleteReview = (reviewId) => {
+    setLoading(true);
+    axios
+      .delete(
+        `https://contactapp-api-uas9.onrender.com/api/user/deleteReview/${reviewId}`,
+        { headers: { token } }
+      )
+      .then((res) => {
+        setLoading(false);
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.dir(err);
+      });
+  };
   return (
     <div>
       <div className="cadre">
@@ -110,11 +112,33 @@ function Reviews({ productId }) {
                   />
                 );
               })}
+            
+              <CommentActions>
+              
+                    <CommentAction
+                      onClick={() => {
+                        handleUserUpdateReview();
+                        setShowEdit(true);
+                      }}
+                    >
+                      Edit
+                    </CommentAction>
+                    
+                      <CommentAction
+                        onClick={() => {
+                          // handleUserDeleteReview(review._id);
+                          setShowEdit(true);
+                        }}
+                      >
+                        Delete
+                      </CommentAction>
+                   
+               
+              </CommentActions>
+           
           </CommentGroup>
-          {/* </details> */}
         </div>
         <form className="review-form">
-          
           <textarea
             id="review"
             name="review"
@@ -123,25 +147,6 @@ function Reviews({ productId }) {
             onChange={(e) => setReviewsBody({ yourReview: e.target.value })}
           />
 
-          {/* <label htmlFor="name">Name </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            onChange={(e) => setNewReviewtBody(e.target.value)}
-          />
-
-          <label htmlFor="email">Email </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            onChange={(e) => setNewReviewtBody(e.target.value)}
-          /> */}
-          {/* <FormCheckbox label="Save my name, email, and website in this browser for the next time I comment." />
-          <p> </p> */}
           {loading ? (
             <Spinner />
           ) : (

@@ -1,8 +1,6 @@
-
-
 .btn-cart {
   all: unset;
-  background-color: hsl(173, 95%, 42%)!important;
+  background-color: hsl(173, 95%, 42%) !important;
   border-radius: 5px;
   height: 30px;
   padding: 5px;
@@ -15,7 +13,8 @@
   width: fit-content;
 }
 .btn-cart:hover {
-  background-color: black!important;
+  background-color: black !important;
+  cursor: pointer;
 }
 
 .add-cart-span {

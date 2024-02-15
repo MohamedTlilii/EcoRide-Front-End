@@ -192,7 +192,7 @@ function AdminProfil() {
           </Button>
         </ModalActions>
       </Modal>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-left"
         autoClose={5000}
         hideProgressBar={false}
@@ -203,7 +203,7 @@ function AdminProfil() {
         draggable
         pauseOnHover
         theme="dark"
-      />
+      /> */}
     </div>
   );
 }

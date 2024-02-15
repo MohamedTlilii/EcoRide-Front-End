@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Style.css";
 import ShoppingCart from "../ShopingCard/ShoppingCart";
-
 function NavBar() {
   const navigate = useNavigate();
   let token = localStorage.getItem("token");
@@ -14,7 +13,7 @@ function NavBar() {
       <Link to="/">
         <img
           className="logo"
-          style={{ width: "188px", height: "88px" }}
+          // style={{ width: "188px", height: "88px" }}
           src="/assets/home/ecoride-logo-green.png"
           alt="Logo"
         />
@@ -44,7 +43,9 @@ function NavBar() {
             <Link to="/profile">
               <li>Profile</li>
             </Link>
-            <li><ShoppingCart /></li>
+            <li>
+              <ShoppingCart />
+            </li>
           </>
         ) : (
           token &&

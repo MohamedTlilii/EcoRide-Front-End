@@ -11,17 +11,29 @@ import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader } from "react-spinners";
 // import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 import axios from "axios";
-import { url } from "../../utils/url";
-
+import { adminUrl, url } from "../../utils/url";
+import {
+  Button,
+  Form,
+  ModalHeader,
+  ModalContent,
+  ModalActions,
+  Dropdown,
+  Modal,
+} from "semantic-ui-react";
+import { toast, ToastContainer } from "react-toastify";
 function ProductsSolo() {
   const [loading, setLoading] = useState(false);
   const [quantity, setQuantity] = useState({ quantity: 1 });
+  const [open, setOpen] = useState(false);
 
   let { id } = useParams();
   let token = localStorage.getItem("token");
+
   const { data } = useFetch(
     `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`
   );
+  // console.log(data);
   const handleAddProductToCart = () => {
     setLoading(true);
     axios
@@ -39,9 +51,147 @@ function ProductsSolo() {
         console.dir(err);
       });
   };
+  const [productData, setProductData] = useState({});
+  const [category, setCategory] = useState("");
+  // console.log(productData);
+  const [productPhoto, setProductPhoto] = useState();
+
+  const options = [
+    {
+      key: "kgzX6",
+      text: "Scooter",
+      value: "scooter",
+    },
+    {
+      key: "0jWRSCP0uBT7",
+      text: "Accessory",
+      value: "access",
+    },
+  ];
+  const handleUpdaitProduct = () => {
+    setLoading(true);
+    let { title, price, description } = productData;
+    const productFormData = new FormData();
+    let files = Object.values(productPhoto);
+    console.log(files);
+    productFormData.append("photo", files);
+    productFormData.append("title", title);
+    productFormData.append("price", price);
+    productFormData.append("description", description);
+    productFormData.append("category", category);
+    axios
+      .put(
+        `https://ecoridebackend.onrender.com/api/admin/updateProduct/${id}`,
+        productFormData,
+        {
+          headers: { token },
+        }
+      )
+      .then((res) => {
+        setLoading(false);
+
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+        setOpen(false);
+        console.dir(err);
+      });
+  };
 
   return (
     <div className="solo-product-parent-div">
+      {/* edit product modal */}
+      <Modal
+        style={{
+          width: "80%",
+          height: "70%",
+          position: "absolute",
+          left: "100px",
+          top: "10px",
+        }}
+        onClose={() => setOpen(false)}
+        open={open}
+      >
+        <ModalHeader>Update Product</ModalHeader>
+        <ModalContent>
+          <Form>
+            <h1>Updait Product</h1>
+            <Form.Group
+              onChange={(e) => {
+                setProductData({
+                  ...productData,
+                  [e.target.name]: e.target.value,
+                });
+              }}
+              widths="equal"
+            >
+              <Form.Input type="text" placeholder="Product" name="title" />
+              <Form.Input type="text" placeholder="Price" name="price" />
+            </Form.Group>
+
+            <Form.Group
+              onChange={(e) => {
+                setProductData({
+                  ...productData,
+                  [e.target.name]: e.target.value,
+                });
+              }}
+              widths="equal"
+            >
+              <Form.Input
+                type="text"
+                placeholder="Description"
+                name="description"
+              />
+              <Dropdown
+                placeholder="Choose category"
+                search
+                selection
+                onChange={(e, data) => {
+                  setCategory(data.value);
+                }}
+                options={options}
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <input
+                style={{
+                  height: "50px",
+                  width: "430px",
+                  position: "relative",
+                  left: "7px",
+                }}
+                type="file"
+                name="photo"
+                multiple
+                onChange={(e) => {
+                  setProductPhoto(e.target.files);
+                }}
+              />
+            </Form.Group>
+            <Button color=" red" loading={loading}>
+              Add
+            </Button>
+          </Form>
+        </ModalContent>
+        <ModalActions>
+          <Button type="button" color="black" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+          <Button
+            type="button"
+            positive
+            loading={loading}
+            onClick={() => {
+              handleUpdaitProduct();
+            }}
+          >
+            Update
+          </Button>
+        </ModalActions>
+      </Modal>
       <div className="solo-product">
         <div className="products-cont">
           <div className="products-mains">
@@ -84,6 +234,8 @@ function ProductsSolo() {
                 />
               </div>
               <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART "} />
+              <Button onClick={() => setOpen(true)}>Update</Button>
+              <ButtonCard text={"Delete  "} />
             </div>
             <fieldset>
               <legend>Guaranteed Safe Checkout</legend>

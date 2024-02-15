@@ -1,7 +1,7 @@
 import ButtonCard from "../Btn/ButtonCard";
 import "./Style.css";
 import React, { useState, useEffect } from "react";
-import { CommentAction, CommentActions } from "semantic-ui-react";
+// import { CommentAction, CommentActions } from "semantic-ui-react";
 import axios from "axios";
 import { url } from "../../utils/url";
 // import { useFetch } from "../../utils/useFetch";
@@ -11,7 +11,8 @@ import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 function Reviews({ productId }) {
   let token = localStorage.getItem("token");
-  let isUser = localStorage.getItem("isUser");
+  let isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
+  let isUser = JSON.parse(localStorage.getItem("isUser"));
   const navigate = useNavigate();
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
@@ -84,22 +85,24 @@ function Reviews({ productId }) {
               })}
           </CommentGroup>
         </div>
-        <form className="review-form">
-          <textarea
-            id="review"
-            name="review"
-            rows="4"
-            required
-            value={reviewsBody.yourReview}
-            onChange={(e) => setReviewsBody({ yourReview: e.target.value })}
-          />
+        {!isAdmin && isUser && (
+          <form className="review-form">
+            <textarea
+              id="review"
+              name="review"
+              rows="4"
+              required
+              value={reviewsBody.yourReview}
+              onChange={(e) => setReviewsBody({ yourReview: e.target.value })}
+            />
 
-          {loading ? (
-            <Spinner />
-          ) : (
-            <ButtonCard text={"Add Review"} fn={handleUserAddReview} />
-          )}
-        </form>
+            {loading ? (
+              <Spinner />
+            ) : (
+              <ButtonCard text={"Add Review"} fn={handleUserAddReview} />
+            )}
+          </form>
+        )}
       </div>
     </div>
   );

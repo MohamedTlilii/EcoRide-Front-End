@@ -1,26 +1,38 @@
 import AdminAside from "../../Components/Navbar/AdminAside";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Form } from "semantic-ui-react";
+import { Button, Form, Dropdown } from "semantic-ui-react";
 import axios from "axios";
 import { adminUrl } from "../../utils/url";
 import { toast, ToastContainer } from "react-toastify";
 
 function AddProduct() {
+  let token = localStorage.getItem("token");
   const navigate = useNavigate();
   const [productData, setProductData] = useState({});
+  const [category, setCategory] = useState("");
   // console.log(productData);
   const [productPhoto, setProductPhoto] = useState();
   const [loading, setLoading] = useState(false);
-
+  const options = [
+    {
+      key: "kgzX6",
+      text: "Scooter",
+      value: "scooter",
+    },
+    {
+      key: "0jWRSCP0uBT7",
+      text: "Accessory",
+      value: "access",
+    },
+  ];
   const handleAddProduct = () => {
     setLoading(true);
-    let token = localStorage.getItem("token");
-    let { title, price, description, category } = productData;
+    let { title, price, description } = productData;
     const productFormData = new FormData();
     productFormData.append("photo", productPhoto);
     productFormData.append("title", title);
-    productFormData.append("price", price);
+    productFormData.append("price", Number(price));
     productFormData.append("description", description);
     productFormData.append("category", category);
     // console.log(productFormData);
@@ -64,8 +76,8 @@ function AddProduct() {
           }}
           widths="equal"
         >
-          <Form.Input type="text" placeholder="Product" name="Product" />
-          <Form.Input type="text" placeholder="Price" name="Price" />
+          <Form.Input type="text" placeholder="Product" name="title" />
+          <Form.Input type="text" placeholder="Price" name="price" />
         </Form.Group>
 
         <Form.Group
@@ -77,9 +89,17 @@ function AddProduct() {
           <Form.Input
             type="text"
             placeholder="Description"
-            name="Description"
+            name="description"
           />
-          <Form.Input type="text" placeholder="Category" name="Category" />
+          <Dropdown
+            placeholder="Choose category"
+            search
+            selection
+            onChange={(e, data) => {
+              setCategory(data.value);
+            }}
+            options={options}
+          />
         </Form.Group>
 
         <Form.Group>
@@ -92,8 +112,9 @@ function AddProduct() {
             }}
             type="file"
             name="Photo"
+            multiple
             onChange={(e) => {
-              setProductPhoto(e.target.files[0]);
+              setProductPhoto(e.target.files);
               // console.log(e.target.files[0]);
             }}
           />

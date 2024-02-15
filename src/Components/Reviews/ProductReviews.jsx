@@ -20,7 +20,8 @@ import { Spinner } from "react-bootstrap";
 function ProductReviews({ review, hourDate, dayDate }) {
   let token = localStorage.getItem("token");
   let userId = localStorage.getItem("id");
-  let adminId = localStorage.getItem("id");
+  let isUser = localStorage.getItem("isUser");
+  let isAdmin = localStorage.getItem("isAdmin");
 
   // const navigate = useNavigate();
 
@@ -30,6 +31,7 @@ function ProductReviews({ review, hourDate, dayDate }) {
   const [showEdit, setShowEdit] = useState(false);
   // const [Cancel, setCancel] = useState(false);
   const [editErr, setEditErr] = useState("");
+  const [showDelete, setShowDelete] = useState("");
   const handleUserUpdateReview = () => {
     setLoading2(true);
     if (newReviewBody.yourReview) {
@@ -53,7 +55,7 @@ function ProductReviews({ review, hourDate, dayDate }) {
     }
   };
   const handleUserDeleteReview = () => {
-    console.log(review._id);
+    // console.log(review._id);
     setLoading(true);
     axios
       .delete(`${url}/deleteReview/${review._id}`, { headers: { token } })
@@ -77,6 +79,8 @@ function ProductReviews({ review, hourDate, dayDate }) {
         console.dir(err);
       });
   };
+  // console.log(review._id);
+
   return (
     <Comment key={review._id}>
       <CommentAvatar src={review.userId.imageUrl} />
@@ -142,6 +146,22 @@ function ProductReviews({ review, hourDate, dayDate }) {
           >
             Edit
           </CommentAction>
+        </CommentActions>
+      )}
+
+      {isAdmin === "true" && (
+        <CommentActions>
+          {loading ? (
+            <Icon name="circle notched" loading />
+          ) : (
+            <CommentAction
+              onClick={() => {
+                handleAdminDeleteReview();
+              }}
+            >
+              Delete
+            </CommentAction>
+          )}
         </CommentActions>
       )}
     </Comment>

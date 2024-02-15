@@ -105,7 +105,7 @@ function Profile() {
   );
 
   return (
-    <div>
+    <div >
       <div className="profil">
         <div className="profile-container">
           {!data ? (

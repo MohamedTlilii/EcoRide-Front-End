@@ -2,12 +2,12 @@
 
 .nav-container {
   /* border: 2px solid black; */
-
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 300px;
-  min-height: 70px;
+  /* gap: 300px; */
+  /* min-height: 70px; */
   border-bottom: 1px rgb(244, 239, 239) solid;
   /* position: fixed; */
   background-color: #ffffff;
@@ -17,34 +17,76 @@
   top: 0;
   left: 0;
   width: 100%;
-
   padding: 10px;
   z-index: 1000;
 }
+@media screen and (min-width: 1111px) {
+  .nav-container {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 300px; */
+    min-height: 70px;
+    border-bottom: 1px rgb(244, 239, 239) solid;
+    /* position: fixed; */
+    background-color: #ffffff;
+    /* width: auto; */
+    /* width: 2000px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 10px;
+    z-index: 1000;
+  }
+}
 .nav {
   /* border: 2px solid red; */
-
   /* z-index: 999; */
   margin-left: 40px;
   padding: 0px 1em;
   /* font-weight: 500; */
-  font-size: 1.6rem;
+  font-size: 0.7rem;
   color: var(--ast-global-color-2);
   line-height: 70px;
   font-style: italic;
   font-weight: 600;
   gap: 44px;
 }
+
 .nav a {
   text-decoration: none;
   color: black;
 }
 ul {
-  /* border: 2px solid black;  */
   display: flex;
   list-style: none;
   gap: 20px;
   cursor: pointer;
+}
+@media screen and (min-width: 1111px) {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+  }
+  .nav {
+    /* border: 2px solid red; */
+    /* z-index: 999; */
+    margin-left: 40px;
+    padding: 0px 1em;
+    /* font-weight: 500; */
+    font-size: 1.1rem;
+    color: var(--ast-global-color-2);
+    line-height: 70px;
+    font-style: italic;
+    font-weight: 600;
+    gap: 44px;
+  }
 }
 .nav a :hover {
   color: hsl(173, 95%, 42%);
@@ -52,13 +94,21 @@ ul {
 .nav li :hover {
   color: hsl(173, 95%, 42%);
 }
-
 .logo {
   /* border: 2px solid black; */
   position: relative;
   right: 100px;
-  /* width: 148px;
-    height: 38px; */
+  width: 108px;
+  height: 28px;
+}
+@media only screen and (min-width: 968px) {
+  .logo {
+    /* border: 2px solid black; */
+    /* position: relative;
+    right: 100px; */
+    width: 128px;
+    height: 48px;
+  }
 }
 
 .search-form {
@@ -158,11 +208,11 @@ ul {
 }
 .admin-aside {
   /* border: 1px black solid !important; */
-  width: 340px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  height: 710px;
+  height: 1810px;
   padding-top: 20px;
   padding: 70px;
   background-color: hsl(173, 95%, 42%) !important;

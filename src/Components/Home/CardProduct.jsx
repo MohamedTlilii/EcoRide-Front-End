@@ -7,7 +7,12 @@ function CardProduct({ imageUrls, title, price, _id }) {
     <div className="product-container">
       <div className="my-product-card">
         <Link to={`/product/${_id}`}>
-          <img style={{width:"450px"}} className="img-product-cart" src={imageUrls[0]} alt="" />
+          <img
+            style={{ width: "270px" }}
+            className="img-product-cart"
+            src={imageUrls[0]}
+            alt=""
+          />
         </Link>
       </div>
 

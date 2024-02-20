@@ -103,12 +103,12 @@ function ProductsSolo() {
     <div className="solo-product-parent-div">
       {/* edit product modal */}
       <Modal
-        style={{
-          width: "80%",
-          height: "70%",
+         style={{
+          width: "50%",
+          height: "40%",
           position: "absolute",
-          left: "100px",
-          top: "10px",
+          left: "500px",
+          top: "300px",
         }}
         onClose={() => setOpen(false)}
         open={open}
@@ -116,7 +116,22 @@ function ProductsSolo() {
         <ModalHeader>Update Product</ModalHeader>
         <ModalContent>
           <Form>
-            <h1>Updait Product</h1>
+            <Form.Group>
+              <label>
+                <input
+                   style={{ width: "927px", height: "50px" }}
+                  type="file"
+                  name="photo"
+                  multiple
+                  onChange={(e) => {
+                    setProductPhoto(e.target.files);
+                  }}
+                />
+                <Button  loading={loading}>
+                  Update photos
+                </Button>
+              </label>
+            </Form.Group>
             <Form.Group
               onChange={(e) => {
                 setProductData({
@@ -129,7 +144,6 @@ function ProductsSolo() {
               <Form.Input type="text" placeholder="Product" name="title" />
               <Form.Input type="text" placeholder="Price" name="price" />
             </Form.Group>
-
             <Form.Group
               onChange={(e) => {
                 setProductData({
@@ -154,26 +168,6 @@ function ProductsSolo() {
                 options={options}
               />
             </Form.Group>
-
-            <Form.Group>
-              <input
-                style={{
-                  height: "50px",
-                  width: "430px",
-                  position: "relative",
-                  left: "7px",
-                }}
-                type="file"
-                name="photo"
-                multiple
-                onChange={(e) => {
-                  setProductPhoto(e.target.files);
-                }}
-              />
-            </Form.Group>
-            <Button color=" red" loading={loading}>
-              Add
-            </Button>
           </Form>
         </ModalContent>
         <ModalActions>
@@ -234,7 +228,7 @@ function ProductsSolo() {
                 />
               </div>
               <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART "} />
-              <Button onClick={() => setOpen(true)}>Update</Button>
+              <ButtonCard fn={() => setOpen(true) } text={"Update "}/>
               <ButtonCard text={"Delete  "} />
             </div>
             <fieldset>

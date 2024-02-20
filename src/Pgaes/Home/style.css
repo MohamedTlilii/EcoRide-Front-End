@@ -1,9 +1,10 @@
 /* LANDING PAGE */
 .parent-div {
-  /* border: 6px rgb(1, 1, 0) solid; */
+  /* border: 1px rgb(1, 1, 0) solid; */
   /* width: 1900px; */
   /* height: 240px; */
-  width: 1520px;
+  width: 1900px;
+
 }
 ::selection {
   background-color: #cf2e2e;
@@ -92,7 +93,7 @@
 .card-km span {
   /* border: 2px solid black; */
   position: relative;
-  bottom: 35px;
+  bottom: 26px;
   font-size: 1.5333333333333rem;
   /* font-weight: 700; */
   font-family: "Montserrat", sans-serif;
@@ -213,38 +214,14 @@
     justify-content: center;
     gap: 10px; */
 }
-.nav {
-  /* border: 2px solid red; */
-  /* z-index: 999; */
-  margin-left: 40px;
-  padding: 0px 1em;
-  /* font-weight: 500; */
-  font-size: 1.1rem;
-  color: var(--ast-global-color-2);
-  line-height: 70px;
-  font-style: italic;
-  font-weight: 600;
-  gap: 44px;
-}
-.nav {
-  /* border: 2px solid red; */
-  /* z-index: 999; */
-  margin-left: 40px;
-  padding: 0px 1em;
-  /* font-weight: 500; */
-  font-size: 1.1rem;
-  color: var(--ast-global-color-2);
-  line-height: 70px;
-  font-style: italic;
-  font-weight: 600;
-  gap: 44px;
-}
+
+
 
 .products {
   /* border: 2px solid red; */
 }
 .products-cont {
-  /* border: 1px solid black; */
+  /* border: 100px solid black; */
   display: flex;
   justify-content: center;
   gap: 50px;

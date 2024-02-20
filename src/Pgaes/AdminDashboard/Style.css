@@ -1,7 +1,7 @@
 .dashboard {
-  border: 2px solid rgb(213, 20, 20);
-  margin-top: 110px;
-  min-height: 150vh;
+  /* border: 2px solid rgb(213, 20, 20); */
+  margin-top: 90px;
+  height: 120vh;
   display: flex;
 }
 
@@ -26,21 +26,25 @@
 
   background-color: hsl(173, 95%, 42%) !important;
 }
-.dashboardProduct {
+/* .dashboardProduct {
   border: 4px black solid !important;
-  margin-top: 110px;
-  min-height: 100vh;
-}
+  margin-top: 90px;
+  min-height: 90vh;
+} */
 .dashboardProductform {
   border: 1px black solid !important;
-  width: 440px;
+  width: 660px;
   height: 240px;
   position: absolute;
-  left: 500px;
-  bottom: 1520px;
+  left: 800px;
+  bottom: 820px;
   /* text-align: center; */
   border-radius: 10px;
 }
 .imageInput {
   border: 4px black solid !important;
 }
+.custom {
+  width:332px; /* Adjust the width value as needed */
+}
+

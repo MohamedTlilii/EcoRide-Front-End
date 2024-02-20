@@ -4,7 +4,7 @@ import "./style.css";
 function LandingPageAbout() {
   return (
     <div>
-      <div className="about-section">
+      <div className="four-section">
         <div className="about-section-content">
           <h6>ABOUT US</h6>
           <h2>

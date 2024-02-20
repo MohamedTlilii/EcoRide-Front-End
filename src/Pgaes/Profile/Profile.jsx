@@ -80,20 +80,20 @@ function Profile() {
       .then((res) => {
         setLoadingP(false);
 
-        // toast.success("Profile picture updated successfully", {
-        //   position: "top-right",
-        //   autoClose: 5000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "colored",
-        // });
+        toast.success("Profile Picture was updated successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         setOpen(false);
       })
       .catch((err) => {
-        setLoadingP(false);
+        setLoading(false);
         console.dir(err);
         setOpen(false);
       });
@@ -105,7 +105,7 @@ function Profile() {
   );
 
   return (
-    <div >
+    <div>
       <div className="profil">
         <div className="profile-container">
           {!data ? (
@@ -130,11 +130,14 @@ function Profile() {
                   <h1
                     className="date"
                     style={{
+                      display: "flex",
+                      justifyContent: "center",
                       fontSize: "59px",
-                      position: "relative",
-                      left: "427px",
-                      bottom: "90px",
                       fontFamily: "monospace",
+                      // border: "1px solid black",
+                      position: "relative",
+                      
+                      bottom: "90px",
                     }}
                   >
                     {data.userName}{" "}

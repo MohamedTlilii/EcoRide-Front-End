@@ -65,82 +65,97 @@ function AddProduct() {
       });
   };
   return (
-    <div className="dashboardProduct">
-      <AdminAside />
+    <div className="dashboard">
+      <div>
+        <AdminAside />
 
-      <Form className="dashboardProductform">
-        <h1>Add New Product</h1>
-        <Form.Group
-          onChange={(e) => {
-            setProductData({ ...productData, [e.target.name]: e.target.value });
-          }}
-          widths="equal"
-        >
-          <Form.Input type="text" placeholder="Product" name="title" />
-          <Form.Input type="text" placeholder="Price" name="price" />
-        </Form.Group>
-
-        <Form.Group
-          onChange={(e) => {
-            setProductData({ ...productData, [e.target.name]: e.target.value });
-          }}
-          widths="equal"
-        >
-          <Form.Input
-            type="text"
-            placeholder="Description"
-            name="description"
-          />
-          <Dropdown
-            placeholder="Choose category"
-            search
-            selection
-            onChange={(e, data) => {
-              setCategory(data.value);
-            }}
-            options={options}
-          />
-        </Form.Group>
-
-        <Form.Group>
-          <input
-            style={{
-              height: "50px",
-              width: "430px",
-              position: "relative",
-              left: "7px",
-            }}
-            type="file"
-            name="Photo"
-            multiple
+        <Form className="dashboardProductform">
+          <h1>Add Product</h1>
+          <Form.Group
+           
             onChange={(e) => {
-              setProductPhoto(e.target.files);
-              // console.log(e.target.files[0]);
+              setProductData({
+                ...productData,
+                [e.target.name]: e.target.value,
+              });
             }}
-          />
-        </Form.Group>
-        <Button
-          color=" red"
-          onClick={() => {
-            handleAddProduct();
-          }}
-          loading={loading}
-        >
-          Add
-        </Button>
-      </Form>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+            widths="equal"
+          >
+            <Form.Input type="text" placeholder="Product" name="title" />
+            <Form.Input type="text" placeholder="Price" name="price" />
+          </Form.Group>
+
+          <Form.Group
+            onChange={(e) => {
+              setProductData({
+                ...productData,
+                [e.target.name]: e.target.value,
+              });
+            }}
+          
+          >
+            <Form.Input
+              type="text"
+              placeholder="Description"
+              name="description"
+              className="custom"
+            />
+            <Dropdown
+              placeholder="Choose category"
+              search
+              selection
+              onChange={(e, data) => {
+                setCategory(data.value);
+              }}
+              options={options}
+              className="custom"
+            />
+          </Form.Group>
+
+          <Form.Group >
+            <input
+
+
+              style={{
+                height: "50px",
+                width: "430px",
+                position: "relative",
+                left: "7px",
+              }}
+             
+
+              type="file"
+              name="Photo"
+              multiple
+              onChange={(e) => {
+                setProductPhoto(e.target.files);
+                // console.log(e.target.files[0]);
+              }}
+            />
+          </Form.Group>
+          <Button
+            color=" red"
+            onClick={() => {
+              handleAddProduct();
+            }}
+            loading={loading}
+          >
+            Add
+          </Button>
+        </Form>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
+      </div>
     </div>
   );
 }

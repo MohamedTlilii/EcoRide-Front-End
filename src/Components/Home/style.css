@@ -1,11 +1,6 @@
 /*home  */
 /* LANDING PAGE */
-.parent-div {
-  /* border: 6px rgb(1, 1, 0) solid; */
-  width: 1900px;
-  margin: auto;
-  /* height: 240px; */
-}
+
 ::selection {
   background-color: #cf2e2e;
 }
@@ -325,6 +320,8 @@ a {
   /* align-items: center; */
   margin-left: 180px;
   gap: 10px;
+  position: relative;
+  left: 200px;
 }
 .about-section-content h6 {
   color: var(--e-global-color-astglobalcolor3);
@@ -366,7 +363,8 @@ a {
   /* justify-content: center; */
   align-items: center;
   /* text-align: center; */
-  height: 1000px;
+  /* height: 1000px; */
+  /* width: fit-content; */
 }
 .card-third-section {
   border: 2px solid rgba(214, 13, 70, 0);
@@ -414,7 +412,7 @@ a {
   width: 920px;
   gap: 25px;
   padding: 55px;
-  margin-left: 350px;
+  margin-left: 490px;
   margin-top: 350px;
   height: 420px;
 }
@@ -560,7 +558,7 @@ a {
   width: 750px;
   height: 500px;
   position: relative;
-  left: 600px;
+  left: 1000px;
   top: 300px;
   /* position: absolute; */
 }

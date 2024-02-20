@@ -83,7 +83,12 @@ function ProductReviews({ review, hourDate, dayDate }) {
 
   return (
     <Comment key={review._id}>
-      <CommentAvatar src={review.userId.imageUrl} />
+      <CommentAvatar
+        style={{
+          height: "40px",
+        }}
+        src={review.userId.imageUrl}
+      />
       <CommentContent>
         <CommentAuthor as="a">{review.userId.userName}</CommentAuthor>
         {showEdit ? (

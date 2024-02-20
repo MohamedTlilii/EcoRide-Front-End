@@ -72,7 +72,7 @@ function LandingPage() {
                 </div>
                 <div className="scoter-hero-section">
                   <img
-                    style={{ width: "600px", height: "577px" }}
+                    style={{ width: "520px", height: "700px" }}
                     src={mainProduct?.imageUrls[0]}
                     alt=""
                   />

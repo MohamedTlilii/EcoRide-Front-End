@@ -41,16 +41,16 @@ function AdminProfil() {
       .then((res) => {
         setLoading(false);
         console.log(res);
-        toast.success("Admin information updated successfully", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        // toast.success("User informations was updated successfully", {
+        //   position: "bottom-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "colored",
+        // });
         setOpen(false);
       })
       .catch((err) => {
@@ -71,41 +71,40 @@ function AdminProfil() {
       .then((res) => {
         setLoadingP(false);
         console.log(res);
-        toast.success("Profile picture updated successfully", {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
+        // toast.success("Profile Picture was updated successfully", {
+        //   position: "bottom-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "colored",
+        // });
         setOpen(false);
       })
       .catch((err) => {
-        setLoadingP(false);
+        setLoading(false);
         console.dir(err);
         setOpen(false);
       });
   };
-
   return (
     <div>
       {!data ? (
         <PacmanLoader color="#36d7b7" size={60} />
       ) : (
         <Card className="profil-container-admin">
-          <Image src={data.imageUrl} />
+          <Image   src={data.imageUrl} />
           <CardContent>
             <CardMeta>
               <span className="date">{data.userName}</span>
             </CardMeta>
 
-            <CardDescription>
+            {/* <CardDescription>
               <Icon name="map marker alternate" />
               {data.address}
-            </CardDescription>
+            </CardDescription> */}
             <CardDescription>
               <Icon name="mail" />
               {data.email}
@@ -115,10 +114,10 @@ function AdminProfil() {
               {data.createdAt.substring(11, data.createdAt.length - 8)}
             </CardMeta>
           </CardContent>
-          <CardContent extra>
+          {/* <CardContent extra>
             <Icon name="phone" />
             {data.number}
-          </CardContent>
+          </CardContent> */}
           <ButtonGroup>
             <Button onClick={() => setOpen(true)}>Edit</Button>
           </ButtonGroup>
@@ -209,3 +208,8 @@ function AdminProfil() {
 }
 
 export default AdminProfil;
+
+
+
+
+

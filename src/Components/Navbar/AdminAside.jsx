@@ -8,16 +8,28 @@ function AdminAside() {
       <div style={{ position: "sticky", top: "100px" }}>
         <h1>Admin Profile</h1>
         <AdminProfil />
-        <Link style={{ color: "black" }} className="aside-link" to="/users">
+        <br />
+        <br />
+        <Link
+          style={{ color: "black", fontFamily: "Menlo, sans-serif" }}
+          className="aside-link"
+          to="/users"
+        >
           Users
         </Link>
         <br />
-        <Link style={{ color: "black" }} className="aside-link" to="/orders">
+        <br />
+        <Link
+          style={{ color: "black", fontFamily: "Menlo, sans-serif" }}
+          className="aside-link"
+          to="/orders"
+        >
           Orders
         </Link>
         <br />
+        <br />
         <Link
-          style={{ color: "black" }}
+          style={{ color: "black", fontFamily: "Menlo, sans-serif" }}
           className="aside-link"
           to="/addProduct"
         >

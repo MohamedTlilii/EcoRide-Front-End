@@ -3,13 +3,11 @@
   margin-top: 90px;
   height: 120vh;
   display: flex;
+  align-items: flex-start;
 }
-
-.profil-container-admin {
-  /* border: 7px black solid !important; */
-  /* width: 500px !important; */
-  /* position: relative; */
-  /* right: 70px; */
+.admin-aside {
+  /* border: 2px solid black; */
+  height: 100%;
 }
 
 .userCardSolo {
@@ -32,19 +30,32 @@
   min-height: 90vh;
 } */
 .dashboardProductform {
-  border: 1px black solid !important;
-  width: 660px;
+  border: 1px rgb(149, 149, 149) solid !important;
+  padding: 25px;
+  /* width: 660px;
   height: 240px;
   position: absolute;
   left: 800px;
   bottom: 820px;
-  /* text-align: center; */
-  border-radius: 10px;
+  border-radius: 10px; */
 }
+
 .imageInput {
   border: 4px black solid !important;
 }
 .custom {
-  width:332px; /* Adjust the width value as needed */
+  width: 632px; /* Adjust the width value as needed */
+ 
 }
 
+.orders-container {
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.table-data {
+  width: 80%;
+  margin-top: 50px;
+}

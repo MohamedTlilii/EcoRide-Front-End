@@ -6,8 +6,8 @@ function AdminAside() {
   return (
     <div className="admin-aside">
       <div style={{ position: "sticky", top: "100px" }}>
-        <h1>Admin Profile</h1>
-        <AdminProfil />
+        {/* <h1>Admin Profile</h1> */}
+        {/* <AdminProfil /> */}
         <br />
         <br />
         <Link

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ButtonCard from "../../Components/Btn/ButtonCard";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // import LandingPageFooter from "../../Components/Footer/Footer";
 import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 
@@ -21,18 +21,18 @@ import {
   Dropdown,
   Modal,
 } from "semantic-ui-react";
-import { toast, ToastContainer } from "react-toastify";
+// import { toast, ToastContainer } from "react-toastify";
 function ProductsSolo() {
-  const [loading, setLoading] = useState(false);
-  const [quantity, setQuantity] = useState({ quantity: 1 });
-  const [open, setOpen] = useState(false);
-
   let { id } = useParams();
   let token = localStorage.getItem("token");
-
+  let isAdmin = localStorage.getItem("isAdmin");
   const { data } = useFetch(
     `https://ecoridebackend.onrender.com/api/user/getSingleProduct/${id}`
   );
+  const [loading, setLoading] = useState(false);
+  const [quantity, setQuantity] = useState({ quantity: 1 });
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   // console.log(data);
   const handleAddProductToCart = () => {
     setLoading(true);
@@ -72,25 +72,27 @@ function ProductsSolo() {
     setLoading(true);
     let { title, price, description } = productData;
     const productFormData = new FormData();
-    let files = Object.values(productPhoto);
-    console.log(files);
-    productFormData.append("photo", files);
-    productFormData.append("title", title);
-    productFormData.append("price", price);
-    productFormData.append("description", description);
-    productFormData.append("category", category);
+    if (productPhoto) {
+      for (let i = 0; i < productPhoto.length; i++) {
+        productFormData.append("photos", productPhoto[i]);
+      }
+    }
+    // productFormData.append("photo", productPhoto[0]);
+    // productFormData.append("photo", productPhoto[1]);
+    // productFormData.append("photo", productPhoto[2]);
+    // productFormData.append("photo", productPhoto[3]);
+
+    title && productFormData.append("title", title);
+    price && productFormData.append("price", price);
+    description && productFormData.append("description", description);
+    // category && productFormData.append("category", category);
     axios
-      .put(
-        `https://ecoridebackend.onrender.com/api/admin/updateProduct/${id}`,
-        productFormData,
-        {
-          headers: { token },
-        }
-      )
+      .put(`${adminUrl}/updateProduct/${id}`, productFormData, {
+        headers: { token },
+      })
       .then((res) => {
         setLoading(false);
-
-        console.log(res);
+        setOpen(false);
       })
       .catch((err) => {
         setLoading(false);
@@ -99,11 +101,31 @@ function ProductsSolo() {
       });
   };
 
+  const handleAdminDeleteProduct = () => {
+    setLoading(true);
+    axios
+      .delete(
+        `https://ecoridebackend.onrender.com/api/admin/deleteProduct/${id}`,
+        {
+          headers: { token },
+        }
+      )
+      .then((res) => {
+        setLoading(false);
+        navigate("/electricscooters");
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.dir(err);
+      });
+  };
+
   return (
     <div className="solo-product-parent-div">
       {/* edit product modal */}
       <Modal
-         style={{
+        style={{
           width: "50%",
           height: "40%",
           position: "absolute",
@@ -119,7 +141,7 @@ function ProductsSolo() {
             <Form.Group>
               <label>
                 <input
-                   style={{ width: "927px", height: "50px" }}
+                  style={{ width: "927px", height: "50px" }}
                   type="file"
                   name="photo"
                   multiple
@@ -127,38 +149,49 @@ function ProductsSolo() {
                     setProductPhoto(e.target.files);
                   }}
                 />
-                <Button  loading={loading}>
-                  Update photos
-                </Button>
+                {/* <Button loading={loading}>Update photos</Button> */}
               </label>
             </Form.Group>
-            <Form.Group
-              onChange={(e) => {
-                setProductData({
-                  ...productData,
-                  [e.target.name]: e.target.value,
-                });
-              }}
-              widths="equal"
-            >
-              <Form.Input type="text" placeholder="Product" name="title" />
-              <Form.Input type="text" placeholder="Price" name="price" />
+            <Form.Group widths="equal">
+              <Form.Input
+                type="text"
+                placeholder="Product"
+                name="title"
+                defaultValue={productData.title}
+                onChange={(e) => {
+                  setProductData({
+                    ...productData,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+              />
+              <Form.Input
+                type="text"
+                placeholder="Price"
+                name="price"
+                defaultValue={productData.price}
+                onChange={(e) => {
+                  setProductData({
+                    ...productData,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
+              />
             </Form.Group>
-            <Form.Group
-              onChange={(e) => {
-                setProductData({
-                  ...productData,
-                  [e.target.name]: e.target.value,
-                });
-              }}
-              widths="equal"
-            >
+            <Form.Group widths="equal">
               <Form.Input
                 type="text"
                 placeholder="Description"
                 name="description"
+                defaultValue={productData.description}
+                onChange={(e) => {
+                  setProductData({
+                    ...productData,
+                    [e.target.name]: e.target.value,
+                  });
+                }}
               />
-              <Dropdown
+              {/* <Dropdown
                 placeholder="Choose category"
                 search
                 selection
@@ -166,7 +199,7 @@ function ProductsSolo() {
                   setCategory(data.value);
                 }}
                 options={options}
-              />
+              /> */}
             </Form.Group>
           </Form>
         </ModalContent>
@@ -228,8 +261,12 @@ function ProductsSolo() {
                 />
               </div>
               <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART "} />
-              <ButtonCard fn={() => setOpen(true) } text={"Update "}/>
-              <ButtonCard text={"Delete  "} />
+              {isAdmin === "true" && (
+                <ButtonCard fn={() => setOpen(true)} text={"Update "} />
+              )}
+              {isAdmin === "true" && (
+                <ButtonCard fn={handleAdminDeleteProduct} text={"Delete  "} />
+              )}
             </div>
             <fieldset>
               <legend>Guaranteed Safe Checkout</legend>

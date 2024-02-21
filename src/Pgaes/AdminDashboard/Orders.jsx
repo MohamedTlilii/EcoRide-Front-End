@@ -9,12 +9,19 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
+  PlaceholderParagraph,
+  PlaceholderLine,
+  PlaceholderHeader,
+  Placeholder,
 } from "semantic-ui-react";
 import { useFetch } from "../../utils/useFetch";
 import axios from "axios";
 import { adminUrl } from "../../utils/url";
+import "./Style.css";
+import { BarLoader } from "react-spinners";
 
 function Orders() {
+  const fakeData = [1, 2, 3, 4, 5];
   const [open2, setOpen2] = useState(false);
   const [loading, setLoading] = useState(false);
   let token = localStorage.getItem("token");
@@ -57,116 +64,152 @@ function Orders() {
   return (
     <div className="dashboard">
       <AdminAside />
-      <div>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Full Name
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Phone
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Email
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Products
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                IsConfirmed{" "}
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                IsDelivered{" "}
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Createdate{" "}
-              </TableHeaderCell>
+      <div className="orders-container">
+        <div className="table-data">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Full Name
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Phone
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Email
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Products
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  IsConfirmed{" "}
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  IsDelivered{" "}
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Createdate{" "}
+                </TableHeaderCell>
 
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Totall
-              </TableHeaderCell>
-              <TableHeaderCell
-                style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-              >
-                Actions
-              </TableHeaderCell>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {data.data &&
-              data.data.map((order) => (
-                <TableRow>
-                  <TableCell>
-                    {order.userId.firstName} {order.userId.lastName}
-                  </TableCell>
-                  <TableCell>{order.userId.number}</TableCell>
-                  <TableCell>{order.userId.email}</TableCell>
-                  <TableCell
-                    onClick={() => {
-                      setOpen2(true);
-                    }}
-                    style={{
-                      cursor: "pointer",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    See Details
-                  </TableCell>
-                  <CartDetails
-                    data={order.cart}
-                    setOpen2={setOpen2}
-                    open2={open2}
-                  />
-                  <TableCell>{order.isConfirmed ? "Yes" : "No"}</TableCell>
-                  <TableCell>{order.isDelevered ? "Yes" : "No"}</TableCell>
-                  <TableCell>
-                    {order.createdAt.substring(0, 10)},{" "}
-                    {order.createdAt.substring(11, order.createdAt.length - 8)}
-                  </TableCell>
-                  <TableCell>
-                    <Button
-                      size="mini"
-                      onClick={() => {
-                        handleConfirmOrder(order._id);
-                      }}
-                      disabled={order.isConfirmed}
-                      loading={loading}
-                    >
-                      Confirm
-                    </Button>
-                    <Button
-                      onClick={() => {
-                        handleDeliverOrder(order._id);
-                      }}
-                      disabled={order.isDelevered}
-                      loading={loading}
-                      size="mini"
-                    >
-                      Deliver
-                    </Button>
-                  </TableCell>
-                  <TableCell>{order.total} DT</TableCell>
-                </TableRow>
-              ))}
-          </TableBody>
-        </Table>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Totall
+                </TableHeaderCell>
+                <TableHeaderCell
+                  style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                >
+                  Actions
+                </TableHeaderCell>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {data.data
+                ? data.data.map((order) => (
+                    <TableRow>
+                      <TableCell>
+                        {order.userId.firstName} {order.userId.lastName}
+                      </TableCell>
+                      <TableCell>{order.userId.number}</TableCell>
+                      <TableCell>{order.userId.email}</TableCell>
+                      <TableCell
+                        onClick={() => {
+                          setOpen2(true);
+                        }}
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        See Details
+                      </TableCell>
+                      <CartDetails
+                        data={order.cart}
+                        setOpen2={setOpen2}
+                        open2={open2}
+                      />
+                      <TableCell>{order.isConfirmed ? "Yes" : "No"}</TableCell>
+                      <TableCell>{order.isDelevered ? "Yes" : "No"}</TableCell>
+                      <TableCell>
+                        {order.createdAt.substring(0, 10)},{" "}
+                        {order.createdAt.substring(
+                          11,
+                          order.createdAt.length - 8
+                        )}
+                      </TableCell>
+                      <TableCell>
+                        <Button
+                          size="mini"
+                          onClick={() => {
+                            handleConfirmOrder(order._id);
+                          }}
+                          disabled={order.isConfirmed}
+                          loading={loading}
+                        >
+                          Confirm
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            handleDeliverOrder(order._id);
+                          }}
+                          disabled={order.isDelevered}
+                          loading={loading}
+                          size="mini"
+                        >
+                          Deliver
+                        </Button>
+                      </TableCell>
+                      <TableCell>{order.total} DT</TableCell>
+                    </TableRow>
+                  ))
+                : fakeData.map((order) => (
+                    <TableRow>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                      <TableCell>
+                        <BarLoader color="#b6fbed" />
+                      </TableCell>
+                    </TableRow>
+                  ))}
+            </TableBody>
+          </Table>
+        </div>
       </div>
     </div>
   );

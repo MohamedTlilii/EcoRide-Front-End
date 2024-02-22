@@ -125,7 +125,7 @@ function ProductReviews({ review, hourDate, dayDate }) {
         {/* Assuming there's a 'body' field */}
         <CommentMetadata>
           <div>
-            Today at {dayDate},{hourDate.substr(0, hourDate?.length - 8)}
+             {dayDate},{hourDate.substr(0, hourDate?.length - 8)}
           </div>
         </CommentMetadata>
       </CommentContent>

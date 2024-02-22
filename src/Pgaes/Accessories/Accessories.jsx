@@ -5,7 +5,7 @@ import "./Style.css";
 // import LandingPageFooter from "../../Components/Footer/Footer";
 import AccessoriesProduct from "../../Components/Accessories/AccessoriesProduct";
 import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader } from "react-spinners";
+import { PacmanLoader, RingLoader } from "react-spinners";
 
 function Accessories() {
   const [search, setSearch] = useState("");
@@ -65,7 +65,11 @@ function Accessories() {
               <AccessoriesProduct key={product.id} {...product} />
             ))
         ) : (
-          <PacmanLoader color="#36d7b7" size={60} />
+          <RingLoader
+            color="#36d7b7"
+            size={100}
+            style={{ position: "relative", top: "120px", left: "680px" }}
+          />
         )}
       </div>
     </div>

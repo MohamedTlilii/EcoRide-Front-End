@@ -41,16 +41,6 @@ function AdminProfil() {
       .then((res) => {
         setLoading(false);
         console.log(res);
-        // toast.success("User informations was updated successfully", {
-        //   position: "bottom-right",
-        //   autoClose: 5000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "colored",
-        // });
         setOpen(false);
       })
       .catch((err) => {
@@ -71,16 +61,6 @@ function AdminProfil() {
       .then((res) => {
         setLoadingP(false);
         console.log(res);
-        // toast.success("Profile Picture was updated successfully", {
-        //   position: "bottom-right",
-        //   autoClose: 5000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "colored",
-        // });
         setOpen(false);
       })
       .catch((err) => {
@@ -89,10 +69,11 @@ function AdminProfil() {
         setOpen(false);
       });
   };
+
   return (
-    <div>
+    <div style={{ position: "relative", left: "1240px",top:"20px"}}>
       {!data ? (
-        <RingLoader color="#36d7b7" size={100} style={{ position: "relative", left: "120px", top: "140px" }}  />
+      <RingLoader color="#36d7b7" size={100} style={{position:"relative", left:"120px" , top :"150px"}} />
       ) : (
         <Card className="profil-container-admin">
           <Image src={data.imageUrl} />
@@ -100,30 +81,20 @@ function AdminProfil() {
             <CardMeta>
               <span className="date">{data.userName}</span>
             </CardMeta>
-
-            {/* <CardDescription>
-              <Icon name="map marker alternate" />
-              {data.address}
-            </CardDescription> */}
             <CardDescription>
               <Icon name="mail" />
               {data.email}
             </CardDescription>
             <CardMeta>
-              Createdate : <span> {data.createdAt.substring(0, 10)} </span>
+              Createdate : <span > {data.createdAt.substring(0, 10)} </span>
               {data.createdAt.substring(11, data.createdAt.length - 8)}
             </CardMeta>
           </CardContent>
-          {/* <CardContent extra>
-            <Icon name="phone" />
-            {data.number}
-          </CardContent> */}
           <ButtonGroup>
             <Button onClick={() => setOpen(true)}>Edit</Button>
           </ButtonGroup>
         </Card>
       )}
-      {/* edit admin modal */}
       <Modal
         style={{
           width: "50%",
@@ -191,18 +162,6 @@ function AdminProfil() {
           </Button>
         </ModalActions>
       </Modal>
-      {/* <ToastContainer
-        position="bottom-left"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      /> */}
     </div>
   );
 }

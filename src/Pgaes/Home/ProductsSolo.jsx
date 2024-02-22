@@ -8,7 +8,7 @@ import { Thumbnails } from "../../Components/Thumbanails/Thumbnails";
 import "./style.css";
 import Reviews from "../../Components/Reviews/Reviews";
 import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader } from "react-spinners";
+import { PacmanLoader, RingLoader } from "react-spinners";
 // import ShoppingCart from "../../Components/ShopingCard/ShoppingCart";
 import axios from "axios";
 import { adminUrl, url } from "../../utils/url";
@@ -223,14 +223,14 @@ function ProductsSolo() {
         <div className="products-cont">
           <div className="products-mains">
             {!data ? (
-              <PacmanLoader
+              <RingLoader
                 color="#36d7b7"
-                size={60}
-                style={{ position: "relative", top: "160px", right: "270px" }}
+                size={80}
+                style={{ position: "relative", top: "160px", right: "140px" }}
               />
-            ) : (
-              <Thumbnails images={data?.imageUrls} />
-            )}
+             ) : ( 
+               <Thumbnails images={data?.imageUrls} />
+             )} 
           </div>
 
           <div className="content-card-boxx">

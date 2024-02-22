@@ -18,11 +18,7 @@ import {
   Modal,
 } from "semantic-ui-react";
 import { useFetch } from "../../utils/useFetch";
-import {
-  BarLoader,
-  
-  RingLoader,
-} from "react-spinners";
+import { BarLoader, RingLoader } from "react-spinners";
 import CartDetails from "./CartDetails";
 import { toast } from "react-toastify";
 
@@ -107,7 +103,6 @@ function Profile() {
         <div className="profile-container">
           {!data ? (
             <div style={{ height: "580px" }}>
-        
               <RingLoader
                 color="#36d7b7"
                 size={80}
@@ -179,6 +174,7 @@ function Profile() {
                   >
                     <Icon name="map marker alternate" />
                     {data.address}
+                    <span> </span>
                     {data.city}
                   </h3>
                   <h3

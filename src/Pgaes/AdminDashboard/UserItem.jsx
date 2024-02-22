@@ -6,6 +6,7 @@ import {
   Card,
   CardMeta,
   CardDescription,
+  Icon,
 } from "semantic-ui-react";
 import { adminUrl } from "../../utils/url";
 import axios from "axios";
@@ -68,10 +69,10 @@ function UserItem({
             style={{
               // width: "220px",
               // height: "220px",
-              borderRadius: "100%",
+              // borderRadius: "100%",
               position: "relative",
-              left: "25px",
-              top: "5px",
+              // left: "25px",
+              // top: "5px",
             }}
           />
         </CardContent>
@@ -83,103 +84,53 @@ function UserItem({
           <br />
           <CardMeta>
             <h4 style={{ color: "black" }}>
-              Name :{firstName} {lastName}
+              {firstName} {lastName}
             </h4>
           </CardMeta>
           <CardMeta>
-            <h4 style={{ color: "black" }}>Number: {number}</h4>
+          <Icon name="phone" style={{ color: "black" }} />
+            <span style={{ color: "black" }} > {number}</span>
           </CardMeta>
-          <br />
+         
 
           <CardMeta>
-            <h4 style={{ color: "black" }}>Email:{email}</h4>
+          <Icon name="map marker alternate" style={{ color: "black" }} />
+            <span style={{ color: "black" }}>
+             {address} <span></span>
+              {city}
+              </span>
+           
           </CardMeta>
           <CardMeta>
-            <h4 style={{ color: "black" }}>
-              Address :{address}
-              {city}
-            </h4>
+          <Icon name="mail" style={{ color: "black" }} />
+            <span style={{ color: "black" }}>Email : {email}</span>
           </CardMeta>
         </CardContent>
         <CardContent extra>
-          {" "}
-          <h4> Date :{createdAt}</h4>
+        <h5 style={{color:"black"}}>
+   Createdate: {createdAt.substring(0, 10)} at {createdAt.substring(11, createdAt.length - 8)}
+</h5>
           <div className="ui two buttons">
             {isBanned ? (
-              <Button
-                basic
-                color="green"
-                onClick={() => {
-                  handleUnbanUser();
-                }}
+              <button
+                className="ui button unban"
+                style={{ borderRadius: "50px" }}
+                onClick={handleUnbanUser}
               >
                 Unban
-              </Button>
+              </button>
             ) : (
-              <Button
-                basic
-                color="red"
-                onClick={() => {
-                  handleBanUser();
-                }}
+              <button
+                style={{ borderRadius: "50px" }}
+                className="ui button ban"
+                onClick={handleBanUser}
               >
                 Ban
-              </Button>
+              </button>
             )}
           </div>
         </CardContent>
       </Card>
-      {/* <Card className="userItemContainer">
-        <Image
-          style={{ width: "90px", height: "90px" }}
-          floated="right"
-          size="mini"
-          src={imageUrl}
-        />
-        <CardHeader> User: {userName}</CardHeader>
-        <CardContent>
-          <CardMeta>
-            Address:
-            {address}
-            {city}
-          </CardMeta>
-          <CardDescription>Email:{email}</CardDescription>
-          <CardMeta>
-            {" "}
-            Name:
-            {firstName} {lastName}
-          </CardMeta>
-
-          <CardMeta>Number: {number}</CardMeta>
-        </CardContent>
-        <CardContent extra>
-          {" "}
-          Date :{createdAt}
-          <div className="ui two buttons">
-            {isBanned ? (
-              <Button
-                basic
-                color="green"
-                onClick={() => {
-                  handleUnbanUser();
-                }}
-              >
-                Unban
-              </Button>
-            ) : (
-              <Button
-                basic
-                color="red"
-                onClick={() => {
-                  handleBanUser();
-                }}
-              >
-                Ban
-              </Button>
-            )}
-          </div>
-        </CardContent>
-      </Card> */}
     </div>
   );
 }

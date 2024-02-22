@@ -9,6 +9,7 @@ import UserItem from "./UserItem";
 function Users() {
   let token = localStorage.getItem("token");
   const { data } = useFetch(`${adminUrl}/getUsers`, token);
+  // console.log(data );
   return (
     <div className="dashboard">
       <AdminAside />

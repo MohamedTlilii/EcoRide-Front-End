@@ -46,7 +46,8 @@ function LandingPage() {
       <div className="hero">
         <div className="hero-prd_details">
           <h1>
-            {mainProduct ? `${mainProduct?.title}` : <RingLoader size={50} />}
+            {mainProduct ? `${mainProduct?.title}` : <RingLoader size={80} color="#36d7b7" />}
+            
           </h1>
 
           <div className="hero-prd_details-infos">
@@ -72,8 +73,8 @@ function LandingPage() {
               alt=""
             />
           ) : (
-            <RingLoader size={100} />
-          )}
+            <RingLoader size={100} color="#36d7b7" />
+           )}
         </div>
         <div className="hero-prd_desc">
           <h4 className="last-section-title">Description</h4>
@@ -81,8 +82,9 @@ function LandingPage() {
             {mainProduct ? (
               `${mainProduct?.description}`
             ) : (
-              <RingLoader size={50} />
+              <RingLoader size={70} color="#36d7b7"  style={{ position: "relative",right:"80px"}}  />
             )}
+           
           </p>
           <h6 className="last-section-logos-titlle">SHARE:</h6>
           <div>

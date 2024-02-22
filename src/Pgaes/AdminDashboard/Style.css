@@ -15,16 +15,16 @@
 .userCardSolo {
   /* border: 4px black solid !important; */
   margin: 50px;
-  height: 450px;
+  height: 470px;
 }
 .userItemContainer {
-  /* border: 4px black solid !important; */
-  height: 510px !important;
-
-  /* position: relative;
-  left: 100px; */
-
-  background-color: hsl(150, 15%, 89%) !important;
+  /* Your existing styles */
+  height: 503px !important;
+  width: 250px !important;
+  
+  /* Box Shadow */
+  /* box-shadow: 100px 0px 100px 100px rgba(0,0,0,0.1);  */
+   background-color: hsl(150, 15%, 89%) !important;
 }
 /* .dashboardProduct {
   border: 4px black solid !important;
@@ -65,4 +65,22 @@
   /* border: 4px black solid !important; */
   display: flex !important;
   justify-content: flex-end !important;
+}
+.userItemContainer .ui.button {
+  border: none;
+  /* border-radius: 50; */
+  /* width: 100px; */
+  /* height: 40px; */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userItemContainer .ui.button.ban {
+  background-color: red;
+  color: white;
+}
+
+.userItemContainer .ui.button.unban {
+  background-color: green;
+  color: white;
 }

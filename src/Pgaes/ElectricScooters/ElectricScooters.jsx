@@ -5,7 +5,7 @@ import { Form } from "semantic-ui-react";
 // import LandingPageFooter from "../../Components/Footer/Footer";
 import ElectricScootersProducts from "../../Components/ElectricScooters/ElectricScootersProducts";
 import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader } from "react-spinners";
+import { PacmanLoader, RingLoader } from "react-spinners";
 function ElectricScooters() {
   const [search, setSearch] = useState("");
   // console.log(search);
@@ -65,7 +65,7 @@ function ElectricScooters() {
               <ElectricScootersProducts key={product.id} {...product} />
             ))
         ) : (
-          <PacmanLoader color="#36d7b7" size={60} />
+          <RingLoader color="#36d7b7" size={100} style={{ position: "relative", top: "120px" }} />
         )}
       </div>
     </div>

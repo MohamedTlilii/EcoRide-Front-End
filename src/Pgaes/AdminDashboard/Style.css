@@ -1,12 +1,14 @@
 .dashboard {
   /* border: 2px solid rgb(213, 20, 20); */
   margin-top: 90px;
-  height: 120vh;
+  height: 100vh;
   display: flex;
   align-items: flex-start;
+  overflow-y: scroll;
 }
 .admin-aside {
   /* border: 2px solid black; */
+  color: aquamarine;
   height: 100%;
 }
 
@@ -17,12 +19,12 @@
 }
 .userItemContainer {
   /* border: 4px black solid !important; */
-  height: 400px !important;
+  height: 510px !important;
 
   /* position: relative;
   left: 100px; */
 
-  background-color: hsl(173, 95%, 42%) !important;
+  background-color: hsl(150, 15%, 89%) !important;
 }
 /* .dashboardProduct {
   border: 4px black solid !important;
@@ -45,7 +47,6 @@
 }
 .custom {
   width: 632px; /* Adjust the width value as needed */
- 
 }
 
 .orders-container {
@@ -58,4 +59,10 @@
 .table-data {
   width: 80%;
   margin-top: 50px;
+}
+
+.profil-container-admin {
+  /* border: 4px black solid !important; */
+  display: flex !important;
+  justify-content: flex-end !important;
 }

@@ -11,7 +11,10 @@ function AdminAside() {
         <br />
         <br />
         <Link
-          style={{ color: "black", fontFamily: "Menlo, sans-serif" }}
+          style={{
+            color: "hsl(173, 95%, 42%)",
+            fontFamily: "Menlo, sans-serif",
+          }}
           className="aside-link"
           to="/users"
         >
@@ -20,7 +23,10 @@ function AdminAside() {
         <br />
         <br />
         <Link
-          style={{ color: "black", fontFamily: "Menlo, sans-serif" }}
+          style={{
+            color: "hsl(173, 95%, 42%)",
+            fontFamily: "Menlo, sans-serif",
+          }}
           className="aside-link"
           to="/orders"
         >
@@ -29,7 +35,10 @@ function AdminAside() {
         <br />
         <br />
         <Link
-          style={{ color: "black", fontFamily: "Menlo, sans-serif" }}
+          style={{
+            color: "hsl(173, 95%, 42%)",
+            fontFamily: "Menlo, sans-serif",
+          }}
           className="aside-link"
           to="/addProduct"
         >

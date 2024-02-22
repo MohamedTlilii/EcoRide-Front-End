@@ -6,15 +6,15 @@
 }
 .hero-section {
   /* border: 2px rgb(202, 221, 28) solid; */
-  display: flex;
-  justify-content: center;
-  height: 99vh;
-  background-image: url("../../../public/assets/home/bg-01.png");
+  /* display: flex; */
+  /* justify-content: center; */
+  /* height: 99vh; */
+  /* background-image: url("../../../public/assets/home/bg-01.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   /* width: fit-content; */
   margin: auto;
-  height: 1000px;
+  /* height: 1000px; */
 }
 
 .hero-section-content {

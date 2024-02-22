@@ -1,5 +1,5 @@
 .profil {
-  /* border: 2px solid rgb(213, 20, 20); */
+  /* border: 20px solid rgb(213, 20, 20); */
   /* background-color: aqua; */
   margin-top: 90px;
   min-height: 150vh;
@@ -23,4 +23,16 @@
   /* position: relative;
   left: 250px; */
   /* background-color: hsl(173, 95%, 42%)!important; */
+  height: 570px;
+}
+
+.orders-container-user {
+  /* border: 2px solid rgb(213, 20, 20) !important; */
+  /* width: 90%; */
+  /* min-height: 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-start; */
+  width: 100%;
+  margin-top: 50px;
 }

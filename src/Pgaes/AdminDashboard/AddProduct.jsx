@@ -71,6 +71,7 @@ function AddProduct() {
       <AdminAside />
       <div className="orders-container">
         <div className="table-data">
+          
           <Form className="dashboardProductform">
             <h1>Add Product</h1>
             <Form.Group

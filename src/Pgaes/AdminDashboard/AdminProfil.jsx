@@ -17,7 +17,7 @@ import {
   Modal,
 } from "semantic-ui-react";
 import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader } from "react-spinners";
+import { PacmanLoader, RingLoader } from "react-spinners";
 import { ToastContainer, toast } from "react-toastify";
 
 function AdminProfil() {
@@ -92,10 +92,10 @@ function AdminProfil() {
   return (
     <div>
       {!data ? (
-        <PacmanLoader color="#36d7b7" size={60} />
+        <RingLoader color="#36d7b7" size={100} style={{ position: "relative", left: "120px", top: "140px" }}  />
       ) : (
         <Card className="profil-container-admin">
-          <Image   src={data.imageUrl} />
+          <Image src={data.imageUrl} />
           <CardContent>
             <CardMeta>
               <span className="date">{data.userName}</span>
@@ -208,8 +208,3 @@ function AdminProfil() {
 }
 
 export default AdminProfil;
-
-
-
-
-

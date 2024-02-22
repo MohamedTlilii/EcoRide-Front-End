@@ -13,7 +13,7 @@ import LandingPageWhy from "../../Components/Home/LandingPageWhy";
 import { Link } from "react-router-dom";
 // import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader } from "react-spinners";
+import { PacmanLoader, RingLoader } from "react-spinners";
 import axios from "axios";
 import { url } from "../../utils/url";
 
@@ -42,53 +42,54 @@ function LandingPage() {
       });
   };
   return (
-    <div className="parent-div">
-      <div className="hero-section">
-        {!data ? (
-          <PacmanLoader
-            color="#36d7b7"
-            style={{ position: "relative", top: "160px" }}
-            size={60}
-          />
-        ) : (
-          data && (
-            <>
-              <div className="hero-section-content">
-                <h1>{mainProduct?.title}</h1>
-                <h5 className="hero-second-title">Informations:</h5>
-                <div className="card-km-info">
-                  <CardKm text={30} km={"km"} content={"BATTERY"} />
-                  <CardKm text={"13,5"} km={"kg"} content={"WEIGHT"} />
-                  <CardKm text={25} km={"km/h"} content={"SPEED"} />
-                </div>
-                <div className="add-cart-section">
-                  {mainProduct?.price} <span>TND</span>
-                  <span className="add-cart-span">
-                    <ButtonCard
-                      fn={handleAddProductToCart}
-                      text={"ADD TO CART"}
-                    />
-                  </span>
-                </div>
-                <div className="scoter-hero-section">
-                  <img
-                    style={{ width: "520px", height: "700px" }}
-                    src={mainProduct?.imageUrls[0]}
-                    alt=""
-                  />
-                </div>
-              </div>
-            </>
-          )
-        )}
+    <div>
+      <div className="hero">
+        <div className="hero-prd_details">
+          <h1>
+            {mainProduct ? `${mainProduct?.title}` : <RingLoader size={50} />}
+          </h1>
 
-        <div className="last-section-hero">
+          <div className="hero-prd_details-infos">
+            <h5>Informations:</h5>
+            <div className="hero-prd_details-infos-cards">
+              <CardKm text={30} km={"km"} content={"BATTERY"} />
+              <CardKm text={"13,5"} km={"kg"} content={"WEIGHT"} />
+              <CardKm text={25} km={"km/h"} content={"SPEED"} />
+            </div>
+          </div>
+          <div className="hero-prd_details-actions">
+            <span>{mainProduct?.price} TND</span>
+            <span>
+              <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART"} />
+            </span>
+          </div>
+        </div>
+        <div className="hero-img_box">
+          {mainProduct ? (
+            <img
+              style={{ width: "520px", height: "700px" }}
+              src={mainProduct.imageUrls[0]}
+              alt=""
+            />
+          ) : (
+            <RingLoader size={100} />
+          )}
+        </div>
+        <div className="hero-prd_desc">
           <h4 className="last-section-title">Description</h4>
-          <p className="last-section-titlle-p">{mainProduct?.description}</p>
+          <p className="last-section-titlle-p">
+            {mainProduct ? (
+              `${mainProduct?.description}`
+            ) : (
+              <RingLoader size={50} />
+            )}
+          </p>
           <h6 className="last-section-logos-titlle">SHARE:</h6>
-          <FaFacebook className="fb-logo" />
-          <AiFillTwitterCircle className="twiter-logo" />
-          <FaSquareYoutube className="youtube-logo" />
+          <div>
+            <FaFacebook className="fb-logo" />
+            <AiFillTwitterCircle className="twiter-logo" />
+            <FaSquareYoutube className="youtube-logo" />
+          </div>
         </div>
       </div>
 
@@ -101,31 +102,40 @@ function LandingPage() {
                 <CardProduct key={product.id} {...product} />
               ))
           ) : (
-            <PacmanLoader
+            <RingLoader
               color="#36d7b7"
-              size={60}
-              style={{ position: "relative", top: "160px", left: "800px" }}
+              size={160}
+              style={{ position: "relative", top: "160px", left: "850px" }}
             />
           )}
         </div>
       </div>
       <LandingPageAbout />
       <div className="third-section">
-        <div className="card-third-section">
-          <Link to="/electricscooters">
-            <img
-              className="img-third-section"
-              // style={{ width: "658px", height: "577px" }}
-              src={secondProduct?.imageUrls[0]}
-              alt=""
-            />
-          </Link>
+        {data ? (
+          <div className="card-third-section">
+            <Link to="/electricscooters">
+              <img
+                className="img-third-section"
+                // style={{ width: "658px", height: "577px" }}
+                src={secondProduct?.imageUrls[0]}
+                alt=""
+              />
+            </Link>
 
-          <h1 className="titlle-third-section">{secondProduct?.title}</h1>
-          <p className="price-third-section">
-            {secondProduct?.price} <span>TND</span>
-          </p>
-        </div>
+            <h1 className="titlle-third-section">{secondProduct?.title}</h1>
+            <p className="price-third-section">
+              {secondProduct?.price} <span>TND</span>
+            </p>
+          </div>
+        ) : (
+          // Display a loading spinner when data is not available
+          <RingLoader
+            color="#36d7b7"
+            size={160}
+            style={{ position: "relative", top: "50px", left: "350px" }}
+          />
+        )}
       </div>
       <LandingPageFour />
       <div className="section-five">

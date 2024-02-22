@@ -4,37 +4,69 @@
   /* width: 1900px; */
   /* height: 240px; */
   width: 1900px;
+}
+.hero {
+  /* border: 1px black solid; */
+  margin-top: 90px;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #f5fbfb;
+}
+.hero-prd_details {
+  /* border: 1px red solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  /* width: 25%; */
+}
+.hero-prd_details h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-prd_details-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.hero-prd_details-infos {
+  flex-direction: column;
+  display: flex;
+}
 
+.hero-prd_details-infos-cards {
+  display: flex;
+}
+.hero-img_box {
+  /* border: 1px blue solid; */
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-prd_desc {
+  /* border: 1px forestgreen solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 ::selection {
   background-color: #cf2e2e;
 }
 .hero-section {
-  /* border: 2px rgb(202, 221, 28) solid; */
+  border: 2px rgb(202, 221, 28) solid;
   background-color: hsl(180, 43%, 97%);
-  display: flex;
-  justify-content: center;
-  height: 99vh;
-  width: 1000;
-  /* background-image: url(""); */
-  background-repeat: no-repeat;
-  background-position: center;
-  /* width: fit-content; */
   margin: auto;
-  height: 1000px;
+  height: 100vh;
 }
 
-.hero-section-content {
-  /* border: 2px red solid; */
-  /* width: 700px; */
-  height: 750px;
-  padding: 0 25px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  right: 60px;
-  top: 250px;
-}
 .hero-section-content h1 {
   /* border: 2px red solid; */
   /* font-size: 55px;
@@ -135,24 +167,27 @@
   color: hsl(173, 95%, 42%) !important;
 }
 .last-section-hero {
-  /* border: 2px solid rgb(26, 192, 56); */
+  border: 2px solid rgb(26, 192, 56);
   position: relative;
   height: 220px;
   width: 250px;
-  position: relative;
+  /* position: relative;
   left: 100px;
-  top: 300px;
+  top: 300px; */
 }
 
 .last-section-titlle-p {
   /* border: 2px solid red; */
   width: 280px;
-  display: block;
+
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   margin-bottom: 5.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .last-section-logos-titlle {
   /* border: 2px solid red; */
@@ -214,8 +249,6 @@
     justify-content: center;
     gap: 10px; */
 }
-
-
 
 .products {
   /* border: 2px solid red; */

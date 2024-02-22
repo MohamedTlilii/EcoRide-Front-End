@@ -2,15 +2,9 @@ import "./Style.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { url } from "../../utils/url";
-import { CardContent, Form } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
 import {
-  CardMeta,
-  CardHeader,
-  CardDescription,
-  Card,
   Icon,
-  Image,
-  ButtonGroup,
   Button,
   TableRow,
   TableHeaderCell,
@@ -23,9 +17,12 @@ import {
   ModalActions,
   Modal,
 } from "semantic-ui-react";
-
 import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader } from "react-spinners";
+import {
+  BarLoader,
+  
+  RingLoader,
+} from "react-spinners";
 import CartDetails from "./CartDetails";
 import { toast } from "react-toastify";
 
@@ -109,7 +106,14 @@ function Profile() {
       <div className="profil">
         <div className="profile-container">
           {!data ? (
-            <PacmanLoader color="#36d7b7" size={60} />
+            <div style={{ height: "580px" }}>
+        
+              <RingLoader
+                color="#36d7b7"
+                size={80}
+                style={{ position: "relative", left: "460px", top: "250px" }}
+              />
+            </div>
           ) : (
             data && (
               <div className="profil-container-user">
@@ -136,7 +140,7 @@ function Profile() {
                       fontFamily: "monospace",
                       // border: "1px solid black",
                       position: "relative",
-                      
+
                       bottom: "90px",
                     }}
                   >
@@ -325,93 +329,105 @@ function Profile() {
             </Modal>
           </>
           {/* products card */}
-          <div>
-            <Table
-              style={{
-                position: "relative",
-                top: "200px",
-                right: "150px",
-                width: "1330px",
-              }}
-              // style={{
-              //   backgroundColor: "hsl(173, 95%, 42%)",
-              // }}
-            >
-              <TableHeader>
-                <TableRow>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    Order ID
-                  </TableHeaderCell>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    Products
-                  </TableHeaderCell>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    IsConfirmed{" "}
-                  </TableHeaderCell>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    IsDelivered{" "}
-                  </TableHeaderCell>
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    Createdate{" "}
-                  </TableHeaderCell>
-
-                  <TableHeaderCell
-                    style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
-                  >
-                    Totall
-                  </TableHeaderCell>
-                </TableRow>
-              </TableHeader>
-
-              <TableBody>
-                {products.data &&
-                  products.data.map((product) => (
-                    <TableRow>
-                      <TableCell>{product._id}</TableCell>
-                      <TableCell
-                        onClick={() => {
-                          setOpen2(true);
-                        }}
-                        style={{
-                          cursor: "pointer",
-                          textDecoration: "underline",
-                        }}
-                      >
-                        See Details
-                      </TableCell>
-                      <CartDetails
-                        data={product.cart}
-                        setOpen2={setOpen2}
-                        open2={open2}
-                      />
-                      <TableCell>
-                        {product.isConfirmed ? "Yes" : "No"}
-                      </TableCell>
-                      <TableCell>
-                        {product.isDelevered ? "Yes" : "No"}
-                      </TableCell>
-                      <TableCell>
-                        {product.createdAt.substring(0, 10)},{" "}
-                        {product.createdAt.substring(
-                          11,
-                          product.createdAt.length - 8
-                        )}
-                      </TableCell>
-                      <TableCell>{product.total} DT</TableCell>
-                    </TableRow>
-                  ))}
-              </TableBody>
-            </Table>
+          <div className="orders-container-user">
+            <div className="table-data-user">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHeaderCell
+                      style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                    >
+                      Order ID
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                    >
+                      Products
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                    >
+                      IsConfirmed
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                    >
+                      IsDelivered
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                    >
+                      Createdate
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
+                    >
+                      Total
+                    </TableHeaderCell>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {products.data
+                    ? products.data.map((product) => (
+                        <TableRow key={product._id}>
+                          <TableCell>{product._id}</TableCell>
+                          <TableCell
+                            onClick={() => {
+                              setOpen2(true);
+                            }}
+                            style={{
+                              cursor: "pointer",
+                              textDecoration: "underline",
+                            }}
+                          >
+                            See Details
+                          </TableCell>
+                          <CartDetails
+                            data={product.cart}
+                            setOpen2={setOpen2}
+                            open2={open2}
+                          />
+                          <TableCell>
+                            {product.isConfirmed ? "Yes" : "No"}
+                          </TableCell>
+                          <TableCell>
+                            {product.isDelivered ? "Yes" : "No"}
+                          </TableCell>
+                          <TableCell>
+                            {product.createdAt.substring(0, 10)},{" "}
+                            {product.createdAt.substring(
+                              11,
+                              product.createdAt.length - 8
+                            )}
+                          </TableCell>
+                          <TableCell>{product.total} DT</TableCell>
+                        </TableRow>
+                      ))
+                    : Array.from({ length: 1 }, (_, index) => (
+                        <TableRow key={index}>
+                          <TableCell>
+                            <BarLoader color="#b6fbed" />
+                          </TableCell>
+                          <TableCell>
+                            <BarLoader color="#b6fbed" />
+                          </TableCell>
+                          <TableCell>
+                            <BarLoader color="#b6fbed" />
+                          </TableCell>
+                          <TableCell>
+                            <BarLoader color="#b6fbed" />
+                          </TableCell>
+                          <TableCell>
+                            <BarLoader color="#b6fbed" />
+                          </TableCell>
+                          <TableCell>
+                            <BarLoader color="#b6fbed" />
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                </TableBody>
+              </Table>
+            </div>
           </div>
         </div>
       </div>

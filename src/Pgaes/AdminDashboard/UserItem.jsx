@@ -67,12 +67,7 @@ function UserItem({
             height={220}
             src={imageUrl}
             style={{
-              // width: "220px",
-              // height: "220px",
-              // borderRadius: "100%",
-              position: "relative",
-              // left: "25px",
-              // top: "5px",
+              objectFit: "cover",
             }}
           />
         </CardContent>
@@ -88,28 +83,27 @@ function UserItem({
             </h4>
           </CardMeta>
           <CardMeta>
-          <Icon name="phone" style={{ color: "black" }} />
-            <span style={{ color: "black" }} > {number}</span>
+            <Icon name="phone" style={{ color: "black" }} />
+            <span style={{ color: "black" }}> {number}</span>
           </CardMeta>
-         
 
           <CardMeta>
-          <Icon name="map marker alternate" style={{ color: "black" }} />
+            <Icon name="map marker alternate" style={{ color: "black" }} />
             <span style={{ color: "black" }}>
-             {address} <span></span>
+              {address} <span></span>
               {city}
-              </span>
-           
+            </span>
           </CardMeta>
           <CardMeta>
-          <Icon name="mail" style={{ color: "black" }} />
+            <Icon name="mail" style={{ color: "black" }} />
             <span style={{ color: "black" }}>Email : {email}</span>
           </CardMeta>
         </CardContent>
         <CardContent extra>
-        <h5 style={{color:"black"}}>
-   Createdate: {createdAt.substring(0, 10)} at {createdAt.substring(11, createdAt.length - 8)}
-</h5>
+          <h5 style={{ color: "black" }}>
+            Createdate: {createdAt.substring(0, 10)} at{" "}
+            {createdAt.substring(11, createdAt.length - 8)}
+          </h5>
           <div className="ui two buttons">
             {isBanned ? (
               <button

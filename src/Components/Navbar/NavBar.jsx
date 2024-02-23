@@ -29,17 +29,20 @@ function NavBar() {
         <Link to="/accessories">
           <li>Accessories</li>
         </Link>
-        <Link to="/about">
-          <li>About</li>
-        </Link>
-
+        {!isAdmin && (
+          <>
+            <Link to="/about">
+              <li>About</li>
+            </Link>
+            <Link to="/contact">
+              <li>Contact</li>
+            </Link>
+          </>
+        )}
         {token && isUser ? (
           // <>
           //   {token && (
           <>
-            <Link to="/contact">
-              <li>Contact</li>
-            </Link>
             <Link to="/profile">
               <li>Profile</li>
             </Link>

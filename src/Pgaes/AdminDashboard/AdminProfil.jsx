@@ -71,11 +71,16 @@ function AdminProfil() {
   };
 
   return (
-    <div style={{ position: "relative", left: "1240px",top:"20px"}}>
+    <div className="admin-profile">
       {!data ? (
-      <RingLoader color="#36d7b7" size={100} style={{position:"relative", left:"120px" , top :"150px"}} />
+        <RingLoader
+          color="#36d7b7"
+          size={100}
+          style={{ position: "relative", left: "120px", top: "150px" }}
+        />
       ) : (
-        <Card className="profil-container-admin">
+        
+        <Card>
           <Image src={data.imageUrl} />
           <CardContent>
             <CardMeta>
@@ -86,7 +91,7 @@ function AdminProfil() {
               {data.email}
             </CardDescription>
             <CardMeta>
-              Createdate : <span > {data.createdAt.substring(0, 10)} </span>
+              Createdate : <span> {data.createdAt.substring(0, 10)} </span>
               {data.createdAt.substring(11, data.createdAt.length - 8)}
             </CardMeta>
           </CardContent>

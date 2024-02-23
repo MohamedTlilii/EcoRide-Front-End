@@ -21,10 +21,10 @@
   /* Your existing styles */
   height: 503px !important;
   width: 250px !important;
-  
+
   /* Box Shadow */
   /* box-shadow: 100px 0px 100px 100px rgba(0,0,0,0.1);  */
-   background-color: hsl(150, 15%, 89%) !important;
+  background-color: hsl(150, 15%, 89%) !important;
 }
 /* .dashboardProduct {
   border: 4px black solid !important;
@@ -48,23 +48,33 @@
 .custom {
   width: 632px; /* Adjust the width value as needed */
 }
-
+.form-filter {
+  all: unset;
+}
+.table-orders {
+  all: unset;
+}
 .orders-container {
-  width: 90%;
+  /* border: 4px black solid !important; */
+  width: 70%;
+  margin: 40px auto;
   min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  /* display: flex; */
 }
 .table-data {
-  width: 80%;
-  margin-top: 50px;
+  /* border: 4px black solid !important; */
+  width: 100%;
+  /* margin-top: 130px; */
 }
 
-.profil-container-admin {
-  /* border: 4px black solid !important; */
-  display: flex !important;
-  justify-content: flex-end !important;
+.admin-profile {
+  /* border: 4px black solid; */
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: flex-start;
 }
 .userItemContainer .ui.button {
   border: none;
@@ -83,4 +93,10 @@
 .userItemContainer .ui.button.unban {
   background-color: green;
   color: white;
+}
+.filtring-orders {
+  /* border: 4px black solid !important; */
+  position: relative;
+  left: 1200px;
+  top: 50px;
 }

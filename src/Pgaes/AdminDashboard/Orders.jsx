@@ -9,10 +9,7 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  PlaceholderParagraph,
-  PlaceholderLine,
-  PlaceholderHeader,
-  Placeholder,
+  Form,
 } from "semantic-ui-react";
 import { useFetch } from "../../utils/useFetch";
 import axios from "axios";
@@ -20,7 +17,14 @@ import { adminUrl } from "../../utils/url";
 import "./Style.css";
 import { BarLoader } from "react-spinners";
 
+// import { Form } from "react-router-dom";
+
 function Orders() {
+  const [search, setSearch] = useState({
+    fullName: "",
+    number: "",
+    email: "",
+  });
   const fakeData = [1, 2, 3, 4, 5];
   const [open2, setOpen2] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -65,6 +69,32 @@ function Orders() {
     <div className="dashboard">
       <AdminAside />
       <div className="orders-container">
+        <Form className="form-filter">
+          <Form.Group widths="equal">
+            <Form.Input
+              label="Filtering"
+              placeholder="Filter by Full Name"
+              onChange={(e) => {
+                setSearch({ ...search, fullName: e.target.value });
+              }}
+            />
+            <Form.Input
+              label="Filtering"
+              placeholder="Filter by Email"
+              onChange={(e) => {
+                setSearch({ ...search, email: e.target.value });
+              }}
+            />
+            <Form.Input
+              label="Filtering"
+              placeholder="Filter by Phone Number"
+              onChange={(e) => {
+                setSearch({ ...search, number: e.target.value });
+              }}
+            />
+          </Form.Group>
+        </Form>
+
         <div className="table-data">
           <Table>
             <TableHeader>
@@ -119,63 +149,85 @@ function Orders() {
             </TableHeader>
             <TableBody>
               {data.data
-                ? data.data.map((order) => (
-                    <TableRow>
-                      <TableCell>
-                        {order.userId.firstName} {order.userId.lastName}
-                      </TableCell>
-                      <TableCell>{order.userId.number}</TableCell>
-                      <TableCell>{order.userId.email}</TableCell>
-                      <TableCell
-                        onClick={() => {
-                          setOpen2(true);
-                        }}
-                        style={{
-                          cursor: "pointer",
-                          textDecoration: "underline",
-                        }}
-                      >
-                        See Details
-                      </TableCell>
-                      <CartDetails
-                        data={order.cart}
-                        setOpen2={setOpen2}
-                        open2={open2}
-                      />
-                      <TableCell>{order.isConfirmed ? "Yes" : "No"}</TableCell>
-                      <TableCell>{order.isDelevered ? "Yes" : "No"}</TableCell>
-                      <TableCell>
-                        {order.createdAt.substring(0, 10)},{" "}
-                        {order.createdAt.substring(
-                          11,
-                          order.createdAt.length - 8
-                        )}
-                      </TableCell>
-                      <TableCell>
-                        <Button
-                          size="mini"
+                ? data.data
+                    .filter(
+                      (order) =>
+                        order.userId.firstName
+                          .toLowerCase()
+                          .includes(search.fullName.toLowerCase()) ||
+                        order.userId.lastName
+                          .toLowerCase()
+                          .includes(search.fullName.toLowerCase())
+                    )
+                    .filter((order) =>
+                      order.userId.email
+                        .toLowerCase()
+                        .includes(search.email.toLowerCase())
+                    )
+                    .filter((order) =>
+                      order.userId.number.includes(search.number)
+                    )
+                    .map((order) => (
+                      <TableRow>
+                        <TableCell>
+                          {order.userId.firstName} {order.userId.lastName}
+                        </TableCell>
+                        <TableCell>{order.userId.number}</TableCell>
+                        <TableCell>{order.userId.email}</TableCell>
+                        <TableCell
                           onClick={() => {
-                            handleConfirmOrder(order._id);
+                            setOpen2(true);
                           }}
-                          disabled={order.isConfirmed}
-                          loading={loading}
-                        >
-                          Confirm
-                        </Button>
-                        <Button
-                          onClick={() => {
-                            handleDeliverOrder(order._id);
+                          style={{
+                            cursor: "pointer",
+                            textDecoration: "underline",
                           }}
-                          disabled={order.isDelevered}
-                          loading={loading}
-                          size="mini"
                         >
-                          Deliver
-                        </Button>
-                      </TableCell>
-                      <TableCell>{order.total} DT</TableCell>
-                    </TableRow>
-                  ))
+                          See Details
+                        </TableCell>
+                        <CartDetails
+                          data={order.cart}
+                          setOpen2={setOpen2}
+                          open2={open2}
+                        />
+                        <TableCell>
+                          {order.isConfirmed ? "Yes" : "No"}
+                        </TableCell>
+                        <TableCell>
+                          {order.isDelevered ? "Yes" : "No"}
+                        </TableCell>
+                        <TableCell>
+                          {order.createdAt.substring(0, 10)},{" "}
+                          {order.createdAt.substring(
+                            11,
+                            order.createdAt.length - 8
+                          )}
+                        </TableCell>
+                        <TableCell>{order.total} DT</TableCell>
+                        <TableCell>
+                          <Button
+                            size="mini"
+                            onClick={() => {
+                              handleConfirmOrder(order._id);
+                            }}
+                            disabled={order.isConfirmed}
+                            loading={loading}
+                          >
+                            Confirm
+                          </Button>
+                          <Button
+                            onClick={() => {
+                              handleDeliverOrder(order._id);
+                            }}
+                            disabled={order.isDelevered}
+                            loading={loading}
+                            size="mini"
+                          >
+                            Deliver
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    ))
                 : fakeData.map((order) => (
                     <TableRow>
                       <TableCell>

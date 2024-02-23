@@ -7,6 +7,7 @@ function NavBar() {
   let token = localStorage.getItem("token");
   let isUser = JSON.parse(localStorage.getItem("isUser"));
   let isAdmin = localStorage.getItem("isAdmin");
+  let isBanned = localStorage.getItem("false");
 
   return (
     <nav className="nav-container">
@@ -43,9 +44,16 @@ function NavBar() {
           // <>
           //   {token && (
           <>
+            <Link to="/about">
+              <li>About</li>
+            </Link>
+            <Link to="/contact">
+              <li>Contact</li>
+            </Link>
             <Link to="/profile">
               <li>Profile</li>
             </Link>
+
             <li>
               <ShoppingCart />
             </li>

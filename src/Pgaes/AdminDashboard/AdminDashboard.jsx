@@ -1,4 +1,5 @@
 import AdminAside from "../../Components/Navbar/AdminAside";
+// import AdminData from "./AdminData";
 import AdminProfil from "./AdminProfil";
 // import AdminProfil from "../AdminDashboard/AdminProfil";
 import "./Style.css";

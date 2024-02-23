@@ -2,27 +2,20 @@ import "./Style.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { adminUrl, url } from "../../utils/url";
+// import { Icon, Button } from "semantic-ui-react";
+import { useFetch } from "../../utils/useFetch";
+import { PacmanLoader, RingLoader } from "react-spinners";
+import { ToastContainer, toast } from "react-toastify";
 import {
-  CardMeta,
-  CardDescription,
-  Card,
-  CardContent,
-  Icon,
-  Form,
-  Image,
-  ButtonGroup,
   Button,
   ModalHeader,
   ModalContent,
   ModalActions,
   Modal,
+  Form,
+  Icon,
 } from "semantic-ui-react";
-import { useFetch } from "../../utils/useFetch";
-import { PacmanLoader, RingLoader } from "react-spinners";
-import { ToastContainer, toast } from "react-toastify";
-import AdminData from "./AdminData";
-
-function AdminProfil() {
+function AdminData() {
   let token = localStorage.getItem("token");
   const { data } = useFetch(
     "https://ecoridebackend.onrender.com/api/user/GetInformation",
@@ -71,7 +64,6 @@ function AdminProfil() {
         setOpen(false);
       });
   };
-
   return (
     <div className="admin-profile">
       <Modal
@@ -142,70 +134,102 @@ function AdminProfil() {
         </ModalActions>
       </Modal>
       {data ? (
-        <>
-          <Card style={{ display: "none" }}></Card>
-          <div className="profil-container-admin">
-            <div className="img-box">
-              <img src={data.imageUrl} alt="" />
-            </div>
+        <div className="profil-container-user">
+          <img
+            style={{
+              width: "250px",
+              height: "250px",
+              borderRadius: "148px",
+              position: "relative",
+              left: "390px",
+              bottom: "100px",
+            }}
+            src={data.imageUrl}
+            alt=""
+          />
 
-            <div className="admin_profil_details">
-              <h1
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  fontSize: "59px",
-                  fontFamily: "monospace",
-                  // border: "1px solid black",
-                }}
-              >
-                {data.userName}{" "}
-              </h1>
-              <h3
-                style={{
-                  fontSize: "20px",
-
-                  fontFamily: "monospace",
-                }}
-              >
-                <Icon name="map marker alternate" />
-                {data.address}
-                <span> </span>
-                {data.city}
-              </h3>
-              <h3
-                style={{
-                  fontSize: "20px",
-
-                  fontFamily: "monospace",
-                }}
-              >
-                <Icon name="mail" />
-                {data.email}
-              </h3>
-              <br />
-            </div>
-
-            <Button
+          <div>
+            <h1
+              className="date"
               style={{
-                fontSize: "20px",
-
+                display: "flex",
+                justifyContent: "center",
+                fontSize: "59px",
                 fontFamily: "monospace",
-                borderRadius: "148px",
-                backgroundColor: "hsl(173, 95%, 42%)",
-                color: "white",
-              }}
-              onClick={() => {
-                setOpen(true);
+                // border: "1px solid black",
+                position: "relative",
+
+                bottom: "90px",
               }}
             >
-              Edit
-            </Button>
-            <br />
+              {data.userName}{" "}
+            </h1>
+            <span
+              style={{
+                fontSize: "30px",
+                position: "relative",
+                left: "248px",
+                bottom: "90px",
+                fontFamily: "monospace",
+              }}
+            >
+              {data.firstName}
+            </span>
+            <span
+              style={{
+                fontSize: "30px",
+                position: "relative",
+                left: "258px",
+                bottom: "90px",
+                fontFamily: "monospace",
+              }}
+            >
+              {data.lastName}
+            </span>
+            <h3
+              style={{
+                fontSize: "20px",
+                position: "relative",
+                left: "245px",
+                bottom: "90px",
+                fontFamily: "monospace",
+              }}
+            >
+              <Icon name="map marker alternate" />
+              {data.address}
+              <span> </span>
+              {data.city}
+            </h3>
+            <h3
+              style={{
+                fontSize: "20px",
+                position: "relative",
+                left: "245px",
+                bottom: "90px",
+                fontFamily: "monospace",
+              }}
+            >
+              <Icon name="mail" />
+              {data.email}
+            </h3>
             <span
               style={{
                 fontSize: "20px",
-
+                position: "relative",
+                left: "243px",
+                bottom: "77px",
+                fontFamily: "monospace",
+              }}
+            >
+              <Icon name="phone" />
+              {data.number}
+            </span>
+            <span
+              style={{
+                fontSize: "20px",
+                position: "relative",
+                right: "70px",
+                top: "90px",
                 fontFamily: "monospace",
               }}
             >
@@ -213,16 +237,34 @@ function AdminProfil() {
               {data.createdAt.substring(11, data.createdAt.length - 8)}
             </span>
           </div>
-        </>
+
+          <Button
+            style={{
+              fontSize: "20px",
+              position: "relative",
+              left: "435px",
+              top: "20px",
+              fontFamily: "monospace",
+              borderRadius: "148px",
+              backgroundColor: "hsl(173, 95%, 42%)",
+              color: "white",
+            }}
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            Edit
+          </Button>
+        </div>
       ) : (
         <RingLoader
           color="#36d7b7"
           size={100}
-          style={{ position: "relative", top: "150px" }}
+          style={{ position: "relative", left: "120px", top: "150px" }}
         />
       )}
     </div>
   );
 }
 
-export default AdminProfil;
+export default AdminData;

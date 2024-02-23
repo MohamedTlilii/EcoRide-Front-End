@@ -66,7 +66,32 @@
   width: 100%;
   /* margin-top: 130px; */
 }
+.profil-container-admin {
+  /* border: 1px rgba(0, 0, 0, 0.264) solid; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+.admin_profil_details h3 {
+  font-size: 2rem;
+}
+.admin_profil_details span {
+  font-size: 2rem;
+}
+.img-box img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
 
+.admin_profil_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .admin-profile {
   /* border: 4px black solid; */
   padding: 50px;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Offcanvas from "react-bootstrap/Offcanvas";
+import { Offcanvas } from "react-bootstrap";
 import "./Style.css";
 import { FaCartShopping } from "react-icons/fa6";
 import axios from "axios";
@@ -208,7 +208,6 @@ function ShoppingCart() {
         {/* <Link to="/chekout"> */}
         <ButtonGroup>
           <Button
-            // className="buttonChekoutbtn"
             onClick={() => {
               handleDeleteCart();
             }}
@@ -219,7 +218,6 @@ function ShoppingCart() {
             Cancel
           </Button>
           <Button
-            // className="buttonChekoutbtn"
             onClick={() => {
               handleSubmitOdrer();
             }}
@@ -230,8 +228,6 @@ function ShoppingCart() {
             Submit odrer
           </Button>
         </ButtonGroup>
-
-        {/* </Link> */}
       </Offcanvas>
       <ToastContainer
         position="bottom-left"

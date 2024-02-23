@@ -6,8 +6,8 @@ function NavBar() {
   const navigate = useNavigate();
   let token = localStorage.getItem("token");
   let isUser = JSON.parse(localStorage.getItem("isUser"));
-  let isAdmin = localStorage.getItem("isAdmin");
-  let isBanned = localStorage.getItem("false");
+  let isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
+  let isBanned = localStorage.getItem("isBanned");
 
   return (
     <nav className="nav-container">
@@ -40,7 +40,7 @@ function NavBar() {
             </Link>
           </>
         )}
-        {token && isUser ? (
+        {token && isUser && !isBanned ? (
           // <>
           //   {token && (
           <>

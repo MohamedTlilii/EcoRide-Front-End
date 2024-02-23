@@ -9,6 +9,7 @@ function Login() {
   const [loginData, setLoginData] = useState({});
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [bannedErr, setBannedErr] = useState("");
   const [loading, setLoading] = useState(false);
   const handleLogin = () => {
     setLoading(true);
@@ -21,7 +22,6 @@ function Login() {
         localStorage.setItem("isAdmin", res.data.data.isAdmin);
         localStorage.setItem("isBanned", res.data.data.isBanned);
         localStorage.setItem("id", res.data.data.id);
-        setMessage("Logged successfully");
         setTimeout(() => {
           setLoading(false);
           if (
@@ -29,7 +29,14 @@ function Login() {
             !res.data.data.isBanned &&
             !res.data.data.isAdmin
           ) {
+            setMessage("Logged successfully");
             navigate("/");
+          } else if (
+            res.data.data.isUser &&
+            res.data.data.isBanned &&
+            !res.data.data.isAdmin
+          ) {
+            setBannedErr("You are banned for 30 days");
           } else if (res.data.data.isAdmin && !res.data.data.isUser) {
             navigate("/dashboard");
           }
@@ -86,6 +93,12 @@ function Login() {
         {error && (
           <Message negative>
             <MessageHeader>OOOPPPS! 🤕</MessageHeader>
+            <p>{error}</p>
+          </Message>
+        )}
+        {bannedErr && (
+          <Message negative>
+            <MessageHeader>{bannedErr} 🤕</MessageHeader>
             <p>{error}</p>
           </Message>
         )}

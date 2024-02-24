@@ -30,8 +30,9 @@ function About() {
           </p>
         </div>
         <img
+          style={{ width: "570px", height: "670px" }}
           className="about-img"
-          src="https://scooteregypt.com/wp-content/uploads/2022/11/about-01.jpg"
+          src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/295018046_562261885619214_1768758809970670065_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=q4ds7WlVI98AX8CqPY1&_nc_ht=scontent.ftun14-1.fna&oh=00_AfAcvuCSDQiULu5qYF4ZsxUquALC5z9LSGRpe66yPTX2rQ&oe=65DDFFD7"
           alt=""
         />
       </div>

@@ -17,6 +17,7 @@ import AdminDashboard from "./Pgaes/AdminDashboard/AdminDashboard";
 import PublicRoute from "./Routes/PublicRoute";
 import AdminRoute from "./Routes/AdminRoute";
 import UserRoute from "./Routes/UserRoute";
+import BanneRoute from "./Routes/BanneRoute";
 
 import AddProduct from "./Pgaes/AdminDashboard/AddProduct";
 import Users from "./Pgaes/AdminDashboard/Users";
@@ -29,7 +30,14 @@ function App() {
       <Route path="/" element={<PublicLayout />}>
         <Route index element={<LandingPage />} />
 
-        <Route path="/product/:id" element={<ProductsSolo />} />
+        <Route
+          path="/product/:id"
+          element={
+            <BanneRoute>
+              <ProductsSolo />
+            </BanneRoute>
+          }
+        />
         {/* <Route path="/" element={<getReviews />} /> */}
 
         <Route path="electricscooters" element={<ElectricScooters />} />
@@ -46,6 +54,7 @@ function App() {
             </UserRoute>
           }
         />
+
         <Route
           path="dashboard"
           element={

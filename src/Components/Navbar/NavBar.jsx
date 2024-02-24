@@ -7,14 +7,13 @@ function NavBar() {
   let token = localStorage.getItem("token");
   let isUser = JSON.parse(localStorage.getItem("isUser"));
   let isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
-  let isBanned = localStorage.getItem("isBanned");
+  let isBanned = JSON.parse(localStorage.getItem("isBanned"));
 
   return (
     <nav className="nav-container">
       <Link to="/">
         <img
           className="logo"
-          // style={{ width: "188px", height: "88px" }}
           src="/assets/home/ecoride-logo-green.png"
           alt="Logo"
         />
@@ -30,23 +29,13 @@ function NavBar() {
         <Link to="/accessories">
           <li>Accessories</li>
         </Link>
-        {!isAdmin && (
+
+        <Link to="/about">
+          <li>About</li>
+        </Link>
+
+        {token && isUser && !isBanned && !isAdmin && (
           <>
-            <Link to="/about">
-              <li>About</li>
-            </Link>
-            <Link to="/contact">
-              <li>Contact</li>
-            </Link>
-          </>
-        )}
-        {token && isUser && !isBanned ? (
-          // <>
-          //   {token && (
-          <>
-            <Link to="/about">
-              <li>About</li>
-            </Link>
             <Link to="/contact">
               <li>Contact</li>
             </Link>
@@ -58,35 +47,34 @@ function NavBar() {
               <ShoppingCart />
             </li>
           </>
-        ) : (
-          token &&
-          isAdmin && (
-            <>
-              <li>
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
-            </>
-          )
         )}
-        {token ? (
-          <Link
-            onClick={() => {
-              localStorage.clear();
-              setTimeout(() => {
-                navigate("/login");
-              }, 100);
-            }}
-          >
-            <li>Logout</li>
-          </Link>
+
+        {token && isAdmin && !isUser && !isBanned && (
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        )}
+        {token && !isBanned ? (
+          <li>
+            <Link
+              onClick={() => {
+                localStorage.clear();
+                setTimeout(() => {
+                  navigate("/login");
+                }, 100);
+              }}
+            >
+              Logout
+            </Link>
+          </li>
         ) : (
           <>
-            <Link to="/login">
-              <li>Login</li>
-            </Link>
-            <Link to="/register">
-              <li>Register</li>
-            </Link>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
           </>
         )}
       </ul>

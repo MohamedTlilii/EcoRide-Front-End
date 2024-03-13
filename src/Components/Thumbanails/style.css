@@ -27,6 +27,7 @@ label span {
 }
 
 .wrapper {
+  /* border: 2px solid black; */
   max-width: 600px;
   margin: 4rem auto;
 }
@@ -50,3 +51,14 @@ label span {
   /* justify-content: center; */
   padding-left: 30px;
 }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    /* border: 2px solid black; */
+    width: 400px;
+    /* margin: 4rem auto; */
+  }
+ 
+  
+}
+

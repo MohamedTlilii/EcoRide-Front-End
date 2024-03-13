@@ -46,7 +46,7 @@
   display: none;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 600px) {
   .nav {
     /* border: 2px solid red!important; */
     display: flex;
@@ -73,7 +73,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .nav {
     /* border: 2px solid red; */
     width: 100%;

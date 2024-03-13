@@ -149,12 +149,12 @@
   cursor: pointer;
 }
 /*  */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
   .hero {
     border: 2px solid black;
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
-    width: 767px;
+    width: 600px;
   }
 
   .hero-details {

@@ -110,7 +110,7 @@
 
 @media only screen and (max-width: 600px) {
   .footer {
-    border: 2px solid rgb(46, 210, 35);
+    /* border: 2px solid rgb(46, 210, 35); */
     /* height: 6610vh; */
     background-color: hsl(195, 57%, 97%);
     height:980px;
@@ -130,12 +130,12 @@
 
 
   .footer-part-one {
-    border: 2px solid rgb(210, 35, 190);
+    /* border: 2px solid rgb(210, 35, 190); */
     width: 175px;
     
   }
   .footer-part-one img {
-    border: 2px solid rgb(210, 35, 190);
+    /* border: 2px solid rgb(210, 35, 190); */
     width: 155px;
     
   }
@@ -157,17 +157,17 @@
 
   
   .footer-part-two {
-    border: 2px solid rgb(35, 210, 50);
+    /* border: 2px solid rgb(35, 210, 50); */
     width: 175px;
    
   }
   .footer-part-third {
-    border: 2px solid rgb(210, 102, 35);
+    /* border: 2px solid rgb(210, 102, 35); */
     width: 175px;
 
   }
   .footer-part-four {
-    border: 2px solid rgb(105, 18, 31);
+    /* border: 2px solid rgb(105, 18, 31); */
     width: 175px;
 
   }

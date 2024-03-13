@@ -75,7 +75,7 @@
 
 @media screen and (max-width: 600px) {
   .nav {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
     background-color: #ffffff;
     padding: 10px;
@@ -92,7 +92,7 @@
   }
 
   .logo {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-top: -20px;
     width: 120px;
     /* height: 20px; */
@@ -118,7 +118,7 @@
     right: 10px;
   }
   .nav-container {
-    border:2px solid rgb(212, 13, 13);
+    /* border:2px solid rgb(212, 13, 13); */
     height: 90px;
     /* width: 390px; */
 

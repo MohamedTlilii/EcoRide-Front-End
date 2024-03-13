@@ -244,10 +244,10 @@
 
 @media only screen and (max-width: 600px) {
   .product-section {
-    border: 2px solid rgb(0, 51, 255);
-    width: 390px;
+    /* border: 2px solid rgb(0, 51, 255); */
+    width: 430px;
     height: auto;
-    margin: 10px auto ;
+    /* margin: 10px auto ; */
 
   }
 
@@ -311,7 +311,7 @@
   }
   .my-product-card img {
     /* border: 2px solid rgb(179, 56, 157); */
-    width: 100px;
+    width: 130px;
     transition: all 0.5s ease;
   }
   .line-through-two {
@@ -380,11 +380,11 @@
 }
 @media only screen and (max-width: 600px) {
   .about-section-- {
-    border: 2px solid rgb(204, 210, 35);
+    /* border: 2px solid rgb(204, 210, 35); */
 
-    width: 390px;
+    width: 430px;
     height: auto;
-    margin: 10px auto ;
+    /* margin: 10px auto ; */
   }
   .about-section-content {
     /* border: 2px solid rgb(178, 142, 208); */
@@ -458,17 +458,17 @@
 @media only screen and (max-width: 600px) {
   /* section 3 */
   .third-section {
-    border: 2px solid rgb(204, 46, 96);
+    /* border: 2px solid rgb(204, 46, 96); */
     background-image: url("../../../public/assets/home/bg-03.jpg");
     background-size: 768px 500px;
-    width: 390px;
+    width: 430px;
     height: 390px;
     background-attachment: unset;
-    margin: 10px auto ;
+    /* margin: 10px auto ; */
 
   }
   .card-third-section {
-    border: 2px solid rgb(204, 46, 96);
+    /* border: 2px solid rgb(204, 46, 96); */
 
     width: 150px;
     height: 150px;
@@ -535,10 +535,10 @@
 
 @media only screen and (max-width: 600px) {
   .four-section {
-    border: 2px solid rgb(204, 46, 96);
-    width: 390px;
+    /* border: 2px solid rgb(204, 46, 96); */
+    width: 430px;
     height: auto;
-    margin: 10px auto ;
+    /* margin: 10px auto ; */
 
   }
   .four-section-content {
@@ -621,10 +621,10 @@
 
 @media only screen and (max-width: 600px) {
   .section-five {
-    border: 2px darkblue solid;
-    width: 390px;
+    /* border: 2px darkblue solid; */
+    width: 430px;
     height: auto;
-    margin: 10px auto ;
+    /* margin: 10px auto ; */
 
   }
   .content-five {
@@ -733,11 +733,11 @@ width: 390px;  }
 
 @media only screen and (max-width: 600px) {
   .why-us-section {
-      border: 2px solid rgb(22, 206, 117);
+      /* border: 2px solid rgb(22, 206, 117); */
 
     height: auto;
-    width: 390px;
-    margin: 10px auto ;
+    width: 430px;
+    /* margin: 10px auto ; */
 
   }
   .why-us-section-content {
@@ -756,7 +756,7 @@ width: 390px;  }
   }
   .why-us-section-card-icon {
     position: relative;
-    left: 50px;
+    left: 70px;
     /* border: 2px solid rgb(22, 206, 117); */
   }
   .why-us-section-card-title {
@@ -825,13 +825,13 @@ width: 390px;  }
 
 @media only screen and (max-width: 600px) {
   .silver-path-section {
-    border: 2px solid rgb(46, 210, 35);
+    /* border: 2px solid rgb(46, 210, 35); */
     background-size: 768px 500px;
-    width: 390px;
+    width: 430px;
     height: auto;
     /* margin-left: 50px; */
     background-attachment: unset;
-    margin: 10px auto ;
+    /* margin: 10px auto ; */
 
   }
   /* .box-last-section {
@@ -852,7 +852,7 @@ width: 390px;  }
   .box-box {
     /* border: 2px solid black; */
     position: relative;
-    right: 800px;
+    right: 720px;
     width: 250px;
     height: auto;
     padding: unset;

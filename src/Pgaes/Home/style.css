@@ -152,11 +152,11 @@
 /*  */
 @media only screen and (max-width: 600px) {
   .hero {
-    border: 2px solid black !important;
+    /* border: 2px solid black !important; */
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
     /* max-width: fit-content; */
-    width: 435px;
+    width: 430px;
     /* margin:  auto ; */
   }
 

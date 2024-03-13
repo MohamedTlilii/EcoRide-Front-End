@@ -155,18 +155,18 @@
 /*  */
 @media only screen and (max-width: 600px) {
 
-  .azazaz {
+  /* .azazaz {
     border: 2px solid black;
-    width: 500px;
+    width: 400px;
 
-  }
+  } */
 
 
   .hero {
     /* border: 2px solid black; */
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
-    width: 550px;
+    max-width: fit-content;
   }
 
   .hero-details {

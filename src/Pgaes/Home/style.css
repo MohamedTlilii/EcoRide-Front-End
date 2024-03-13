@@ -156,7 +156,7 @@
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
     /* max-width: fit-content; */
-    width: 430px;
+    width: 420px;
     /* margin:  auto ; */
   }
 
@@ -1057,8 +1057,8 @@ legend {
   }
 
   .reviews {
-    /* border: 2px solid black; */
-
+    border: 2px solid black;
+width: 430px;
     bottom: 20px; /* Adjusted position */
   }
 

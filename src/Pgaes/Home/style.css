@@ -247,8 +247,7 @@
     /* border: 2px solid rgb(0, 51, 255); */
     width: 430px;
     height: auto;
-    margin: 0 15px 0 25px  ;
-
+margin: 0;
   }
 
   .products {
@@ -473,7 +472,7 @@
     width: 430px;
     height: 390px;
     background-attachment: unset;
-    margin: 0 15px 0 25px  ;
+    margin: 0;
 
   }
   .card-third-section {
@@ -840,7 +839,7 @@ width: 390px;  }
     height: auto;
     /* margin-left: 50px; */
     background-attachment: unset;
-    margin: 0 15px 0 25px  ;
+    margin: 0;
 
   }
   /* .box-last-section {

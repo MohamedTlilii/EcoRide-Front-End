@@ -148,13 +148,25 @@
   background-color: hsl(173, 95%, 42%);
   cursor: pointer;
 }
+.azazaz {
+  /* border: 2px solid black; */
+
+}
 /*  */
 @media only screen and (max-width: 600px) {
-  .hero {
+
+  .azazaz {
     border: 2px solid black;
+    width: 500px;
+
+  }
+
+
+  .hero {
+    /* border: 2px solid black; */
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
-    width: 600px;
+    width: 550px;
   }
 
   .hero-details {

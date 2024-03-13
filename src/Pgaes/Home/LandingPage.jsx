@@ -58,7 +58,7 @@ function LandingPage() {
   };
 
   return (
-    <div>
+    <div className="azazaz">
       <div class="hero">
         <div class="hero-details">
           <div class="hero-title">

@@ -156,8 +156,8 @@
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
     /* max-width: fit-content; */
-    width: 390px;
-    margin: 10px auto ;
+    width: 400px;
+    margin:  auto ;
   }
 
   .hero-details {

@@ -38,7 +38,7 @@ h2 {
   .review-form input {
     /* border: 12px solid black!important; */
   
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;

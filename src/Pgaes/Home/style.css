@@ -148,21 +148,18 @@
   background-color: hsl(173, 95%, 42%);
   cursor: pointer;
 }
-.azazaz {
-  /* border: 2px solid black; */
-}
+
 /*  */
 @media only screen and (max-width: 600px) {
-  .azazaz {
-    /* border: 2px solid black; */
-    width: 600px;
-    margin: 0 auto; /* This will center the element */  }
+ 
 
   .hero {
     /* border: 2px solid black; */
     flex-direction: column;
     gap: 20px; /* Reduced the gap */
-    max-width: fit-content;
+    /* max-width: fit-content; */
+    width: 600px;
+    margin: 0 ;
   }
 
   .hero-details {

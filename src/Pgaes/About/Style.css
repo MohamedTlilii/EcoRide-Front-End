@@ -113,7 +113,7 @@
 
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   /* About section */
   .about-parent {
     /* border: 2px solid rgb(204, 46, 96); */

@@ -46,7 +46,7 @@
   display: none;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 768px) {
   .nav {
     display: flex;
     flex-direction: row;
@@ -72,7 +72,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
   .nav {
     /* border: 2px solid red; */
     width: 100%;
@@ -120,6 +120,11 @@
   }
   
 }
+
+
+
+
+
 
 /* admin-aside */
 

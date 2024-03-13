@@ -37,7 +37,7 @@
   margin-top: 50px;
 }
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   /* Profile section */
   .profil {
     margin-top: 250px; /* Adjusted margin */

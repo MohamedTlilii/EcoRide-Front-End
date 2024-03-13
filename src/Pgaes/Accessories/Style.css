@@ -63,7 +63,7 @@
 }
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   /* Accessories section */
   .accessories-section {
     margin-top: 150px; /* Adjusted margin */

@@ -87,7 +87,7 @@
 }
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   /* LOGIN */
   .page-container {
     margin-top: 100px; /* Adjusted margin */

@@ -150,17 +150,13 @@
 }
 .azazaz {
   /* border: 2px solid black; */
-
 }
 /*  */
 @media only screen and (max-width: 600px) {
-
-  /* .azazaz {
-    border: 2px solid black;
-    width: 400px;
-
-  } */
-
+  .azazaz {
+    /* border: 2px solid black; */
+    width: fit-content;
+  }
 
   .hero {
     /* border: 2px solid black; */
@@ -176,17 +172,23 @@
   }
 
   .title {
+    /* border: 2px solid black; */
+
     font-size: 3.5rem; /* Adjusted font size */
   }
   .info-cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 125px !important;
+    /* border: 2px solid black; */
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    display: flex!important;
     align-items: center; /* Center cards horizontally */
   }
 
   .card {
-    margin-bottom: 15px; /* Add margin between cards */
+    /* border: 52px solid rgb(198, 23, 23); */
+
+    margin-bottom: 15px;
   }
   .hero-image {
     width: 60%;
@@ -201,7 +203,6 @@
 
   .hero-description {
     /* border: 2px solid red; */
-    width: 600px; /* Remove max-width on smaller screens */
     padding: 0 20px; /* Add padding for better readability */
     /* display: flex;
     flex-direction: column; */
@@ -824,15 +825,14 @@
   }
   .box-box {
     /* border: 2px solid black; */
-position: relative;
-right: 800px;
-width: 550px;
-padding: unset;
-top: 70px;  
-align-items: center; 
-padding: 10px;
-background-color: #0000004f;
-
+    position: relative;
+    right: 800px;
+    width: 550px;
+    padding: unset;
+    top: 70px;
+    align-items: center;
+    padding: 10px;
+    background-color: #0000004f;
   }
   .box-box h5 {
     /* border: 2px solid black; */
@@ -843,29 +843,10 @@ background-color: #0000004f;
     /* border: 2px solid black; */
 
     font-size: 1rem;
-    
   }
 }
 
 /* six section */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* solo-product section */
 .solo-product-parent-div {
@@ -1039,10 +1020,5 @@ legend {
 
   /* Other styles remain the same or adjust as needed */
 }
-
-
-
-
-
 
 /* solo-product section */

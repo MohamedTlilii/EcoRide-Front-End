@@ -75,7 +75,7 @@
 
 @media screen and (max-width: 600px) {
   .nav {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     width: 100%;
     background-color: #ffffff;
     padding: 10px;
@@ -116,8 +116,8 @@
     right: 10px;
   }
   .nav-container {
-    /* border:2px solid rgb(212, 13, 13); */
-    height: 75px;
+    border:2px solid rgb(212, 13, 13);
+    height: auto;
     width: 390px;
 
   }

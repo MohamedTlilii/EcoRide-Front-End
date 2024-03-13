@@ -157,7 +157,7 @@
     gap: 20px; /* Reduced the gap */
     /* max-width: fit-content; */
     width: 430px;
-    margin: 10px auto ;
+    margin: 10px  ;
   }
 
   .hero-details {
@@ -388,17 +388,22 @@
   }
   .about-section-content {
     /* border: 2px solid rgb(178, 142, 208); */
-
+/* align-items: center!important; */
     width: 390px;
 
     left: 0;
     margin: 0;
   }
   .about-section-content h6 {
+    
     font-size: 20px;
   }
   .about-section-content h2 {
+    align-items: center!important;
+    /* border: 2px solid rgb(178, 142, 208); */
+
     font-size: 2rem;
+    width: auto;
     height: auto;
   }
   .about-section-content p {

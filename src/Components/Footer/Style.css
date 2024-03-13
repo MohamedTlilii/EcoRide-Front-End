@@ -108,12 +108,13 @@
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .footer {
-    /* border: 2px solid rgb(46, 210, 35); */
+    border: 2px solid rgb(46, 210, 35);
     /* height: 6610vh; */
     background-color: hsl(195, 57%, 97%);
-    height:900px;
+    height:980px;
+    width: 390px;
   }
   
 
@@ -121,26 +122,32 @@
   .footer-section {
     /* border: 2px solid rgb(35, 93, 210); */
     display: grid;
-    column-gap: 50px;
+    column-gap: 10px;
     grid-template-columns: auto auto ;
   }
 
 
   .footer-part-one {
-    /* border: 2px solid rgb(210, 35, 190); */
+    border: 2px solid rgb(210, 35, 190);
+    width: 175px;
+    
+  }
+  .footer-part-one img {
+    border: 2px solid rgb(210, 35, 190);
+    width: 155px;
     
   }
 .fb-logo {
-  font-size: 53px!important;
+  font-size: 23px!important;
 }
 
 .twiter-logo {
-  font-size: 56px!important;
+  font-size: 26px!important;
   cursor: pointer;
 
 }
 .youtube-logo {
-  font-size: 53px!important;
+  font-size: 23px!important;
 
 }
 
@@ -148,21 +155,27 @@
 
   
   .footer-part-two {
-    /* border: 2px solid rgb(35, 210, 50); */
+    border: 2px solid rgb(35, 210, 50);
+    width: 175px;
    
   }
   .footer-part-third {
-    /* border: 2px solid rgb(210, 102, 35); */
-    
+    border: 2px solid rgb(210, 102, 35);
+    width: 175px;
+
   }
   .footer-part-four {
-    /* border: 2px solid rgb(105, 18, 31); */
-  
+    border: 2px solid rgb(105, 18, 31);
+    width: 175px;
+
+  }
+  .input-footer {
+    width: 150px !important;
   }
   .last-footer {
-    border-top: 2px rgba(12, 11, 11, 0.01) solid;
+    border-top: 2px rgba(3, 3, 3, 0.066) solid;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;

@@ -3,7 +3,7 @@ import "./style.css";
 
 function LandingPageAbout() {
   return (
-    <div>
+   
       <div className="about-section--">
         <div className="about-section-content">
           <h6>ABOUT US</h6>
@@ -19,7 +19,7 @@ function LandingPageAbout() {
           </p>
         </div>
       </div>
-    </div>
+    
   );
 }
 

@@ -11,7 +11,6 @@ import LandingPageAbout from "../../Components/Home/LandingPageAbout";
 import LandingPageFour from "../../Components/Home/LandingPageFour";
 import LandingPageWhy from "../../Components/Home/LandingPageWhy";
 import { Link } from "react-router-dom";
-// import Footer from "../../Components/Footer/Footer";
 import { useFetch } from "../../utils/useFetch";
 import { PacmanLoader, RingLoader } from "react-spinners";
 import axios from "axios";
@@ -41,56 +40,74 @@ function LandingPage() {
         console.dir(err);
       });
   };
+
+  const renderInfoCards = () => {
+    return (
+      <div className="info-cards">
+        <div className="card">
+          <CardKm text={30} km={"km"} content={"BATTERY"} />
+        </div>
+        <div className="card">
+          <CardKm text={"13,5"} km={"kg"} content={"WEIGHT"} />
+        </div>
+        <div className="card">
+          <CardKm text={25} km={"km/h"} content={"SPEED"} />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
-      <div className="hero">
-        <div className="hero-prd_details">
-          <h1>
-            {mainProduct ? `${mainProduct?.title}` : <RingLoader size={80} color="#36d7b7" />}
-            
-          </h1>
-
-          <div className="hero-prd_details-infos">
-            <h5>Informations:</h5>
-            <div className="hero-prd_details-infos-cards">
-              <CardKm text={30} km={"km"} content={"BATTERY"} />
-              <CardKm text={"13,5"} km={"kg"} content={"WEIGHT"} />
-              <CardKm text={25} km={"km/h"} content={"SPEED"} />
-            </div>
+      <div class="hero">
+        <div class="hero-details">
+          <div class="hero-title">
+            <h1 class="title">
+              {mainProduct ? (
+                `${mainProduct?.title}`
+              ) : (
+                <RingLoader size={80} color="#36d7b7" />
+              )}
+            </h1>
           </div>
-          <div className="hero-prd_details-actions">
-            <span>{mainProduct?.price} TND</span>
-            <span>
+
+          <div class="hero-info">
+            <h5 class="info-title">Informations:</h5>
+            {renderInfoCards()}
+          </div>
+
+          <div class="hero-actions">
+            <span class="price">{mainProduct?.price} TND</span>
+            <span class="add-to-cart">
               <ButtonCard fn={handleAddProductToCart} text={"ADD TO CART"} />
             </span>
           </div>
         </div>
-        <div className="hero-img_box">
+
+        <div class="hero-image">
           {mainProduct ? (
-            <img
-              style={{ width: "520px", height: "700px" }}
-              src={mainProduct.imageUrls[0]}
-              alt=""
-            />
+            <img class="product-image" src={mainProduct.imageUrls[0]} alt="" />
           ) : (
             <RingLoader size={100} color="#36d7b7" />
-           )}
+          )}
         </div>
-        <div className="hero-prd_desc">
-          <h4 className="last-section-title">Description</h4>
-          <p className="last-section-titlle-p">
+
+        <div class="hero-description">
+          <h4 class="description-title">Description</h4>
+          <p class="description-text">
             {mainProduct ? (
               `${mainProduct?.description}`
             ) : (
-              <RingLoader size={70} color="#36d7b7"  style={{ position: "relative",right:"80px"}}  />
+              <RingLoader size={70} color="#36d7b7" />
             )}
-           
           </p>
-          <h6 className="last-section-logos-titlle">SHARE:</h6>
-          <div>
-            <FaFacebook className="fb-logo" />
-            <AiFillTwitterCircle className="twiter-logo" />
-            <FaSquareYoutube className="youtube-logo" />
+          <div class="share-title-cont">
+            <h6 class="share-title">SHARE:</h6>
+            <div class="social-logos">
+              <FaFacebook class="fb-logo" />
+              <AiFillTwitterCircle class="twitter-logo" />
+              <FaSquareYoutube class="youtube-logo" />
+            </div>
           </div>
         </div>
       </div>
@@ -150,11 +167,18 @@ function LandingPage() {
               enim ad minim veniam.
             </p>
             <Link to={"accessories"}>
-              <ButtonCard text={"SHOP ACCESSORIES"} />
+              {/* <ButtonCard  text={"SHOP ACCESSORIES"} /> */}
+
+              <div>
+                <button type="button" className="btn-cartttttt">
+                  SHOP ACCESSORIES
+                </button>
+              </div>
             </Link>
           </div>
 
           <img
+            className="image-shop-acces"
             src="https://websitedemos.net/electric-scooter-04/wp-content/uploads/sites/1113/2022/07/accessories-01.png"
             alt=""
           />

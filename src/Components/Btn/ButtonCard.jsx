@@ -10,6 +10,7 @@ function ButtonCard({ text, fn }) {
           fn && fn();
         }}
         className="btn-cart"
+        
       >
         {text}
       </button>

@@ -32,7 +32,7 @@ function About() {
         <img
           style={{ width: "570px", height: "670px" }}
           className="about-img"
-          src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/295018046_562261885619214_1768758809970670065_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=q4ds7WlVI98AX8CqPY1&_nc_ht=scontent.ftun14-1.fna&oh=00_AfAcvuCSDQiULu5qYF4ZsxUquALC5z9LSGRpe66yPTX2rQ&oe=65DDFFD7"
+          src="https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/281488956_516286210216782_7056601783186434710_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CHSKfq9P9k8AX-RVagP&_nc_ht=scontent.ftun16-1.fna&oh=00_AfA3dJKR6zDuqxFxOY3swmciMZCfoU86DspDIRh5eMqHeg&oe=65F5DFD6"
           alt=""
         />
       </div>

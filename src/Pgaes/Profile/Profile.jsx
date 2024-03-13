@@ -201,7 +201,7 @@ function Profile() {
                     <Icon name="phone" />
                     {data.number}
                   </span>
-                  <span
+                  {/* <span
                     style={{
                       fontSize: "20px",
                       position: "relative",
@@ -213,7 +213,7 @@ function Profile() {
                     Createdate :{" "}
                     <span> {data.createdAt.substring(0, 10)} </span>
                     {data.createdAt.substring(11, data.createdAt.length - 8)}
-                  </span>
+                  </span> */}
                 </div>
 
                 <Button
@@ -238,7 +238,7 @@ function Profile() {
           )}
           <>
             {/* edit user modal */}
-            <Modal
+            <Modal className="modal"
               style={{
                 width: "50%",
                 height: "40%",

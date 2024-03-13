@@ -54,7 +54,7 @@ function Register() {
       });
   };
   return (
-    <div className="page-container">
+    <div className="page-container-register">
       <Form
         size="large"
         className="register-form"
@@ -137,7 +137,7 @@ function Register() {
           name="number"
           placeholder="Phone"
         />
-        <input
+        <input className="email"
           style={{
             margin: "10px",
             padding: "5px",
@@ -149,7 +149,7 @@ function Register() {
           placeholder="Email"
         />
 
-        <input
+        <input className="password"
           style={{
             margin: "10px",
             padding: "5px",

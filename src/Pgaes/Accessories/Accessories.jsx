@@ -24,7 +24,7 @@ function Accessories() {
             <Link to={"/"}>
               <li className="accessories-to-home">Home</li>
             </Link>
-            <span className="accessories-to-home">/</span>
+            <span className="accessories-to-home"></span>
             <li className="accessories-to-home">Accessories</li>
           </ul>
         </nav>

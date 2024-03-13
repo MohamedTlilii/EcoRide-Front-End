@@ -1,5 +1,5 @@
 .profil {
-  /* border: 20px solid rgb(213, 20, 20); */
+  /* border: 2px solid rgb(213, 20, 20); */
   /* background-color: aqua; */
   margin-top: 90px;
   min-height: 150vh;
@@ -35,4 +35,55 @@
   align-items: flex-start; */
   width: 100%;
   margin-top: 50px;
+}
+/* Define styles for screens up to 650px */
+@media only screen and (max-width: 650px) {
+  /* Profile section */
+  .profil {
+    margin-top: 250px; /* Adjusted margin */
+    min-height: 230vh; /* Adjusted minimum height */
+  }
+
+  .profile-container {
+    width: 90%; /* Adjusted width */
+    top: 100px; /* Adjusted top */
+    left: 0; /* Reset left */
+    right: 0; /* Reset right */
+    position: static; /* Reset position */
+  }
+
+  .profil-container-user {
+    /* border: 2px solid rgb(213, 20, 20) !important; */
+    align-items: center;
+    height: 630px; /* Adjusted height */
+    /* display: flex;
+    flex-direction:column; */
+    position: relative;
+    right: 200px;
+  }
+  .profil-container-user img {
+    /* border: 2px solid rgb(213, 20, 20) !important; */
+  }
+  .profil-container-user h3 {
+    /* border: 2px solid rgb(213, 20, 20) !important; */
+  }
+
+  .orders-container-user {
+    margin-top: 20px;
+    /* display: flex;
+    flex-direction: column; */
+    
+  }
+  .modal {
+    /* border: 2px solid rgb(213, 20, 20) !important; */
+    /* margin-left: 50px!important; 
+    width: 90px !important;
+    height: auto; */
+    position: relative!important;
+    margin-right: 1040px!important;
+    margin-bottom: 550px!important;
+    width: 550px!important;
+    height: 370px!important;
+
+}
 }

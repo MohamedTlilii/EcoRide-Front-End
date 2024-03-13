@@ -1,4 +1,6 @@
 .btn-cart {
+    /* border: 2px solid rgb(59, 201, 27)!important; */
+
   all: unset;
   background-color: hsl(173, 95%, 42%) !important;
   border-radius: 5px;
@@ -19,4 +21,8 @@
 
 .add-cart-span {
   margin-left: 25px;
+}
+
+@media only screen and (max-width: 650px) {
+  
 }

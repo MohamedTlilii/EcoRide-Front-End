@@ -16,7 +16,7 @@ function Footer() {
           dolore eu fugiat nulla pariatur.
         </p>
         <FaFacebook className="fb-logo" />
-        <AiFillTwitterCircle className="twiter-logo" />
+        <AiFillTwitterCircle className="twiter-logo" style={{fontSize:"47px"}} />
         <FaSquareYoutube className="youtube-logo" />
       </div>
       <div className="footer-part-two">

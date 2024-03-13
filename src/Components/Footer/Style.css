@@ -70,7 +70,7 @@
   font-weight: 700;
 }
 .last-footer {
-  border-top: 2px rgba(0, 0, 0, 0.05) solid;
+  border-top: 2px rgba(12, 11, 11, 0.01) solid;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -90,4 +90,83 @@
   /* border: 2px rgb(177, 28, 28) solid; */
   position: relative;
   top: 15px;
+}
+.fb-logo :hover {
+  cursor: pointer;
+  color:hsl(173, 95%, 42%)!important;
+}
+.twiter-logo :hover {
+  cursor: pointer;
+  color:hsl(173, 95%, 42%)!important;
+}
+.youtube-logo :hover {
+  cursor: pointer;
+  color:hsl(173, 95%, 42%)!important;
+}
+
+
+
+
+
+@media only screen and (max-width: 650px) {
+  .footer {
+    /* border: 2px solid rgb(46, 210, 35); */
+    /* height: 6610vh; */
+    background-color: hsl(195, 57%, 97%);
+    height:900px;
+  }
+  
+
+
+  .footer-section {
+    /* border: 2px solid rgb(35, 93, 210); */
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto ;
+  }
+
+
+  .footer-part-one {
+    /* border: 2px solid rgb(210, 35, 190); */
+    
+  }
+.fb-logo {
+  font-size: 53px!important;
+}
+
+.twiter-logo {
+  font-size: 56px!important;
+  cursor: pointer;
+
+}
+.youtube-logo {
+  font-size: 53px!important;
+
+}
+
+
+
+  
+  .footer-part-two {
+    /* border: 2px solid rgb(35, 210, 50); */
+   
+  }
+  .footer-part-third {
+    /* border: 2px solid rgb(210, 102, 35); */
+    
+  }
+  .footer-part-four {
+    /* border: 2px solid rgb(105, 18, 31); */
+  
+  }
+  .last-footer {
+    border-top: 2px rgba(12, 11, 11, 0.01) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+   
+  }
+  
 }

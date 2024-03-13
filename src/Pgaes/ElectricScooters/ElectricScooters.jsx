@@ -24,7 +24,7 @@ function ElectricScooters() {
             <Link to={"/"}>
               <li className="elictric-to-home">Home</li>
             </Link>
-            <span className="elictric-to-home">/</span>
+            <span className="elictric-to-home"></span>
             <li className="elictric-to-home">Electric Scooters</li>
           </ul>
         </nav>

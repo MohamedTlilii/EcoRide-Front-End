@@ -110,3 +110,75 @@
   /* text-align: center; */
   height: 900px;
 }
+
+
+/* Define styles for screens up to 650px */
+@media only screen and (max-width: 650px) {
+  /* About section */
+  .about-parent {
+    /* border: 2px solid rgb(204, 46, 96); */
+
+    margin-top: 150px; /* Adjusted margin */
+    min-height: 100vh; /* Adjusted minimum height */
+  }
+
+  .about-section {
+    background-size: cover; /* Ensure background covers entire area */
+    background-position: center; /* Center the background */
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .about-content h1 {
+    font-size: 2rem; /* Adjusted font size */
+  }
+
+  .about-content h3 {
+    font-size: 1.5rem; /* Adjusted font size */
+  }
+
+  .about-section-two {
+    flex-direction: column; /* Change to column layout */
+    gap: 10px; /* Adjusted gap */
+    align-items: center; /* Center items */
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .about-section-two-content {
+    width: 100%; /* Adjusted width */
+    position: static; /* Reset position */
+    top: auto; /* Reset top */
+  }
+
+  .about-img {
+    bottom: 0; /* Reset bottom */
+  }
+
+  .about-section-third {
+    width: 100%; /* Adjusted width */
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .about-section-four {
+    background-size: 650px 500px;
+    width: 650px;
+    height: 577px;
+    background-attachment: unset;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  about section */

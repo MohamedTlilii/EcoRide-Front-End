@@ -392,12 +392,14 @@
     /* border: 2px solid rgb(178, 142, 208); */
 /* align-items: center!important; */
     width: 390px;
+    /* margin: 0 15px 0 25px  ; */
 
     left: 0;
     margin: 0;
   }
   .about-section-content h6 {
-    
+        /* border: 2px solid rgb(178, 142, 208); */
+
     font-size: 20px;
   }
   .about-section-content h2 {

@@ -157,7 +157,7 @@
     gap: 20px; /* Reduced the gap */
     /* max-width: fit-content; */
     width: 390px;
-    /* margin: 10px auto ; */
+    margin: 10px auto ;
   }
 
   .hero-details {
@@ -219,7 +219,7 @@
   }
 
   .twitter-logo {
-    font-size: 55px;
+    font-size: 25px;
   }
   .share-title-cont {
     /* border: 2px solid red; */
@@ -247,6 +247,8 @@
     border: 2px solid rgb(0, 51, 255);
     width: 390px;
     height: auto;
+    margin: 10px auto ;
+
   }
 
   .products {
@@ -382,7 +384,7 @@
 
     width: 390px;
     height: auto;
-    margin: 0;
+    margin: 10px auto ;
   }
   .about-section-content {
     /* border: 2px solid rgb(178, 142, 208); */
@@ -462,6 +464,8 @@
     width: 390px;
     height: 390px;
     background-attachment: unset;
+    margin: 10px auto ;
+
   }
   .card-third-section {
     border: 2px solid rgb(204, 46, 96);
@@ -534,6 +538,8 @@
     border: 2px solid rgb(204, 46, 96);
     width: 390px;
     height: auto;
+    margin: 10px auto ;
+
   }
   .four-section-content {
     width: auto;
@@ -618,6 +624,8 @@
     border: 2px darkblue solid;
     width: 390px;
     height: auto;
+    margin: 10px auto ;
+
   }
   .content-five {
     
@@ -729,6 +737,8 @@ width: 390px;  }
 
     height: auto;
     width: 390px;
+    margin: 10px auto ;
+
   }
   .why-us-section-content {
     margin-top: 50px;
@@ -821,6 +831,8 @@ width: 390px;  }
     height: auto;
     /* margin-left: 50px; */
     background-attachment: unset;
+    margin: 10px auto ;
+
   }
   /* .box-last-section {
     border: 2px solid black;

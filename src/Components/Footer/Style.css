@@ -114,7 +114,9 @@
     /* height: 6610vh; */
     background-color: hsl(195, 57%, 97%);
     height:980px;
-    width: 390px;
+    width: auto;
+    margin: 10px auto ;
+
   }
   
 

@@ -92,7 +92,9 @@
   }
 
   .logo {
-    width: 80px;
+    border: 2px solid black;
+    margin-top: -20px;
+    width: 120px;
     /* height: 20px; */
     position: absolute;
     left: 50%;
@@ -117,8 +119,8 @@
   }
   .nav-container {
     border:2px solid rgb(212, 13, 13);
-    height: auto;
-    width: 390px;
+    height: 90px;
+    /* width: 390px; */
 
   }
   

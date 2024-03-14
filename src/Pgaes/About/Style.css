@@ -165,15 +165,16 @@ width: auto;
 
   .about-section-two-content {
     /* border: 2px solid rgb(11, 209, 74); */
-
-    width: auto; /* Adjusted width */
+text-align: center;
+    width: 500px; /* Adjusted width */
     position: static; /* Reset position */
     top: auto; /* Reset top */
   }
 
   .about-img {
     /* border: 2px solid rgb(11, 209, 74); */
-    width: auto; /* Adjusted width */
+    width: 450px!important; /* Adjusted width */
+    height: 450px!important; /* Adjusted width */
 
     bottom: 0; /* Reset bottom */
   }
@@ -189,8 +190,8 @@ width: auto;
     border: 2px solid rgb(11, 209, 74);
 
     background-size: 650px 500px;
-    width: 650px;
-    height: 577px;
+    width: 580px;
+    height: 500px;
     /* background-attachment: unset; */
   }
 }

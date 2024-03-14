@@ -116,7 +116,7 @@
 @media only screen and (max-width: 600px) {
   /* About section */
   .about-parent {
-    border: 2px solid rgb(204, 46, 96);
+    /* border: 2px solid rgb(204, 46, 96); */
     width: auto;
 display: flex;
 flex-direction: column;
@@ -164,7 +164,7 @@ width: auto;
   }
 
   .about-section-two-content {
-    border: 2px solid rgb(11, 209, 74);
+    /* border: 2px solid rgb(11, 209, 74); */
 text-align: center;
     width: 420px; /* Adjusted width */
     position: static; /* Reset position */
@@ -172,7 +172,7 @@ text-align: center;
   }
 
   .about-img {
-    border: 2px solid rgb(11, 209, 74);
+    /* border: 2px solid rgb(11, 209, 74); */
     width: 420px!important; /* Adjusted width */
     height: 420px!important; /* Adjusted width */
 
@@ -189,9 +189,8 @@ text-align: center;
   .about-section-four {
     border: 2px solid rgb(11, 209, 74);
 
-    background-size: 650px 500px;
-    width: 550px;
-    height: 500px;
+    width: auto;
+    height: auto;
     /* background-attachment: unset; */
   }
 }

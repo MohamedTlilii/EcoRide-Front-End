@@ -54,12 +54,12 @@ label span {
 
 @media screen and (max-width: 600px) {
   .wrapper {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 384px;
     /* margin: 4rem auto; */
   }
   .SLIDES {
-    border: 1px black solid; 
+    /* border: 1px black solid;  */
     display: flex;
     justify-content: center;
     padding-left: 30px;

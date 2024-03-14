@@ -118,13 +118,13 @@
   .about-parent {
     /* border: 2px solid rgb(204, 46, 96); */
     width: auto;
+    /* height: 900px; */
 display: flex;
 flex-direction: column;
 align-items: center;
 text-align: center;
 
 justify-content: center;
-    min-height: 100vh; /* Adjusted minimum height */
   }
 
   .about-section {
@@ -187,12 +187,8 @@ text-align: center;
   }
 
   .about-section-four {
-    border: 2px solid rgb(11, 209, 74);
-
-    background-size: 650px 500px;
-    width: 430px;
-    height: 430px;
-    /* background-attachment: unset; */
+    /* border: 2px solid rgb(11, 209, 74); */
+all: unset;
   }
 }
 

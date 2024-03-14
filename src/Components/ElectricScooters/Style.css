@@ -60,15 +60,16 @@
     /* width: 300px;
       height: 470px; */
     text-align: center;
-    width: 100px!important;
+    width: 200px!important;
     height: 400px;
-    display: flex;
-    justify-content: space-around;
+    display: grid!important;
+    /* justify-content: space-evenly!important; */
   }
   .my-product-card {
     /* border: 2px solid rgb(214, 208, 38); */
   /* width: 300px; */
   /* display: flex!important; */
+  
    
   }
 

@@ -139,12 +139,12 @@
 }
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /* Contact section */
   .contact-parent {
     /* border: 2px solid rgb(13, 233, 90); */
 
-    margin-top: 100px; /* Adjusted margin */
+    width: auto;
     min-height: 100vh; /* Adjusted minimum height */
   }
 
@@ -154,7 +154,7 @@
     /* background-image: url("../../../public/assets/home/bg-01.png"); */
     /* background-repeat: no-repeat; */
     background-position: center;
-  width: 600px;
+  /* width: 600px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,6 +232,10 @@
   }
 
   .useful-link-one {
+        /* border: 2px solid rgb(13, 233, 90); */
+display: flex;
+flex-direction: column;
+align-items: center;
     height: auto; /* Adjusted height */
     text-align: center; /* Center text */
     padding: 20px; /* Adjusted padding */

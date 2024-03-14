@@ -113,56 +113,85 @@
 
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /* About section */
   .about-parent {
-    /* border: 2px solid rgb(204, 46, 96); */
+    border: 2px solid rgb(204, 46, 96);
+    width: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
 
-    margin-top: 150px; /* Adjusted margin */
+justify-content: center;
     min-height: 100vh; /* Adjusted minimum height */
   }
 
   .about-section {
-    background-size: cover; /* Ensure background covers entire area */
-    background-position: center; /* Center the background */
-    padding: 20px; /* Adjusted padding */
+    /* border: 2px solid rgb(11, 209, 74); */
+    width: auto;
+    /* height: auto; */
+    /* height: 99vh; */
+    background-image: url("../../../public/assets/home/bg-01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: fit-content; */
+    /* margin: auto;
+    height: 1000px; */
   }
 
   .about-content h1 {
+        /* border: 2px solid rgb(11, 209, 74); */
+        /* width: auto; */
+
     font-size: 2rem; /* Adjusted font size */
   }
 
   .about-content h3 {
+            /* border: 2px solid rgb(11, 209, 74); */
+
     font-size: 1.5rem; /* Adjusted font size */
   }
 
   .about-section-two {
+    /* border: 2px solid rgb(11, 209, 74); */
+width: auto;
     flex-direction: column; /* Change to column layout */
     gap: 10px; /* Adjusted gap */
     align-items: center; /* Center items */
     padding: 20px; /* Adjusted padding */
+    text-align: center;
   }
 
   .about-section-two-content {
-    width: 100%; /* Adjusted width */
+    /* border: 2px solid rgb(11, 209, 74); */
+
+    width: auto; /* Adjusted width */
     position: static; /* Reset position */
     top: auto; /* Reset top */
   }
 
   .about-img {
+    /* border: 2px solid rgb(11, 209, 74); */
+    width: auto; /* Adjusted width */
+
     bottom: 0; /* Reset bottom */
   }
 
   .about-section-third {
-    width: 100%; /* Adjusted width */
+    /* border: 2px solid rgb(11, 209, 74); */
+
+    width: auto; /* Adjusted width */
     padding: 20px; /* Adjusted padding */
   }
 
   .about-section-four {
+    border: 2px solid rgb(11, 209, 74);
+
     background-size: 650px 500px;
     width: 650px;
     height: 577px;
-    background-attachment: unset;
+    /* background-attachment: unset; */
   }
 }
 

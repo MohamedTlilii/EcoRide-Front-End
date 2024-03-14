@@ -189,8 +189,9 @@ text-align: center;
   .about-section-four {
     border: 2px solid rgb(11, 209, 74);
 
-    width: auto;
-    height: auto;
+    /* background-size: 650px 500px; */
+    width: 400px;
+    height: 400px;
     /* background-attachment: unset; */
   }
 }

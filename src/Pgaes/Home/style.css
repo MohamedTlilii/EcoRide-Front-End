@@ -245,9 +245,9 @@
 @media only screen and (max-width: 600px) {
   .product-section {
     /* border: 2px solid rgb(0, 51, 255); */
-    width: 430px;
+    width: auto;
     height: auto;
-    /* margin: 0; */
+/* margin: 0; */
   }
 
   .products {
@@ -382,13 +382,14 @@
     /* border: 2px solid rgb(204, 210, 35); */
     /* margin: 0 15px 0 25px  ; */
 
-    width: 430px;
+
+    width: auto;
     height: auto;
     /* margin: 10px auto ; */
   }
   .about-section-content {
     /* border: 2px solid rgb(178, 142, 208); */
-    /* align-items: center!important; */
+/* align-items: center!important; */
     width: 390px;
     /* margin: 0 15px 0 25px  ; */
 
@@ -396,12 +397,12 @@
     margin: 0;
   }
   .about-section-content h6 {
-    /* border: 2px solid rgb(178, 142, 208); */
+        /* border: 2px solid rgb(178, 142, 208); */
 
     font-size: 20px;
   }
   .about-section-content h2 {
-    align-items: center !important;
+    align-items: center!important;
     /* border: 2px solid rgb(178, 142, 208); */
 
     font-size: 2rem;
@@ -465,13 +466,14 @@
 @media only screen and (max-width: 600px) {
   /* section 3 */
   .third-section {
-    border: 2px solid rgb(204, 46, 96);
+    /* border: 2px solid rgb(204, 46, 96); */
     background-image: url("../../../public/assets/home/bg-03.jpg");
     background-size: 768px 500px;
     width: auto;
     height: 390px;
     background-attachment: unset;
     /* margin: 0; */
+
   }
   .card-third-section {
     /* border: 2px solid rgb(204, 46, 96); */
@@ -486,10 +488,10 @@
     height: 50px;
   }
   .titlle-third-section {
-    font-size: 0.6rem;
+    font-size: .6rem;
   }
   .price-third-section {
-    font-size: 0.6rem;
+    font-size: .6rem;
   }
 }
 /* section 3 */
@@ -542,9 +544,10 @@
 @media only screen and (max-width: 600px) {
   .four-section {
     /* border: 2px solid rgb(204, 46, 96); */
-    width: 430px;
+    width: auto;
     height: auto;
     /* margin: 0 15px 0 25px  ; */
+
   }
   .four-section-content {
     width: auto;
@@ -627,11 +630,13 @@
 @media only screen and (max-width: 600px) {
   .section-five {
     /* border: 2px darkblue solid; */
-    width: 430px;
+    width: auto;
     height: auto;
     /* margin: 0 15px 0 25px  ; */
+
   }
   .content-five {
+    
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -644,8 +649,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    width: 390px;
-  }
+width: 390px;  }
   .section-five-content h1 {
     /* border: 2px solid rgb(59, 201, 27); */
     text-align: center;
@@ -653,6 +657,7 @@
     font-size: 2.5rem;
     position: relative;
     right: 110px;
+    
   }
   .section-five-content p {
     /* border: 2px solid rgb(59, 201, 27); */
@@ -736,11 +741,12 @@
 
 @media only screen and (max-width: 600px) {
   .why-us-section {
-    /* border: 2px solid rgb(22, 206, 117); */
+      /* border: 2px solid rgb(22, 206, 117); */
 
     height: auto;
-    width: 430px;
+    width: auto;
     /* margin: 0 15px 0 25px  ; */
+
   }
   .why-us-section-content {
     margin-top: 50px;
@@ -758,7 +764,7 @@
   }
   .why-us-section-card-icon {
     position: relative;
-    left: 70px;
+    left: 150px;
     /* border: 2px solid rgb(22, 206, 117); */
   }
   .why-us-section-card-title {
@@ -833,7 +839,8 @@
     height: auto;
     /* margin-left: 50px; */
     background-attachment: unset;
-    /* margin: 0; */
+    margin: 0;
+
   }
   /* .box-last-section {
     border: 2px solid black;
@@ -1008,12 +1015,13 @@ legend {
   bottom: 150px;
 }
 
+
 @media only screen and (max-width: 600px) {
   /* solo-product section */
   .solo-product-parent-div {
     /* border: 2px solid black; */
-    margin-top: 50px;
-    min-height: 100vh;
+    margin-top: 50px; 
+    min-height: 100vh; 
     width: 430px;
   }
 
@@ -1053,12 +1061,12 @@ legend {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center !important;
+    align-items: center!important;
   }
 
   .reviews {
     /* border: 2px solid black; */
-    width: 430px;
+width: 430px;
     bottom: 20px; /* Adjusted position */
   }
 

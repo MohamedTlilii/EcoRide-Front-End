@@ -166,7 +166,7 @@ width: auto;
   .about-section-two-content {
     border: 2px solid rgb(11, 209, 74);
 text-align: center;
-    width: 450px; /* Adjusted width */
+    width: 420px; /* Adjusted width */
     position: static; /* Reset position */
     top: auto; /* Reset top */
   }

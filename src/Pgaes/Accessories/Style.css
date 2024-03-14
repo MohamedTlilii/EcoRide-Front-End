@@ -12,7 +12,7 @@
   display: flex;
   height: fit-content;
   justify-content: space-evenly;
-  gap: 250px;
+  gap: 420px;
   padding: 50px;
 }
 .accessories-to-home {
@@ -21,7 +21,7 @@
   font-size: 13, 8px;
   position: relative;
   top: 62px;
-  right: 120px;
+  right: 30px;
 }
 .accessories-section-two {
   /* border: 2px solid rgb(234, 24, 220); */
@@ -42,7 +42,7 @@
   text-align: center;
 }
 .accessories-section-third {
-  border: 2px solid rgb(234, 210, 24);
+  /* border: 2px solid rgb(234, 210, 24); */
   /* display: flex; */
   position: relative;
   left: 1115px;
@@ -107,10 +107,14 @@
   }
 
   .accessories-section-four {
-    width: auto; /* Reset width */
-    padding: 20px; /* Adjusted padding */
-    gap: 20px; /* Adjusted gap */
+      /* border: 2px solid rgb(92, 160, 15); */
+      width: auto; 
+      /* padding: 20px;  */
+      gap: 20px;
+      display: flex;
+      justify-content: space-around;
   }
+  
 }
 
 /*  Accessories section */

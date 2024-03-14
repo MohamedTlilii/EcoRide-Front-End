@@ -87,16 +87,18 @@
 }
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /* ElectricScooters section */
   .electric-section {
-    margin-top: 150px; 
+    /* border: 2px solid rgb(214, 208, 38); */
+/* margin: 0; */
+    /* margin-top: 150px;  */
     min-height: 100vh;
   }
 
   .electric-section-one {
     /* border: 2px solid rgb(214, 208, 38); */
-    margin: 20px; 
+    margin: 20px;
     display: flex;
     flex-direction: column; /* Change to column layout */
     gap: 20px; /* Adjusted gap */
@@ -112,6 +114,8 @@
   }
 
   .electric-section-two {
+        /* border: 2px solid rgb(214, 208, 38); */
+
     top: 0; /* Reset top */
     text-align: center; /* Center text */
   }
@@ -120,32 +124,32 @@
     margin: 10px auto; /* Adjusted margin */
   }
 
-  .electric-section-third {
-    left: 0; /* Reset left */
-    justify-content: center; /* Center content */
-    gap: 20px; /* Adjusted gap */
-  }
 
   .electric-section-four {
-    width: auto; /* Reset width */
-    padding: 20px; /* Adjusted padding */
-    gap: 20px; /* Adjusted gap */
+    /* border: 2px solid rgb(214, 208, 38); */
+/* display: grid!important; */
+
+    width: auto; 
+    padding: 20px; 
+    gap: 20px;
   }
 
   .electric-scooter-products {
-    width: 100%; /* Adjusted width */
-    height: auto; /* Adjusted height */
+    /* border: 2px solid rgb(214, 208, 38); */
+/* display: flex; */
+    width: 20% !important;
+    height: 45% !important;
   }
 
   .electric-scooter-products-title {
-    font-size: 14px; /* Adjusted font size */
+    /* border: 2px solid rgb(214, 208, 38); */
+width: 200px;
+    font-size: 8px!important; /* Adjusted font size */
   }
-  
+
   .electric-scooter-products-price {
     font-size: 12px; /* Adjusted font size */
   }
 }
-
-
 
 /* ElectricScooters section */

@@ -10,7 +10,7 @@
 }
 
 .electric-scooter-products {
-  /* border: 2px solid rgb(214, 208, 38); */
+  /* border: 2px solid rgb(214, 208, 38)!important; */
   /* width: 300px;
     height: 470px; */
   text-align: center;
@@ -25,3 +25,52 @@
   color: hsl(173, 95%, 42%)!important;
 }
 
+/* product zoomed  */
+.my-product-card {
+  /* border: 2px solid rgb(214, 208, 38); */
+
+  overflow: hidden;
+}
+.my-product-card img {
+  transition: all 0.5s ease;
+}
+.my-product-card:hover img {
+  scale: 1.2;
+}
+
+.electric-scooter-products {
+  /* border: 2px solid rgb(214, 208, 38)!important; */
+  /* width: 300px;
+    height: 470px; */
+  text-align: center;
+  width: 309px;
+  height: 400px;
+}
+
+.electric-scooter-products-title {
+  /* border: 2px solid rgb(214, 208, 38); */
+  font-size: 15px;
+  font-size: larger;
+  color: hsl(173, 95%, 42%)!important;}
+
+@media only screen and (max-width: 600px) {
+
+  .electric-scooter-products {
+    /* border: 2px solid rgb(214, 208, 38)!important; */
+    /* width: 300px;
+      height: 470px; */
+    text-align: center;
+    width: 200px!important;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .my-product-card {
+    /* border: 2px solid rgb(214, 208, 38); */
+  /* width: 300px; */
+  /* display: flex!important; */
+   
+  }
+
+  
+}

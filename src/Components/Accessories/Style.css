@@ -23,3 +23,20 @@
   font-size: 15px;
   font-size: larger;
 }
+@media only screen and (max-width: 600px) {
+  .electric-scooter-products {
+    /* border: 2px solid rgb(214, 208, 38)!important; */
+    /* width: 300px;
+      height: 470px; */
+    text-align: center;
+    width: 200px !important;
+    height: 400px;
+    display: grid !important;
+    /* justify-content: space-evenly!important; */
+  }
+  .my-product-card {
+    /* border: 2px solid rgb(214, 208, 38); */
+    /* width: 300px; */
+    /* display: flex!important; */
+  }
+}

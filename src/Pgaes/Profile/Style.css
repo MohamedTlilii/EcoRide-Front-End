@@ -38,15 +38,20 @@
 }
 /* Define styles for screens up to 650px */
 @media only screen and (max-width: 600px) {
+  .tititit {
+        border: 2px solid rgb(213, 20, 20) !important;
+        width: auto!important;
+        height: auto!important;
+
+  }
   /* Profile section */
   .profil {
     /* border: 2px solid rgb(213, 20, 20) !important; */
 
     margin-top: 190px; /* Adjusted margin */
     min-height: 230vh; /* Adjusted minimum height */
-    width: 390px;
+    width: auto;
     height: auto;
-    
 
   }
 

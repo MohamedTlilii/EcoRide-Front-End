@@ -98,7 +98,7 @@ function Profile() {
   );
 
   return (
-    <div>
+    <div className="tititit">
       <div className="profil">
         <div className="profile-container">
           {!data ? (

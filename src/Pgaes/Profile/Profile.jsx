@@ -150,9 +150,9 @@ function Profile() {
                       fontFamily: "monospace",
                     }}
                   >
-                    {data.firstName}
+                    {data.firstName} {data.lastName}
                   </span>
-                  <span className="detailssss"
+                  {/* <span className="detailssss"
                     style={{
                       fontSize: "30px",
                       position: "relative",
@@ -162,7 +162,7 @@ function Profile() {
                     }}
                   >
                     {data.lastName}
-                  </span>
+                  </span> */}
                   <h3
                     style={{
                       fontSize: "20px",

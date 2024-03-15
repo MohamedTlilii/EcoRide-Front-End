@@ -93,11 +93,11 @@
     margin-right: 450px;
   }
 .btnbtntbnprofil {
-  margin-right: 820px!important;
+  margin-right: 830px!important;
 }
   .orders-container-user {
-    /* border: 2px solid rgb(213, 20, 20) !important; */
-
+    border: 2px solid rgb(213, 20, 20) !important;
+width: auto;
     margin-top: 20px;
     /* display: flex;
     flex-direction: column; */

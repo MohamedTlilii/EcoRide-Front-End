@@ -50,8 +50,8 @@
 
     margin-top: 190px; /* Adjusted margin */
     min-height: 230vh; /* Adjusted minimum height */
-    width: auto;
-    height: auto;
+    width: auto!important;
+    height: auto!important;
 
   }
 

@@ -123,7 +123,7 @@
   }
   .table-data-user {
     /* border: 2px solid rgb(16, 95, 16) !important; */
-    width: 550px !important;
+    width: 350px !important;
  
     
 
@@ -131,8 +131,9 @@
   .cartdetailmodall {
     /* border: 2px solid rgb(16, 95, 16) !important; */
     position: relative !important;
-   left: 500px!important;
-   width: 550px !important;
+   left: 50px!important;
+   width: 350px !important;
+   height: fit-content!important;
 
 }
 

@@ -191,9 +191,10 @@
     left: 0; /* Reset left */
     position: static; /* Reset position */
     text-align: center; /* Center text */
-    padding: 20px; /* Adjusted padding */
-    position: relative;
-    left: 110px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
   }
 
   .contact-details-element,
@@ -211,8 +212,10 @@
     position: static; /* Reset position */
     text-align: center; /* Center text */
     padding: 20px; /* Adjusted padding */
-    position: relative;
-    left: 210px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
   }
 
   .links-section {
@@ -235,7 +238,11 @@
     top: auto; /* Reset top */
     width: auto; /* Reset width */
   }
-
+.test {
+      /* border: 2px solid rgb(13, 233, 90); */
+      text-align: center;
+width: auto;
+}
   .useful-links {
     /* border: 2px solid rgb(13, 233, 90); */
 

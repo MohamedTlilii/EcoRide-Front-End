@@ -23,15 +23,15 @@ function Contact() {
         <div className="contact-details">
           <h6>CONTACT DETAILS</h6>
 
-          <b className="contact-details-element">E:</b>
+          {/* <b className="contact-details-element">E:</b> */}
           <Link to="">
             <span className="contact-details-element"> contact@info.com</span>
           </Link>
           <br />
-          <b className="contact-element">P:</b>
+          {/* <b className="contact-element">P:</b> */}
           <span className="contact-element">+1 234 567 890</span>
           <br />
-          <b className="contact-element">A:</b>
+          {/* <b className="contact-element">A:</b> */}
           <span className="contact-element">
             123 Fifth Avenue, New York,NY 10160
           </span>
@@ -44,7 +44,7 @@ function Contact() {
         </div>
       </div>
       <div className="links-section">
-        <h2>Useful Links</h2>
+        <h2 className="test">Useful Links</h2>
         <div className="useful-links">
           <div className="useful-link-one">
             <FaHandshake

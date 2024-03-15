@@ -40,9 +40,9 @@
 @media only screen and (max-width: 600px) {
   /* Profile section */
   .profil {
-    border: 2px solid rgb(213, 20, 20) !important;
+    /* border: 2px solid rgb(213, 20, 20) !important; */
 
-    margin-top: 150px; /* Adjusted margin */
+    margin-top: 190px; /* Adjusted margin */
     min-height: 230vh; /* Adjusted minimum height */
     width: auto;
   }
@@ -60,36 +60,37 @@
   .profil-container-user {
     /* border: 2px solid rgb(46, 8, 143) !important; */
     align-items: center;
-   display: flex;
-   flex-direction: column;
-   width: auto!important;
-   
+    display: flex;
+    flex-direction: column;
+    width: auto !important;
   }
   .profil-container-user img {
     /* border: 2px solid rgb(213, 20, 20) !important; */
-margin-right: 780px;
+    margin-right: 780px;
+    
   }
   .s {
-        border: 2px solid rgb(23, 15, 118) !important;
-width: 560px!important;
-display: flex;
-flex-direction: column;
-text-align: center;}
+    /* border: 2px solid rgb(23, 15, 118) !important; */
+    width: auto !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   .date {
     /* border: 2px solid rgb(213, 20, 20) !important; */
     width: auto !important;
-
   }
 
   .detailssss {
     /* border: 2px solid rgb(20, 213, 62) !important; */
-position: relative!important;
-right: 850px!important;
-width: 180px!important;
+    position: relative !important;
+    
+    margin-right: 450px;
   }
   .profil-container-user h3 {
-    border: 2px solid rgb(213, 20, 20) !important;
+    /* border: 2px solid rgb(213, 20, 20) !important; */
     width: 310px !important;
+    margin-right: 450px;
   }
 
   .orders-container-user {

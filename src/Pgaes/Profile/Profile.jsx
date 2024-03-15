@@ -328,7 +328,7 @@ function Profile() {
           <div className="orders-container-user">
             <div className="table-data-user">
               <Table >
-                <TableHeader className="aaaaaaaaaaaaaaa">
+                <TableHeader >
                   <TableRow>
                     <TableHeaderCell
                       style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
@@ -362,7 +362,7 @@ function Profile() {
                     </TableHeaderCell>
                   </TableRow>
                 </TableHeader>
-                <div className="bbbbbbbbbbbb">
+               
                 <TableBody >
                   {products.data
                     ? products.data.map((product) => (
@@ -423,7 +423,7 @@ function Profile() {
                         </TableRow>
                       ))}
                 </TableBody>
-                </div>
+                
               </Table>
             </div>
           </div>

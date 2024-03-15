@@ -45,6 +45,8 @@
     margin-top: 190px; /* Adjusted margin */
     min-height: 230vh; /* Adjusted minimum height */
     width: auto;
+    height: auto;
+
   }
 
   .profile-container {
@@ -110,7 +112,7 @@ width: auto;
     position: relative !important;
     margin-right: 1040px !important;
     margin-bottom: 550px !important;
-    width: 550px !important;
+    width: 350px !important;
     height: 370px !important;
   }
 }

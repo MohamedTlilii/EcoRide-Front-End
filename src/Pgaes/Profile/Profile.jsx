@@ -125,7 +125,7 @@ function Profile() {
                   alt=""
                 />
 
-                <div>
+                <div className="s" >
                   <h1
                     className="date"
                     style={{
@@ -141,7 +141,7 @@ function Profile() {
                   >
                     {data.userName}{" "}
                   </h1>
-                  <span
+                  <span className="detailssss"
                     style={{
                       fontSize: "30px",
                       position: "relative",
@@ -152,7 +152,7 @@ function Profile() {
                   >
                     {data.firstName}
                   </span>
-                  <span
+                  <span className="detailssss"
                     style={{
                       fontSize: "30px",
                       position: "relative",
@@ -189,7 +189,7 @@ function Profile() {
                     <Icon name="mail" />
                     {data.email}
                   </h3>
-                  <span
+                  <span className="detailssss"
                     style={{
                       fontSize: "20px",
                       position: "relative",

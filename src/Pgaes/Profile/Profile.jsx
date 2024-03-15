@@ -327,8 +327,8 @@ function Profile() {
           {/* products card */}
           <div className="orders-container-user">
             <div className="table-data-user">
-              <Table>
-                <TableHeader>
+              <Table >
+                <TableHeader className="aaaaaaaaaaaaaaa">
                   <TableRow>
                     <TableHeaderCell
                       style={{ backgroundColor: " hsl(173, 95%, 42%)" }}
@@ -362,11 +362,12 @@ function Profile() {
                     </TableHeaderCell>
                   </TableRow>
                 </TableHeader>
-                <TableBody>
+                <div className="bbbbbbbbbbbb">
+                <TableBody >
                   {products.data
                     ? products.data.map((product) => (
-                        <TableRow key={product._id}>
-                          <TableCell>{product._id}</TableCell>
+                        <TableRow   key={product._id}>
+                          <TableCell  >{product._id}</TableCell>
                           <TableCell
                             onClick={() => {
                               setOpen2(true);
@@ -422,6 +423,7 @@ function Profile() {
                         </TableRow>
                       ))}
                 </TableBody>
+                </div>
               </Table>
             </div>
           </div>

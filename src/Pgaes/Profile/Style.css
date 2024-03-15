@@ -39,7 +39,7 @@
 /* Define styles for screens up to 650px */
 @media only screen and (max-width: 600px) {
   .tititit {
-        border: 2px solid rgb(213, 20, 20) !important;
+        /* border: 2px solid rgb(213, 20, 20) !important; */
         width: auto!important;
         height: auto!important;
 
@@ -118,15 +118,25 @@
     /* border: 2px solid rgb(213, 20, 20) !important; */
 width: auto;
     margin-top: 20px;
-    
+  
     
   }
   .table-data-user {
     /* border: 2px solid rgb(16, 95, 16) !important; */
     width: auto;
-    display: flex!important;
-    flex-direction: column;
+    
+    
 
   }
- 
+ /* .aaaaaaaaaaaaaaa {
+      border: 2px solid rgb(16, 95, 16) !important;
+width: 250px;
+
+
+ }
+ .bbbbbbbbbbbb {
+      border: 2px solid rgb(10, 32, 153) !important;
+width: 250px!important;
+
+ } */
 }

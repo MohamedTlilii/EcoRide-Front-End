@@ -368,7 +368,7 @@ function Profile() {
                     ? products.data.map((product) => (
                         <TableRow   key={product._id}>
                           <TableCell  >{product._id}</TableCell>
-                          <TableCell
+                          <TableCell 
                             onClick={() => {
                               setOpen2(true);
                             }}

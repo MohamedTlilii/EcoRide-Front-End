@@ -13,7 +13,8 @@ import {
 } from "semantic-ui-react";
 function CartDetails({ setOpen2, open2, data }) {
   return (
-    <Modal
+    <Modal       className="cartdetailmodall"
+
       style={{
         width: "50%",
         height: "70%",
@@ -25,7 +26,7 @@ function CartDetails({ setOpen2, open2, data }) {
       open={open2}
       size="large"
     >
-      <ModalHeader>Cart details</ModalHeader>
+      <ModalHeader >Cart details</ModalHeader>
       <ModalContent
         style={{
           // width: "50%",
@@ -82,6 +83,7 @@ function CartDetails({ setOpen2, open2, data }) {
         </Button>
       </ModalActions>
     </Modal>
+    
   );
 }
 

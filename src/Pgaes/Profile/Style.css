@@ -46,7 +46,7 @@
   }
   /* Profile section */
   .profil {
-    border: 2px solid rgb(213, 20, 20) !important;
+    /* border: 2px solid rgb(213, 20, 20) !important; */
 
     margin-top: 190px; /* Adjusted margin */
     min-height: 230vh; /* Adjusted minimum height */
@@ -115,18 +115,26 @@
   height: 370px !important;
 }
   .orders-container-user {
-    border: 2px solid rgb(213, 20, 20) !important;
+    /* border: 2px solid rgb(213, 20, 20) !important; */
     width: auto !important;
     margin-top: 20px;
   
     
   }
   .table-data-user {
-    border: 2px solid rgb(16, 95, 16) !important;
-    width: 250px !important;
+    /* border: 2px solid rgb(16, 95, 16) !important; */
+    width: 550px !important;
  
     
 
   }
+  .cartdetailmodall {
+    /* border: 2px solid rgb(16, 95, 16) !important; */
+    position: relative !important;
+   left: 500px!important;
+   width: 550px !important;
+
+}
+
 
 }

@@ -87,9 +87,11 @@
 }
 
 /* Define styles for screens up to 650px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /* LOGIN */
   .page-container {
+        border: 2px solid rgb(204, 46, 96);
+
     margin-top: 100px; /* Adjusted margin */
     min-height: 100vh; /* Adjusted minimum height */
     background-image: url("../../../public/assets/home/bg-03.jpg");
@@ -97,25 +99,42 @@
     width: 650px;
     height: 577px;
     background-attachment: unset;
+    /* all: unset; */
+    width: auto!important;
+    height: auto!important;
   }
 
   .login-form
   {
-    /* border: 2px solid rgb(204, 46, 96); */
+    border: 2px solid rgb(204, 46, 96);
 
     width: 370px;
     height: auto;
     position: relative;
-    right: 310px;
-    top: 150px !important;
+    right: 330px;
+    top: 270px !important;
   }
+
+  .page-container-register {
+    border: 2px solid rgb(204, 46, 96);
+
+margin-top: 100px; /* Adjusted margin */
+min-height: 100vh; /* Adjusted minimum height */
+background-image: url("../../../public/assets/home/bg-03.jpg");
+background-size: 650px 500px;
+
+background-attachment: unset;
+/* all: unset; */
+width: auto!important;
+height: auto!important;
+}
   .register-form {
-    /* border: 2px solid rgb(204, 46, 96); */
+    border: 2px solid rgb(204, 46, 96);
     width: 500px;
     height: auto;
     position: relative;
-    right:280px;
-    top: 150px !important;
+    right: 330px;
+    top: 370px !important;
   }
 
 

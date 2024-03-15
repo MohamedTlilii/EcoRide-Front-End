@@ -325,7 +325,7 @@ function Profile() {
             </Modal>
           </>
           {/* products card */}
-          {/* <div className="orders-container-user">
+          <div className="orders-container-user">
             <div className="table-data-user">
               <Table>
                 <TableHeader>
@@ -424,7 +424,7 @@ function Profile() {
                 </TableBody>
               </Table>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
 

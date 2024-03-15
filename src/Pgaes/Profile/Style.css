@@ -44,8 +44,9 @@
 
     margin-top: 190px; /* Adjusted margin */
     min-height: 230vh; /* Adjusted minimum height */
-    width: auto;
+    width: 430px;
     height: auto;
+    
 
   }
 
@@ -97,22 +98,30 @@
 .btnbtntbnprofil {
   margin-right: 830px!important;
 }
+.modal {
+  /* border: 2px solid rgb(213, 20, 20) !important; */
+  /* margin-left: 50px!important; 
+  width: 90px !important;
+  height: auto; */
+  position: relative !important;
+  margin-right: 1040px !important;
+  margin-bottom: 550px !important;
+  width: 350px !important;
+  height: 370px !important;
+}
   .orders-container-user {
-    border: 2px solid rgb(213, 20, 20) !important;
+    /* border: 2px solid rgb(213, 20, 20) !important; */
 width: auto;
     margin-top: 20px;
-    /* display: flex;
-    flex-direction: column; */
+    
+    
   }
-  .modal {
-    /* border: 2px solid rgb(213, 20, 20) !important; */
-    /* margin-left: 50px!important; 
-    width: 90px !important;
-    height: auto; */
-    position: relative !important;
-    margin-right: 1040px !important;
-    margin-bottom: 550px !important;
-    width: 350px !important;
-    height: 370px !important;
+  .table-data-user {
+    /* border: 2px solid rgb(16, 95, 16) !important; */
+    width: auto;
+    display: flex!important;
+    flex-direction: column;
+
   }
+ 
 }

@@ -216,7 +216,7 @@ function Profile() {
                   </span> */}
                 </div>
 
-                <Button
+                <Button className="btnbtntbnprofil"
                   style={{
                     fontSize: "20px",
                     position: "relative",
